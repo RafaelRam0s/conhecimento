@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+
+/* Glossário */
+/*
+
+    color
+
+    font-weight
+    font-style
+    font-size
+
+    text-decoration-line
+    text-decoration-color
+    text-decoration-style
+    text-decoration
+
+    vertical-align
+
+    text-align
+
+    font-family
+    font-variant
+
+    text-transform
+    text-indent
+
+    line-height
+
+    word-spacing
+    letter-spacing
+
+    direction
+    unicode-bidi
+
+
+*/
+
+
+
+
+
+
+
+
+
+/* Digitando uma tagname, você aplica o estilo definido a todas as tagnames */
+body {
+    color: rgba(255, 255, 240, 0.99);
+    /* color - define a cor de diversas propriedades, como texto, borda, e por aí vai 
+        Valores:
+            Padrões de cores
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* O símbolo de jogo-da-velha serve para fazer referência a um id, e logo após ele deve ser colocado o nome do id */
+#b {
+    font-weight: 900;
+    /* font-weight - define o nível de negrito 
+        Valores:
+            Números de 0-900 - definem o nível de aparência
+    */
+}
+
+
+
+#i {
+    font-style: italic;
+}
+#em {
+    font-style: oblique;
+}
+/* font-style - define o itálico do texto. 
+    Valores:
+        normal - sem inclinação
+        italic - itálico
+        oblique - mais inclinado que o itálico
+*/
+
+
+
+body {
+    font-size: 100%;
+}
+h1 {
+    font-size: 400%;
+}
+h2 {
+    font-size: 350%;
+}
+h3 {
+    font-size: 300%;
+}
+h4 {
+    font-size: 250%;
+}
+h5 {
+    font-size: 200%;
+}
+h6 {
+    font-size: 150%;
+}
+p {
+    font-size: 125%;
+}
+#small {
+    font-size: 75%;
+}
+#big {
+    font-size: 175%;
+}
+/* font-size - define o tamanho do texto 
+    Valores:
+        Unidades de medidas
+
+    Uso responsivo: Definindo o <body> como 100% os outros se adaptam a partir dele
+*/
+
+
+
+/* O ponto-final serve para fazer referência a uma classe, e logo após ele deve ser colocado o nome da class */
+.tracos {
+    text-decoration-line: line-through overline underline;
+    /* text-decoration-line - decora o texto colocando um traço
+        Valores:
+            none - não possui traço
+            line-through - traço no meio
+            overline - traço em cima
+            underline - traço em baixo
+    */
+}
+.tracomodificado {
+    text-decoration-color: rgba(0, 255, 98, 0.9);
+    /* text-decoration-color - escolhe uma cor para o traço do texto 
+        Valores:
+            Padrões de cor
+    */
+    text-decoration-style: dashed;
+    /* text-decoration-style - escolhe o estilo do traço 
+        Valores:
+            solid - traço simples
+            double - dois traços simples
+            dashed - tracejados
+            dotted - pontilhados
+            wavy - tremulo
+            none - sem estilo
+    */
+    text-decoration: line-through overline underline rgba(0, 255, 98, 0.9) dashed;
+    /* text-decoration - compacta os serviços do text-decoration-line, text-decoration-color e do text-decoration-style em apenas uma propriedade, sendo respetivamente a ordem de procedência dos citados. */
+}
+
+
+
+#sub {
+    vertical-align: -100%;
+}
+#sup {
+    vertical-align: 100%;
+}
+/* vertical-align - alinha verticalmente o elemento
+    Valores: 
+        Unidades de medidas
+
+    Cuidados: se o seu valor for negativo ele se joga para baixo mantendo a linha em que estava intacta, porém um próximo elemento abaixo será colocado mais para baixo, se o seu valor for positivo, ele se mantém fixo e o resto da informação é redirecinada para baixo. 
+
+    @@@@@ Caso não queira que o espaçamento mude e sim que o texto simplesmente vá para cima ou para baixo, use o position:relative; junto de um valor para top: %;
+*/
+
+
+
+#textosombreado {
+    text-shadow: 2px 2px 5px yellow;
+    /* text-shadow - adiciona uma sombra no texto
+        Como usar: 
+            O primeiro valor é a direção right, o segundo valor é a direção bottom, o terceiro valor é o espalhamento da sombra e o quarto valor é a sua cor
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* O uso da vírgula para fazer refência a um elemento html, no css, serve para acrescentar a mesma configuração a outros elementos */
+h1 {
+    text-align: center;
+}
+h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+.justificado {
+    text-align: justify;
+    /* Text-align alinha o texto. 
+        Valores:
+            left - á esquerda
+            center - no centro
+            right - á direita
+            justify - justificado, fica com cada linha do começo ao fim encaixada no seu conteinêr, basicamente ele ajusta os espaços entre cada letra para os textos terminarem na borda do preenchimento
+            
+        @@@@@ Variáveis:
+            text-align-last
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.familia_serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+.familia_sans_serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.familia_monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* font-family - seleciona qual a formatação que os caractéres devem ter, deve conter vários nomes de fontes como um sistema de "fallback", se o navegador não suportar a primeira fonte, ele tenta a próxima fonte e assim por diante. 
+Cuidado: Coloque um font-size para caso de nenhuma das font-family funcionarem. */
+
+
+
+.extenso {
+    font-variant: small-caps;
+    /* font-variant - específica se um texto deve ou não ser exibido em uma fonte com letras maiúsculas. Em uma fonte com letras maiúsculas, todas as letras minúsculas são convertidas em letras maiúsculas. No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor que as letras maiúsculas originais no texto (Em outras palavras define se deve ser escrito por extenso). 
+        Valores: 
+            normal - o normal seria ver o as letras maiúsculas e minúsculas com uma diferença de representação
+            small-caps - Todas as letras ficam como se fossem maiúsculas, porém a sepração de qual é maiúscula ou minúscula é dada pelo seu tamanho
+    */
+}
+
+
+
+.nenhum {
+    text-transform: none;
+}
+.maiusculo {
+    text-transform: uppercase;
+}
+.minusculo {
+    text-transform: lowercase;
+}
+.capitalizado {
+    text-transform: capitalize;
+}
+/* Text-transform seleciona o uso de caractéres em maiúsculas ou minúsculas
+Valores:
+    none - nenhuma edição, o que escrever será lido
+    uppercase - tudo maiúsculo
+    lowercase - tudo minúsculo
+    capitalize - cada palavra terá a sua primeira letra em maiúsculo e as demais continuarão normalmente
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.espaco_paragrafo {
+    text-indent: 5%;
+    /* text-indent - define o espaçamento antes de um texto */
+}
+
+
+
+.espaco_linha {
+    line-height: 60%;
+    /* line-height - altura de linha, é usado para especificar o espaço entre as linhas */
+}
+
+
+
+.espaco_palavra {
+    word-spacing: 5vw;
+    /* word-spacing - define o tamanho do espaçamento entres as palavras */
+}
+
+
+
+.espaco_letra {
+    letter-spacing: 1vw;
+    /* letter-spacing - define o tamanho do espaço entre os caractéres */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bidi {
+    text-align: left;
+    direction: rtl;
+    /* @@@@@@@@@@@@@@@@@ direction - define a direção que o texto deve ser lido, ele age parecido com o text-align 
+        Valores:
+            ltr - esquerda para a direita
+            rtl - direita para a esquerda
+    */
+    unicode-bidi: bidi-override;
+    /* @@@@@@@@@@@@@@@@@@ unicode-bidi - 
+        Valores:
+            bidi-override, isolate-override - a cada palavra ele troca a ordem de qual letra veem primeiro
+
+            normal, embed, isolate - padrão que conhecemos porém suas pontuações finais vão para o início da linha
+    */
+}
+/* Ao definir o direction para rtl é bom especificar o unicode-bidi */
+/* O navegador geralmente determina em qual direção o texto embutido fluirá, dependendo do lang atributo dos elementos, da localidade do navegador e font-family de elementos específicos. unicode-bidi é útil quando um elemento contém texto LTR e texto RTL: A unicode-bidi propriedade possui três valores amplamente suportados:
+
+a palavra-chave "normal", que não oferece níveis adicionais de texto bidirecional incorporado (o comportamento padrão do navegador). Um elemento com essa propriedade conterá apenas texto LTR ou RTL.
+a palavra-chave "embed", que permite texto bidirecional em um elemento (por exemplo, texto RTL que flui entre o texto LTR). Isso é determinado pela directionpropriedade e deve ser aplicado a um elemento embutido.
+a palavra-chave "bidi-override", que age da mesma forma que "incorporar" quando aplicada a elementos embutidos. Nos elementos no nível do bloco, ele substitui o algoritmo de texto bidirecional do navegador e flui o texto dentro de qualquer filho embutido estritamente de acordo com a directionpropriedade*/
+
+
+
+

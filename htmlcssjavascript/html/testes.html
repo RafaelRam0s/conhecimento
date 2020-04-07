@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="author" content="Rafael Ramos" />
+    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
+    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="refresh" content="600" />
+
+    <link rel="icon" href="../midia/favicons/icone_r.ico" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/style.css" hreflang="pt" />
+    <link rel="stylesheet" type="text/css" href="../css/testes.css" />
+    
+    <title>Testes</title>
+
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+
+    <p>Vamos aos testes então</p>
+
+    <h2>Fundos</h2>
+
+    <div class="fundoverde">
+        <div class="fundopreto">
+            <h3>Mudando a cor do fundo</h3>
+
+            <p>Ao colocar um fundo verifique se não existe outros elementos da mesma cor, pois caso isto aconteça terá uma impressão de que algo não está funcionando.</p>
+
+        </div>
+
+        <div class="fundopreto opacidade">
+            <h3>Opacidade</h3>
+
+            <p>Caso deseje fazer uma transparência do fundo, pode-se fazer deste jeito<br/><span class="opacidadetotal">Cuidado em seu uso pois os elementos contidos acabam por erdar a opacidade</span></p>
+
+        </div>
+
+        <div class="fundoimg">
+            <h3>Imagem de fundo</h3>
+            
+            <p>Diversas configurações devem ser reparadas quando colocamos uma imagem de fundo, para que não ajam problemas de visualização, tais como a repetição da imagem, quando ela acaba, e se o texto é capaz de aparecer sem problemas para leitura.</p>
+
+        </div>
+
+        <div>
+            <h3>Tipos de repetição</h3>
+
+            <p class="visualizacao fundoimg repetirximg">Repetição de imagem somente lateral</p>
+            <p class="visualizacao fundoimg repetiryimg">Repetição de imagem somente vertical</p>
+
+            <p class="visualizacao fundoimg">Repetição de ambos os sentidos que é o que vem por padrão</p>
+
+            <p class="visualizacao fundoimg naorepetir">Sem repetição</p>
+
+            <p class="visualizacao fundoimg repetirespacado">Repetição espaçada tenta fazer a primeira e a última imagem aparecerem sem serem recortadas e depois cria espaços automáticos para distribuir a frequência de aparecimento</p>
+            <p class="visualizacao fundoimg repetiresticada">Repetição esticada tenta fazer a primeira e a última imagem aparecerem sem serem recortadas e depois adaptam seu espaço para encaixar as outras.</p>
+
+            <!-- A ordem de qual classe será ativada assim que sem tem várias é dado pela ordem que apareceu primeiro no css -->
+
+        </div>
+    </div>
+    
+
+</body>
+</html>

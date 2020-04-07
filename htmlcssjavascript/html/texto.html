@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="author" content="Rafael Ramos" />
+    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
+    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="refresh" content="360" />
+
+    <link rel="icon" href="../midia/favicons/icone_r.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" hreflang="pt" />
+    <link rel="stylesheet" type="text/css" href="../css/texto.css" />
+    
+    <title>Texto</title>
+
+</head>
+<body>
+    
+    <hgroup>
+    <!-- <hgroup> - serve para indicar um conjunto de títulos. 
+        Código:
+            hgroup {
+                display: block;
+            }
+    -->
+        <h1>Título mais importante</h1>
+        <h2>Título</h2>
+        <h3>Subtítulo</h3>
+        <h4>Tópico</h4>
+        <h5>Subtópico</h5>
+        <h6>Título de menor importância</h6>
+        <!-- Os títulos são colocados dentro dos "h"s variando de h1 até h6, sendo h1 usado para o título mais importante, h2 para um título de menor importância, h3 para um título de menor importância que o h2, e assim vai indo até o h6 que pela lógica é o título de menor importância. -->
+
+        <!-- <h1>
+            Código:
+                h1 {
+                    display: block;
+                    font-size: 2em;
+                    margin-top: 0.67em;
+                    margin-bottom: 0.67em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+            <h2>
+            Código:
+                h2 {
+                    display: block;
+                    font-size: 1.5em;
+                    margin-top: 0.83em;
+                    margin-bottom: 0.83em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+            <h3>
+            Código:
+                h3 {
+                    display: block;
+                    font-size: 1.17em;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+            <h4>
+            Código:
+                h4 {
+                    display: block;
+                    font-size: 1em;
+                    margin-top: 1.33em;
+                    margin-bottom: 1.33em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+            <h5>
+            Código:
+                h5 {
+                    display: block;
+                    font-size: .83em;
+                    margin-top: 1.67em;
+                    margin-bottom: 1.67em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+            <h6>
+            Código:
+                h6 {
+                    display: block;
+                    font-size: .67em;
+                    margin-top: 2.33em;
+                    margin-bottom: 2.33em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    font-weight: bold;
+                }
+        -->
+    </hgroup>
+
+    <p>O que estou escrevendo agora se encontra em um parágrafo.</p>
+    <!-- <p> - define um parágrafo
+        Código:
+            p {
+                display: block;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 0;
+                margin-right: 0;
+            }
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>Texto</h1>
+
+
+    <div>
+    <!-- <div> - define uma divisão ou seção em um documento html, utilizado para ser editado, na falta de uma tag para saber como classificar o bloco de informações use este elemento
+        Código:
+            div {
+                display: block;
+            }
+    -->
+        <h2>Formatações de texto:</h2>
+
+        <p>Existem diversas marcações em html como os textos em; <b>negrito, mas só por estilo</b>, <strong>negrito com importância</strong>, <i>itálico só por estilo</i>, <em>itálico com importância</em>, <mark>grifado</mark>, <small>pequeno</small>, <del cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_removido.com" datetime="05/03/2020">deletado</del>, <ins>inserido</ins>, <sub>subscrito</sub> (como o 2 de H<sub>2</sub>O) e <sup>superescrito</sup> (como o 2 de x <sup>2</sup>).</p>
+            <!-- <b> - deixa o texto em negrito
+            Código:
+                b {
+                    font-weight: bold;
+                }
+            -->
+
+        <!-- <strong> - indica que é um texto importante
+            Código:
+                strong {
+                    font-weight: bold;
+                }
+        -->
+
+        <!-- <i> - deixa o texto em itálico
+            Código:
+                i {
+                    font-style: italic;
+                }
+        -->
+        
+        <!-- <em> - indica que o texto é enfatizado 
+            Código:
+                em {
+                    font-style: italic;
+                }
+        -->
+
+        <!-- <mark> - torna o texto grifado
+            Código:
+                mark {
+                    background-color: yellow;
+                color: black;
+                }
+        -->
+
+        <!-- <small> - torna o texto pequeno 
+            Código:
+                small {
+                    font-size: smaller;
+                }
+        -->
+
+        <!-- <del> - torna o texto como deletado, serve para avisar aos usuários que aquele texto foi removido e não simplesmente para colocar um traço no meio.
+            Código:
+                del {
+                    text-decoration: line-through;
+                }
+        -->
+        <!-- cite="" - cita uma url a qual deverá conter o motivo para tal texto ser removido, por exemplo um site de dicionário. -->
+        <!-- datetime="" - coloque a data de modificação. -->
+
+        <!-- <ins> - torna o texto inserido, com um underline 
+            Código:
+                ins {
+                    text-decoration: underline;
+                }
+        -->
+
+        <!-- <sub> - torna o texto subscrito 
+            Código:
+                sub {
+                    vertical-align: sub;
+                    font-size: smaller;
+                }
+        -->
+
+        <!-- <sup> - torna o texto superescrito 
+            Código:
+                sup {
+                    vertical-align: super;
+                    font-size: smaller;
+                }
+        -->
+
+        <p>Agora as mesmas de formatações em css ficam assim; <span id="b">temos o texto em negrito, podendo até mesmo controlar a sua intensidade</span>, <span id="i">temos o texto em itálico,</span> <span id="em">o que também é possível controlar o seu nível de inclinação</span>, <span id="small">temos o texto pequeno, mas também posso fazê-lo </span><span id="big">grande</span>, <span class="tracos">temos os mais diversos traços e combinações deles</span>, <span class="tracos tracomodificado">modificando também o formato do traço</span> e consigo posicionar onde no texto eu quero que a frase fique, <span id="sub">se mais para baixo</span> ou <span id="sup">mais para cima</span>.</p>
+        <!-- <span> - marca o elemento para que seja editado. -->
+
+        <!-- id="" - atribui um nome único, para quando o css ou o javascript precisarem editar apenas um elemento em específico, chamarem ele através do seu id -->
+
+        <!-- class="" - atribui um nome que pode ser usado  -->
+
+        <p id="textosombreado">Caso queira dar um estilo a mais é possível adicionar um sombreamento no texto.</p>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Levando o que escreve como literal:</h2>
+
+        <p>Como regra o html acaba por desconsiderar espaços dados desnecessariamente e quebras de linhas dados pelo enter, para que ele passe a considerá-los é utilizada a tagname - pre -, como o exemplo a seguir:</p>
+        <pre>Ele considera até mesmo os tabs dados anteriormente a ele,
+por conta disto não curto muito a sua       utilização     ,
+            já que esteticamente para um programador,
+                    no código fica feio,    por conta de ocupar uma parte do fechamento da tag.
+        </pre>
+        <!-- <pre> - é uma pré-formatação, mostra na página o que foi escrito
+            Código:
+                pre {
+                    display: block;
+                    font-family: monospace;
+                    white-space: pre;
+                    margin: 1em 0;
+                }
+        -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Alinhamento e quebra de linha:</h2>
+
+        <p>Vou fazer três textos com as mesmas coisas escritas para ser entendido como funciona um texto justificado e uma quebra de linha, o 1° vai ser um parágrafo como qualquer outro, o 2° vai possuir o texto justificado e o 3° possuirá uma quebra de linha. Caso não veja as alterações do 2° e do 3° tente redimencionar o seu tamanho de tela, caso esteja em um dispositivo que o redimencionamento de tela não seje possível tente modificar com o - width -.</p>
+
+        <p class="justificado">Vou fazer três textos com as mesmas coisas escritas para ser entendido como funciona um texto justificado e uma quebra de linha, o 1° vai ser um parágrafo como qualquer outro, o 2° vai possuir o texto justificado e o 3° possuirá uma quebra de linha. Caso não veja as alterações do 2° e do 3° tente redimencionar o seu tamanho de tela, caso esteja em um dispositivo que o redimencionamento de tela não seje possível tente modificar com o - width -.</p>
+
+        <p>Vou fazer três textos com as mesmas coisas escritas para ser entendido como funciona um texto justificado e uma quebra de linha, o 1° vai ser um parágrafo como qualquer outro, o 2° vai possuir o texto justificado e o 3° possuirá uma quebra de linha.<br /> Caso não veja as alterações do 2° e do 3° tente redimencionar o seu tamanho de tela, caso esteja em um dispositivo que o redimencionamento de tela não seje possível tente modificar com o - width -.</p>
+        <!-- <br> - a quebra de linha (breaking-row) simplesmente joga a próxima informação para baixo -->
+
+        Agora para se fazer uma quebra de seção temos a tagname - hr - para fazer isto assim como está sendo utilizada aqui em baixo.
+        <hr />
+        <!-- <hr> - cria uma linha com sentido de fazer uma quebra temática
+            Código:
+                hr {
+                    display: block;
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-style: inset;
+                    border-width: 1px;
+                }
+        -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        
+        <h2>Famílias de fontes de texto:</h2>
+
+        <p class="familia_serif">Aqui estou testando uma fonte serif</p>
+        <p class="familia_sans_serif">Aqui estou testando uma fonte sans-serif</p>
+        <p class="familia_monospace">Aqui estou testando uma fonte monospace</p>
+
+        <p class="extenso">Este parágrafo não é uma font-family nem text-transform, mas seu efeito fica numa categoria entre o font-family e o text-transform, então decidi colocar-lo aqui.</p>
+
+        <h2>Transformação de texto:</h2>
+
+        <p class="nenhum">Estou fazendo um texto modelo para poder comparar os DIFERENTES valores do text-transform.</p>
+        <p class="maiusculo">Estou fazendo um texto modelo para poder comparar os DIFERENTES valores do text-transform.</p>
+        <p class="minusculo">Estou fazendo um texto modelo para poder comparar os DIFERENTES valores do text-transform.</p>
+        <p class="capitalizado">Estou fazendo um texto modelo para poder comparar os DIFERENTES valores do text-transform.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Uso de aspas:</h2>
+
+        <p>Para citações, vulgo o aspas usamos o <q cite="https://www.w3schools.com/tags/tag_q.asp">quotation</q> e <q>Assim que tivermos <q>quotation dentro de outro <q>quotation</q> faremos a aspas simples</q> e se tivesse uma outra quotation ali dentro?</q> Só seria colocado aspas simples para os outros valores dali de dentro com o - q -.</p>
+        <!-- <q> - cria aspas e ao colocar-se um <q> dentro de outro <q> independente de quantos coloque todos ficaram com aspas simples e o único que ficará com aspas duplas é o primeiro <q> 
+            Código:
+                q {
+                    display: inline;
+                }
+
+                q:before {
+                    content: open-quote;
+                }
+
+                q:after {
+                    content: close-quote;
+                }
+        -->
+        <!-- cite="" - serve para citar a url de onde foi tirado o determinado texto. -->
+
+        <h2>Uso de um bloco referencial de outra fonte:</h2>
+
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            <q>Por quase 60 anos, o WWF protege o futuro da natureza. A organização líder em conservação do mundo, o WWF trabalha em 100 países e é apoiada por mais de um milhão de membros nos Estados Unidos e perto de cinco milhões em todo o mundo.</q>
+        </blockquote>
+        <!-- <blockquote> - serve para inserir textos de outras fontes, o exemplo mais comum de se ver isso é em conteúdos de filosofia, que colocam um texto grande sobre o que o filósofo pensou
+            Código:
+                blockquote {
+                    display: block;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                }
+        -->
+
+        <!-- cite="" - serve para citar a url de onde foi tirado o determinado texto. -->
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Espaçamentos textuais:</h2>
+
+        <p class="espaco_paragrafo">Quando se tem um páragrafo é comum se utilizar de um espaço vazio antes de começar a se escrever, e com o uso do - text-indent - é possível configurar a distância que terá inicialmente antes se começar a enchergar um texto, e não pense em dar vários espaços manualmente visto que isso é uma má prática e nem um pouco prático.</p>
+
+        <p class="espaco_linha">Cada parágrafo possui uma distância entre uma linha e outra, este parágrafo contém um espaçamento diferente do que os outros parágrafos, caso não esteje sendo possível visualizar este fenômeno tente alterar o tamanho da tela ou deste parágrafo.</p>
+
+        <p>Farei três parágrafos para comparar, o primeiro é um parágrafo normal, o 2° modifica o espaço entre as palavras e o 3° muda a distância entre os caractéres.</p>
+
+        <p class="espaco_palavra">Farei três parágrafos para comparar, o primeiro é um parágrafo normal, o 2° modifica o espaço entre as palavras e o 3° muda a distância entre os caractéres.</p>
+
+        <p class="espaco_letra">Farei três parágrafos para comparar, o primeiro é um parágrafo normal, o 2° modifica o espaço entre as palavras e o 3° muda a distância entre os caractéres.</p>
+
+        
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Abreviações e citações:</h2>
+
+        <p>Ao mercionarmos palavras abreviadamente, é recomendado que a marquemos com a tagname - abbr - e adicionando o atributo - title - podemos explicar o seu significado por extenso, para de fato ver o que está escrito no atributo é preciso ficar com o mouse sobre o elemento, teste ficar com o mouse sobre estas 3 palavras e veja o que acontece: <abbr title="Computador">PC</abbr>, <abbr title="Televisão">TV</abbr>, <abbr title="Hyper Text Markup Language">html</abbr>... </p>
+        <!-- <abbr> - indica uma abreviação 
+            Código:
+                abbr {
+                    display: inline;
+                }
+                abbr[title] {
+                    text-decoration: underline dotted;
+                }
+        -->
+            
+            <!-- title="" - título como elemento, geralmente são mostradas como um texto de dica de ferramenta quando o mouse se move sobre o elemento. -->
+
+        <p>E ao mencionarmos um título de uma obra tipo a <cite >Monalisa</cite> ou a música <cite>Highway to Hell</cite>, é correto marca-los com a tagname - cite -.</p>
+        <!-- <cite> - citação é usado para citar um título de uma obra (por exemplo, um livro, uma música, um filme, um programa de TV, uma pintura, uma escultura etc.)
+            Código:
+                cite {
+                    font-style: italic;
+                } 
+        -->
+
+        <p>E caso estejamos falando de algum código de computador utilizamos a tagname <code>- code -</code>.</p>
+        <!-- <code> - indica um pedaço de código de computador. 
+            Código:                               
+            code {
+                font-family: monospace;
+            }
+        -->
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Direção do texto:</h2>
+
+        <p>Repetirei este parágrafo 3 vezes, a primeira serve de modelo, a segunda serve para ver a tagname bdo invertendo a ordem de aparecimento das letras junto do atributo - dir - e a terceira serve para ver o mesmo efeito só que com a propriedade unicode-bidi.</p>
+
+        <p><bdo dir="rtl">Repetirei este parágrafo 3 vezes, a primeira serve de modelo, a segunda serve para ver a tagname bdo invertendo a ordem de aparecimento das letras junto do atributo - dir - e a terceira serve para ver o mesmo efeito só que com a propriedade unicode-bidi.</bdo></p>
+        <!-- <bdo> - Indica uma mudança de sentido de leitura
+            Código:
+                bdo {
+                    unicode-bidi: bidi-override;
+                }
+        -->
+
+        <!-- dir="" - modifica o sentido de leitura age como um text-align @@@@@@@@@@@@@@@@ -->
+
+        <p id="bidi">Repetirei este parágrafo 3 vezes, a primeira serve de modelo, a segunda serve para ver a tagname bdo invertendo a ordem de aparecimento das letras junto do atributo - dir - e a terceira serve para ver o mesmo efeito só que com a propriedade unicode-bidi.</p>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Direitos à:</h2>
+
+        <address>
+            Escrito por Rafael Ramos.<br>
+            Visite-me em: https://github.com/SrRam0s/<br>
+            Rua Marques de São Vincente, 260<br>
+            SP - São Paulo
+        </address>
+        <!-- <address> - define as informações de contato (autor / proprietário) de um documento ou artigo.
+            Código:
+                address {
+                    display: block;
+                    font-style: italic;
+                }
+        -->
+        
+    </div>
+
+</body>
+</html>

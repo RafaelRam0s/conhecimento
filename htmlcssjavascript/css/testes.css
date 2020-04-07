@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.visualizacao {
+    min-width: 300px;
+    min-height: 300px;
+}
+
+/* Glossário */
+/*
+
+background-color
+opacity
+background-image
+background-repeat
+
+*/
+
+.fundoverde {
+    background-color: lawngreen;
+}
+.fundopreto {
+    background-color: black;
+}
+/* background-color - muda a cor do fundo
+    Valores:
+        Padrões de cor
+*/
+
+
+
+.opacidade {
+    opacity: 0.5;
+    /* opacity - muda a transparência
+        Valores:
+            variam de 0 a 1 (Porcentagem minimizada)
+    */
+}
+
+
+.fundoimg {
+    color: black;
+    font-weight: 900;
+    text-shadow: -2px 2px 0px yellow;
+    background-image: url("../midia/imagens/duzentos.png");
+    /* back-ground-image - define uma imagem de fundo
+        Valores:
+            url()
+    */
+}
+
+
+
+
+.fundoimg {
+    background-repeat: repeat;
+}
+.repetirximg {
+    background-repeat: repeat-x;
+}
+.repetiryimg {
+    background-repeat: repeat-y;
+}
+.naorepetir {
+    background-repeat: no-repeat;
+}
+.repetirespacado {
+    background-repeat: space;
+}
+.repetiresticada {
+    background-repeat: round;
+}
+/* background-repeat - configura a repetição da imagem de fundo
+    Valores:
+        repeat - repetição é usado para quando acabar o tamanho da imagem, verificar se está cobrindo todo o elemento caso não esteja é colocada outra imagem e assim por diante tanto no sentido horizontal quanto vertical
+        repeat-x - repetição apenas na horizontal
+        repeat-y - repetição apenas na vertical
+        space - A imagem de fundo é repetida o máximo possível sem cortar. A primeira e a última imagem são fixadas em ambos os lados do elemento e o espaço em branco é distribuído igualmente entre as imagens.
+        round - A imagem de fundo é repetida e esmagada ou esticada para preencher o espaço (sem lacunas).
+*/
+
+
+
+
+
+
+
+
+
+
