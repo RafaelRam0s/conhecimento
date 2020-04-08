@@ -13,7 +13,7 @@
         } 
 -->
 
-<!-- lang="" - mostra para os sitemas de pesquisa qual a localidade do idioma da sua página, então para alguns sistemas como o tradutor automático do Chrome, podem ver essa informação e tomar uma ação mais apropiada. -->
+<!-- lang="" - mostra para os sitemas de pesquisa qual a localidade do idioma da sua página, então para alguns sistemas com tradutor automático de linguagem, podem ver essa informação e tomar uma ação mais apropiada. -->
 
 <!-- dir="" - mostra em que direção deve ser apresentada as informações, @@@@@@@@@@@@@@@@ aparentemente ele age como um text-align, porém é mais falho pois ao inserir os textos com um dir="rtl" a pontuação acaba indo parar em outra direção
     Valores: 
@@ -91,20 +91,23 @@
     <!-- name="" - específíca um nome de um elemento, para facilitar a interpetração de um sistema de busca.
 
         @@@@@ Valores com <meta>:
-            application-name - indica o nome do aplicativo da Web em execução na página, se a página não for um aplicativo da Web, este atributo não deverá ser usado.
-            author - indica que o metadado falará do autor
+            author - indica que o metadado falará quem é o autor
+            
             description - indica um resumo rápido sobre o que a sua página falará
-            generator - indica um dos pacotes de software usados ​​para gerar o documento (não usado nas páginas de autoria manual)
+
             keywords - indica palavras chaves
+
             @@@@@@@@@@@@@@@@@ viewport - indica qual o tamanho de tela para determinados dispositivos, é um valor que gera muitas dificuldades de entedimento, por isso deve ser revisada
                 Infelizmente, muitos documentos foram projetados historicamente em viewports maiores e exibem uma variedade de erros quando vistos em viewports menores. Isso inclui quebra de layout não intencional, conteúdo cortado, limites de rolagem desajeitados e erros de script. Para evitar esses problemas, os navegadores móveis geralmente usam uma inicial fixa que contém a largura do bloco que imita o tamanho da janela comum do navegador da área de trabalho (geralmente 980-1024px). O layout resultante é então reduzido para caber no espaço disponível na tela.
             
             Existem diversos outros valores dos quais não foram oficialmente reconhecidos, mas muitos foram propostos e na url a seguir você pode ver as diversas outras possibilidades de valores do - name -: https://wiki.whatwg.org/wiki/MetaExtensions
+
             Atualmente as mais utilizadas pelos programadores são:
             creator - Este valor define o nome do criador do documento HTML. Pode ser utilizado o nome da instituição
+
             publisher - Este valor define o nome da pessoa que editou
-            robots - Uma das principais funções das meta tags é transmitir instruções de indexação aos rastreadores de mecanismos de busca. Essa é função das meta tags robots. Através delas é possível determinar se uma página pode ser adicionada a um índice do mecanismo de busca e se está disponível para uma pesquisa na web. Eles também podem específicar se os links das páginas de saída devem ser seguidos ou ignorados pelos rastreadores.   
-                A seguir mostrarei os tipos.
+
+            robots - Uma das principais funções das meta tags é transmitir instruções de indexação aos rastreadores de mecanismos de busca. Essa é função das meta tags robots. Através delas é possível determinar se uma página pode ser adicionada a um índice do mecanismo de busca e se está disponível para uma pesquisa na web. Eles também podem específicar se os links das páginas de saída devem ser seguidos ou ignorados pelos rastreadores, os valores que podem ser usados para configurar essa name é:
                 Observação: os valores a seguir vão no atributo “content”.
                     index - Este tipo permite que os robôs indexem uma página.
                     noindex - Este tipo impede que os robôs indexem uma página.
@@ -146,17 +149,13 @@
     
     <!-- content="" - É um atributo que dá um valor associado com o atributo - http-equiv - ou com o atributo - name -
         Valores com - name - :
-            application-name - fala qual o nome do aplicativo da Web em execução
-
             author - fala quem é o autor
 
-            description - descreve um resumo rápido e curto sobre o que a sua página falará, apesar de não ser um fator para classificação nos motores de buscas é importante que use um texto atraente com uma palavra-chave porque buscadores como o Google e Bing podem mostrar este texto nos resultados de busca. Um texto persuasivo pode atrair cliques
+            description - descreve um resumo rápido e curto sobre o que a sua página falará, apesar de não ser um fator para classificação nos motores de buscas é importante que use um texto atraente com uma palavra-chave porque buscadores como o Google e Bing podem mostrar esse texto nos resultados de busca. Um texto persuasivo pode atrair cliques
 
-            generator - serve para identificar o software usado para gerar a página
+            keywords - define palavras chaves separadas por vírgulas associadas ao conteúdo da página. Um dia já foi usada como estratégia de SEO, porém hoje não contribui mas com este tipo de otimização e é ignorada pelos principais mecanismos de busca, use-a para classificar como sua página deve ser catalogada
 
-            keywords - define palavras chaves separadas por vírgulas associadas ao conteúdo da página. Um dia já foi usada como estratégia de SEO, porém hoje não contribui mas com este tipo de otimização e é ignorada pelos principais mecanismos de busca, use-a para classificar como sua página deva ser catalogada
-
-            viewport - qual o tamanho que deve ser aberto a página em diferentes telas e dispositivos, mais usados são width=device-width(fala que a largura deve ser referente a largura do dispositivo) e initial-scale=1.0 (fala que a escala de visualização deve ser 1.0, que deve ser 100%)
+            viewport - qual o tamanho que deve ser aberto a página em diferentes telas e dispositivos, os mais usados são width=device-width (fala que a largura deve ser referente a largura do dispositivo) e initial-scale=1.0 (fala que a escala de visualização deve ser 1.0 (100%)) 
 
         Valores com - http-equiv - :
             content-type - 
@@ -183,9 +182,9 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css" hreflang="pt" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" hreflang="pt-br" />
     <link rel="icon" href="../midia/favicons/icone_r.ico" />
-    <!-- <link> - define um link entre um documento (neste exemplo este site) e um recurso externo (neste exemplo o documento css). 
+    <!-- <link> - define um link (conexão) entre um documento (nesse exemplo este site) e um recurso externo (nesse exemplo o documento css). 
         Código:
             link {
                 display: none;
@@ -193,10 +192,10 @@
         @@@@@ Atributos:
             crossorigin
             href - indica a url a ser usada
-            hreflang - indica o idioma do href
+            hreflang - indica o idioma que está o documento externo
             media
             referrerpolicy
-            rel
+            rel - indica a relação como deve ser tratado o documento externo
             sizes
             title
             type - específica a mídia do documento
@@ -204,11 +203,12 @@
 
     <!-- type="" - indica o tipo de arquivo 
         @@@@@ Valores:
+            text/css - indica que o arquivo possui documentos do tipo texto tratado como css
             
     -->
 
     <!-- rel="" - específica o relacionamento entre o documento atual e o documento / recurso vinculado.
-        Elemento necessário para ativar o <link>
+        Obs: Elemento necessário para ativar o <link>
         @@@@@ Valores:
             alternate - 
             author - 
@@ -258,7 +258,7 @@
 
 
     <script>
-    // <script> - é usado para se ativar um modelo javascript dentro da sua página
+    /* <script> - é usado para se ativar um modelo javascript dentro da sua página */
     </script>
 
 
