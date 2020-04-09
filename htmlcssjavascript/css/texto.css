@@ -74,7 +74,7 @@ body {
 /* O símbolo de jogo-da-velha serve para fazer referência a um id, e logo após ele deve ser colocado o nome do id */
 #b {
     font-weight: 900;
-    /* font-weight - define o nível de negrito 
+    /* font-weight - define o nível de negrito, a grossura da fonte
         Valores:
             Números de 0-900 - definem o nível de aparência
     */
@@ -98,7 +98,7 @@ body {
 
 
 body {
-    font-size: 100%;
+    font-size: 16px;
 }
 h1 {
     font-size: 400%;
@@ -116,7 +116,7 @@ h5 {
     font-size: 200%;
 }
 h6 {
-    font-size: 150%;
+    font-size: 175%;
 }
 p {
     font-size: 125%;
