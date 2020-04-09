@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-.visualizacao {
-    min-width: 300px;
-    min-height: 300px;
-}
+
 
 /* Glossário */
 /*
@@ -30,21 +27,28 @@ background-repeat
 
 .opacidade {
     opacity: 0.5;
-    /* opacity - muda a transparência
+    /* @@@@@@@@@@@@ opacity - muda a transparência, seu valor acaba por interferir na opacidade dos elementos filhos só permitindo ficar mais fraco e não poder retornar o que era antes
         Valores:
             variam de 0 a 1 (Porcentagem minimizada)
     */
 }
+.opacidademaior {
+    opacity: 1;
+}
+.opacidademenor {
+    opacity: 0.25;
+}
+
 
 
 .fundoimg {
     color: black;
     font-weight: 900;
     text-shadow: -2px 2px 0px yellow;
-    background-image: url("../midia/imagens/duzentos.png");
+    background-image: url();
     /* back-ground-image - define uma imagem de fundo
         Valores:
-            url()
+            url() - entre aspas duplas coloque o caminho da imagem ou sua url
     */
 }
 

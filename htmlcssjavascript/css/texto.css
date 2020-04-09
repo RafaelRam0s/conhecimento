@@ -101,16 +101,16 @@ body {
     font-size: 16px;
 }
 h1 {
-    font-size: 400%;
-}
-h2 {
     font-size: 350%;
 }
-h3 {
+h2 {
     font-size: 300%;
 }
-h4 {
+h3 {
     font-size: 250%;
+}
+h4 {
+    font-size: 225%;
 }
 h5 {
     font-size: 200%;
