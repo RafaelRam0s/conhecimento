@@ -35,6 +35,14 @@
 
         hsl - uma cor pode ser especificada usando matiz, saturação e luminosidade (HSL) no formato hsl ( matiz , saturação , leveza ). Matiz é um grau na roda de cores de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul. A saturação é um valor percentual, 0% significa um tom de cinza e 100% é a cor completa. A luminosidade também é uma porcentagem, 0% é preto, 50% não é claro nem escuro, 100% é branco
 
+    Apontamento de posição
+        center - centro
+        top - em cima
+        bottom - em baixo
+        left - esquerda
+        right - direita
+
+    
 */
 
 

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 .visualizacao {
-    min-width: 420px; 
     min-height: 420px;
 }
 
@@ -9,7 +8,9 @@
 /*
 
 background-color
+
 opacity
+
 background-image
 background-repeat
 
@@ -49,12 +50,14 @@ background-repeat
     font-weight: 900;
     text-shadow: -2px 2px 0px yellow;
     background-image: url("../midia/imagens/duzentosporduzentos.png");
-    /* back-ground-image - define uma imagem de fundo
+}
+.fundoimg div {
+    background-image: url("https://lh3.googleusercontent.com/proxy/fYskUo6XVFjKmLAFeqaXiSUvppGy8ghuYJOvmrgmlkySde93kpctZLJap8IX5B3lZIndfVQgzsPb119k14L7W3Kw15KWcdPZdR--x-EHPo_KI8h4xsg5rKEDci48-IlUpWjLc3CeK3-q9zhclnUa20VmL7w");
+}
+/* back-ground-image - define uma imagem de fundo
         Valores:
             url() - entre aspas duplas coloque o caminho da imagem ou sua url
-    */
-}
-
+*/
 
 
 
@@ -84,14 +87,62 @@ background-repeat
 
         repeat-y - repetição apenas na vertical
 
-        space - espaço, ele pega a imagem e coloca lá no ponto inicial dela, depois disso é verificado quantas imagens após ela conseguem aparecer inteiras, aí se tiver alguma imagem que ao se repetir ficasce cortada, ela deixa um espaço vazio, então seria analisado qual foi essa distância que sobrou e repartiria em tamanhos iguais entre cada imagem que teve a mais do que a inicial.
+        no-repeat - impede repetições de imagens
+
+        space - espaço, ele pega a imagem e coloca lá no ponto inicial do elemento, depois disso é verificado quantas imagens após ela conseguem aparecer inteiras, aí se tiver alguma imagem que ao se repetir ficasse cortada, ela deixa um espaço vazio, então seria analisado qual foi essa distância que sobrou e repartiria em tamanhos iguais entre cada imagem que teve a mais do que a inicial.
             Exemplo: se escolhescemos uma imagem de 200px de largura para ficar em um elemento de 1100px de largura, seria colocada a primeira imagem, então 1100 - 200 = 900 esse resultado foi o espaço que sobrou, fazendo o cálculo de quantas outras inteiras apareceriam faríamos assim; 900 / 200 = 4 inteiros com resto 100 esse espaço que sobrou é dividido por cada imagem a mais e inserido a sua esquerda 100 / 4 = 25 colocando-se assim um espaço a esquerda de 25px em cada imagem que apareceu a mais.
 
-        round - segue o procedimento bem parecido com o do space, mas ao invés de inserir espaços ele estica as imagens
+        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento a deformando e criando repetições de acordo com o necessário, na prática o que faz; verifica se o tamanho do elemento é menor que o tamanho da imagem mais a sua metade, se for ele faz o tamanho da imagem ser igual ao do elemento, agora se for maior ele se pergunta se o valor entre o resto da divisão do tamanho do elemento e o tamanho da imagem divididos pelo tamanho da imagem é menor que 0.5 se for @@@@@ preguiça de escrever tudo o exemplo abaixo está como se fosse a lógica na linguagem python:
+
+            numintimg = imgelement // img
+
+            numrestimg = ( imgelement % img ) / img
+            
+            if ( imgelement < img + (img/2) )
+                {
+                    img = imgelement
+                    coloque a imagem no elemento
+                }
+
+            else ( imgelement >= img + (img/2) )
+                {
+                    if ( numrestimg < 0.5 )
+                    {
+                        restelement = (imgelement - numintimg * img) / numintimg
+
+                        img += restelement
+
+                        coloque numintimg imagens no elemento
+                    }
+
+                    else (numrestimg >= 0.5 )
+                    {
+                        restelement = (imgelement - numintimg * img) / ( numintimg + 1 )
+
+                        img -= restelement
+                        
+                        coloque numintimg + 1 imagens no elemento
+                    }
+                }
 */
 
 
 
+#posicionamento {
+    color: black;
+    font-weight: 900;
+    text-shadow: -2px 2px 0px yellow;
+    height: 900px;
+    background-image: url("../midia/imagens/duzentosporduzentos.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    /* background-position - Coloca a imagem em uma posição dentro de seu elemento
+        Valores:
+            Unidades de medidas
+            Apontamento de posição, podendo colocar até dois locais como center left
+            
+    */
+}
 
 
 
