@@ -12,7 +12,7 @@
 
         vw e vh - medida que pega o tamanho da página como referência, basicamente pega o valor do tamanho da página e divide em frações, sendo o vw o tamanho da largura e o vh o tamanho da altura, exemplo: se tivermos uma página com 1000px de largura e 500px de altura, um vw é igual  1% dos 1000px, logo 1 vw irá corresponder a 10px, e 1 vh corresponderia a 5px
 
-        vmax e vmin - verifica o tamanho máximo ou mínimo de uma tela e a partir disso define em porcentagem fixa um tamanho
+        vmax e vmin - verifica o tamanho máximo ou mínimo de uma tela e a partir disso define uma porcentagem fixa de tamanho
 
 
 
@@ -89,7 +89,9 @@ div {
 
 
 
-
+div p {
+    margin-left: 20px;
+}
 
 
 
