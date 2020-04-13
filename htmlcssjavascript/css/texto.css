@@ -2,6 +2,35 @@
 
 
 /* Glossário */
+/* Pendentes:
+
+    font-size-adjust
+
+    text-align-last
+
+    line-height-step
+
+    font-variant-ligatures
+    font-variant-numeric
+    font-variant-caps
+    font-variant-east-asian
+    font-variant-alternates
+    font-variant-position
+    font-variation-settings
+
+    flex-direction
+    animation-direction
+
+    font-feature-settings
+    font-stretch
+    font-display
+    font-kerning
+    font-optical-sizing
+    font-language-override
+    font-synthesis
+
+*/
+
 /*
 
     color
@@ -16,6 +45,10 @@
     text-decoration
 
     vertical-align
+
+    text-shadow
+
+    white-space
 
     text-align
 
@@ -164,7 +197,12 @@ p {
             none - sem estilo
     */
     text-decoration: line-through overline underline rgba(0, 255, 98, 0.9) dashed;
-    /* text-decoration - compacta os serviços do text-decoration-line, text-decoration-color e do text-decoration-style em apenas uma propriedade, sendo respetivamente a ordem de procedência dos citados. */
+    /* text-decoration - 
+        Taquiografia:
+            text-decoration-line
+            text-decoration-color
+            text-decoration-style
+    */
 }
 
 
@@ -191,6 +229,40 @@ p {
     /* text-shadow - adiciona uma sombra no texto
         Como usar: 
             O primeiro valor é a direção right, o segundo valor é a direção bottom, o terceiro valor é o espalhamento da sombra e o quarto valor é a sua cor
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#preformatado {
+    white-space: pre-wrap;
+    /* white-space - espaço de formateção, configura como o texto deve agir
+        Valores:
+            normal - segue o padrão html, sem espaços a mais, sem tab, sem enter e com quebra de linha ao final do elemento
+
+            nowrap -  sem espaços a mais, sem tab, sem enter e sem quebra de linha ao final do elemento
+
+            pre - permite espaços a mais, tab, enter e sem quebra de linha ao final do elemento
+
+            pre-line - sem espaços a mais, sem tab, com enter e com quebra de linha ao final do elemento
+
+            pre-wrap - permite espaços a mais, tab, enter e com quebra de linha ao final do elemento
     */
 }
 
@@ -361,7 +433,7 @@ Valores:
 #bidi {
     text-align: left;
     direction: rtl;
-    /* @@@@@@@@@@@@@@@@@ direction - define a direção que o texto deve ser lido, ele age parecido com o text-align 
+    /* @@@@@@@@@@@@@@@@@ direction - define a direção que o texto deve ser lido, ele age parecido com o text-align
         Valores:
             ltr - esquerda para a direita
             rtl - direita para a esquerda
