@@ -1,0 +1,526 @@
+@charset "UTF-8";
+
+
+
+/* Glossário */
+/* Pendentes: 
+    border-collapse
+
+    border-spacing
+
+    border-image
+    border-image-width
+    border-image-repeat
+    border-image-slice
+    border-image-outset
+    border-image-source
+
+    border-inline
+    border-inline-color
+    border-inline-style
+    border-inline-width
+    
+    border-inline-start
+    border-inline-start-color
+    border-inline-start-style
+    border-inline-start-width
+    
+    border-inline-end
+    border-inline-end-color
+    border-inline-end-style
+    border-inline-end-width 
+    
+    border-block
+    border-block-color
+    border-block-style
+    border-block-width
+
+    border-block-start
+    border-block-start-color
+    border-block-start-style
+    border-block-start-width
+    
+    border-block-end
+    border-block-end-color
+    border-block-end-style
+    border-block-end-width
+
+    mask-border
+    mask-border-mode
+    mask-border-outset
+    mask-border-repeat
+    mask-border-slice
+    mask-border-source
+    mask-border-width
+
+    border-end-end-radius
+    border-start-end-radius
+    border-end-start-radius
+    border-start-start-radius
+
+
+    padding-inline-start
+    padding-inline-end
+    padding-block-start
+    padding-block-end
+    padding-block
+    padding-inline
+
+    scroll-padding
+    scroll-padding-top
+    scroll-padding-right
+    scroll-padding-bottom
+    scroll-padding-left
+    scroll-padding-inline-start
+    scroll-padding-inline-end
+    scroll-padding-block-start
+    scroll-padding-block-end
+    scroll-padding-block
+    scroll-padding-inline
+
+    shape-margin
+    margin-inline-start
+    margin-inline-end
+    margin-block-start
+    margin-block-end
+    margin-block
+    margin-inline
+
+    scroll-margin
+    scroll-margin-top
+    scroll-margin-right
+    scroll-margin-bottom
+    scroll-margin-left
+    scroll-margin-inline-start
+    scroll-margin-inline-end
+    scroll-margin-block-start
+    scroll-margin-block-end
+    scroll-margin-block
+    scroll-margin-inline
+
+*/
+/*
+
+border-style
+border-top-style
+border-right-style
+border-bottom-style
+border-left-style
+
+border-width
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+
+border-color
+border-top-color
+border-right-color
+border-bottom-color
+border-left-color
+
+border
+border-top
+border-right
+border-bottom
+border-left
+
+border-radius
+border-top-left-radius
+border-top-right-radius
+border-bottom-left-radius
+border-bottom-right-radius
+
+outline
+outline-style
+outline-width
+outline-color
+outline-offset
+
+width
+height
+min-width
+min-height
+max-width
+max-height
+
+margin
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+padding
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+box-sizing
+
+*/
+
+
+
+.none {border-style: none;}
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.double {border-style: double;}
+.groove {border-style: groove;}
+.ridge {border-style: ridge;}
+.inset {border-style: inset;}
+.outset {border-style: outset;}
+.hidden {border-style: hidden;}
+.mix {border-style: dotted dashed solid double;}
+/* border-style - estilo de borda, seleciona qual deve ser o formato da borda
+    Valores:
+        none - Define sem borda
+
+        dotted - Define uma borda pontilhada
+
+        dashed - Define uma borda tracejada
+
+        solid - Define uma borda sólida
+
+        double - Define uma borda dupla
+
+        groove- Define uma borda estriada 3D. O efeito depende do valor da cor da borda
+
+        ridge- Define uma borda sulcada em 3D. O efeito depende do valor da cor da borda
+
+        inset- Define uma borda inserida em 3D. O efeito depende do valor da cor da borda
+
+        outset- Define uma borda inicial 3D. O efeito depende do valor da cor da borda
+
+        hidden - Define uma borda oculta
+
+*/
+#bordaporpartes {
+    border-top-style: double;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: dashed;
+}
+/* border-top-style, border-right-style, border-bottom-style, border-left-style - borda com efeito de estilo na direção indicada pelo nome */
+
+
+
+#bordag {
+    border-width: 30px;
+}
+#bordam {
+    border-width: 15px;
+}
+#bordap {
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+/* border-width - tamanho da borda, define sua grossura, segue o Padrão Cardinal
+    Valores:
+        Unidades de medidas
+*/
+/* border-top-width, border-right-width, border-bottom-width, border-left-width - borda com efeito de tamanho na direção indicada pelo nome */
+
+
+
+.bordacorazul {
+    border-color: turquoise;
+}
+.bordacorvermelho {
+    border-top-color: darkblue;
+    border-right-color: darkred;
+    border-bottom-color: yellow;
+    border-left-color: darkgreen;
+}
+/* border-color - cor de borda, define a coloração da borda
+    Valores:
+        Padrões de cores
+*/
+/* border-top-color, border-right-color, border-bottom-color, border-left-color - borda com efeito de cor na direção indicada pelo nome */
+
+
+
+#bordatotal {
+    border: 5px solid springgreen;
+}
+/* border - borda
+    Taquiografia:
+        border-width
+        border-style
+        border-color
+*/
+#bordatotaldividida {
+    border-top: 5px solid red;
+    border-right: 10px dashed blue;
+    border-bottom: 15px double yellow;
+    border-left: 20px dotted green;
+}
+/* border-top, border-right, border-bottom, border-left - borda com efeito na direção indicada pelo nome */
+
+
+
+#bordaredonda {
+    border-radius: 10px;
+    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+/* border-radius - raio da borda
+    Valores:
+        Unidades de medida
+*/
+/* border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius - raio da borda em determinada posição
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bordavazia {
+    border: 20px solid black;
+}
+
+
+
+.non {outline-style: none;}
+.dotte {outline-style: dotted;}
+.dashe {outline-style: dashed;}
+.soli {outline-style: solid;}
+.doubl {outline-style: double;}
+.groov {outline-style: groove;}
+.ridg {outline-style: ridge;}
+.inse {outline-style: inset;}
+.outse {outline-style: outset;}
+.hidde {outline-style: hidden;}
+/* border-style - estilo de borda, seleciona qual deve ser o formato da borda
+    Valores:
+        none - Define sem contorno
+
+        dotted - Define um contorno pontilhado
+
+        dashed - Define um contorno tracejado
+
+        solid - Define um contorno sólido
+
+        double - Define um contorno duplo
+
+        groove- Define um contorno estriado 3D. O efeito depende do valor da cor do contorno
+
+        ridge- Define um contorno sulcado em 3D. O efeito depende do valor da cor do contorno
+
+        inset- Define um contorno inserido em 3D. O efeito depende do valor da cor do contorno
+
+        outset- Define um contorno inicial 3D. O efeito depende do valor da cor do contorno
+
+        hidden - Define um contorno oculto
+*/
+
+
+
+.contornop {
+    outline-width: 5px;
+}
+.contornog {
+    outline-width: 15px;
+}
+/* outline-width - tamanho do contorno
+    Valores:
+        Unidades de medida
+*/
+
+
+
+.contornoazul {
+    outline-color: blue;
+}
+.contornoverde {
+    outline-color: green;
+}
+/* outline-color - cor do contorno
+    Valores:
+        Padrões de cores
+*/
+
+
+
+.espacocontorno {
+    outline-offset: 10px;
+}
+/* outline-offset - determina o espaço que o contorno deve ter da borda para começar
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+#contornototal {
+    outline: 5px solid red;
+}
+/* outline - define as configurações gerais de contorno
+    Taquiografia:
+        outline-width
+        outline-style
+        outline-color
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.largura {
+    width: 50%;
+}
+/* width - largura define o tamanho horizontal que deve possuir o conteúdo
+    Valores:
+        Unidades de medida
+*/
+
+
+
+.altura {
+    height: 700px;
+}
+/* height - altura define o tamanho vertical que deve possuir o conteúdo
+    Valores:
+        Unidades de medida
+*/
+
+
+
+.minmaxtamanho {
+    min-width: 100px;
+    max-width: 500px;
+    min-height: 10px;
+    max-height: 200px;
+}
+/* min-width, min-height - definem o mínimo de tamanho que devem possuir os elementos*/
+/* max-width, max-height - definem o mínimo de tamanho que devem possuir os elementos*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#margem {
+    margin: 40px;
+}
+#margemtopogrande {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 16px;
+    margin-left: 1%;
+}
+#margemautomatica {
+    margin: auto;
+}
+/* margin - margem, dá um espaçamento de um elemento até outro, segue o Padrão Cardinal
+    Valores:
+        Unidades de medida
+*/
+/* margin-top, margin-right, margin-bottom, margin-left - definem a margem de um dos cantos escolhidos */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#preenchimento {
+    padding: 20px 40px 0px 50px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+}
+/* padding - preenchimento, configura a distância entre o conteúdo e a borda
+    Valores:
+        Unidades de medidas
+*/
+/* padding-top, padding-right, padding-bottom, padding-left - definem o preenchimento de cada lado selecionado */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#tamanhodacaixa {
+    width: 70%;
+    padding: 40px;
+    border: 20px solid white;
+    box-sizing: border-box;
+}
+/* box-sizing - tamanho da caixa, configura como deve se comportar as dimensões selecionadas
+    Valores:
+        content-box - devem ir somando e alterando a dimensão total do elemento
+
+        border-box - devem manter seu tamanho e ir preenchendo internamente
+*/
