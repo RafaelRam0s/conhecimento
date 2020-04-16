@@ -3,6 +3,7 @@
 
 /* Glossário */
 /* Pendentes:
+    importar uma fonte
 
     font-size-adjust
 
@@ -68,8 +69,6 @@
 
 
 */
-
-
 
 
 
@@ -345,6 +344,31 @@ Cuidado: Coloque um font-size para caso de nenhuma das font-family funcionarem. 
             small-caps - Todas as letras ficam como se fossem maiúsculas, porém a sepração de qual é maiúscula ou minúscula é dada pelo seu tamanho
     */
 }
+
+
+
+@font-face {
+    font-family: "fonte-pessoal";
+    src: url("../midia/fontes/LEMONMILK-Light.otf");
+}
+.fonteimportada {
+    font-family: "fonte-pessoal";
+}
+/* @font-face - cara da fonte, serve para importar uma fonte de texto, o font-family definido nele serve para nomear, ai quando vc precisar utilizá-lo é só usar o font-family com o seu nome, o src logo abaixo serve para pegar onde está o arquivo junto do url() */
+
+
+
+.fonttotal {
+    font: italic normal 900 25px monospace;
+}
+/* font - fonte
+    Taquiografia:
+        font-style
+        font-variant
+        font-weight
+        font-size/line-height
+        font-family
+*/
 
 
 
