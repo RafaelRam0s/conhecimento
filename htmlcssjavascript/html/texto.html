@@ -147,7 +147,7 @@
     -->
         <h2>Formatações de texto:</h2>
 
-        <p>Existem diversas marcações em html como os textos em; <b>negrito</b>, mas só por estilo, <strong>negrito com importância</strong>, <i>itálico</i> só por estilo, <em>itálico com importância</em>, <mark>grifado</mark>, <small>pequeno</small>, <del cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_removido.com" datetime="05/03/2020">deletado</del>, <ins>inserido</ins>, <sub>subscrito</sub> (como o 2 de H<sub>2</sub>O) e <sup>superescrito</sup> (como o 2 de x <sup>2</sup>).</p>
+        <p>Existem diversas marcações em html como os textos em; <b>negrito</b>, mas só por estilo, <strong>negrito com importância</strong>, <i>itálico</i> só por estilo, <em>itálico com importância</em>, <mark>grifado</mark>, <small>pequeno</small>, <del cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_removido.com" datetime="2020-04-16T18:46:50GMT">deletado</del>, <ins cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_removido.com" datetime="2020-04-16T18:48:12GMT">inserido</ins>, <sub>subscrito</sub> (como o 2 de H<sub>2</sub>O) e <sup>superescrito</sup> (como o 2 de x <sup>2</sup>).</p>
         <!-- <b> - deixa o texto em negrito
             Código:
                 b {
@@ -197,14 +197,26 @@
                     text-decoration: line-through;
                 }
         -->
-        <!-- cite="" - cita uma url a qual deverá conter o motivo para tal texto ser removido, por exemplo um site de dicionário. -->
-        <!-- datetime="" - coloque a data de modificação. -->
 
         <!-- <ins> - torna o texto inserido, com um underline 
             Código:
                 ins {
                     text-decoration: underline;
                 }
+        -->
+
+        <!-- cite="" - cita uma url a qual deverá conter o motivo para tal texto ser removido ou inserido, por exemplo um site de dicionário. -->
+        <!-- datetime="" - marca a data de modificação.
+            Valores:
+                YYYY-MM-DDThh:mm:ssTZD
+                YYYY - define o ano
+                MM - define o mês
+                DD - define o dia
+                T - está sendo usado para separar informação
+                hh - define a hora
+                mm - define o minuto
+                ss - define o segunda
+                TZD - Fala qual o relógio que se baseia
         -->
 
         <!-- <sub> - torna o texto subscrito 
@@ -487,7 +499,7 @@
             
         <!-- title="" - título como elemento, geralmente são mostradas como um texto de dica de ferramenta quando o mouse se move sobre o elemento, revelando assim uma pequena caixa de texto. -->
 
-        <p>E ao mencionarmos um título de uma obra tipo a <cite >Monalisa</cite> ou a música <cite>Highway to Hell</cite>, é correto marca-los com a tagname - cite -.</p>
+        <p>E ao mencionarmos um título de uma obra tipo a <cite>Monalisa</cite> ou a música <cite>Highway to Hell</cite>, é correto marca-los com a tagname - cite -.</p>
         <!-- <cite> - citação é usado para citar um título de uma obra (por exemplo, um livro, uma música, um filme, um programa de TV, uma pintura, uma escultura etc.)
             Código:
                 cite {
