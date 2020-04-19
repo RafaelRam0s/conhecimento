@@ -38,26 +38,27 @@
 
         <p>Te redirecionar para uma outra parte de uma página externa <a href="texto.html#bidi">clique aqui e veja</a></p>
 
-        <!-- <a> - hyperlink, tem como conceito um elemento clicável que interage com a página -->
+        <!-- <a> - hyperlink, tem como conceito um elemento clicável que interage com a página 
+            Código:
+                a:link, a:visited {
+                    color: (internal value);
+                    text-decoration: underline;
+                    cursor: auto;
+                }
+
+                    a:link:active, a:visited:active {
+                    color: (internal value);
+                }
+        -->
+
         <!-- href - referencia para uma url, arquivo, parte de uma página e diversos como:
-            mailto:teste@gmail.com - ativa o e-mail do seu aparelho com o destinatário definido no valor que neste caso é o teste@gmail.com
-
-
-
-
-
-
-
-            href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-            
-            no href fala de onde foi retirado o arquivo que será baixado e no download é executada a ação de baixar, e você não é redirecionado para o link da url
-
-            download="firefox-39-installer.exe"
-
-            <a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US" download="firefox-39-installer.exe"> Faça o download do Firefox 39 para Windows </a>
+            Valores:
+                mailto:
         -->
 
         <p>Perceba que ele possui diversas propriedades por padrão, tais como; ao passar com o mouse sobre ele o cursor muda e vira uma mão, se você não visitou o link ainda ele deixa de uma cor e após já ter acessado o link ele fica de outra (caso tenha acessado um, mas queira ver como é seu efeito antes e depois é só limpar o histórico do navegador)</p>
+
+        
 
         
 
@@ -66,7 +67,43 @@
 
 
     <div>
-        <h2>Redirecionamentos e links:</h2>
+        <h2>Download por link, email ativado por link:</h2>
+
+        <!-- <a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The body of the email">
+            Aqui está um exemplo, incluindo um cc, bcc, assunto e corpo:
+        </a> 
+    
+            mailto:nowhere@mozilla.org?
+            cc=name2@rapidtables.com
+            &bcc=name3@rapidtables.com&amp;
+            subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email
+
+
+
+            mailto:rafael@teste.com - ativa o e-mail do seu aparelho com o destinatário definido no valor que neste caso é o rafael@teste.com
+            
+            mailto:rafael@teste.com,ramos@teste.com,silva@teste.com - as vírgulas servem para colocar mais um destinatário
+            
+            mailto:rafael@teste.com?cc=silva@teste.com - o ?cc= serve para colocar o destinatária que receberá uma cópia desta mensagem
+
+            mailto:rafael@teste.com&bcc=silva@teste.com
+
+            mailto:rafael@teste.com&amp;subject=Um%20assunto, mas no site não é indicado espaço, por isso não sei&nbsp;o que deve ser feito@
+
+            mailto:rafael@teste.com&amp;body=Um corpo de email, possui o mesmo problema de espaços que o do assunto
+
+
+
+
+            
+            <a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US" download="firefox-39-installer.exe"> Faça o download do Firefox 39 para Windows </a>
+            
+            no href fala de onde foi retirado o arquivo que será baixado e no download é executada a ação de baixar, e você não é redirecionado para o link da url
+
+            download="firefox-39-installer.exe"
+
+            
+        -->
 
         <p></p>
 
