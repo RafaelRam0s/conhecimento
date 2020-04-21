@@ -13,14 +13,42 @@
 
     <link rel="icon" href="../midia/icones/icone_r.ico" />
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/link.css" />
+    <link rel="stylesheet" type="text/css" href="../css/_style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/link.css" /> -->
     
     <title>Links</title>
 
+    <style>
+        .linktexto:link {
+            color: red;
+        }
+        .linktexto:visited {
+            color: green;
+        }
+        .linktexto:hover {
+            color: hotpink;
+        }
+        .linktexto:active {
+            color: blue;
+        }
+
+        .linkbotao:link, .linkbotao:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .linkbotao:hover, .linkbotao:active {
+            background-color: red;
+        }
+    </style>
+
 </head>
 <body>
-
+    Pendentes media, ping, rel, type atributos https://www.w3schools.com/tags/tag_a.asp
     <h1></h1>
 
     <h2>Link</h2>
@@ -30,7 +58,7 @@
 
         <p>Um link em html é definido como hyperlink, no qual tem como conceito um elemento clicável que interage com a página, dentre as coisas que ele pode fazer estão:</p>
         
-        <p>Te redirecionar para outra página dos seus documentos <a href="index.html">clique aqui e veja</a></p>
+        <p>Te redirecionar para outra página dos seus documentos <a href="_index.html">clique aqui e veja</a></p>
 
         <p>Te redirecionar para uma página externa <a href="https://www.w3schools.com/html/html_links.asp">clique aqui e veja</a></p>
 
@@ -46,68 +74,128 @@
                     cursor: auto;
                 }
 
-                    a:link:active, a:visited:active {
+                a:link:active, a:visited:active {
                     color: (internal value);
                 }
         -->
 
         <!-- href - referencia para uma url, arquivo, parte de uma página e diversos como:
             Valores:
-                mailto:
+                url - domínio do site
+                caminho de arquivo - onde ele está nos arquivos
+                parte de uma página - usa o id como base e redireciona até ele 
+                mailto: - explicado mais para frente
         -->
 
         <p>Perceba que ele possui diversas propriedades por padrão, tais como; ao passar com o mouse sobre ele o cursor muda e vira uma mão, se você não visitou o link ainda ele deixa de uma cor e após já ter acessado o link ele fica de outra (caso tenha acessado um, mas queira ver como é seu efeito antes e depois é só limpar o histórico do navegador)</p>
 
-        
 
-        
+
+        <h3>Liks estilosos</h3>
+
+        <p>Este vai ser um parágrafo com variedade de possibilidades com link:
+            <br />Estilo texto <a class="linktexto" href="#">acesse</a>
+            <br />Estilo botão <a class="linkbotao" href="#">acesse</a>
+        </p>
 
     </div>
 
 
 
     <div>
-        <h2>Download por link, email ativado por link:</h2>
+        <h3>Email por link</h3>
 
-        <!-- <a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The body of the email">
-            Aqui está um exemplo, incluindo um cc, bcc, assunto e corpo:
-        </a> 
-    
-            mailto:nowhere@mozilla.org?
-            cc=name2@rapidtables.com
-            &bcc=name3@rapidtables.com&amp;
-            subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email
+        <p>Links para ativar email são bem práticos para facilitar a vida do usuário, por favor não envie nenhuma mensagem é só teste para visualizar</p>
 
+        <p>Temos como colocar o destinatário <a href="mailto:ramos@teste.br">desta forma</a></p>
+        <!-- mailto: serve para ativar o email, o que for escrito após ele é o destinatário -->
 
+        <p>E não se limita a apenas um podemos colocar diversos apenas os separando por vírgula <a href="mailto:ramos@teste.br,rafael@teste.br">desta forma</a></p>
+        <!-- A vírgula serve para acrescentar mais um valor, neste caso inseriu mais um email, mas pode ser usada para colocar uma cópia (cc) e uma cópia oculta (cco) -->
 
-            mailto:rafael@teste.com - ativa o e-mail do seu aparelho com o destinatário definido no valor que neste caso é o rafael@teste.com
-            
-            mailto:rafael@teste.com,ramos@teste.com,silva@teste.com - as vírgulas servem para colocar mais um destinatário
-            
-            mailto:rafael@teste.com?cc=silva@teste.com - o ?cc= serve para colocar o destinatária que receberá uma cópia desta mensagem
+        <p>Um destinatário para receber a cópia do email <a href="mailto:ramos@teste.br?cc=rafael@teste.br">desta forma</a></p>
+        <!-- Quando acabamos de inserir a configuração de destinatário e queremos colocar mais uma definição, colocamos um ponto de interrogação (?) no final do último destinatário inserido
+            Exemplos:
+                mailto:ramos@teste.br,rafael@teste.br?cc=silva@teste.br
+                
+                mailto:ramos@teste.br,rafael@teste.br?cc=silva@teste.br,teste@teste.br
 
-            mailto:rafael@teste.com&bcc=silva@teste.com
+                mailto:ramos@teste.br,rafael@teste.br?bcc=silva@teste.br
 
-            mailto:rafael@teste.com&amp;subject=Um%20assunto, mas no site não é indicado espaço, por isso não sei&nbsp;o que deve ser feito@
-
-            mailto:rafael@teste.com&amp;body=Um corpo de email, possui o mesmo problema de espaços que o do assunto
-
-
-
-
-            
-            <a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US" download="firefox-39-installer.exe"> Faça o download do Firefox 39 para Windows </a>
-            
-            no href fala de onde foi retirado o arquivo que será baixado e no download é executada a ação de baixar, e você não é redirecionado para o link da url
-
-            download="firefox-39-installer.exe"
-
-            
+                mailto:ramos@teste.br,rafael@teste.br?subject=Um título de email
         -->
 
-        <p></p>
+        <!-- cc= - serve para colocar um destinatário que receberá a cópia do email -->
 
-        <p></p>
+        <p>Um destinatário oculto para receber a cópia do email <a href="mailto:ramos@teste.br?cc=rafael@teste.br&bcc=silva@teste.br">desta forma</a></p>
+        <!-- bcc= - serve para colocar um destinatário que receberá a cópia oculta do email -->
+
+        <!-- Se quiser inserir alguma outra configuração após ter colocado o cc coloque o "e" comercial (&), de base segue a mesma lógica do interrogação (?) -->
+
+        <p>Um assunto <a href="mailto:ramos@teste.br?cc=rafael@teste.br&bcc=silva@teste.br&amp;subject=Um título de email">desta forma</a></p>
+        <!-- subject= - coloca um assunto no email -->
+
+        <!-- Se quiser inserir alguma outra configuração após ter colocado o bcc coloque o código "&amp;", de base segue a mesma lógica do interrogação (?) -->
+
+        <p>Uma mensagem <a href="mailto:ramos@teste.br?cc=rafael@teste.br&bcc=silva@teste.br&amp;subject=Um título de email&amp;body=Por algum motivo no site em que eu uso para estudar falava para não usar espaços e sim divisão 20 tipo%20isso, mas não sei qual o problema sendo que até o nonbody-space funciona&nbsp;aqui">desta forma</a></p>
+        <!-- body= - serve para colocar o corpo do email, a sua mensagem -->
+
+        <!-- Se quiser inserir alguma outra configuração após ter colocado o subject coloque o código "&amp;", de base segue a mesma lógica do interrogação (?) -->
+
+    </div>
+
+
+
+    <div>
+        <h3>Formas de se abrir um link</h3>
+
+        <p>Podemos ativar o link para abrir na em que está <a href="_index.html" target="_self">clique aqui e veja</a></p>
+
+        <p>Podemos ativar o link para abrir em outra aba <a href="_index.html" target="_blank">clique aqui e veja</a></p>
+        
+        <p>Podemos ativar o link para abrir na mesma página porém fora de onde a página está presa @@@@@ usado com iframe <a href="_index.html" target="_top">clique aqui e veja</a></p>
+
+        <p>Podemos ativar o link para abrir no @@@@@ iframe em que está <a href="_index.html" target="_parent">clique aqui e veja</a></p>
+
+        <!-- target - seleciona onde o link será aberto
+            Valores:
+                _self - na própria página
+                _blank - em uma nova aba
+                _top - @@@@@
+                _parent - @@@@@
+        -->
+
+
+
+        <h3>Link com idioma</h3>
+
+        <p>Este será um link com o atributo hreflang <a href="texto.html" hreflang="pt-br">clique aqui</a> repare que ao clicar não há uma mudança drástica porém isso ajuda os navegadores a saber como devem lidar com a linguagem de determinada página</p>
+
+        <!-- hreflang - indica a linguagem da página que será aberta
+            Valores:
+                en - inglês
+                pt-br - portugues do Brasil
+                es - Espanhol
+                Para mais acesse o site https://www.w3schools.com/tags/ref_language_codes.asp 
+        -->
+
+
+    </div>
+
+
+
+    <div>
+        <h3>Download por link:</h3>
+
+        <p>Podemos fazer um download tanto de um documento que está nos arquivos do seu documento <a href="../midia/imagens/cenariotempo.jpg" download="cenario_do_tempo_fantasia">clique aqui e veja</a></p>
+
+        <p>Dowload de um arquivo externo <a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US" download="firefox-39-installer.exe">clique aqui e veja</a></p>
+            
+        <!-- download - faz o download de um arquivo, 
+            Uso: 
+                Só é usado se o atributo href estiver definido, pois ele pega a url especificada nele e baixa aquele arquivo. O valor deste atributo será o nome do arquivo baixado. Não há restrições quanto aos valores permitidos, e o navegador detectará automaticamente a extensão de arquivo correta e a adicionará ao arquivo (.img, .pdf, .txt, .html, etc.). Se o valor for omitido, o nome do arquivo original será usado.
+        -->
+
     </div>
 
     
@@ -123,6 +211,9 @@
         <p></p>
 
         <h3>Seções</h3>
+        <p></p>
+
+        <h3>Iframes</h3>
         <p></p>
 
     </div>

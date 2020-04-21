@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+
+/* Glossário */
+/*
+
+    Unidades de medida 
+
+        px - um valor fixo que ao termos um tamanho de tela que passe por um elemento com um px definido, acaba por criar uma barra de rolagem
+
+        % - um valor que se baseia nas características de um elemento pai com porcentagem, basicamente para definir o seu próprio tamanho com a porcentagem, ele precisa que o seu elemento pai tenha esta mesma propriedade dada em porcentagem, caso contrário não terá efeito, exemplo: se o <body> tiver uma propriedade definida em %, e o próximo elemento, tipo uma <div>, neste caso, tiver a mesma propriedade em % ele será relativo ao body, agora se o <body> estivesse definido, a <div> não, e possuisse um <p> com porcentagem, nada seria alterado, mas se configurascemos de novo a <div> o <p> seria relativo a ele.
+
+        vw e vh - medida que pega o tamanho da página como referência, basicamente pega o valor do tamanho da página e divide em frações, sendo o vw o tamanho da largura e o vh o tamanho da altura, exemplo: se tivermos uma página com 1000px de largura e 500px de altura, um vw é igual  1% dos 1000px, logo 1 vw irá corresponder a 10px, e 1 vh corresponderia a 5px
+
+        vmax e vmin - verifica o tamanho máximo ou mínimo de uma tela e a partir disso define uma porcentagem fixa de tamanho
+
+
+
+    Padrão Cardinal
+        Quando apenas um valor define os 4 lados
+        Quando com dois valores é definido respectivamente: seu top junto do bottom e depois seu right junto do left.
+        Quando com três valores é definido respectivamente: top, depois seus lados, bottom
+        Quando com quatro valores é definido respectivamente: top, right, bottom, left
+
+
+
+    Padrões de cores
+        color - digite o nome de uma cor
+
+        rgba - é uma forma de escolher uma cor, pela mistura de três pigmentos básicos, red (vermelho), green (verde)e blue (azul), além de sua transparência alpha
+            Como funciona:
+                Ao abrir o parênteses o primeiro valor é a quantidade do pigmento vermelho que deseja, depois a quantidade de pigmento verde e por último a quantidade de pigmento azul, seus valores variam de 0 a 255, o último valor é a transparência que varia de 0 a 1
+        
+        hex - uma cor pode ser especificada usando um valor hexadecimal no formato # rrggbb. Onde rr (vermelho), gg (verde) e bb (azul) são valores hexadecimais entre 00 e ff (o mesmo que decimal 0-255). Por exemplo, # ff0000 é exibido como vermelho, porque vermelho é definido como seu valor mais alto (ff) e os outros são definidos como o valor mais baixo (00).
+
+        hsl - uma cor pode ser especificada usando matiz, saturação e luminosidade (HSL) no formato hsl ( matiz , saturação , leveza ). Matiz é um grau na roda de cores de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul. A saturação é um valor percentual, 0% significa um tom de cinza e 100% é a cor completa. A luminosidade também é uma porcentagem, 0% é preto, 50% não é claro nem escuro, 100% é branco
+
+    Apontamento de posição
+        center - centro
+        top - em cima
+        bottom - em baixo
+        left - esquerda
+        right - direita
+
+    
+*/
+
+
+body {
+    background-color: rgba(6, 6, 7, 0.747);
+    margin: 5%;
+    color: rgba(255, 255, 240, 0.99);
+    font-size: 16px;
+}
+
+
+
+h1 {
+    text-decoration-line: underline;
+    font-size: 350%;
+}
+h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+h2 {
+    font-size: 300%;
+}
+h3 {
+    font-size: 250%;
+}
+h4 {
+    font-size: 225%;
+}
+h5 {
+    font-size: 200%;
+}
+h6 {
+    font-size: 175%;
+}
+p {
+    font-size: 125%;
+}
+
+
+
+div {
+    margin-bottom: 60vh;
+}
+
+
+
+div p {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
