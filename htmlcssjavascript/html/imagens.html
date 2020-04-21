@@ -16,25 +16,26 @@
     <link rel="stylesheet" type="text/css" href="../css/_style.css" />
     <!-- <link rel="stylesheet" type="text/css" href="../css/imagens.css" /> -->
     
-    <title>Layout padrão</title>
+    <title>Imagem</title>
 
 </head>
 <body>
 
-    <h1>Tema</h1>
-
     <h2>Imagens</h2>
 
     <div>
-        <h3>Inserindo Imagens</h3>
-        
-        <p>A tagname - img - pode carregar tanto imagens quanto gifs, quanto a extensão de arquivo que é suportada depende de cada navegador.</p>
 
-        <img src="../midia/imagens/copodecafe.jpg" alt="Copo de café" />
-
-        <img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Feixes se movendo infinitamente" />
+        <h3>Imagens:</h3>
         
-        <img src="urlerrada" alt="O alt aparece quando ocorre um problema no elemento ao qual não pode exibir a imagem, por exemplo este, é usado como um texto alternativo, use-o para indicar o que seria a imagem e não para avisar que deu erro, pois leitores de telas para deficientes visuais se utilizam do alt para mostrar a informação sobre" />
+        <p>A tagname - img - pode carregar tanto imagens quanto gifs, caso se pergunte qual extensão de arquivo é compatível dependerá de cada navegador</p>
+
+        <img src="../midia/imagens/copodecafe.jpg" />
+        
+        <img style="width: 200px; height: 200px;" src="../midia/gifs/feixedinamico.gif"/>
+
+        <p>Logo abaixo trouxe uma imagem de um link externo, de um site que uso para estudos o <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_image_diffloc">w3school</a>, se a imagem não aparecer pode ser por mudança na url deles, eu ter digitado errado ou a sua internet estar ruim</p>
+
+        <img src="https://www.w3schools.com/images/lamp.jpg" alt="Lâmpada de um site externo">
 
         <!-- <img> - tagname para inserir uma imagem 
             Código:
@@ -46,16 +47,65 @@
         <!-- src - coloca a url da imagem
             Valores:
                 caminho do arquivo
-                url - link externo
+                url - link externo @@@@@ colocar exemplo
         -->
+
+        <p>O vão que ficou entre as duas imagens acima foi causado pela barra de espaço, ao término de uma tagname coloque logo em seguida a outra, desta forma não teremos esse problema. Caso esteja em um dispositivo com tela menor talvez não consiga reparar o que estou dizendo pois as imagens podem ter ficado empilhadas, neste caso basta usarmos uma margem negativa por exemplo</p>
+
+        <img src="../midia/imagens/copodecafe.jpg" /><img style="width: 200px; height: 200px;" src="../midia/gifs/feixedinamico.gif"/>
+
+
+
+        <h3>Texto alternativo para Imagens:</h3>
+
+        <img src="../midia/imagens/copodecafe.jpg" alt="Copo de café" />
+
+        <img src="urlerrada.error" alt="O alt aparece quando ocorre um problema no elemento ao qual não pode exibir a imagem, por exemplo este, é usado como um texto alternativo, use-o para indicar o que seria a imagem e não para avisar que deu erro, pois leitores de telas automáticos para deficientes visuais se utilizam do alt para mostrar a informação sobre a imagem. Este alt apareceu em baixo das imagens, mas é porque ele está grande, se não ficaria ao lado delas" />
+
+        <!-- alt - texto alternativo, serve para deficientes visuais interpretarem o que estaria presente, também aparece se o src estiver não encontrar o arquivo ou não puder carrega-lo -->
+
+        <p>O atributo - alt - se comporta de maneira um tanto diferente, pois se adicionarmos estilos a img, alguns são seguidos e outros não, por exemplo a largura e altura não são obedecidas, mas padding, margin, borda e por aí vai, são @@@@@. Como o alt não deveria aparecer, a página pode em alguns casos, ficar piscando durante o carregamento, pois ele acaba ocupando um espaço diferente do que o determinado. Recarregue a página neste quadro (onde está o problema de carregamento da imagem) e veja como este efeito de tela piscar pode ser ruim.</p>
+
+
+
+        <h3>Tamanhos definidos desde o início:</h3>
+
+        <p>Ao colocarmos uma imagem em nossa página é importante que seja definido os seu tamanhos, se a altura e a largura estiverem definidas, o espaço necessário para a imagem será reservado quando a página for carregada. No entanto, sem esses atributos, o navegador não sabe o tamanho da imagem e não pode reservar o espaço apropriado para ela. O efeito será que o layout da página será alterado durante o carregamento (enquanto as imagens são carregadas), o que pode acabar por fazer a sua página ficar piscando.</p>
+        
+        <img src="../midia/imagens/copodecafe.jpg" width="200" height="200" alt="Copo de café">
+        
+        <img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Feixes de luz se mexendo infinitamente">
+
+        <!-- width - escolhe uma largura para a imagem em pixels -->
+
+        <!-- height - escolhe uma altura para a imagem em pixels -->
+
+        
+
+        vertical-align para imagens em meio a textos
+
+        <h3>Cuidados:</h3>
+
+        <p>1° Ao definir os tamanhos para uma imagem veja se ela não ficará deformada</p>
+
+
+    </div>
+
+
+    <div>
         <h3>Imagens com legenda</h3>
 
-        <p>Se observar bem existe um espaço entre a imagem e o gif na verdade é a barra de espaço que fez isso. Fica feio no html, mas fazer o que, ai está outro conjunto de imagens, só que desta vez com legenda</p>
-
         <figure>
-            <img src="../midia/imagens/copodecafe.jpg" alt="Esta mensagem aparecerá quando não for possível carregar a imagem"><img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Não sei ao certo para que é usado o alt dizem que é para caso a imagem não carregue, enquanto outros dizem que é para leitores de busca poderem interpretar melhor para deficientes visuais">
+            <!-- <figure> - figura, é um contêiner para imagens -->
+            <img src="../midia/imagens/copodecafe.jpg" width="200" height="200" alt="Esta mensagem aparecerá quando não for possível carregar a imagem"><img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Não sei ao certo para que é usado o alt dizem que é para caso a imagem não carregue, enquanto outros dizem que é para leitores de busca poderem interpretar melhor para deficientes visuais">
+            <figcaption>Legenda de imagem: todas as imagens foram tiradas do site 
+                <a href="https://pixabay.com/pt/" target="_blank">pixabay</a>
+                
+            </figcaption>
+            <!-- <figcaption> - legenda, é colocada uma descrição ou nota sobre a imagem -->
 
         </figure>
+        
 
         <p></p>
 
