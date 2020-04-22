@@ -30,12 +30,14 @@
         <p>A tagname - img - pode carregar tanto imagens quanto gifs, caso se pergunte qual extensão de arquivo é compatível dependerá de cada navegador</p>
 
         <img src="../midia/imagens/copodecafe.jpg" />
+
+        <img src="../midia/imagens/duzentosporduzentos.png" />
         
         <img style="width: 200px; height: 200px;" src="../midia/gifs/feixedinamico.gif"/>
 
-        <p>Logo abaixo trouxe uma imagem de um link externo, de um site que uso para estudos o <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_image_diffloc">w3school</a>, se a imagem não aparecer pode ser por mudança na url deles, eu ter digitado errado ou a sua internet estar ruim</p>
+        <p>Logo abaixo trouxe uma imagem de um link externo, de um site que uso para estudos o <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_image_diffloc" target="_blank">w3school</a>, se a imagem não aparecer pode ser por mudança na url deles, eu ter digitado errado ou a sua internet estar ruim</p>
 
-        <img src="https://www.w3schools.com/images/lamp.jpg" alt="Lâmpada de um site externo">
+        <img src="https://www.w3schools.com/images/lamp.jpg" />
 
         <!-- <img> - tagname para inserir uma imagem 
             Código:
@@ -52,13 +54,13 @@
 
         <p>O vão que ficou entre as duas imagens acima foi causado pela barra de espaço, ao término de uma tagname coloque logo em seguida a outra, desta forma não teremos esse problema. Caso esteja em um dispositivo com tela menor talvez não consiga reparar o que estou dizendo pois as imagens podem ter ficado empilhadas, neste caso basta usarmos uma margem negativa por exemplo</p>
 
-        <img src="../midia/imagens/copodecafe.jpg" /><img style="width: 200px; height: 200px;" src="../midia/gifs/feixedinamico.gif"/>
+        <img src="../midia/imagens/copodecafe.jpg" /><img src="../midia/imagens/duzentosporduzentos.png" />
 
 
 
         <h3>Texto alternativo para Imagens:</h3>
 
-        <img src="../midia/imagens/copodecafe.jpg" alt="Copo de café" />
+        <img src="../midia/imagens/duzentosporduzentos.png" alt="Caixa de duzentos por duzentos pixels" />
 
         <img src="urlerrada.error" alt="O alt aparece quando ocorre um problema no elemento ao qual não pode exibir a imagem, por exemplo este, é usado como um texto alternativo, use-o para indicar o que seria a imagem e não para avisar que deu erro, pois leitores de telas automáticos para deficientes visuais se utilizam do alt para mostrar a informação sobre a imagem. Este alt apareceu em baixo das imagens, mas é porque ele está grande, se não ficaria ao lado delas" />
 
@@ -71,43 +73,80 @@
         <h3>Tamanhos definidos desde o início:</h3>
 
         <p>Ao colocarmos uma imagem em nossa página é importante que seja definido os seu tamanhos, se a altura e a largura estiverem definidas, o espaço necessário para a imagem será reservado quando a página for carregada. No entanto, sem esses atributos, o navegador não sabe o tamanho da imagem e não pode reservar o espaço apropriado para ela. O efeito será que o layout da página será alterado durante o carregamento (enquanto as imagens são carregadas), o que pode acabar por fazer a sua página ficar piscando.</p>
-        
-        <img src="../midia/imagens/copodecafe.jpg" width="200" height="200" alt="Copo de café">
-        
-        <img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Feixes de luz se mexendo infinitamente">
+
+        <img src="../midia/imagens/duzentosporduzentos.png" width="200" height="200" alt="Caixa de duzentos por duzentos pixels" />
 
         <!-- width - escolhe uma largura para a imagem em pixels -->
 
         <!-- height - escolhe uma altura para a imagem em pixels -->
 
-        
 
-        vertical-align para imagens em meio a textos
+
+        <h3>Imagens em base 64 (meia quatro):</h3>
+
+        <p>Imagens em base 64 mais nada são do que imagens transformadas em códigos (visualmente falando nada muda, mas veja seu src no html), ele pode acabar por inutilizar qualquer outra configuração feita no próprio elemento, então coloque as configurações por css interno ou externo, mas não inline, se quiser também pode configurar no elemento pai de preferência não coloque nenhum outro atributo no elemento</p>
+
+        <p>Para converter as minha imagens em base 64 me utilizo do site <a href="https://www.base64-image.de/" target="_blank">Base64</a><br />Caso queira saber mais sobre base 64 <a href="https://pt.wikipedia.org/wiki/Base64" target="_blank">pesquise</a></p>
+
+        <span style="display: block; text-align: center;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAACoFBMVEUAAAAGAP8GAf8HAv8IA/8JBP8KBf8LBv8MB/8NCP8OCf8PCv8QC/8RDP8SDf8TDv8UD/8VEP8WEf8XEv8YE/8ZFP8aFf8bFv8cF/8dGP8eGf8fGv8gG/8hHP8iHf8jHv8kH/8lIP8mIf8nIv8oI/8pJP8qJf8rJv8sJ/8tKP8uKf8vKv8vK/8wLP8xLf8yLv8zL/80MP81Mf83M/84NP85Nf86Nv87N/88OP89Of8+Ov8/O/9APP9BPf9CPv9DP/9EQP9FQf9GQv9HQ/9JRf9KRv9LR/9NSf9OSv9PS/9QTP9RTf9STv9TT/9UUP9VUf9WUv9XU/9YVP9ZVf9ZVv9aV/9bWP9cWf9dWv9eW/9gXf9hXv9iX/9kYf9lYv9mY/9nZP9pZv9qZ/9raP9saf9tav9ua/9vbP9wbf9xbv9yb/9zcP90cf91cv92c/93dP95dv96d/97eP98ef99ev9+e/9/fP+CgP+Dgf+Egv+Fg/+GhP+Hhf+Ihv+Jh/+Miv+Pjf+Qjv+Rj/+Ukv+Vk/+WlP+Xlf+Ylv+Zl/+amP+bmf+cmv+dm/+fnf+ioP+jof+kov+lo/+mpP+pp/+qqP+rqf+sqv+sq/+trP+urf+vrv+wr/+zsv+0s/+1tP+3tv+4t/+5uP+6uf+7uv+8u/+9vP++vf+/vv/Av//Cwf/Ew//FxP/Gxf/Hxv/Ix//JyP/Kyf/Lyv/My//NzP/Ozf/Pzv/Qz//R0P/U0//V1P/X1//Y2P/Z2f/a2v/b2//c3P/d3f/e3v/f3//g4P/h4f/i4v/j4//k5P/l5f/m5v/n5//q6v/r6//s7P/t7f/u7v/v7//w8P/x8f/y8v/z8//09P/19f/29v/39//5+f/6+v/7+//8/P/9/f/+/v////+RzUsgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1AgMFiMWbQsdEgAAAB10RVh0Q29tbWVudABDcmVhdGVkIHdpdGggVGhlIEdJTVDvZCVuAAAGfUlEQVR42u2b+X8TVRTFOUnaNF2gAkLVVopSoFDAStnLphQBF5CqyKIoYAUVEBERRWoVEFkUQQTFDSgigiKoCGEpIKBYqEAlRdok/4pvmCUzybRJcOLwac/9oe/OyeTO+ybv3fcyc9uqFe2ms2AzMIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIUiT9uPMnqmOzIFLqkPSqXkFbtfd038KNinFYNbFjgpSNw2KtflY1ZanKNLchiak6GZl7Ggg/nEiQNqoxwe7RPuREli68siSDqJ5PtioFN0sjR0NZK14+5zLwjnzoLjoWUmqcgPzfcFgfYUT2BVsRIrBLI0dBSSQJ64luw2jgZclZzrwrCyVA0ODjUjRzdrYUUCOASkXFf8wUCAN7HR4zstKfS5QZS7FYNbGjgKyBRimHWTBLf5uB0pVZRGw3FzS5sF9wDLFF5/tC1bGjgdkBfCMdtAZyeLvG8B7qrILmGIuhVJnBlK8170dQH6dpbHjAPFu3HhQ9asdyBfNZGCPKp0H+ptLIVsDDJLSZm0uXAcsjn1jK/srwDzRjADOavM1Ddnmkm5OlwAVoi0DXrc69g2BbHYi9bRo7wF8mpiDdHNJZ2czkXo8uBsoumZ57PhBfAsdwGrJywf8mpwHp7mktw/ErL6SB483AbHjBPFvyIGafXroI3eBw1wyDC6xgvcB3k1E7PhA9vYXl8r6XD4oBEK5Jxsec8lg59qK99/vT0jsOED+ekpcyrPgknI4EvhDN/tuN5eM9iHgOJmg2DGD/CC+eefTWuYITgH2af2Q86GJZLSZorvlCYodK8g2sYcuOqgTlgLrVH+PvEKZSMYY0h48xZuQ2LGCeNPFzwBD2vwGmKr6y4CV5pLeau5AxkJlWbQ6dswgw4FXjcrV1sj8WxmzIhedNJf0NglY5S+Wl0WrY8cKcgDoEf5BzgAWy94mYGRjUsiENNwf9LqReszy2DGDiBGxNFw75YFrfUA4O1sDuxuTQrm3HTzHRfum+DXhtzh27CBiE+5w6ey6uEpM3X4vvjQM8gapEUlNmWOAtyXnWvia+N9jxwFyJ4wmqxVJyuE87SM2kbTN7wB5AO13Iu2EpbHjAHGbXizondXVnZQ7db8+BUVKkp1IR/JhxZ8vxrjfwti800gQghCEIAQhCEEIQhCCEIQgBCFIiwTprt1GsPZcgrR4kCVlZc0DJFHfHkFaFgjQPRj4pKStq+PYTX5958yLaX6e0S3F1WnSjkAESO2qMTnJzluL36q2DcT3iHITeni1vnMmxTT/PKfer37gQhjI9iz1pcyvbALpVgpkjypOE30orNN3LqKYxj9BnHNv6UPZoulz2QCyPxlw9p342CDRplbZA+JEu0/FoLqy2KE8EVQ7F1FMs0J8adLDN/9nWWpRnHruaGDc75Lz5whjTdf/CIIkpXZpJZB+WT9cwopprnZA36vyK0cy4DyjB0lDG6VypqqJR+kJBpmtuIGBwAbDBDYW02wBvlTftkh5zqyem4QsJVUEKiu/twnkF9VfB8w0gBiLaWYBteqp3wLT9SB9xYDy2Zx+U7UnzEfkp8e6tcFQTCNGf7fuinUCRutBvhAT7JbJ7x9qsBEkV/OvAL3DFjl9MU2B8YnhAEP63dZVLsges6bWfpA6oGcYiL6YpqcRpNC4IPp3zu7tkPT2W2wfWieAwUYQQzHNYKC+6S3Kpa8X5Yt8/p1Nk12r7lkPTDN0zlhMMxU4HXWv5Rf5bIJNIHPUHFUsFySFOmcsplmrqz6uGDKkUg/Su+Cd0EQrsAkkWfm3jtVimNXoQcKKaWo8aP+bsuplwHVOD3Ib+in7yEPiG7QJBO23ik74loipukDfuYhimgVAp0qpv3s7y4MwdK7Yr5VdLwf8VaSE1+wB6Sj2gDklQ6VNY5F+0xhZTFM3QJzTZXxpL9HcdcEAsk98CilDn3hUStHZF2zaxh/NUxLqqBp950yKaS6O0xaR02GTfV2y+lKvo7b9sPKVF6U5sh7eGtB3zrSYJlD5ZG6SK3v85oaIrHVsbmFruDtP3Fhv3y/EZnGnkSAEIUgLARk7dkbzALl5jCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQpAWDEK7qexfWdr5ydpV/c0AAAAASUVORK5CYII=">
+        </span>
+
+
 
         <h3>Cuidados:</h3>
 
-        <p>1° Ao definir os tamanhos para uma imagem veja se ela não ficará deformada</p>
+        <p>1° Se preocupe com direitos autorais</p>
+
+        <p>2° Ao definir os tamanhos para uma imagem veja se ela não ficará deformada ou ruim de visualizar</p>
+
+        <p>3° Não use um tamanho de imagem original maior do que você usará na página, pois o html pega o arquivo carrega e depois o reajusta para caber no seu elemento, por exemplo: temos uma imagem que baixei da internet de 2000x1900 (2000 pixels de largura e 1900 pixels de altura) e coloco na minha página somente para ficar em elementos de 500x475, então quando carregamos a página o html baixa todo o arquivo gigante e depois o reajusta para o tamanho do elemento, note que imagens maiores tendem a ser mais pesadas, logo consomem mais dados de internet, além de causar uma lentidão na hora de carregar as informações da sua página, então vá num editor de imagens e diminua sua imagem</p>
+
 
 
     </div>
 
 
     <div>
-        <h3>Imagens com legenda</h3>
+        <h3>Imagens com legenda:</h3>
 
         <figure>
-            <!-- <figure> - figura, é um contêiner para imagens -->
-            <img src="../midia/imagens/copodecafe.jpg" width="200" height="200" alt="Esta mensagem aparecerá quando não for possível carregar a imagem"><img src="../midia/gifs/feixedinamico.gif" width="200" height="200" alt="Não sei ao certo para que é usado o alt dizem que é para caso a imagem não carregue, enquanto outros dizem que é para leitores de busca poderem interpretar melhor para deficientes visuais">
-            <figcaption>Legenda de imagem: todas as imagens foram tiradas do site 
-                <a href="https://pixabay.com/pt/" target="_blank">pixabay</a>
-                
+        <!-- <figure> - figura, é um contêiner para imagens 
+            Código:
+                figure {
+                    display: block;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                }
+        -->
+
+            <img src="../midia/imagens/duzentosporduzentos.png" width="200" height="200" alt="Caixa de duzentos por duzentos pixels" />
+            
+            <figcaption id="legendateste">Legenda de imagem: todas as imagens foram tiradas do site <a href="https://pixabay.com/pt/" target="_blank">pixabay</a>
             </figcaption>
-            <!-- <figcaption> - legenda, é colocada uma descrição ou nota sobre a imagem -->
+            <!-- <figcaption> - legenda, é colocada uma descrição ou nota sobre a imagem para um elemento <figure> 
+                Código:
+                    figcaption {
+                        display: block;
+                    }
+            -->
 
         </figure>
-        
 
-        <p></p>
+        <p>Também existem legendas de imagem que podem estar em outra parte do seu documento e serem referenciadas por um atributo, porém este atributo parece não ser utilizado por nenhum navegador, mas fica aqui a explicação dele: Seus valores agem como um href de link, é possível referenciar a legenda por url, id e caminho de arquivo</p>
+
+        <img src="../midia/imagens/duzentosporduzentos.png" width="200" height="200" alt="Caixa de duzentos por duzentos pixels" longdesc="#legendateste" />
+
+        <!-- longdesc - longa descrição serve para mostrar onde está uma descrição mais detalhada da imagem
+            Valores:
+                url
+                id
+                caminho de página
+        -->
+
+        
 
         <h3>Imagens diferentes de acordo com o tamanho de tela</h3>
 
@@ -126,40 +165,7 @@
 
 
 
-
-
-
-
-    
-    <h2>Áudios</h2>
-
-    <div>
-        <h3></h3>
-
-        <p></p>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <h2>Vídeos</h2>
-
-    <div>
-        <h3></h3>
-
-        <p></p>
-
-    </div>
-
-    
+    vertical-align para imagens em meio a textos, base64
 
 
 </body>
