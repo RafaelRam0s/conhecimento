@@ -255,9 +255,9 @@ background
     Valores:
         auto - o tamanho da imagem de fundo deve ser as das dimensões da imagem
 
-        contain - verifica a altura do elemento e deixa a imagem com a mesma altura, fazendo após isso um auto-ajuste de seu comprimento
+        contain - verifica a altura do elemento e deixa a imagem com a mesma altura, fazendo após isso um ajuste de seu comprimento para caber completamente no elemento
 
-        cover - verifica a largura do elemento e deixa a imagem com a mesma largura, fazendo após isso um auto-ajuste de sua altura
+        cover - verifica a largura do elemento e deixa a imagem com a mesma largura, fazendo após isso um auto-ajuste de sua altura para não perder qualidade
 
         Unidades de medida
 */
