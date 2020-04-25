@@ -1,0 +1,316 @@
+Aprendendo javascript do zero
+
+Macetes e avisos:
+
+Não é possível acessar aparelhos externos pelo javascript
+
+Você pode quebrar a linha onde teria um espaço que o javascript procede normalmente
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+
+
+
+
+
+document.getElementById("nome_do_id").innerHTML = "Olá Mundo!";
+
+document - indica que será feita as instruções no documento em que está inserido
+
+getElementById() - obtem um elemento por id, dentro do seu parênteses, entre as aspas é inserido o id
+
+.innerHTML - html interno, se junto do getElementById(), apaga o conteúdo do elemento e insere, a informação que está recebendo ( = )
+Então um html com:
+<p id="teste">Lorem</p>
+Junto de um javascript com:
+<script>
+document.getElementById("teste").innerHTML = "Hello World!"
+</script>
+É como se o html ficasce:
+<p id="teste">Hello World!</p>
+E se houvesce um css estilisando o parágrafo continuaria com os mesmos estilos
+
+; - serve para finalizar uma instrução do javascript, é tipo o chaves {} do css
+
+
+
+
+
+
+
+
+
+
+document.write("Olá Mundo");
+
+write() - escrever, dá uma instrução de apagar todo o html e inserir apenas o que estiver no seu valor (recomendado a ser usado apenas para testes)
+Imagine que você fez um html:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <button type="button" onclick="document.write('Ele apaga tudo o que estiver dentro do head e do body, deixando apenas o body preenchido com seu valor, que neste caso é essa mensagem')">Clique e veja</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+window.alert("Essa mensagem aparecerá");
+
+window - indica que será feita uma janela de exibição
+
+alert() - alerta, junto do window, faz surgir uma mensagem que estará no seu valor, com um botão de "ok"
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <script>
+        window.alert("Este foi um teste de mensagem de alerta")
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("ola mundo");
+
+console - ativa o console, que é um @@@@@
+
+log() - lógica, coloca em operação o valor fornecido @@@@@
+
+Feito para processar no console, mais explicações futuramente dadas
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <script>
+        console.log("ola mundo");
+    </script>
+</body>
+</html>
+
+Aperte F12 e poderá ver onde ele respondeu
+
+
+
+
+
+
+
+
+
+
+window.print();
+
+print() - imprimir, tira uma print da tela para imprimir, o próprio javascript não pode acessar dispositivos externos, mas este podemos considerar como um método do navegador @@@@@. Ao usá-lo perceba que ele vem com o nome da url e data da impressão
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <button onclick="window.print()">Imprimir essa página</button>
+</body>
+</html>
+
+
+
+
+
+
+
+var apresentacao = "Olá Mundo!";
+
+var - declara que a próxima palavra será uma variável, isso significa, que a partir de agora a palavra poderá conter um valor. Para se declarar uma variável deve-se seguir algumas regras:
+As variáveis podem conter letras, dígitos, sublinhados e cifrões.
+As variáveis devem começar com uma letra
+As variáveis também podem começar com $ e _ (mas não o usaremos neste tutorial)
+As variáveis diferenciam maiúsculas de minúsculas (y e Y são variáveis ​​diferentes)
+Palavras reservadas (como palavras-chave JavaScript) não podem ser usadas como
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p id="p">Este parágrafo será modificado ao clicar no botão</p>
+    <button onclick="document.getElementById('p').innerHTML = 'Palavra mensagem entre aspas não é considerado uma instrução, na verdade quase qualquer coisa que for colocada entre aspas não é considerado intrução e sim texto' "> Clique aqui para mais explicação </button>
+    <script>
+        var mensagem = "Uma mensagem qualquer";
+        window.alert(mensagem);
+    </script>
+</body>
+</html>
+
+Outras formas de definir variáveis:
+
+var teste1;
+teste1 = "Lorem";
+
+var teste2, teste3, testen;
+teste2 = "ipsum";
+teste3 = "dor"; testen = "vários valores";
+
+As vírgulas servem para adicionar a mesma instrução ao elemento seguinte
+
+Não dá para fazer o efeito da vírgula para recebimento de valores, também não faz muito sentido ter duas variáveis fazendo a mesma coisa, aqui vai o exemplo do que não se deve fazer:
+
+var teste3, testen;
+teste3, testen = "vários valores"; //É aqui onde está o erro
+
+
+
+
+
+
+
+
+
+function umaFuncaoQualquer() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+
+function - função, funciona como o var, só que ao invés de definir uma variável é dado um conjunto de instruções a realizar, a palavra a frente do function vai ser uma palavra que armazenará e agirá como uma função, ao abrir entre chaves será colocada as instruções que deve seguir
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1 id="demo1">Um título qualquer</h1>
+    <p id="demo2">Um parágrafo qualquer</p>
+    <script>
+        function umaFuncaoQualquer() {
+            document.getElementById("demo1").innerHTML = "Hello Dolly!";
+            document.getElementById("demo2").innerHTML = "How are you?";
+        }
+    </script>
+    <button onclick="umaFuncaoQualquer()">Clique aqui e veja o título e parágrafo ficarem diferentes</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tipos de dados:
+
+    Number, os números decimais (números com vírgula na matemática brasileira) são formados por ponto final ao invés de vírgula:
+        Naturais = 1, 2, 3, 999
+        Inteiros = -999, -3, -2, -1
+        Racionais; -2.75, 8,09
+
+    String, o que estiver entre aspas será considerado um texto:
+        Aspas duplas; "texto"
+        Aspas simples; 'texto'
+
+    Aritiméticos: 
+        Mais; + (se somarmos textos eles iram concatenar, isso é se juntar, teste no seu console: var ola = "Hello"; var mundo = "World"; console.log(ola + " " + mundo + "!"); deveria aparecer: Hello World!)
+
+        Menos; -
+        Vezes; *
+        Divisão; /
+
+        Sinais matemáticos funcionam muito parecido com as contas que fazemos no dia-a-dia, porém quando usamos vários deles só temos que prestar atenção em como será feita a conta, por exemplo:
+            2 + 6 / 3
+            A conta dará 4, mas se quiser fazer antes algum cálculo, coloque entre parênteses, assim:
+                (2 + 6) / 3
+                A conta dará 8/3
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <script>
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>Um título qualquer</h1>
+    <p>Um parágrafo qualquer</p>
+    <script>
+
+    </script>
+</body>
+</html>
+
+
