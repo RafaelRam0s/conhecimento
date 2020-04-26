@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+
+.tabelabordada {
+    width: 100%;
+}
+.tabelabordada, .tabelabordada th, .tabelabordada td {
+    border: 1px solid white;
+    
+}
