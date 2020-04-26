@@ -96,6 +96,13 @@
 
 
 
+
+
+
+
+
+
+
         <h3>Tamanhos definidos desde o início:</h3>
 
         <p>Ao colocarmos uma imagem em nossa página é importante que seja definido os seus tamanhos, se a altura e a largura estiverem definidas, o espaço necessário para a imagem será reservado quando a página for carregada. No entanto, sem esses atributos, o navegador não sabe o tamanho da imagem e não pode reservar o espaço apropriado para ela. O efeito será que o layout da página será alterado durante o carregamento (enquanto as imagens são carregadas), o que pode acabar por fazer a sua página ficar piscando.</p>
@@ -111,7 +118,14 @@
         <!-- height - escolhe uma altura para a imagem em pixels -->
 
 
-        
+
+
+
+
+
+
+
+
         <h3>Imagens no meio de textos</h3>
 
         <p style="max-width: 600px;">
@@ -123,13 +137,19 @@
 
 
 
+
+
+
+
+
+
+
+
         <h3>Imagens em base 64 (meia quatro):</h3>
 
-        <p>Imagens em base 64 mais nada são do que imagens transformadas em códigos, visualmente falando nada muda, mas veja seu src no html, ele pode acabar por inutilizar qualquer outra configuração feita na própria tagname img. Meios alternativos para se configurar o img incluem usar o elemento pai como referência e modificá-lo a partir daí, por exemplo de um id para o span e depois coloque "img" @@@@@</p>
+        <p>Imagens em base 64 mais nada são do que imagens transformadas em códigos, visualmente falando nada muda, mas veja seu src no html. O base64 pode acabar por inutilizar qualquer outra configuração feita na própria tagname img. Meios alternativos para se configurar podem ser feito no css ao chamar um span que a contenha e referenciar a img como elemento filho (span img {width: 200px}</p>
 
-        <p>então coloque as configurações por css interno ou externo, mas não inline, se quiser também pode configurar no elemento pai de preferência não coloque nenhum outro atributo no elemento
-        
-        </p>
+        <p>então coloque as configurações por css interno ou externo, mas não inline, se quiser também pode configurar no elemento pai de preferência não coloque nenhum outro atributo no elemento</p>
 
         <p>
             Para converter as minha imagens em base 64 me utilizo do site 
@@ -161,7 +181,7 @@
 
 
 
-        
+
         <h3>Cuidados:</h3>
 
         <p>1° Se preocupe com direitos autorais</p>
@@ -170,7 +190,7 @@
 
         <p>3° Não use um tamanho de imagem original maior do que você usará na página, pois o html pega o arquivo carrega e depois o reajusta para caber no seu elemento, por exemplo: temos uma imagem que baixei da internet de 2000x1900 (2000 pixels de largura e 1900 pixels de altura) e coloco na minha página somente para ficar em elementos de 500x475, então quando carregamos a página o html baixa todo o arquivo gigante e depois o reajusta para o tamanho do elemento, note que imagens maiores tendem a ser mais pesadas, logo consomem mais dados de internet, além de causar uma lentidão na hora de carregar as informações da sua página, então vá num editor de imagens e diminua sua imagem</p>
 
-
+        <img id="note" width="400" height="266" src="../midia/imagens/laptop.jpg" alt="Notebook" />
 
     </div>
 
@@ -209,8 +229,8 @@
                     }
             -->
 
-            <img width="200" height="200" src="../midia/imagens/duzentosporduzentos.png" alt="Caixa de duzentos por duzentos pixels" />
-            
+            <img id="mesa" width="400" height="266" src="../midia/imagens/mesa.jpg" alt="Mesa" />
+
             <figcaption id="legendateste">
                 Legenda de imagem: todas as imagens foram tiradas do site 
                 <a href="https://pixabay.com/pt/" target="_blank">pixabay</a>
@@ -235,23 +255,48 @@
                 caminho de página
         -->
 
-        
+
+
+
+
+
+
+
+
+
+
+
 
         <h3>Imagens diferentes de acordo com o tamanho de tela</h3>
 
         <p>Se você tiver imagens grandes, pode ser que em dispositivos menores como celulares o layout fique quebrado, para evitar isso podemos configurar diversas imagens para aparecem conforme o tamanho de tela</p>
+
+        <p>Para colocarmos imagens dependendo do tamanho da tela, é necessário que dentro do elemento picture tenha um ou mais elementos source, e um img</p>
 
         <picture>
             <!-- <picture> - pinturas, serve para armazenar <source> de imagens -->
             <source media="(max-width: 668px)" srcset="../midia/imagens/cenariotempo_peq.jpg" />
             <source media="(max-width: 991px)" srcset="../midia/imagens/cenariodeserto_med.jpg" />
             <!-- <source> - fonte, é usado para dar opções alternativas de que arquivos podem ser carregados para substituir o em vigor, por conta dele agir como substituto precisará de um arquivo fixo, que seria o img -->
+
+            <!-- media - meios, serve para falar quando que determinada imagem deve aparecer, aqui ele fala que deve aparecer até o tamanho que está no seu valor.
+                Valores:
+                    (min-width: px) - largura mínima que o dispositivo tem que ter para aparecer seu elemento
+                    (max-width: px) - largura máxima que o dispositivo tem que ter para aparecer seu elemento
+            -->
+
+            <!-- srcset - arquivo alternativo, indica qual imagem deve carregar
+                Valores:
+                    caminho de arquivo
+                    url de site externo
+            -->
             
             <img src="../midia/imagens/cenariomontanha_grande.jpg" alt="Cenário" />
 
         </picture>
 
-        <p>Para este elemento funcionar é preciso </p>
+
+
 
         <h3 id="mesacomobjetos">Áreas clicáveis de uma imagem:</h3>
 
@@ -306,7 +351,7 @@
                     Valores:
                         url - domínio do site
                         caminho de arquivo - onde ele está nos arquivos
-                        parte de uma página - usa o id como base e redireciona até ele 
+                        parte de uma página - usa o id como base e redireciona até ele
                         mailto: - explicado mais para frente
                 -->
 
@@ -315,7 +360,7 @@
                         en - inglês
                         pt-br - portugues do Brasil
                         es - Espanhol
-                        Para mais acesse o site https://www.w3schools.com/tags/ref_language_codes.asp 
+                        Para mais acesse o site https://www.w3schools.com/tags/ref_language_codes.asp
                 -->
 
                 <!-- alt - importante para avisar o que está sendo marcado, para que leitores de telas para deficientes visuais possam repaçar seus valores, caso o elemento não possa carregar o valor do seu atributo aparecerá -->
@@ -329,7 +374,7 @@
                 -->
 
                 <!-- download - faz o download de um arquivo, 
-                    Uso: 
+                    Uso:
                         Só é usado se o atributo href estiver definido, pois ele pega a url especificada nele e baixa aquele arquivo. O valor deste atributo será o nome do arquivo baixado. Há restrições quanto aos valores permitidos tem que seguir a regra de nomenclatura de arquivos, e o navegador detectará automaticamente a extensão de arquivo correta e a adicionará ao arquivo (.img, .pdf, .txt, .html, etc.). Se o valor for omitido, o nome do arquivo original será usado.
                 -->
 
@@ -349,11 +394,6 @@
         <p></p>
     </div>
 
-    
-
-    <img id="note" width="400" height="266" src="../midia/imagens/laptop.jpg" alt="Notebook" />
-
-    <img id="mesa" width="400" height="266" src="../midia/imagens/mesa.jpg" alt="Mesa" />
 
 </body>
 </html>

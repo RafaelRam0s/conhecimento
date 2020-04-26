@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> - define para o navegador, que o tipo de linguagem que deve ser lido é o html5, é após ele que devemos começar nossa página -->
+
+
+
+
+
+
+
+
+
+
+<html lang="pt-br" dir="ltr">
+<!-- <html> - indica o início do documento html
+    Código:
+        html {
+        display: block;
+        }
+
+        html:focus {
+        outline: none;
+        } 
+-->
+
+<!-- lang="" - linguagem, mostra para os navegadores qual o idioma da sua página. Os sistemas de leitura se baseiam nessa informação para poderem traduzir a sua página para outros idiomas
+    Valores:
+        pt-br - português do Brasil
+        es - espanhol
+        en - inglês
+-->
+
+<!-- dir="" - mostra em que direção deve ser lido os caractéres, @@@@@@@@@@@@@@@@ aparentemente ele age como um text-align, porém é mais falho pois ao inserir os textos com um dir="rtl" a pontuação no final de um texto acaba indo parar em outra direção
+    Valores: 
+        ltr - esquerda para a direita
+        rtl - direita para a esquerda
+        auto - @@@@@ automático, quer dizer que se o padrão de visualização de determinado usuário for ltr ou rtl o site se adaptará a ele
+-->
+
+
+
+
+
+
+
+
+
+
+<head>
+<!-- <head> - cabeça, conterá informações lógicas sobre a página
+    Código:
+        head {
+            display: none;
+        }
+-->
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8" />
+    <!-- <meta> - metadado, são etiquetas que marcam e descrevem informações relacionadas ao website para que possam ser lidos pelos sistemas de busca -->
+
+    <!-- charset="" - escolha de caractéres, específica que conjunto de carácteres será utilizado no seu site, o valor - UTF-8 - engloba a maioria dos símbolos do mundo, caso não seja especificado caractéres como cecedilha (ç) podem ser substituidos por um conjunto de caractéres diferentes -->
+
+    <meta name="author" content="Rafael, Ramos" />
+    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
+    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- name="" - nome, usado pelos sistemas de busca para aprimorar pesquisas, seus valores indicam do que se tratará o conteúdo (content)
+        Valores:
+            author - autor, falará quem é o autor no content
+            
+            description - descrição, terá um resumo rápido no content, caso não seje definido, o primeiro parágrafo que a sua página tiver será considerado uma descrição
+
+            keywords - palavras chaves, colocará palavra chaves sobre o que é a página no content
+
+            viewport - visualização do dispositivo, indica no content o tamanho que o conteúdo da página deverá ser aberto em outros aparelhos
+
+            @@@@@@@@@@@@@@@@@ viewport é um valor que gera muitas dificuldades de entedimento, por isso deve ser revisada
+                Infelizmente, muitos documentos foram projetados historicamente em viewports maiores e exibem uma variedade de erros quando vistos em viewports menores. Isso inclui quebra de layout não intencional, conteúdo cortado, limites de rolagem desajeitados e erros de script. Para evitar esses problemas, os navegadores móveis geralmente usam uma inicial fixa que contém a largura do bloco que imita o tamanho da janela comum do navegador da área de trabalho (geralmente 980-1024px). O layout resultante é então reduzido para caber no espaço disponível na tela.
+            
+            Existem diversos outros valores dos quais não foram oficialmente reconhecidos, mas muitos foram propostos e na url a seguir você pode ver as diversas outras possibilidades de valores do - name -: https://wiki.whatwg.org/wiki/MetaExtensions
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta http-equiv="refresh" content="3600 texto.html" />
+    <!-- http-equiv="" -  serve para controlar ações dos navegadores
+        @@@@@ Valores:
+            content-type - 
+            default-style - 
+            refresh - refrescar, atualiza a página
+    -->
+
+    <!-- content="" - conteúdo, dá explicações sobre o valor posto no name ou no http-equiv
+        Valores com - name - :
+            author - fala quem é o autor da página
+
+            description - descreve um resumo rápido sobre o que a sua página falará, é importante que use um texto atraente com uma palavra-chave porque buscadores de site podem mostrar esse texto nos resultados de busca. Um texto persuasivo pode atrair cliques
+
+            keywords - palavras chaves, cada palavra deve ser separadas por vírgulas, associadas ao conteúdo da página. Um dia já foi usada como estratégia de SEO, porém hoje não contribui mas com este tipo de otimização e é ignorada pelos principais mecanismos de busca, use-a para classificar como sua página deve ser catalogada
+
+            viewport - qual o tamanho que deve ser aberto a página em diferentes telas e dispositivos, os mais usados são width=device-width (fala que a largura deve receber a largura real do dispositivo) e initial-scale=1.0 (fala que a escala de visualização deve ser 1.0 (100%))
+
+        Valores com - http-equiv - :
+            content-type - 
+            default-style - 
+            refresh - refrescar, colocando um número é considerado os segundos que a página deve levar até atualizar, se após o número for colocado uma url ou um caminho de arquivo a página será redirecionada para ele 
+
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="../css/_style.css" hreflang="pt-br" />
+    <link rel="icon" type="image/ico" href="_icone_r.ico" />
+    <!-- <link> - conexão, define um link entre um documento e um recurso externo
+        Código:
+            link {
+                display: none;
+            }
+    -->
+
+    <!-- rel="" - relacionamento, avisa ao navegador como deve ser tratado o documento externo que será vinculado. Elemento necessário para ativar o <link>
+        @@@@@ Valores:
+            alternate - 
+            author - 
+            dns-prefetch - 
+            help - 
+            icon - Importa um ícone
+            license - 
+            next - 
+            pingback - 
+            preconnect - 
+            prefetch - 
+            preload - 
+            prerender - 
+            prev - 
+            search - 
+            stylesheet - Importa uma folha de estilo
+    -->
+
+    <!-- type="" - indica o tipo de arquivo
+        @@@@@ Valores:
+            text/css - texto em formato css
+
+            image/png - imagem em formato png
+            image/jpeg - imagem em formato jpeg
+
+            Mais valores em: https://www.iana.org/assignments/media-types/media-types.xhtml
+    -->
+
+    <!-- href="" - referencia html, mostra de onde acessar o arquivo 
+        Valores:
+            Caminho de arquivo
+            Nome de url
+    -->
+
+    <!-- hreflang="" - linguagem de referência html, indica qual o idioma do texto do documento vinculado. Este atributo é usado apenas se o atributo href estiver definido. Serve para os mecanismos de busca interpretarem mais fácil aque linguagem determinado documento está -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+    /* <style> - estilo como tagname ativa o css interno, isto é, quando quiser fazer o css da página pode faze-lo localmente */
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <script>
+    /* <script> - é usado para se ativar um modelo javascript dentro da sua página */
+    </script>
+
+
+    <title>Início</title>
+    <!-- <title> - título, adiciona um título na aba do site, fornece um título para a página quando ela é adicionada aos favoritos, exibe um título para a página nos resultados do mecanismo de pesquisa.
+        Código:
+            title {
+                display: none;
+            }
+    -->
+
+</head>
+<body style="font-size: 200%;">
+<!-- <body> - no corpo é onde será postas informações que aprecerão para o usuário -->
+<!-- style - estilo como atributo, ativa o css em linha -->
+
+    Hello World!
+
+    Olá Mundo!
+
+    Pendentes:
+        html
+            dir
+        meta
+            name
+                viewport
+            http-equiv
+                content-type
+                default-style
+        link
+            rel
+            crossorigin
+            media
+            referrerpolicy
+            sizes
+            title
+        
+
+    Pendentes em outras páginas:
+        span
+        id
+        class
+</body>
+</html>

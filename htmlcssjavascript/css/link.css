@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+
+
+a:link {
+    color: rgb(0, 0, 255);
+}
+a:active {
+    color: rgb(255, 0, 0);
+}
+a:visited {
+    color: rgb(85, 26, 139);
+}
+
+.linktexto:link {
+    color: red;
+}
+.linktexto:visited {
+    color: green;
+}
+.linktexto:hover {
+    color: hotpink;
+}
+.linktexto:active {
+    color: blue;
+}
+
+.linkbotao:link, .linkbotao:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.linkbotao:hover, .linkbotao:active {
+    background-color: red;
+}
