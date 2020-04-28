@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="_icone_r.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <title>Listas</title>
+</head>
+<body>
+    
+    <h1>Lista</h1>
+
+    <h2></h2>
+
+    <div>
+        <h3>Listas não ordenadas:</h3>
+
+
+        
+        <ul>
+            <!-- <ul> - unorded list, lista não ordenada serve para pré-configurar como agirão os itens de lista
+                Código:
+                    ul {
+                        display: block;
+                        list-style-type: disc;
+                        margin-top: 1em;
+                        margin-bottom: 1 em;
+                        margin-left: 0;
+                        margin-right: 0;
+                        padding-left: 40px;
+                    }
+            -->
+            <li>Itens</li>
+            <!-- <li> - list item, item da lista coloca uma informação da lista
+                Código:
+                    li {
+                        display: list-item;
+                    }
+            -->
+            <li>de</li>
+            <li>Lista</li>
+        </ul>
+
+        <ul type="circle">
+            <!-- type - seleciona o tipo de símbolo que aparecerá antes de cada item 
+                Valores com ul:
+                    disc - Disco
+                    circle - Círculo
+                    square - Quadrado
+                    none - Nenhum
+            -->
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ul>
+
+        <ul type="square">
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ul>
+
+        <ul type="none">
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ul>
+
+        <p>Existem alguns icones de lista que podemos usar, por padrão ele vem disc, e todos os itens de lista erdam o que foi especificado nele, a não ser que possua um type dentro deste item</p>
+
+        <ul type="disc">
+            <li type="disc">Disco</li>
+            <li type="circle">Círculo</li>
+            <li type="square">Quadrado</li>
+            <li type="none">Nenhum</li>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+        </ul>
+        
+    </div>
+
+
+
+
+
+    <div>
+        <h3>Listas Ordenadas:</h3>
+
+        <p>Listas ordenadas fazem a numeração de cada item</p>
+
+        <ol>
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ol>
+
+        <ol type="A">
+            <!-- type - seleciona o sistema de categorizar por ordem colocando em cada item um valor específico para ele
+                Valores com ol:
+                    1 - Numérico
+                    1 - Numerado
+                    A - Alfabético
+                    a - Alfabético minúsculo
+                    I - Numeragem Romana
+                    i - Numeragem Romana minúscula
+                Código:
+                    ol {
+                        display: block;
+                        list-style-type: decimal;
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                        margin-left: 0;
+                        margin-right: 0;
+                        padding-left: 40px;
+                    }
+            -->
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ol>
+
+        <ol type="a">
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ol>
+
+        <ol type="I">
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ol>
+
+        <ol type="i">
+            <li>Item</li>
+            <li>de</li>
+            <li>Lista</li>
+        </ol>
+
+        <p>Assim como o da lista desordenada, possuem diversos tipos de símbolos anteriores ao item, na ordenada existem outras formas de catalogar</p>
+
+        <ol type="1">
+            <li type="1">Numerado</li>
+            <li type="A">Alfabético</li>
+            <li type="a">Alfabético minúsculo</li>
+            <li type="I">Numeragem Romana</li>
+            <li type="i">Numeragem Romana minúscula</li>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+        </ol>
+
+        <p>Caso deseje começar a contagem a partir de um número específico, tipo: item de número 100 podemos fazer assim:</p>
+
+        <ol type="1" start="100">
+            <!-- start - começo, dá um ponto de início para a contagem começar -->
+            <li type="1">Numerado</li>
+            <li type="A">Alfabético</li>
+            <li type="a">Alfabético minúsculo</li>
+            <li type="I">Numeragem Romana</li>
+            <li type="i">Numeragem Romana minúscula</li>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+        </ol>
+
+        <p>Se quiser inverter a ordem de contagem que originalmente é rumo ao infinito positivo, podemos colocar infinito negativo</p>
+
+        <ol type="1" start="100" reversed>
+            <!-- reversed - reverso, inverte a ordem de contagem dos itens de lista -->
+            <li>Item de Lista</li>
+            <li>Item de Lista</li>
+            <li>Item de Lista</li>
+        </ol>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Listas misturadas:</h3>
+
+        <ul>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+            <ul>
+                <li>Item de lista</li>
+                <ul>
+                    <li>Item de lista</li>
+                    <ul>
+                        <li>Item de lista</li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+            <ol>
+                <li>Item de lista</li>
+                <li>Item de lista</li>
+                <ul>
+                    <li>Item de lista</li>
+                </ul>
+            </ol>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+        </ul>
+
+        <p>Se uma lista não ordenada estiver dentro de outras listas ela vai modificando seu type padrão de disc para circle e square</p>
+
+        <ol>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+            <ul>
+                <li>Item de lista</li>
+                <li>Item de lista</li>
+                <li>Item de lista</li>
+            </ul>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+            <ol>
+                <li>Item de lista</li>
+                <li>Item de lista</li>
+                <ol>
+                    <li>Item de lista</li>
+                </ol>
+            </ol>
+            <li>Item de lista</li>
+            <li>Item de lista</li>
+        </ol>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Descrição de lista:</h3>
+
+        <p>Descrições de lista não podem se misturar contendo umas as outras dentro de si</p>
+
+        <dl>
+            <!-- <dl> - Faz uma lista de descrição
+                Código:
+                    dl {
+                        display: block;
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+            -->
+            <dt>Termo de uma descrição</dt>
+            <!-- <dt> - Tópico de descrição, coloca um assunto
+                Código:
+                    dt {
+                        display: block;
+                    }
+            -->
+            <dd>- Dados de descrição</dd>
+            <!-- <dd> - dados de descrição dão uma definição para o tópico aprofundando sobre seu tema
+                Código: 
+                    dd {
+                        display: block;
+                        margin-left: 40px;
+                    }
+            -->
+            <dt>Descrição de lista</dt>
+            <dt><p>Termo de uma descrição</p></dt>
+            <dd><p>- Descorrendo sobre o tema</p></dd>
+        </dl>
+    </div>
+</body>
+</html>

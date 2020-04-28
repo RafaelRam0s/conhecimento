@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="_icone_r.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <title>Iframe</title>
+</head>
+<body>
+
+    @@@@@ Pendentes: referrerpolicy, sand-box, srcdoc
+    
+    <h1>Iframe</h1>
+
+    <h2></h2>
+
+    <div>
+        <h3>Tela</h3>
+
+        <p>Iframes são páginas que ficam dentro de páginas, configure seus tamanhos logo de início pois a página o diminui</p>
+
+        <iframe src="link.html" width="320px" height="400px"></iframe>
+        <!-- <iframe> - quadro, ativa uma página dentro de outra página
+            Código:
+                iframe:focus {
+                    outline: none;
+                }
+
+                iframe[seamless] {
+                    display: block;
+                }
+        -->
+        <!-- src - seleciona uma url externa ou um arquivo que possua para abrir na página, também pode ser colocado o id após o link para abrir em um local mais específico da página -->
+
+        <p>@@@@@ Se a página que escolheu pro seu iframe, tiver um iframe dentro, esse segundo iframe que seria a da terceira página não aparece</p>
+
+        <p>Tirando bordas</p>
+
+        <iframe src="iframe.html" style="width: 50%; height: 60vh; border: none;" name="mudando_iframe"></iframe>
+
+        <p>Também temos a possibilidade de mudar o site que é mostrado no iframe através de um link, para isso basta colocar um name no iframe, e no target do link colocar o nome do name <a href="link.html#fimpag" target="mudando_iframe">clique aqui e veja</a></p>
+        
+    </div>
+</body>
+</html>
