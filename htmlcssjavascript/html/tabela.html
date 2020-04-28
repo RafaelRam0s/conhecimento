@@ -1,102 +1,628 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br">
 <head>
 
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Rafael Ramos" />
-    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
-    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="_icone_r.ico" />
 
-    <meta http-equiv="refresh" content="600" />
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+        table, th, tr, td {
+            border: 1px solid white;
+        }
+    </style>
 
-    <link rel="icon" href="../midia/icones/icone_r.ico" />
-
-    <link rel="stylesheet" type="text/css" href="../css/_style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/tabela.css" />
-    
-    <title>Tabela</title>
-
+    <title>Tabelas</title>
 </head>
 <body>
+    
+    <h1>Tabela</h1>
 
-    <h1></h1>
-
-    <h2>Tabela</h2>
+    <p>Tabelas são iniciadas pela tagname - table -, em seguida para cada linha que a tabela deve ter colocamos um - tr -, dentro das linhas, temos os temas da tabela, que ficam nas table header - th - e as informações que ficam nas table data - td -, dependendo de como é organizada a sua estrutura ela pode parecer que está em pé ou deitada. Se você deixar uma célula vazia isto é não preencher um tr um th ou um td eles ainda ocuparão um espaço da linha e a próxima célula da linha será jogada para a próxima coluna, se você inserir uma célula a mais ela ocupara outra coluna, mesmo que não tenha uma célula acima dela.</p>
+    
+    <p>Não deixe de por uma célula, mesmo que seu valor vá ficar vazio, mesmo que que pareça que vai economizar código e que visualmente falando daria no mesmo, pois nunca se sabe quando será acrescentado uma nova linha ou coluna, que você pode acabar esquecendo de preencher.</p>
+    
+    <p>Uma célula com conteúdo maior do que das outras aumenta o tamanho da coluna</p>
 
     <div>
-        <h3>Tabela simples</h3>
-
-        <p>Uma tabela é iniciada por sua respectiva tagname table, dentro dela existem linhas, em cada linha existe uma ou mais informações, na primeira linha normalmente fica os tópicos que indicam do que se falam as informações dadas nas linhas abaixo</p>
-        <p>Para as linhas que tem como intuito ser o tópico das próximas usamos a table head (cabeçalho de tabela) th</p>
-        <p>Para as informações que preenchem as linhas seguintes usamos td</p>
+        <h3>Tabela Horizontal:</h3>
 
         <table>
+            <!-- <table> - tabela, armazena uma tabela e deve estar presente no início de uma
+                Código:
+                    table {
+                        display: table;
+                        border-collapse: separate;
+                        border-spacing: 2px;
+                        border-color: gray;
+                    }
+            -->
+            <caption>Legenda de uma tabela</caption>
+            <!-- <caption> - adiciona uma legenda para a tabela, recomendável usar logo após a tagname <table>
+                Código:
+                    caption {
+                        display: table-caption;
+                        text-align: center;
+                    }
+            -->
             <tr>
+                <!-- <tr> -  table row ou linha de tabela, insere uma linha na tabela
+                    Código:
+                        tr {
+                            display: table-row;
+                            vertical-align: inherit;
+                            border-color: inherit;
+                        }
+                -->
                 <th>Nome</th>
-                <th>Classe</th>
-                <th>Raça</th>
+                <!-- <th> - table header ou cabeçalho de tabela, define uma célula que será o foco da linha ou coluna da sua tabela
+                    Código:
+                        th {
+                            display: table-cell;
+                            vertical-align: inherit;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                -->
+                <th>Idade</th>
+                <th>Comida favorita</th>
+                <th>Esporte preferido</th>
+                <th>Estado civil</th>
+                <th>Altura</th>
             </tr>
             <tr>
                 <td>Ramos</td>
-                <td>Guerreiro</td>
-                <td>Humano</td>
+                <!-- <td> - table data ou dados de tabela, serve para criar uma cédula em que pode ser colocada as informações a serem preenchidas
+                    Código:
+                        td {
+                            display: table-cell;
+                            vertical-align: inherit;
+                        }
+                -->
+                <td>17 anos</td>
+                <td>Pizza de mussarela</td>
+                <td>Ping Pong</td>
+                <td>Solteiro</td>
+                <td>1,83</td>
             </tr>
             <tr>
-                <td>Rafael</td>
-                <td>Mago</td>
-                <td>Anão</td>
+                <td>Rodrigo</td>
+                <td>37 anos</td>
+                <td></td>
+                <td>Futebol</td>
+                <td>Comprometido</td>
+                <td>1,72</td>
+            </tr>
+            <tr>
+                <td>Beltrano</td>
+                <td>56 anos</td>
+                <td>Pastel</td>
+                <td>Vôlei</td>
+                <td></td>
+                <td>1,90</td>
+            </tr>
+            <tr>
+                <td>Deltrana</td>
+                <td>22 anos</td>
+                <td>Lasanha</td>
+                <td></td>
+                <td>Solteiro</td>
+                <td>1,68</td>
             </tr>
         </table>
 
-        <p>Uma tabela consegue dividir o espaço necessário para cada coluna, então se colocarmos seu width de forma a ocupar todo seu elemento sua visualização pode ficar melhor</p>
-
-        <table style="width: 100%;">
-            <tr>
-                <th>Nome</th>
-                <th>Classe</th>
-                <th>Raça</th>
-            </tr>
-            <tr>
-                <td>Ramos</td>
-                <td>Guerreiro</td>
-                <td>Humano</td>
-            </tr>
-            <tr>
-                <td>Rafael</td>
-                <td>Mago</td>
-                <td>Anão</td>
-            </tr>
-        </table>
-
-
-
-
-        <h3>Adicionando Bordas</h3>
-
-        <table class="tabelabordada">
-            <tr>
-                <th>Nome</th>
-                <th>Classe</th>
-                <th>Raça</th>
-            </tr>
-            <tr>
-                <td>Ramos</td>
-                <td>Guerreiro</td>
-                <td>Humano</td>
-            </tr>
-            <tr>
-                <td>Rafael</td>
-                <td>Mago</td>
-                <td>Anão</td>
-            </tr>
-        </table>
         
+
+
+
+
+        <h3>Tabela Vertical:</h3>
+
+        <table>
+            <caption>Informações dos clientes</caption>
+            <tr>
+                <th>Nome</th>
+                <td>Ramos</td>
+                <td>Rodrigo</td>
+                <td>Beltrano</td>
+                <td>Deltrana</td>
+            </tr>
+            <tr>
+                <th>Idade</th>
+                <td>17 anos</td>
+                <td>37 anos</td>
+                <td>56 anos</td>
+                <td>22 anos</td>
+            </tr>
+            <tr>
+                <th>Comida favorita</th>
+                <td>Pizza de mussarela</td>
+                <td></td>
+                <td>Pastel</td>
+                <td>Lasanha</td>
+            </tr>
+            <tr>
+                <th>Esporte preferido</th>
+                <td>Ping Pong</td>
+                <td>Futebol</td>
+                <td>Vôlei</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Estado civil</th>
+                <td>Solteiro</td>
+                <td>Comprometido</td>
+                <td></td>
+                <td>Solteiro</td>
+                <td></td>
+
+                <td>Não deixe</td>
+            </tr>
+            <tr>
+                <th>Altura</th>
+                <td>1,83</td>
+                <td>1,72</td>
+                <td>1,90</td>
+                <td>1,68</td>
+
+                <td>células a mais</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>pois fica feio</td>
+            </tr>
+        </table>
     </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Tabela com cédulas agrupadas:</h3>
+
+        <p>Tabelas podem mesclar células (ocupar o espaço de outra célula além da própria)</p>
+
+        <p>Podemos mesclar linha como é o caso abaixo do campo "Nome", em que foi preciso criar outra linha para que o campo Número pudesse se dividir, e podemos mesclar colunas, como é o caso do campo "Número"</p>
+
+        <p>Se tentarmos mesclar uma célula que não existe por exemplo um colspan="9999999999999999999" a tabela poderá ficar com uma falha, criando um espaço pequeno a mais</p>
+
+        <table>
+            <tr>
+                <th rowspan="2">Nome</th>
+                <th rowspan="2">Idade</th>
+                <th rowspan="2">Comida favorita</th>
+                <th rowspan="2">Esporte preferido</th>
+                <th rowspan="2">Estado civil</th>
+                <th rowspan="2">Altura</th>
+                <!-- rowspan - mescla linhas
+                    Valor:
+                        Número - este valor será referente a quantas linhas o elemento ocupará
+                -->
+                <th colspan="2" id="contato">Número</th>
+                <!-- colspan - mescla colunas
+                    Valor:
+                        Número - este valor será referente a quantas colunas o elemento ocupará
+                -->
+            </tr>
+            <tr>
+                <th headers="contato">Telefone</th>
+                <th headers="contato">Celular</th>
+                <!-- headers - fala o id de qual cabeçalho pertence essa ramificação, útil para organizar o código e avisar ao navegador a presença de dois campos para uma informação -->
+            </tr>
+            <tr>
+                <td>Ramos</td>
+                <td>17 anos</td>
+                <td>Pizza de mussarela</td>
+                <td>Ping Pong</td>
+                <td>Solteiro</td>
+                <td>1,83</td>
+                <td>1234-5678</td>
+                <td>91234-5678</td>
+            </tr>
+            <tr>
+                <td>Rodrigo</td>
+                <td>37 anos</td>
+                <td>Arroz com feijão</td>
+                <td>Futebol</td>
+                <td>Comprometido</td>
+                <td>1,72</td>
+                <td></td>
+                <td>98765-4321</td>
+            </tr>
+            <tr>
+                <td>Beltrano</td>
+                <td>56 anos</td>
+                <td>Pastel</td>
+                <td>Vôlei</td>
+                <td></td>
+                <td>1,90</td>
+                <td>4321-4321</td>
+                <td>94321-4321</td>
+            </tr>
+            <tr>
+                <td>Deltrana</td>
+                <td>22 anos</td>
+                <td>Lasanha</td>
+                <td></td>
+                <td>Solteiro</td>
+                <td>1,68</td>
+                <td>1234-1234</td>
+                <td></td>
+            </tr>
+        </table>
+
+
+
+        <h3>Tabela Vertical com Mesclagem:</h3>
+
+        <p>Atributos que ajudam o programador a visualizar a tabela, veja o código para entender o abbr, headers e scope</p>
+
+        <table>
+            <tr>
+                <th colspan="2" abbr="Primeiro Nome" scope="row">Nome</th>
+                <!-- abbr - abreviação, falará mais especificamente para que serve determinada célula de cabeçalho, usada para ajudar o programador -->
+                <td>Ramos</td>
+                <td>Rodrigo</td>
+                <td>Beltrano</td>
+                <td>Deltrana</td>
+            </tr>
+            <tr>
+                <th colspan="2" scope="row">Idade</th>
+                <td>17 anos</td>
+                <td>37 anos</td>
+                <td>56 anos</td>
+                <td>22 anos</td>
+            </tr>
+            <tr>
+                <th colspan="2" scope="row">Comida favorita</th>
+                <td>Pizza de mussarela</td>
+                <td>Arroz com feijão</td>
+                <td>Pastel</td>
+                <td>Lasanha</td>
+            </tr>
+            <tr>
+                <th colspan="2" scope="row">Esporte preferido</th>
+                <td>Ping Pong</td>
+                <td>Futebol</td>
+                <td>Vôlei</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th colspan="2" scope="row">Estado civil</th>
+                <td>Solteiro</td>
+                <td>Comprometido</td>
+                <td></td>
+                <td>Solteiro</td>
+            </tr>
+            <tr>
+                <th colspan="2" scope="row">Altura</th>
+                <td>1,83</td>
+                <td>1,72</td>
+                <td>1,90</td>
+                <td>1,68</td>
+            </tr>
+            <tr>
+                <th rowspan="2" id="contato" scope="row">Número</th>
+                <th headers="contato" scope="rowgroup">Telefone</th>
+                <!-- scope - scope indica a função de determinada célula se age visualmente como linha ou coluna
+                    Valores:
+                        row - linha
+                        rowgroup - grupo de linhas
+                        col - coluna
+                        colgroup - grupo de colunas
+                -->
+                <td>1234-5678</td>
+                <td></td>
+                <td>4321-4321</td>
+                <td>1234-1234</td>
+            </tr>
+            <tr>
+                <th headers="contato" scope="rowgroup">Celular</th>
+                <td>91234-5678</td>
+                <td>98765-4321</td>
+                <td>94321-4321</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div>
+
+        <h3>Estilizando colunas:</h3>
+
+        <p>Quebrei a informação da tabela mostrar o que aconteceria com células mescladas se fossem estilizadas na metade</p>
+
+        <table>
+            <caption>Dados dos Clientes</caption>
+
+            <colgroup span="4" style="background-color:blue;"></colgroup>
+            <!-- <colgroup> - grupo de colunas, útil para estilizar diversas colunas ao invés de adicionar classe em cada uma. Deve ser filha de um elemento <table>, depois de qualquer elemento <caption> e antes de qualquer elemento <thead>, <tbody>, <tfoot> e <tr>
+                Código:
+                    colgroup {
+                        display: table-column-group;
+                    }
+            -->
+
+            <!-- span - selecionador, escolhe o número de colunas que serão atingidas pelo estilo 
+                Valor:
+                    Número natural - o número será referente a quantas colunas serão atingidas pelo estilo, por padrão vem 1
+            -->
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Comida favorita</th>
+                <th colspan="2">Esporte preferido</th>
+                <th>Estado civil</th>
+                <th>Altura</th>
+            </tr>
+            <tr>
+                <td>Ramos</td>
+                <td>17 anos</td>
+                <td>Pizza de mussarela</td>
+                <td>Ping Pong</td>
+                <td>Solteiro</td>
+                <td>1,83</td>
+            </tr>
+            <tr>
+                <td>Rodrigo</td>
+                <td>37 anos</td>
+                <td></td>
+                <td>Futebol</td>
+                <td>Comprometido</td>
+                <td>1,72</td>
+            </tr>
+            <tr>
+                <td>Beltrano</td>
+                <td>56 anos</td>
+                <td>Pastel</td>
+                <td>Vôlei</td>
+                <td></td>
+                <td>1,90</td>
+            </tr>
+            <tr>
+                <td>Deltrana</td>
+                <td>22 anos</td>
+                <td>Lasanha</td>
+                <td></td>
+                <td>Solteiro</td>
+                <td>1,68</td>
+            </tr>
+        </table>
+
+
+
+
+
+        <h3>Estilizando coluna por coluna:</h3>
+
+        <table>
+            
+            <colgroup>
+                <col style="background-color:black">
+                <col span="1" style="background-color:red">
+                <col span="2" style="background-color:yellow">
+                <!-- <col> - coluna, seleciona uma coluna para estilizar 
+                    Código:
+                        col {
+                            display: table-column;
+                        }
+                -->
+            </colgroup>
+
+            <tr>
+                <th>Nome</th>
+                <td>Ramos</td>
+                <td>Rodrigo</td>
+                <td>Beltrano</td>
+                <td>Deltrana</td>
+            </tr>
+            <tr>
+                <th>Idade</th>
+                <td>17 anos</td>
+                <td>37 anos</td>
+                <td>56 anos</td>
+                <td>22 anos</td>
+            </tr>
+            <tr>
+                <th>Comida favorita</th>
+                <td>Pizza de mussarela</td>
+                <td></td>
+                <td>Pastel</td>
+                <td>Lasanha</td>
+            </tr>
+            <tr>
+                <th>Esporte preferido</th>
+                <td>Ping Pong</td>
+                <td>Futebol</td>
+                <td>Vôlei</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Estado civil</th>
+                <td>Solteiro</td>
+                <td>Comprometido</td>
+                <td></td>
+                <td>Solteiro</td>
+            </tr>
+            <tr>
+                <th>Altura</th>
+                <td>1,83</td>
+                <td>1,72</td>
+                <td>1,90</td>
+                <td>1,68</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Tabela complexa</h3>
+
+        <table>
+            <caption>Tabela bem segmentada</caption>
+
+            <colgroup>
+                <col span="999" style="background-color: grey;">
+            </colgroup>
+
+            <thead>
+                <!-- <thead> - cabeça de tabela, agrupa os th
+                    Código:
+                        thead {
+                            display: table-header-group;
+                            vertical-align: middle;
+                            border-color: inherit;
+                        }
+                -->
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Comida favorita</th>
+                    <th>Esporte preferido</th>
+                    <th>Estado civil</th>
+                    <th>Altura</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- <tbody> - corpo da tabela, armazena os dados da tabela
+                    Código:
+                        tbody {
+                            display: table-row-group;
+                            vertical-align: middle;
+                            border-color: inherit;
+                        }
+                -->
+                <tr>
+                    <td>Ramos</td>
+                    <td>17 anos</td>
+                    <td>Pizza de mussarela</td>
+                    <td>Ping Pong</td>
+                    <td>Solteiro</td>
+                    <td>1,83</td>
+                </tr>
+                <tr>
+                    <td>Rodrigo</td>
+                    <td>37 anos</td>
+                    <td></td>
+                    <td>Futebol</td>
+                    <td>Comprometido</td>
+                    <td>1,72</td>
+                </tr>
+                <tr>
+                    <td>Beltrano</td>
+                    <td>56 anos</td>
+                    <td>Pastel</td>
+                    <td>Vôlei</td>
+                    <td></td>
+                    <td>1,90</td>
+                </tr>
+                <tr>
+                    <td>Deltrana</td>
+                    <td>22 anos</td>
+                    <td>Lasanha</td>
+                    <td></td>
+                    <td>Solteiro</td>
+                    <td>1,68</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <!-- <tfoot> - rodapé da tabela
+                    Código:
+                        tfoot {
+                            display: table-footer-group;
+                            vertical-align: middle;
+                            border-color: inherit;
+                        }
+                -->
+                <tr>
+                    <td colspan="6">Rodapé</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+    </div>
 
 
 </body>

@@ -1,0 +1,99 @@
+
+
+
+
+
+index.html
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta>
+    <link>
+    <style>
+    <script>
+    <title>
+    <body>
+    @@@ Pendente: meta (viewport), link (type, rel), html (dir)
+
+texto.html
+    <hgroup>
+    <h1>
+    <h2>
+    <h3>
+    <h4>
+    <h5>
+    <h6>
+    <p>
+    <div>
+    <b>
+    <strong>
+    <i>
+    <em>
+    <mark>
+    <small>
+    <del>
+    <ins>
+    <sub>
+    <sup>
+    <pre>
+    <br>
+    <hr>
+    <q>
+    <blockquote>
+    <abbr>
+    <cite>
+    <code>
+    <address>
+    @@@ Pendente: del (datetime), bdo (dir)
+
+tabela.html
+    <table>
+    <caption>
+    <tr>
+    <th>
+    <td>
+    <colgroup>
+    <col>
+    <thead>
+    <tbody>
+    <tfoot>
+
+lista.html
+    <ul>
+    <li>
+    <ol>
+    <dl>
+    <dt>
+    <dd>
+
+link.html
+    <a>
+    Pendente: a (media, ping, rel, type)
+
+imagens.html
+    <img>
+    Pendentes: area (media, rel, type)
+
+iframe.html
+    <iframe>
+    Pendentes: iframe (referrerpolicy, sand-box, srcdoc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
