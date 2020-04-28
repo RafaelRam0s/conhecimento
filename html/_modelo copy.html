@@ -66,14 +66,23 @@
     <div>
         <h3>teste</h3>
         
-        <input type="text" name="teste" id="vai" onblur="func()">
-
-        <p id="indo">Será</p>
+        <input type="text" name="teste" id="vai" oninput="func()">
+        <br>
+        <p>Aqui será repassada a informação do bloco de cima</p>
+        <input type="text" name="b" id="indo">
 
         <script>
             function func() {
-                document.getElementById("indo").innerHTML = "Foi"
-            }
+                var valor = document.getElementById("vai").value;
+                if (valor.length == 8) {
+                    if (valor == "02914030") {
+                        document.getElementById("indo").value = "Rua Salvador Sala";
+                    }
+                    else {
+                        document.getElementById("indo").value = "Não sei o endereço";
+                    }
+                };
+            };
         </script>
 
         
