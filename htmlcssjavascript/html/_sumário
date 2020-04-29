@@ -9,6 +9,7 @@ index.html
     <head>
     <meta>
     <link>
+    <base>
     <style>
     <script>
     <title>
@@ -68,10 +69,16 @@ lista.html
 
 link.html
     <a>
-    Pendente: a (media, ping, rel, type)
+    Pendente: a (media, ping, rel, type, href)
 
 imagens.html
     <img>
+    <picture>
+    <source>
+    <figure>
+    <figcaption>
+    <map>
+    <area>
     Pendentes: area (media, rel, type)
 
 iframe.html
