@@ -117,7 +117,7 @@
             <li>Lista</li>
         </ul>
 
-        <p>Existem alguns icones de lista que podemos usar, por padrão ele vem disc, e todos os itens de lista erdam o que foi especificado nele, a não ser que possua um type dentro deste item</p>
+        <p>Existem alguns icones de lista que podemos usar, por padrão ele vem disc, e todos os itens de lista erdarão o que foi especificado nele, a não ser que possua um type dentro deste item, que faria ele ter um estilo próprio</p>
 
         <ul type="disc">
             <li type="disc">Disco</li>
@@ -137,7 +137,7 @@
     <div>
         <h3>Listas Ordenadas:</h3>
 
-        <p>Listas ordenadas fazem a numeração de cada item</p>
+        <p>Listas ordenadas, organizam seus itens por ordem, sejam numéricas ou alfabéticas</p>
 
         <ol>
             <li>Item</li>
@@ -188,7 +188,7 @@
             <li>Lista</li>
         </ol>
 
-        <p>Assim como o da lista desordenada, possuem diversos tipos de símbolos anteriores ao item, na ordenada existem outras formas de catalogar</p>
+        <p>Assim como a lista desordenada possue diversos tipos de símbolos anteriores ao item, na ordenada existem outras formas de catalogar</p>
 
         <ol type="1">
             <li type="1">Numerado</li>
@@ -215,8 +215,8 @@
 
         <p>Se quiser inverter a ordem de contagem que originalmente é rumo ao infinito positivo, podemos colocar infinito negativo</p>
 
-        <ol type="1" start="100" reversed>
-            <!-- reversed - reverso, inverte a ordem de contagem dos itens de lista -->
+        <ol type="1" start="1" reversed>
+            <!-- reversed - reverso, inverte a ordem de contagem dos itens de lista é necessário que o atributo start esteja presente para funcionar -->
             <li>Item de Lista</li>
             <li>Item de Lista</li>
             <li>Item de Lista</li>
@@ -261,7 +261,7 @@
             <li>Item de lista</li>
         </ul>
 
-        <p>Se uma lista não ordenada estiver dentro de outras listas ela vai modificando seu type padrão de disc para circle e square</p>
+        <p>Se uma lista desordenada estiver dentro de outras listas ela vai modificando seu type padrão de disc para circle e square, de acordo com sua primeira, segunda e terceira ramificação, a partir da terceira subdivisão se torna padrão o square</p>
 
         <ol>
             <li>Item de lista</li>
@@ -300,7 +300,7 @@
     <div>
         <h3>Descrição de lista:</h3>
 
-        <p>Descrições de lista não podem se misturar contendo umas as outras dentro de si</p>
+        <p>Descrições de lista não podem se misturar contendo umas as outras dentro de si como as listas fazem</p>
 
         <dl>
             <!-- <dl> - Faz uma lista de descrição
@@ -328,9 +328,24 @@
                         margin-left: 40px;
                     }
             -->
+            <dd>- Dados de descrição</dd>
+            <dd>- Dados de descrição</dd>
             <dt>Descrição de lista</dt>
+            <dt>Termo de uma descrição</dt>
             <dt><p>Termo de uma descrição</p></dt>
             <dd><p>- Descorrendo sobre o tema</p></dd>
+        </dl>
+
+        <dl>
+            <dt>Sumário</dt>
+            <dt>index.html</dt>
+            <dd>- DOCTYPE</dd>
+            <dd>- html</dd>
+            <dt>lista.html</dt>
+            <dd>- ol</dd>
+            <dd>- ul</dd>
+            <dd>- li</dd>
+
         </dl>
     </div>
 </body>

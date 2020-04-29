@@ -201,6 +201,32 @@
 
 
 
+    <base href="https://www.algum_dominio_que_possua.dominio/html/" target="_self" />
+    <!-- <base> - base, quando formos escrever algum href, src, url ou seja qualquer caminho de arquivo de nosso site, seja ele em html, css ou javascript ele terá o caminho iniciado pelo que for definido no href
+        Exemplo:
+            <base href="https://www.site_do_ramos.com/html/">
+            <img src="_icone_r.ico" />
+            Então no src do img é como se estivesse escrito; https://www.site_do_ramos.com/html/_icone_r.ico
+        Exemplo 2:
+            <base href="https://www.site_do_ramos.com/html/">
+            <link rel="stylesheet" href="../css/fundo.css" />
+            Ficaria https://www.site_do_ramos.com/css/fundo.css
+    -->
+    
+    <!-- href - referência de caminho, dá a instrução de qual deve ser o caminho inicial dos seus links, seu valor é a url de domínio -->
+
+    <!-- target - alvo, configura a base de como devem ser abertos os seus links
+        Valores:
+            _blank
+            _parent
+            _self
+            _top
+            framename
+    -->
+
+
+
+
 
 
 
@@ -276,6 +302,8 @@
 <!-- <body> - no corpo é onde será postas informações que aprecerão para o usuário -->
 <!-- style - estilo como atributo, ativa o css em linha -->
 
+<noscript>Desculpe, seu navegador não está habilitado ou não possui suporte para o javascript desta página</noscript>
+<!-- <noscript> - não javascript, gera uma mensagem para caso o javascript não tenha suporte no navegador, para testar se essa tagname está funcionando, clique F12 vá em configurações e desative o javascript -->
     Hello World!
 
     Olá Mundo!

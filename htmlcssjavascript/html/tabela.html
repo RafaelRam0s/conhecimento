@@ -64,11 +64,6 @@
     
     <h1>Tabela</h1>
 
-    <p>Tabelas são iniciadas pela tagname - table -, em seguida para cada linha que a tabela deve ter colocamos um - tr -, dentro das linhas, temos os temas da tabela, que ficam nas table header - th - e as informações que ficam nas table data - td -, dependendo de como é organizada a sua estrutura ela pode parecer que está em pé ou deitada. Se você deixar uma célula vazia isto é não preencher um tr um th ou um td eles ainda ocuparão um espaço da linha e a próxima célula da linha será jogada para a próxima coluna, se você inserir uma célula a mais ela ocupara outra coluna, mesmo que não tenha uma célula acima dela.</p>
-    
-    <p>Não deixe de por uma célula, mesmo que seu valor vá ficar vazio, mesmo que que pareça que vai economizar código e que visualmente falando daria no mesmo, pois nunca se sabe quando será acrescentado uma nova linha ou coluna, que você pode acabar esquecendo de preencher.</p>
-    
-    <p>Uma célula com conteúdo maior do que das outras aumenta o tamanho da coluna</p>
 
     <div>
         <h3>Tabela Horizontal:</h3>
@@ -157,9 +152,9 @@
             </tr>
         </table>
 
+        <p>Caso não tenha uma informação para colocar em uma célula, faça a célula, mas a deixe vazia, pois nunca se sabe quando poderá ter a informação, além de que caso vá criar próximas células ao seu lado pode ser que esqueça e acabe indo parar em um campo indesejado</p>
+
         
-
-
 
 
         <h3>Tabela Vertical:</h3>
@@ -224,6 +219,9 @@
                 <td>pois fica feio</td>
             </tr>
         </table>
+
+        <p>Uma célula com conteúdo maior do que das outras de sua coluna, aumenta o tamanho de todas de sua fileira</p>
+
     </div>
 
 
@@ -245,11 +243,11 @@
     <div>
         <h3>Tabela com cédulas agrupadas:</h3>
 
-        <p>Tabelas podem mesclar células (ocupar o espaço de outra célula além da própria)</p>
+        <p>Tabelas podem mesclar células (ocupar o espaço de outra célula além dela mesma)</p>
 
         <p>Podemos mesclar linha como é o caso abaixo do campo "Nome", em que foi preciso criar outra linha para que o campo Número pudesse se dividir, e podemos mesclar colunas, como é o caso do campo "Número"</p>
 
-        <p>Se tentarmos mesclar uma célula que não existe por exemplo um colspan="9999999999999999999" a tabela poderá ficar com uma falha, criando um espaço pequeno a mais</p>
+        
 
         <table>
             <tr>
@@ -320,7 +318,7 @@
 
         <h3>Tabela Vertical com Mesclagem:</h3>
 
-        <p>Atributos que ajudam o programador a visualizar a tabela, veja o código para entender o abbr, headers e scope</p>
+        <p>Veja o código para entender o abbr, headers e scope, pois estes são atributos que ajudam um programador a imaginar melhor sua tabela enquanto está em criação</p>
 
         <table>
             <tr>
@@ -617,11 +615,12 @@
                         }
                 -->
                 <tr>
-                    <td colspan="6">Rodapé</td>
+                    <td colspan="9999999">Rodapé</td>
                 </tr>
             </tfoot>
-            
         </table>
+
+        <p>Se tentarmos mesclar uma célula que não existe por exemplo um colspan="9999999999999999999" a tabela poderá ficar com uma falha, criando um espaço pequeno a mais</p>
     </div>
 
 

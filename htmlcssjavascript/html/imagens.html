@@ -65,32 +65,33 @@
 
     <div>
 
-        <h3 id="cafe">Imagens:</h3>
+        <h3>Imagens:</h3>
         
-        <p>A tagname - img - pode carregar tanto imagens quanto gifs, caso se pergunte qual extensão de arquivo é compatível dependerá de cada navegador</p>
+        <p>A tagname - img - pode carregar tanto imagens quanto gifs, dependendo do seu navegador algumas extensões de arquivo podem não funcionar</p>
 
-        <a href="#mesacomobjetos">
-            <img src="../midia/imagens/copodecafe.jpg" />
-        </a>
-
-        <img src="../midia/imagens/duzentosporduzentos.png" />
+        <a href="#mesacomobjetos"><img id="cafe" src="../../midia/imagens/copodecafe.jpg" /></a>
         
-        <img style="width: 200px; height: 200px;" src="../midia/gifs/feixedinamico.gif"/>
+        <img src="../../midia/imagens/duzentosporduzentos.png" />
+        
+        <img style="width: 200px; height: 200px;" src="../../midia/gifs/feixedinamico.gif"/>
 
-        <p>
-            Logo abaixo trouxe uma imagem de um link externo, de um site que uso para estudos o 
-            <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_image_diffloc" target="_blank">w3school</a>,
-            se a imagem não aparecer pode ser por mudança na url deles, eu ter digitado errado ou a sua internet estar ruim
-        </p>
-
-        <img src="https://www.w3schools.com/images/lamp.jpg" />
-
-        <!-- <img> - tagname para inserir uma imagem 
+        <!-- <img> - imagem, possibilita inserir uma imagem após ter seu src definido
             Código:
                 img {
                     display: inline-block;
                 }
         -->
+
+        <p>É possível visualizar um espaço entre as duas imagens de cima, isso acontece pela barra de espaço, uma possível solução seria deixar a margem negativa, ou deixar colada uma tagname na outra</p>
+
+        <a href="#mesacomobjetos"><img src="../../midia/imagens/copodecafe.jpg" /></a><img src="../../midia/imagens/duzentosporduzentos.png" />
+
+
+
+
+        <h3>Imagem de link externo:</h3>
+
+        <img src="https://www.w3schools.com/images/lamp.jpg" />
 
         <!-- src - coloca a url da imagem
             Valores:
@@ -98,14 +99,12 @@
                 url - link externo @@@@@ colocar exemplo
         -->
 
-        <p>O vão que ficou entre as duas imagens acima foi causado pela barra de espaço, ao término de uma tagname coloque logo em seguida a outra, desta forma não teremos esse problema. Caso esteja em um dispositivo com tela menor talvez não consiga reparar o que estou dizendo pois as imagens podem ter ficado empilhadas, neste caso basta usarmos uma margem negativa por exemplo</p>
+        <p>Essa foi uma imagem de um link externo, de um site que uso para estudos o <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_image_diffloc" target="_blank">w3school</a>, se a imagem não aparecer pode ser por mudança na url deles, eu ter digitado errado ou a sua internet estar ruim
+        </p>
 
-        <img src="../midia/imagens/copodecafe.jpg" /><img src="../midia/imagens/duzentosporduzentos.png" />
+    </div>
 
-
-
-
-
+        
 
 
 
@@ -121,10 +120,15 @@
 
 
 
+
+
+
+
+    <div>
 
         <h3>Texto alternativo para Imagens:</h3>
 
-        <img src="../midia/imagens/duzentosporduzentos.png" alt="Caixa de duzentos por duzentos pixels" />
+        <img id="note" width="400" height="266" src="../../midia/imagens/laptop.jpg" alt="Notebook" />
 
         <img src="urlerrada.error" alt="O alt aparece quando ocorre um problema no elemento ao qual não pode exibir a imagem, por exemplo este, é usado como um texto alternativo, use-o para indicar o que seria a imagem e não para avisar que deu erro, pois leitores de telas automáticos para deficientes visuais se utilizam do alt para mostrar a informação sobre a imagem. Este alt apareceu em baixo das imagens, mas é porque ele está grande, se não ficaria ao lado delas" />
 
@@ -148,12 +152,13 @@
         <p>Para uma responsividade coloque por via do style o width como 100%, porém esteja ciente que essa ação pode causar em piscamento da tela enquanto a imagem carrega, veja o que é mais viável para a sua página responsividade ou conteúdo</p>
 
         <a href="#mesacomobjetos">
-            <img id="agenda" width="300" height="181" src="../midia/imagens/cadernocomlapis.jpg" alt="Caderno com caneta em cima" />
+            <img id="agenda" width="300" height="181" src="../../midia/imagens/cadernocomlapis.jpg" alt="Caderno com caneta em cima" />
         </a>
 
         <!-- width - escolhe uma largura para a imagem em pixels -->
 
         <!-- height - escolhe uma altura para a imagem em pixels -->
+    </div>
 
 
 
@@ -162,14 +167,13 @@
 
 
 
-
-
+    <div>
         <h3>Imagens no meio de textos</h3>
 
         <p style="max-width: 600px;">
             Caso queira colocar uma imagem no meio do texto, 
-            <img width="32" height="32" src="../midia/imagens/lampadapequena.jpg" alt="lâmpada pequena" /> 
-            ajuste o vertical-align para que possa ficar bem posicionado <img width="32" height="32" style="vertical-align: -5px;" src="../midia/imagens/lampadapequena.jpg" alt="lâmpada pequena" /> 
+            <img width="32" height="32" src="../../midia/imagens/lampadapequena.jpg" alt="lâmpada pequena" /> 
+            ajuste o vertical-align para que possa ficar bem posicionado <img width="32" height="32" style="vertical-align: -5px;" src="../../midia/imagens/lampadapequena.jpg" alt="lâmpada pequena" /> 
             só tome cuidado para não acabar colocando um tamanho muito grande e linha ficar com muito espaço
         </p>
 
@@ -226,9 +230,7 @@
 
         <p>2° Ao definir os tamanhos para uma imagem veja se ela não ficará deformada ou ruim de visualizar</p>
 
-        <p>3° Não use um tamanho de imagem original maior do que você usará na página, pois o html pega o arquivo carrega e depois o reajusta para caber no seu elemento, por exemplo: temos uma imagem que baixei da internet de 2000x1900 (2000 pixels de largura e 1900 pixels de altura) e coloco na minha página somente para ficar em elementos de 500x475, então quando carregamos a página o html baixa todo o arquivo gigante e depois o reajusta para o tamanho do elemento, note que imagens maiores tendem a ser mais pesadas, logo consomem mais dados de internet, além de causar uma lentidão na hora de carregar as informações da sua página, então vá num editor de imagens e diminua sua imagem</p>
-
-        <img id="note" width="400" height="266" src="../midia/imagens/laptop.jpg" alt="Notebook" />
+        <p>3° Não use um tamanho de imagem original maior do que você usará na página, pois o html pega o arquivo carrega e depois o reajusta para caber no seu elemento, por exemplo: temos uma imagem que baixei da internet de 2000x1900 (2000 pixels de largura e 1900 pixels de altura) e coloco na minha página somente para ficar em elementos de 500x475, então quando carregamos a página o html baixa todo o arquivo gigante e depois o reajusta para o tamanho do elemento, note que imagens maiores tendem a ser mais pesadas, logo consomem mais dados de internet, além de causar uma lentidão na hora de carregar as informações da sua página, pode ainda custar mais caro no seu plano de hospedagem, então vá num editor de imagens e diminua sua imagem</p>
 
     </div>
 
@@ -267,7 +269,7 @@
                     }
             -->
 
-            <img id="mesa" width="400" height="266" src="../midia/imagens/mesa.jpg" alt="Mesa" />
+            <img id="mesa" width="400" height="266" src="../../midia/imagens/mesa.jpg" alt="Mesa" />
 
             <figcaption id="legendateste">
                 Legenda de imagem: todas as imagens foram tiradas do site 
@@ -284,7 +286,7 @@
 
         <p>Também existem legendas de imagem que podem estar em outra parte do seu documento e serem referenciadas por um atributo, porém este atributo parece não ser utilizado por nenhum navegador, mas fica aqui a explicação dele: Seus valores agem como um href de link, é possível referenciar a legenda por url, id e caminho de arquivo, onde deverá conter explicações mais detalhadas sobre a imagem</p>
 
-        <img width="200" height="200" src="../midia/imagens/duzentosporduzentos.png" alt="Caixa de duzentos por duzentos pixels" longdesc="#legendateste" />
+        <img width="200" height="200" src="../../midia/imagens/duzentosporduzentos.png" alt="Caixa de duzentos por duzentos pixels" longdesc="#legendateste" />
 
         <!-- longdesc - longa descrição serve para mostrar onde está uma descrição mais detalhada da imagem
             Valores:
@@ -313,9 +315,9 @@
 
         <picture>
             <!-- <picture> - pinturas, serve para armazenar <source> de imagens -->
-            <source media="(max-width: 668px)" srcset="../midia/imagens/cenariotempo_peq.jpg" />
-            <source media="(max-width: 991px)" srcset="../midia/imagens/cenariodeserto_med.jpg" />
-            <!-- <source> - fonte, é usado para dar opções alternativas de que arquivos podem ser carregados para substituir o em vigor, por conta dele agir como substituto precisará de um arquivo fixo, que seria o img -->
+            <source media="(max-width: 668px)" srcset="../../midia/imagens/cenariotempo_peq.jpg" />
+            <source media="(max-width: 991px)" srcset="../../midia/imagens/cenariodeserto_med.jpg" />
+            <!-- <source> - fonte, é usado para dar opções alternativas de arquivos que podem ser carregados para substituir o principal, por conta dele agir como substituto precisará de um arquivo fixo, que seria o img -->
 
             <!-- media - meios, serve para falar quando que determinada imagem deve aparecer, aqui ele fala que deve aparecer até o tamanho que está no seu valor.
                 Valores:
@@ -329,7 +331,7 @@
                     url de site externo
             -->
             
-            <img src="../midia/imagens/cenariomontanha_grande.jpg" alt="Cenário" />
+            <img src="../../midia/imagens/cenariomontanha_grande.jpg" alt="Cenário" />
 
         </picture>
 
@@ -341,7 +343,7 @@
         <p>Quando colocamos uma imagem dentro de um link acaba que toda a sua área fica a opção clique, mas se você quiser definir só algumas áreas, pode fazer deste jeito:</p>
 
         <span>
-            <p>E esta é uma imagem com algumas áreas clicáveis, parece ter o mesmo efeito do link mas clique no laptop e depois no café, você poderá observar que cada um fará uma ação diferente, enquanto no link cada um deles precisaria ser um elemento e diferente, com isto podemos colocar em apenas uma imagem diversas ações</p>
+            <p>E esta é uma imagem com algumas áreas clicáveis, parece ter o mesmo efeito do link, mas clique no laptop, café, celular, mesa ou agenda, você poderá observar que cada um fará uma ação diferente, enquanto no link cada um deles precisaria ser um elemento diferente, com isto podemos colocar em apenas uma imagem diversas ações</p>
 
             <map name="objetosnamesa">
                 <!-- <map> - mapa, serve para armazenar todas as localizações que estarão com áreas clicáveis
@@ -357,7 +359,7 @@
 
                 <area shape="default" href="#mesa" alt="Mesa">
 
-                <area shape="rect" coords="441, 181, 490, 261" href="../midia/imagens/celular.png" alt="Celular" download="celular-teste-download" />
+                <area shape="rect" coords="441, 181, 490, 261" href="../../midia/imagens/celular.png" alt="Celular" download="celular-teste-download" />
 
                 <area shape="circle" coords="492, 318, 48" href="#cafe" hreflang="pt-br" alt="Café" target="_blank" />
 
@@ -421,7 +423,7 @@
 
             
 
-            <img width="600" height="400" src="../midia/imagens/mesadetrabalho.jpg" alt="Mesa de trabalho" usemap="#objetosnamesa">
+            <img width="600" height="400" src="../../midia/imagens/mesadetrabalho.jpg" alt="Mesa de trabalho" usemap="#objetosnamesa">
 
             <!-- usemap - usar mapa, serve para ativar as coordenadas que existem dentro de um <map> e está associado ao - name -  -->
         </span>
