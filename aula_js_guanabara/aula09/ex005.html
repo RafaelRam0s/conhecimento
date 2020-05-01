@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando estudos com DOM</h1>
+    
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar oção <strong>DOM</strong> em JavaScript</p>
+    <!-- Tudo começa na window, na janela, temos o location que é onde está armazenada sua página a url, history o histórico de que site veio e para onde vai e o document que é o documento que rodará na página, dentro de document temos html (que é parent de body e head), dentro do html temos head e body (que são filhos de html) -->
+    <div id="msg" name="msgn" class="mensg">Clique em mim</div>
+        
+    <script>
+        //window.document.write(window.document.charset)
+        //write escreve uma informação, se feito no console apaga toda a página e só mostra o que estiver dentro do seu valor
+        //charset avisa qual o conjunto de caractéres da página
+        //window.document.write(window.navigator.appName)
+        //indica qual o nome do aplicativo que o seu navegador está usando
+        //window.document.write(window.document.URL)
+        //Indica a sua url
+        
+        // var p1 = window.document.getElementsByTagName('p')[0]
+        //pega um elemento por nome da tagname, selecionando a tagname que quer usar dentro do parênteses e colocando entre aspas simples a tagname que deseja modificar, e dentro do colchetes entra um número relacionado a qual tagname que vc quer pegar se for a primeira é 0 se for a segunda é 1 e assim sucessivamente 
+        //window.document.write('Está escrito assim:' + p1.innerText)
+        //innnerText - começa a escrever
+
+
+        //p1.style.color = 'blue'
+        //deste jeito é ativado o css através do javascript
+
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //document.write(p1.innerHTML)
+        //Dessa forma é mantido as tagnames, pois com innerText toda a informação era replicada como texto, agora com innerHTML é replicado como texto em html
+
+        //var d = window.document.getElementById('msg')
+        // Desta forma vc seleciona um elemento por ID
+
+        //d.innerText = 'Estou aguardando...'
+        //Aqui foi reescrito o que estava dentro do id msg, por uma string que foi recebida
+
+        //var d = window.document.getElementsByName('msgn')[0]
+        //d.innerText = 'Olá'
+
+        //var d = window.document.getElementsByClassName('mensg')[0]
+        //d.innerText = 'Olá'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>

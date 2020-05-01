@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Meu primeiro programa...</title>
+
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+
+    <p>Já me livrei da maldição</p>
+
+    <script>
+
+        var n1 = Number.parseFloat(window.prompt("Digite um número: ")) // prompt retorna string
+        var n2 = Number(window.prompt("Digite outro número: "))
+        var s = n1 + n2
+        //window.alert('A soma dos valores é ' + String(s))
+        window.alert(`A soma dos valores é ${s}`) //${}, abre uma excessão no texto para poder inserir um código, age como + n +
+
+        //Number.parseInt(n), se for colocado um número float só será pego a parte inteira do número, então 1.9, se torna 1 e 1.1 se torna 1 também, se não for escrito um valor ele retorna NaN
+
+        //Number.parseFloat(n), só será apresentado um número com vírgula se tiver outro número com vírgula que não seja só .0, exemplo 1.0 + 1 retorna 2, mas 1.1 + 1 retorna 2.1, se não for escrito um valor ele retorna NaN
+
+        //Number(n), faz o javascript ler e retornar o que ele achar que é, se não for escrito um valor, será colocado 0, se somar NaN com 0 dá NaN
+
+        //String(n), transorma em texto
+
+        //n.toString()
+        
+        //n.length quantos caracteres possue, espaços são contados
+
+        //n.toUpperCase() tudo para maiúsculo
+
+        //n.toLoweCase() tudo para minúsculo
+        
+
+
+
+        //window.alert(`A soma dos valores é ${s.toFixed(2)}`)
+        //n.toFixed(x), coloca fixa quantas casas decimais você deseja que apareça
+
+        //window.alert(`A soma dos valores é ${s.toFixed(2).replace('.', ',')}`)
+        //n.replace('teste', 'sucedido') replace troca o que estiver na primeira aspas, pelo que estiver na segunda
+    </script>
+    
+</body>
+</html>

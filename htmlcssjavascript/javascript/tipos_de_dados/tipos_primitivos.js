@@ -12,10 +12,12 @@ Dados primitivos:
 Dados complexos:
     function
     object
+    NaN
+    null
 */
 
 
-// Number - número, indica que pode ser realizados operações matemáticas com seus valores
+// Number - número, indica que podem ser realizados operações matemáticas com seus valores
 typeof 5;
 // typeof - serve para verificar o tipo primitivo de uma variável
 var x = 5;
@@ -68,7 +70,7 @@ typeof teste;
 typeof true;
 typeof false;
 typeof texto == x;
-
+typeof x != texto;
 
 
 
