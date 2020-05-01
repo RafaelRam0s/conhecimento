@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Javascript</h1>
+
+    <h2></h2>
+
+    <div>
+        <h3>Formas de referenciar elementos:</h3>
+        
+        <p>Os "Confere" a seguir estão sendo usados para ver se o respectivo seletor está funcionando</p>
+
+        <p id="id_element">Pegando elemento por id</p>
+
+        <p>Pegando elemento por tagname</p>
+
+        <p class="class_element">Pegando elemento por classe</p>
+
+        <p name="name_element">Pegando elemento por name</p>
+
+        <p id="seletor_element" class="class_element">Pegando elemento por seletor de id</p>
+
+        <p class="classe_elemento">Pegando elemento por seletor de classe</p>
+
+        <p class="classe_elemento">Pegando elemento por seletor de classe</p>
+
+        <p>O que é esperado é que por seletor de classe fossem todas as classes terem a mesma configurção, para fazer isso @@@@@</p>
+    </div>
+
+    <script>
+        window.document.getElementById('id_element').innerText = 'Confere por id'
+        //window.document.getElementById('id_element').innerHTML = 'Confere por id'
+
+        // getElementById() - pega um elemento por identificador, onde no seu parâmetro deverá ser escrito em formato de string seu id
+        // innerText - seleciona o texto
+        // innerHTML - seleciona o interior do elemento HTML
+
+        window.document.getElementsByTagName('p')[2].innerText = 'Confere por tagname'
+        //window.document.getElementsByTagName('p')[2].innerHTML = 'Confere por tagname'
+
+        // getElementsByTagName() - pega um elemento por sua tagname, onde no seu parâmetro deverá ser escrito em formato de string sua tagname que deseja selecionar, e ao fechamento do seu parênteses deverá ser colocado entre colchetes um número relativo a sua ordem de aparição, sendo que 0 é o primeiro, 1 é o segundo e assim por diante
+
+        window.document.getElementsByClassName('class_element')[0].innerHTML = 'Confere por classe'
+        // getElementsByClassName() - pega um elemento por seu nome de classe, onde no seu parâmetro deverá ser escrito em formato de string sua classe que deseja selecionar, e ao fechamento do seu parênteses deverá ser colocado entre colchetes um número relativo a sua ordem de aparição, sendo que 0 é o primeiro, 1 é o segundo e assim por diante
+        
+        window.document.getElementsByName('name_element')[0].innerText = 'Confere por nome'
+        //window.document.getElementsByName('name_element')[0].innerHTML = 'Confere por nome'
+
+        // getElementsByName() - pega um elemento por seu nome, onde no seu parâmetro deverá ser escrito em formato de string seu name que deseja selecionar, e ao fechamento do seu parênteses deverá ser colocado entre colchetes um número relativo a sua ordem de aparição, sendo que 0 é o primeiro, 1 é o segundo e assim por diante
+        
+        window.document.querySelector('p#seletor_element').innerHTML = 'Confere por seletor através de id'
+        window.document.querySelector('p.classe_elemento').innerHTML = 'Confere por seletor através de classe'
+        // querySelector() - inquerir seletor, pega um elemento referenciando-o como um css dentro do seu parênteses, que deverá ser colocado como string
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Escrevendo atravésdo JavaScript</h3>
+
+        <script>
+            document.write('<p>Este parágrafo está sendo escrito de dentro de um javascript</p>')
+            /* write - escrever, define o que será escrito, se usado no console apagará toda a tela e deixará no body o que estiver escrito.
+            Desta forma: <html><head></head><body>Um texto qualquer colocado em formato string dentro do write()</body></html>
+            */
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

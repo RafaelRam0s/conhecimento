@@ -6,9 +6,10 @@
 
 
 /*
-Sinais:
+Sinais/operadores:
+    Ordem direita para esquerda: (), **, * / %, + -, > < >= <= == !=, ! && ||, ? :
 
-    Sinais matemáticos:
+    Sinais aritméticos:
         +   Somar (em números ele soma seus valores (1 + 2 == 3), em strings ele concatena ("Enten" + "deu?" == "Entendeu?"), se tiver um número e uma string ele concatena ( 1 + "° teste" == "1° teste") se tiver dois números e uma string primeiro soma e depois concatena (1 + 1 + "° teste" == "2° teste"), se a string estiver no meio só irá concatenar (1 + "teste" + 2 == "1teste2") qualquer operação que estiver depois de uma string será concatenada ("teste" + 1 + 2 + 3 + 4 + 5 == "teste12345"))
         -   Subtrair
         *   Multiplicar 
@@ -35,7 +36,7 @@ Sinais:
             5 ** 2;
             console: 25
             
-            Ao colocar uma varíavel um sinal matemático um sinal de recebimento e um valor, você indica que deseja que a mesma variável receba uma conta com ela envolvida sobre o efeito de um sinal matemático e por um valor, exemplo:
+            Ao colocar uma varíavel um sinal matemático um sinal de recebimento e um valor, você indica que deseja que a mesma variável receba uma conta com ela envolvida sobre o efeito de um sinal matemático e por um valor, exemplo (auto-atribuições):
                 x += 2; (x = x + 2
                 console: 7
 
@@ -54,8 +55,13 @@ Sinais:
                 x **= 2; // x = x ** 2
                 console: 25
 
+                x ++ // x = x + 1 // console: 5
+                ++ x // console: 6
+                x -- // x = x - 1 // console: 5
+                -- x // console: 4
 
-    Sinais de comparação:
+
+    Sinais relacionais e de indentidades:
         =   Recebe lógico
         ==  Igual a lógico
         === Perfeitamente igual
@@ -113,9 +119,9 @@ Sinais:
 
     
     Sinais lógicos:
+        !   "Não" lógico
         &&  "E" lógico (quando apenas uma operação for falsa todo o sistema é considerado falso)
         ||  "Ou" lógico (quando apenas uma operação for verdadeira todo o sistema é considerado verdadeiro)
-        !   "Não" lógico
 
         Exemplos:
             5 == 5 && 2 == 2
@@ -136,4 +142,18 @@ Sinais:
             5 == 2 || 2 == 5
             console: false
             
+
+
+
+
+
+
+    Ternário:
+        ?
+        :
+
+        teste lógico ? true : false
+        o que vai acontecer quando o teste for verdadeiro e o que vai acontecer quando esse teste for falso
+
+        situação_acadêmica = média >= 7 ? "Aprovado" : "Reprovado"
 */

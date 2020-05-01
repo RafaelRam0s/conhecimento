@@ -9,6 +9,8 @@
 
     <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
 
+    <link rel="stylesheet" href="../../midia/icones/fontawesome-free-5.13.0-web/css/all.css" />
+
     <style>
         body {
             background-color: rgba(6, 6, 7, 0.747);
@@ -58,64 +60,163 @@
     <title>Layout</title>
 </head>
 <body>
-    
+
+
     <header>
-        <!-- <header> cabeçalho, um contêiner que deverá ter informações padrões sobre seu site, para facilitar  -->
-        <img src="../../midia/imagens/logo.png" width="100" alt="Logo R">
-        Logo img
-        cadastre-se login
-    </header>
-
-    <nav>
-        <p>Barra de menu</p>
-        <ul>
-            <li>Menu</li>
-            <li>HTML 5</li>
-            <ol>
-                <li><a href="index.html" target="_blank">index.html</a></li>
-                <li><a href="texto.html" target="_blank">texto.html</a></li>
-                <li><a href="lista.html" target="_blank">lista.html</a></li>
-                <li><a href="tabela.html" target="_blank">tabela.html</a></li>
-                <li><a href="iframe.html" target="_blank">iframe.html</a></li>
-                <li><a href="imagens.html" target="_blank">imagens.html</a></li>
-                <li><a href="link.html" target="_blank">link.html</a></li>
-            </ol>
-            <li>CSS 3</li>
-            <ol>
-                <li>style.css</li>
-                <li>fundo.css</li>
-                <li>dimensoes.css</li>
-                <li>icones.css</li>
-                <li>texto.css</li>
-            </ol>
-            <li>JavaScript 5</li>
-            <ol>
-                <li>variavel.js</li>
-                <li>tipos_de_dados.js</li>
-            </ol>
-        </ul>
-    </nav>
-
-
-
-
-
-    <footer>
-        <h3>Rodapé</h3>
-
-        <p>No rodapé de uma página deve ser colocadas informações para contato, ajuda, termos, a parte mais burocrática de um site, assim como podem conter auxílios de navegação e páginas parceiras. Ao fazer um rodapé deixe-o no máximo ocupando metade da tela</p>
+        <!-- <header> cabeçalho, um container que deverá ter informações padrões sobre seu site que ficam no topo, onde toda vez que um usuário bata o olho nele pense que está no seu site
+            Código:
+                header {
+                    display: block;
+                }
+        -->
+        <figure>
+            <img src="../../midia/imagens/logo.png" width="100" alt="Logo R">
+            <figcaption>Imagem de logo</figcaption>
+        </figure>
 
         <address>
-            Escrito por: Rafael Ramos 
+            Escrito por: Rafael Ramos
             <span>Apoie-me no github: <a href="https://github.com/RafaelRam0s" target="_blank">https://github.com/RafaelRam0s</a></span>
             <br />
             Mora em: SP - São Paulo
         </address>
-        <p>Logo img</p>
+
+        <nav>
+            <!-- <nav> - navigation, navegação deve ser usado em conjunto de links que auxiliam o acesso a outras páginas -->
+            <p>Barra de menu</p>
+            <ul>
+                <li>Menu</li>
+                <li>HTML 5</li>
+                <ol>
+                    <li><a href="index.html" target="_blank">index.html</a></li>
+                    <li><a href="texto.html" target="_blank">texto.html</a></li>
+                    <li><a href="lista.html" target="_blank">lista.html</a></li>
+                    <li><a href="tabela.html" target="_blank">tabela.html</a></li>
+                    <li><a href="iframe.html" target="_blank">iframe.html</a></li>
+                    <li><a href="imagens.html" target="_blank">imagens.html</a></li>
+                    <li><a href="link.html" target="_blank">link.html</a></li>
+                </ol>
+                <li>CSS 3</li>
+                <ol>
+                    <li><a href="">style.css</a></li>
+                    <li><a href="">fundo.css</a></li>
+                    <li><a href="">dimensoes.css</a></li>
+                    <li><a href="">icones.css</a></li>
+                    <li><a href="">texto.css</a></li>
+                </ol>
+                <li>JavaScript 5</li>
+                <ol>
+                    <li><a href="">variavel.js</a></li>
+                    <li><a href="">tipos_de_dados.js</a></li>
+                </ol>
+            </ul>
+        </nav>
+
+        <span><a href="">Buscar <i class="fas fa-search"></i></a></span>
+        <span><a href="">Cadastre-se <i class="fas fa-sign-in-alt"></i></a></span>
+    </header>
+
+    <div>
+        <section>
+            <!-- <section> - seção, coloca o tema principal que sua página irá discorrer
+                Código:
+                    section {
+                        display: block;
+                    }
+            -->
+            <h2>Explicando containers</h2>
+
+            <p>O header deve ser a primeira informação da sua página, onde por padrão contem uma imagem de sua marca com link para página inicial, barra de menu para navegação, um botão de logar (caso tenha na sua página métodos de inscrição), uma aba de pesquisar, informações rápidas de contato, redes sociais. Enfim qualquer coisa que ajude a navegar nas suas páginas</p>
+
+            <p>O container nav serve para armazenar links de navegação, não necessariamente estará dentro do header</p>
+
+            <p>E nas sections, é onde terão os conteúdos se sua página</p>
+
+        </section>
+    </div>
+
+    <section>
+        <div>
+            <h2>Detalhes e sumário:</h2>
+
+            <p>Podemos ter em um elemento uma forma de ter informações</p>
+
+            <details>
+                <!-- <details> - detalhes, esconderá as informções de dentro dele, deixando apenas um sumário para ativá-lo e mostrar suas informações
+                    Código:
+                        details {
+                            display: block;
+                        }
+                -->
+                
+                <!-- <summary> - sumário, é filho de um elemento details, é quem será responsável por colocar um título para abertura dos detalhes
+                    Código:
+                        summary {
+                            display: block;
+                        }
+                -->
+                <p>Para não ficar muito enjoativo de um usuário ficar vendo grandes informações, já que ver tudo de uma vez só acaba dando preguiça</p>
+
+                <p>Cuidado onde e como for colocá-lo</p>
+            </details>
+
+            <details open>
+                <!-- open - aberto deixa logo de início os detalhes abertos -->
+                <summary>mais detalhadas abertas desde o início</summary>
+
+                <p>Basta clicar no elemento que ele irá abrir e fechar</p>
+            </details>
+        </div>
+    </section>
+    
+
+    <div>
+        <article>
+            <!-- <article> - artigo, destina-se a marcar um conteúdo que se constitua em um componente autossuficiente em uma página, aplicação ou site e que possa ser distribuido ou reusado de forma independente (isolada), como por exemplo via sindicalização. Tal conteúdo pode ser um post em um fórum, um artigo de uma revista ou jornal, uma matéria em um blog, um comentário de um usuário, um widget ou gadget interativo ou qualquer outro item independente de conteúdo.
+                Código:
+                    article {
+                        display: block;
+                    }
+            -->
+
+            <section>
+                <h2>Exemplo de article</h2>
+
+                <h3>Notícia urgente:</h3>
+
+                <p>Uma nova doença passou a assolar o mundo, foi recomendado que fiquemos em casa e esperemos novas recomendações</p>
+
+                <p>O ministério da sáude, disse em seu pronunciamento: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur molestias praesentium voluptatem unde sit laboriosam enim maiores incidunt voluptatibus eveniet facilis sapiente commodi aliquid provident exercitationem, dolore doloremque odit quas!"</p>
+
+                <p>Confira essas e muitas outras informações no <a href="">site do governo</a></p>
+            </section>
+        </article>
+    </div>
+
+    <div>
+        <aside>
+            <!-- <aside> - do lado, Coloca uma informação em paralelo (tanto de aviso quanto visualmente falando) com o do section -->
+            <h2>Informação Lateral:</h2>
+
+            <p>Quando precisamos dividir uma página no meio para demontrar duas informações em paralelo podemos usar este container, tábem é possível usá-lo como uma lateral de navegação</p>
+        </aside>
+    </div>
+    <footer>
+        <h3>Rodapé</h3>
+
+        <p>No rodapé de uma página devem ser colocadas informações para contato, informações da empresa ou criador, dúvidas frequentes, termos de uso, privacidade, a parte mais burocrática de um site, assim como podem conter auxílios de navegação e páginas parceiras. Ao fazer um rodapé deixe-o no máximo ocupando metade da tela, senão pode ficar extranha a visualizção para um usuário</p>
+
+        <address>
+            Escrito por: Rafael Ramos
+            <span>Apoie-me no github: <a href="https://github.com/RafaelRam0s" target="_blank">https://github.com/RafaelRam0s</a></span>
+            <br />
+            Mora em: SP - São Paulo
+        </address>
+
         <p>Atualizado em: &copy; Copyright Termos Uso Privacidade</p>
-        <p>Parcerias:</p>
-        <p>Siga-nos nas redes sociais:</p>
-        <p>Principais dúvidas</p>
+        <p>Parcerias: Nenhuma</p>
+        <p>Siga-nos nas redes sociais: <a href="https://github.com/RafaelRam0s" target="_blank"> <i class="fab fa-github fa-2x"></i></a> </p>
+        <p>Principais dúvidas: <q>Quando vou aprender tudo?</q></p>
     </footer>
 
 </body>
