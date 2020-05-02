@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificar de país</h1>
+
+    <p>Em qual país você nasceu?</p>
+    <input type="text" name="txtpaís" id="txtpaís" >
+    <input type="button" value="Buscar" onclick="pesquisarNcionalidade()">
+
+    <script>
+        function pesquisarNcionalidade() {
+            var país = window.document.getElementById('txtpaís')
+            var nacionalidade
+            país = String(país.value)
+
+            if (país == 'Brasil') {
+                nacionalidade = 'brasileiro'
+            } else {
+                nacionalidade = 'estrangeiro'
+            }
+
+            window.document.write(`<p>Se a sua nacionalidade for referente ao país <strong>${país}</strong>, no Brasil você é <strong>${nacionalidade}</strong></p>`)
+            }
+        
+    </script>
+
+</body>
+</html>

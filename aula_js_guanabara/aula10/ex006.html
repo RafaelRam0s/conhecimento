@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area, div#bloco {
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()">
+        Interaja...
+    </div> -->
+
+    <!-- <script>
+        var area = window.document.getElementById('area')
+
+        function clicar() {
+            /* function nomeDaFunção(parâmetro1, parâmetro2) {
+                bloco // bloco é o local onde ocorrerão as instruções
+            }    
+            */
+            //tem como colocar finitos parâmetros basta nomear um e separar por vírgula
+            //var area = window.document.getElementById('area')
+            // Se uma variável estiver dentro de um bloco de uma function ele só funcionará dentro desta function
+
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+
+        function entrar() {
+            area.innerText = 'Entrou!'
+        }
+        
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = 'green'
+        }
+
+    </script> -->
+
+
+
+    <div id="bloco">
+        Interaja...
+    </div>
+
+    <script>
+        var bloco = window.document.getElementById('bloco')
+
+        function clicou() {
+            bloco.innerText = 'Clicou!'
+            bloco.style.background = 'red'
+        }
+
+        function entrou() {
+            bloco.innerText = 'Entrou!'
+        }
+        
+        function saiu() {
+            bloco.innerText = 'Saiu!'
+            bloco.style.background = 'green'
+        }
+
+        bloco.addEventListener('click', clicou)
+        bloco.addEventListener('mouseover', entrou)
+        bloco.addEventListener('mouseout', saiu)
+    </script>
+
+</body>
+</html>
