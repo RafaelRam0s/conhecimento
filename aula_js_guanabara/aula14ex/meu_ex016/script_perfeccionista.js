@@ -53,5 +53,26 @@ function contar() {
 
             resultado.innerHTML += ' &#127937;</p>'
         }
+        
+        // Para os preguiçosos que não ligam para o sinal e a matemática pura o jeito deles está nas próximas linhas
+        // if (inicio <= final && pular < 0|| inicio >= final && pular > 0) {
+        //     pular = - pular
+        // }
+    
+        // resultado.innerHTML = 'Contando:<br><p>'
+
+        // if (pular > 0) {
+        //     while (inicio <= final) {
+        //         resultado.innerHTML += ` ${inicio} &#128073;`
+        //         inicio += pular
+        //     }
+        // } else {
+        //     while (inicio >= final) {
+        //         resultado.innerHTML += ` ${inicio} &#128073;`
+        //         inicio += pular
+        //     }
+        // }
+
+        // resultado.innerHTML += ' &#127937;</p>'
     }
 }

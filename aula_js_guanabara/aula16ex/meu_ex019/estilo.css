@@ -27,22 +27,5 @@ footer {
     font-style: italic;
 }
 
-table {
-    border: 1px solid rgb(83, 83, 83);
-    padding: 6px;
-    min-height: 356px;
-    display: inline-block;
-}
 
-th {
-    max-width: 255px;
-}
 
-td {
-    border-bottom: 1px solid lightgray;
-    text-align: left;
-    padding: 3px 10px;
-    display: block;
-    margin-bottom: 2px;
-    background-color: rgb(241, 241, 241);
-}
