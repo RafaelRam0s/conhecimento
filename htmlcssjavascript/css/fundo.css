@@ -1,28 +1,27 @@
 @charset "UTF-8";
 
-.visualizacao {
-    min-height: 420px;
+.margem_zero {
+    margin: 0px;
 }
-.letranofundo {
+
+.texto_legivel_claro {
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+
+.texto_legivel_escuro {
     color: black;
-    font-weight: 900;
-    text-shadow: -2px 2px 0px yellow;
+    font-weight: bolder;
+    text-shadow: 3px 3px 1px white;
 }
-#anexosfundo div {
-    overflow: scroll;
-    height: 100px;
-    margin-bottom: 10px;
-}
-#anexosfundo div p {
-    height: 450px;
-}
-.camadas p {
-    border: 10px dotted black;
-    padding: 10px;
+
+.minima_visualizacao {
+    min-width: 300px;
+    min-height: 300px;
 }
 
 /* Glossário */
-/* Pendentes: background-blend-mode, enable-background */
+/* Pendentes: */
 /*
 
 background-color
@@ -30,26 +29,32 @@ background-color
 opacity
 
 background-image
+
 background-repeat
-
-background-position
-background-position-x
-background-position-y
-
-background-attachment
-background-clip
-background-origin
-background-size
-
-background
 
 */
 
-.fundoverde {
+
+
+
+
+
+
+
+
+
+
+.fundo_preto {
+    background-color: black;
+}
+.fundo_verde {
     background-color: lawngreen;
 }
-.fundopreto {
-    background-color: black;
+.fundo_verde_claro {
+    background-color: springgreen;
+}
+.texto_legivel_claro {
+    background-color: rgb(41, 168, 72);
 }
 /* background-color - muda a cor do fundo
     Valores:
@@ -58,72 +63,127 @@ background
 
 
 
-.opacidade {
-    opacity: 0.5;
-    /* @@@@@@@@@@@@ opacity - muda a transparência, seu valor acaba por interferir na opacidade dos elementos filhos só permitindo ficar mais fraco e não poder retornar o que era antes
-        Valores:
-            variam de 0 a 1 (Porcentagem minimizada)
-    */
+
+
+
+
+
+
+
+
+.opacidade_oito {
+    opacity: 0.8;
 }
-.opacidademaior {
-    opacity: 1;
+.opacidade_seis {
+    opacity: 0.6;
 }
-.opacidademenor {
-    opacity: 0.25;
+.opacidade_alta {
+    opacity: 99;
+}
+/* opacity - opacidade, muda a transparência, seu valor acaba por interferir na opacidade dos elementos filhos só permitindo ficar mais fraco e não deixando retornar ao que era antes
+    Valores:
+        variam de 0 a 1 (Porcentagem minimizada)
+*/
+
+.alfa_oito {
+    color: rgba(255, 255, 255, 0.8);
+}
+.alfa_seis {
+    color: rgba(255, 255, 255, 0.6);
+}
+.alfa_dez {
+    color: rgba(255, 255, 255, 1);
 }
 
 
 
-.fundoimg {
-    background-image: url("../midia/imagens/duzentosporduzentos.png");
+
+
+
+
+
+
+
+
+.fundo_img_duzentos {
+    background-image: url('../../midia/imagens/duzentosporduzentos.png');
 }
-#fundosimgs {
-    background-image: url("../midia/imagens/quadro.png"), url("../midia/imagens/cenariodeserto.jpg");
-}
-#fundodefora {
+.fundo_img_externa {
     background-image: url("https://s2.glbimg.com/PzijMfcV12zBe3dE-RPTOuIZIpQ=/0x0:695x463/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/05/29/google-hardware-1.jpg");
+}
+.fundo_img_misturada {
+    background-image: url("../../midia/imagens/quadro.png"), url("../../midia/imagens/cenariodeserto.jpg");
 }
 /* back-ground-image - define uma imagem de fundo
         Usos:
-            Possibilidade de usar mais de um fundo ao mesmo tempo, e para isso utilizando arquivos de fundo vazio podemos sobrepor um ou mais fundos, basta separar por vírgulas o primeiro a ser mencionado será o plano que ficará mais na frente
+            Possibilidade de usar mais de um fundo ao mesmo tempo, e para isso utilizando arquivos com fundo vazio podemos sobrepor um ou mais fundos, basta separar por vírgulas o primeiro a ser mencionado será o plano que ficará mais na frente
         @@@@@ Valores:
             url() - entre aspas duplas coloque o caminho da imagem ou sua url
 */
 
 
 
-.fundoimg {
+
+
+
+
+
+
+
+
+.fundo_repete {
     background-repeat: repeat;
 }
-.repetirximg {
+.fundo_repete_x {
     background-repeat: repeat-x;
 }
-.repetiryimg {
+.fundo_repete_y {
     background-repeat: repeat-y;
 }
-.naorepetir {
+.fundo_repete_nao {
     background-repeat: no-repeat;
 }
-.repetirespacado {
-    background-repeat: space;
+.fundo_img_cinza_degrade {
+    background-image: url('../../midia/imagens/fundo_detalhe_cinza.jpg');
 }
-.repetiresticada {
-    background-repeat: round;
+.fundo_img_cinza_degrade_lateral {
+    background-image: url('../../midia/imagens/fundo_detalhe_cinza_lateral.jpg');
 }
-/* background-repeat - configura a repetição da imagem de fundo
+/* background-repeat - repetição de fundo, configura como deve ser apresentada as imagens de fundo
     Valores:
         repeat - repetição é usado para quando acabar o tamanho da imagem, verificar se está cobrindo todo o elemento caso não esteja é colocada outra imagem e assim por diante tanto no sentido horizontal quanto vertical
 
-        repeat-x - repetição apenas na horizontal
+        repeat-x - repetição apenas na horizontal quantas vezes forem necessárias para cobrir o elemento
 
-        repeat-y - repetição apenas na vertical
+        repeat-y - repetição apenas na vertical quantas vezes forem necessárias para cobrir o elemento
 
-        no-repeat - impede repetições de imagens
+        no-repeat - impede repetições de imagens e só é mostrada uma cópia
 
         space - espaço, ele pega a imagem e coloca lá no ponto inicial do elemento, depois disso é verificado quantas imagens após ela conseguem aparecer inteiras, aí se tiver alguma imagem que ao se repetir ficasse cortada, ela deixa um espaço vazio, então seria analisado qual foi essa distância que sobrou e repartiria em tamanhos iguais entre cada imagem que teve a mais do que a inicial.
-            Exemplo: se escolhescemos uma imagem de 200px de largura para ficar em um elemento de 1100px de largura, seria colocada a primeira imagem, então 1100 - 200 = 900 esse resultado foi o espaço que sobrou, fazendo o cálculo de quantas outras inteiras apareceriam faríamos assim; 900 / 200 = 4 inteiros com resto 100 esse espaço que sobrou é dividido por cada imagem a mais e inserido a sua esquerda 100 / 4 = 25 colocando-se assim um espaço a esquerda de 25px em cada imagem que apareceu a mais.
+            Exemplo: se escolhescemos uma imagem de 200px de largura para ficar em um elemento de 1100px de largura, seria colocada a primeira imagem, então 1100 - 200 = 900 esse resultado foi o espaço que sobrou, fazendo o cálculo de quantas outras inteiras apareceriam faríamos assim; 900 / 200 = 4 inteiros com resto 100 esse espaço que sobrou é dividido por cada imagem a mais e inserido a sua esquerda 100 / 4 = 25 colocando-se assim um espaço a esquerda de 25px em cada imagem que repetiu a mais.
 
-        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento a deformando e criando repetições de acordo com o necessário, na prática o que faz; verifica se o tamanho do elemento é menor que o tamanho da imagem mais a sua metade, se for ele faz o tamanho da imagem ser igual ao do elemento, agora se for maior ele se pergunta se o valor entre o resto da divisão do tamanho do elemento e o tamanho da imagem divididos pelo tamanho da imagem é menor que 0.5 se for @@@@@ preguiça de escrever tudo o exemplo abaixo está como se fosse a lógica na linguagem python:
+        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento, a deformando e criando repetições de acordo com o necessário, na prática o que faz;
+        
+            verifica o tamanho do elemento
+             
+            se for menor que a soma entre o tamanho da imagem mais sua metade, é configurado o tamanho da imagem para ficar o mesmo que o do elemento
+        
+            agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, é verificado quantas imagens inteiras cabem no elemento
+            
+            se sobrar um espaço e for menor que metade do tamanho da imagem é esticado todas as imagens em um espaço relativo a quanto de espaço sobrou repartido por quantas imagens estão presentes
+
+            se sobrar um espaço e for maior ou igual que metade do tamanho da imagem é encolhido
+            
+            
+            
+            se ele deve esticar ou se deve encolher para todas as imagens caberem no elemento 
+            
+
+            
+            
+            ele vai esticar caso o resto da divisão entre 
+        
+        verifica se o tamanho do elemento é menor que o tamanho da imagem mais a sua metade, se for, ele faz o tamanho da imagem ser igual ao do elemento, agora se for maior ele se pergunta se o valor entre o resto da divisão do tamanho do elemento e o tamanho da imagem divididos pelo tamanho da imagem é menor que 0.5 se for @@@@@ preguiça de escrever tudo o exemplo abaixo está como se fosse a lógica na linguagem python:
 
             numintimg = imgelement // img
 
@@ -159,121 +219,27 @@ background
 
 
 
-#posicionamento {
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    background-position-x: center;
-    background-position-y: bottom;
-    /* background-position - Coloca o fundo em uma posição dentro de seu elemento
-        Valores:
-            Unidades de medidas, se colocar apenas um valor vai valer tanto para o eixo x quanto o y, se colocar dois valores, define primeiro o y e depois o x
-
-            Apontamento de posição, sendo capaz de mistura-los, por exemplo: center right, left top ...
-
-        Variantes:
-            background-position-x
-            background-position-y
-    */
-}
 
 
 
-#fundocolado {
-    background-attachment: scroll;
-}
-#fundofixo {
-    background-attachment: fixed;
-}
-#fundolocal {
-    background-attachment: local;
-}
-
-/* background-attachment - fundo anexo, ajusta de que maneira o fundo deve se comportar
-    Valores:
-        scroll - o fundo fica estático, o que coube dentro de seu elemento é o que vai aparecer
-
-        fixed - o fundo fica fixo, conforme é rolada a página é apresentado o resto de seu conteúdo
-
-        local - o fundo é local, quando seu elemento é rodado sua imagem vai aparecendo
-*/
 
 
 
-#fundoborda {
-    background-clip: border-box;
-}
-#fundopreenchimento {
-    background-clip: padding-box;
-}
-#fundoconteudo {
-    background-clip: content-box;
-}
-/* background-clip - limite do fundo, coloca uma determinação para até onde o fundo pode ocupar.
-    Valores:
-        border-box - ocupa inclusive a borda
-        padding-box - ocupa até o preenchimento
-        content-box - ocupa o conteúdo do elemento
-*/
 
 
 
-#fundocomecopreenchimento {
-    background-origin: padding-box;
-}
-#fundocomecoborda {
-    background-origin: border-box;
-}
-#fundocomecoconteudo {
-    background-origin: content-box;
-}
-/* background-origin - indica a partir de onde a imagem deve começar
-    Valores:
-        padding-box - a partir do preenchimento
-        border-box - a partir da borda
-        content-box - a partir do conteúdo
-*/
 
 
 
-#fundotamanhoauto {
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-#fundotamanhocontido {
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-#fundotamanhocobrindo {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#fundotamanhodefinido {
-    background-repeat: no-repeat;
-    background-size: 80% 40%;
-}
-/* background-size - tamanho do fundo define como suas dimensões devem se comportar em relação ao elemento
-    Valores:
-        auto - o tamanho da imagem de fundo deve ser as das dimensões da imagem
-
-        contain - verifica a altura do elemento e deixa a imagem com a mesma altura, fazendo após isso um ajuste de seu comprimento para caber completamente no elemento
-
-        cover - verifica a largura do elemento e deixa a imagem com a mesma largura, fazendo após isso um auto-ajuste de sua altura para não perder qualidade
-
-        Unidades de medida
-*/
 
 
 
-#fundoestiloso {
-    background: url("../midia/imagens/quadro.png") no-repeat left top, red url("../midia/imagens/cenariotempo.jpg") no-repeat fixed left top;;
-    background-size: 100% 100%;
-    height: 50vh;
-}
-/* background - fundo, define as formatações gerais de como o fundo deve agir
-    Taquiografia:
-        background-color
-        background-image
-        background-repeat
-        background-attachment
-        background-position
-*/
+
+
+
+
+
+
+
+
+

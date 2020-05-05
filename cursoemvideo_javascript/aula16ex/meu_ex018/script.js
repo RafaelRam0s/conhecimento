@@ -1,9 +1,10 @@
 
 let lista = []
+let paragrafo = window.document.getElementById('resultado')
 
 function addAnalise() {
-    let numero = window.document.getElementById('num_analisar')
-    numero = Number(numero.value)
+    let num = window.document.getElementById('num_analisar')
+    numero = Number(num.value)
 
     let tabela = window.document.getElementById('tabelaNumeros')
     
@@ -13,10 +14,14 @@ function addAnalise() {
         lista.push(numero)
         
         tabela.innerHTML += `<option value="${numero}v" id="${numero}i">Valor ${numero} adicionado</option>`
-        
+
     } else {
         window.alert('Valor já cadastrado')
     }
+
+    paragrafo.innerHTML = ''
+    num.value = ''
+    num.focus()
 }
 
 function finalizarAnalise() {
@@ -24,7 +29,6 @@ function finalizarAnalise() {
     if (lista.length == 0) {
         window.alert('Favor adicionar um número antes')
     } else {
-        let paragrafo = window.document.getElementById('resultado')
 
         let contador = 0
         let somar = 0

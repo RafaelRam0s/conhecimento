@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="fundo.css">
+    <link rel="stylesheet" href="_style.css">
+
+    <title>Plano de Fundo</title>
+</head>
+<body>
+    
+    <h1>Fundos</h1>
+
+    <div>
+        <div class="fundo_preto">
+            <div class="fundo_verde">
+                <div class="fundo_verde_claro">
+                    <h2>Cor de fundo:</h2>
+
+                    <p>Ao colocar uma cor de fundo verifique se não possui nenhum outro elemento do mesmo pigmento, senão ao colocar um fundo diferente poderá não encherga-lo e achar que algo está dando errado</p>
+
+                    <p class="texto_legivel_claro">Tome cuidado com qual cor escolherá para não ficar ruim de visualizar as informações para os usuários. Se por algum motivo a presença do fundo for mais importante do que a padronização do texto, você pode adicionar efeitos; como sombra, outro fundo para as palavras e/ou deixar a marca do texto mais forte </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <h2>Transparência:</h2>
+
+            <div class="margem_zero opacidade_oito">
+                <h3>Opacidade</h3>
+
+                <p>Ao modificar a opacidade de um elemento todos os elementos filho acabam por erdar a determinada opacidade como máxima possível de se ter</p>
+
+                <p class="opacidade_alta">Este parágrafo é um exemplo da explicação acima, apesar de no css eu modificar a opacidade dele para ser maior que a do elemento pai, não ocorre alterações</p>
+
+                <p class="opacidade_seis">Porém se modificar-mos o parágrafo filho para ficar ainda mais fraco ele altera</p>
+            </div>
+            <div class="alfa_oito">
+                <h3>Valor Alfa</h3>
+
+                <p class="alfa_seis">Com o sistema RGBA de cores podemos modificar a transparência por métodos alternativos</p>
+
+                <p class="alfa_dez">Ele age melhor que a propriedade opacity, pois seus elementos filhos não dependem do valor do elemento pai</p>
+            </div>
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Imagem de Fundo:</h2>
+
+                <p class="fundo_img_duzentos texto_legivel_escuro">Ao colocarmos uma imagem de fundo devemos ter os mesmos cuidados de visualização que os das "Cores de fundo" para nenhum elemento sumir, esteja preparado caso o arquivo da imagem não se encontre no local referenciado ou um navegador não suporte sua extensão, pois o que aconteceria com este parágrafo caso a imagem de fundo sumisce é que as letras iriam parecer que desapareceram se eu não colocasse sombra branca</p>
+
+                <p class="fundo_img_externa texto_legivel_escuro">O parágrafo anterior ativou uma imagem de fundo pesquisando nas pastas do site, quanto a este parágrafo, puxei uma imagem de fundo de um link externo, então caso não esteja aparecendo aqui uma imagem de fundo pode ser que a sua internet não a carregou ou a referência a ela esteja inválida</p>
+
+                <p class="fundo_img_misturada minima_visualizacao">É possível fazer combinações de fundo, para o seu efeito ocorrer precisamos de imagens que contenham fundos transparentes ou imagens de tamanhos diferentes ( @@@@@ para usar esta segunda opção avance um pouco mais aqui nos seus estudos de imagens de fundo onde poderá aprender a controlar determinadas propriedades)</p>
+            </div>
+
+            
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Repetições de fundo:</h2>
+
+                <p>Os parágrafos a seguir estão com larguras e alturas mínimas para poder visualizar as diferenças de efeito da repetição de fundo</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete">Observe que fundos com imagens pequenas tendem a se repetir diversas vezes, isto é feito pelo css e não porque a imagem foi editada para possuir essa aparência</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_x">Pode-se ajustar as repetições para ocorrerem em apenas um dos eixos, neste caso a imagem só deve repetir na horizontal</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_y">Agora a repetição só deve aparecer na vertical. Esses tipos de configurações, para repetir em determinados eixos, não servem muito com a imagem que estou usando de exemplo, normalmente utilizamos fundos mais simples que servem para dar estilo</p>
+                
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao">Caso não queira que ocorra repetição, só será inserida uma cópia da imagem, útil para caso a aparência vá ficar feia se a imagem se repetir, usada também caso possua uma imagem grande o suficiente que cubra o elemento, mas esteja ciente que em diferentes tamanhos de tela pode não ser suficiente apenas uma imagem e que além de tudo imagens maiores consomem mais dados de internet e por este motivo pode-se acarretar em maiores tarifas para o seu provedor, ou lentidão de carregamento de página para seus usuários</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_cinza_degrade fundo_repete_x">Este e o próximo parágrafo são exemplos de tipos de imagens que utilizamos com a repetição de eixos, repare que a imagem é pequena mas tem um efeito de maneira a parecer contínua</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_cinza_degrade_lateral fundo_repete_y">A imagem que escolhi de fato não combina com o fundo do nosso site, mas se tivéssemos essa cor de cinza para nosso site ia ficar bonito e nem parecer que teria uma imagem por trás. Note que é sutil as mudanças, mas os detalhes fazem a diferença para uma boa página</p>
+
+
+            </div>
+
+            <div>
+                <h2></h2>
+            </div>
+
+
+        </div>
+        
+    </div>
+</body>
+</html>

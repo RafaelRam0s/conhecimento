@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(6, 6, 7, 0.747);
+    color: rgba(255, 255, 240, 0.99);
+    font-size: 16px;
+    margin: 0px;
+}
+
+h1 {
+    text-decoration-line: underline;
+    font-size: 350%;
+}
+h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+h2 {
+    font-size: 300%;
+}
+h3 {
+    font-size: 250%;
+}
+h4 {
+    font-size: 225%;
+}
+h5 {
+    font-size: 200%;
+}
+h6 {
+    font-size: 175%;
+}
+p {
+    font-size: 125%;
+}
+div {
+    margin-bottom: 60vh;
+}
+div p {
+    margin-left: 20px;
+}
+a {
+    color: aqua;
+}
+a:hover {
+    color: gold;
+}
+
+/* Cabeçalho */
+
+
+#pre_menu {
+    background-color: white;
+    padding: 3px 50px;
+}
+
+#pre_menu q {
+    color: rgba(6, 6, 7, 0.747);
+    font-size: xx-large;
+}
+
+
+header {
+    position: sticky;
+    top: 0px;
+}
+
+#menu_de_navegacao {
+    background-color: rgb(28, 179, 128);
+    padding: 0px 9%;
+}
+
+#menu_de_navegacao span {
+    display: inline-block;
+    border-right: 1px solid white;
+    padding: 13px 45px 13px 15px;
+    font-size: 150%;
+    font-weight: bold;
+    
+}
+
+#menu_de_navegacao span .menu_guia {
+    position: absolute;
+}
+
+div.menu_direita {
+    margin: 0px;
+    float: right;
+}
+
+/* Corpo do Documento */
+
+div#corpo {
+    margin: 5%;
+}
+
