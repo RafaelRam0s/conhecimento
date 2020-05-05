@@ -168,7 +168,20 @@ background-repeat
              
             se for menor que a soma entre o tamanho da imagem mais sua metade, é configurado o tamanho da imagem para ficar o mesmo que o do elemento
         
-            agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, 
+            agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, é verificado quantas imagens inteiras cabem no elemento
+            
+            se sobrar um espaço e for menor que metade do tamanho da imagem é esticado todas as imagens em um espaço relativo a quanto de espaço sobrou repartido por quantas imagens estão presentes
+
+            se sobrar um espaço e for maior ou igual que metade do tamanho da imagem é encolhido
+            
+            
+            
+            se ele deve esticar ou se deve encolher para todas as imagens caberem no elemento 
+            
+
+            
+            
+            ele vai esticar caso o resto da divisão entre 
         
         verifica se o tamanho do elemento é menor que o tamanho da imagem mais a sua metade, se for, ele faz o tamanho da imagem ser igual ao do elemento, agora se for maior ele se pergunta se o valor entre o resto da divisão do tamanho do elemento e o tamanho da imagem divididos pelo tamanho da imagem é menor que 0.5 se for @@@@@ preguiça de escrever tudo o exemplo abaixo está como se fosse a lógica na linguagem python:
 
