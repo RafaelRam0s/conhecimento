@@ -20,6 +20,28 @@
     min-height: 300px;
 }
 
+.margem_dez {
+    margin: 10px 0px;
+}
+
+div#rolagem div {
+    overflow-x: auto;
+    height: 100px;
+}
+
+div#rolagem div p {
+    min-height: 400px;
+}
+
+.borda_pontilhada {
+    border: 20px dotted rgb(28, 179, 128);
+}
+
+.preenchimento_trinta {
+    padding: 30px;
+}
+
+
 /* Glossário */
 /* Pendentes: */
 /*
@@ -31,6 +53,20 @@ opacity
 background-image
 
 background-repeat
+
+background-position
+background-position-x
+background-position-y
+
+background-attachment
+
+background-origin
+
+background-clip
+
+background-size
+
+background
 
 */
 
@@ -44,8 +80,8 @@ background-repeat
 
 
 
-.fundo_preto {
-    background-color: black;
+.fundo_escuro {
+    background-color: rgb(83, 83, 83);
 }
 .fundo_verde {
     background-color: lawngreen;
@@ -149,6 +185,12 @@ background-repeat
 .fundo_img_cinza_degrade_lateral {
     background-image: url('../../midia/imagens/fundo_detalhe_cinza_lateral.jpg');
 }
+.fundo_repete_espaco {
+    background-repeat: space;
+}
+.fundo_repete_estica {
+    background-repeat: round;
+}
 /* background-repeat - repetição de fundo, configura como deve ser apresentada as imagens de fundo
     Valores:
         repeat - repetição é usado para quando acabar o tamanho da imagem, verificar se está cobrindo todo o elemento caso não esteja é colocada outra imagem e assim por diante tanto no sentido horizontal quanto vertical
@@ -162,59 +204,7 @@ background-repeat
         space - espaço, ele pega a imagem e coloca lá no ponto inicial do elemento, depois disso é verificado quantas imagens após ela conseguem aparecer inteiras, aí se tiver alguma imagem que ao se repetir ficasse cortada, ela deixa um espaço vazio, então seria analisado qual foi essa distância que sobrou e repartiria em tamanhos iguais entre cada imagem que teve a mais do que a inicial.
             Exemplo: se escolhescemos uma imagem de 200px de largura para ficar em um elemento de 1100px de largura, seria colocada a primeira imagem, então 1100 - 200 = 900 esse resultado foi o espaço que sobrou, fazendo o cálculo de quantas outras inteiras apareceriam faríamos assim; 900 / 200 = 4 inteiros com resto 100 esse espaço que sobrou é dividido por cada imagem a mais e inserido a sua esquerda 100 / 4 = 25 colocando-se assim um espaço a esquerda de 25px em cada imagem que repetiu a mais.
 
-        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento, a deformando e criando repetições de acordo com o necessário, na prática o que faz;
-        
-            verifica o tamanho do elemento
-             
-            se for menor que a soma entre o tamanho da imagem mais sua metade, é configurado o tamanho da imagem para ficar o mesmo que o do elemento
-        
-            agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, é verificado quantas imagens inteiras cabem no elemento
-            
-            se sobrar um espaço e for menor que metade do tamanho da imagem é esticado todas as imagens em um espaço relativo a quanto de espaço sobrou repartido por quantas imagens estão presentes
-
-            se sobrar um espaço e for maior ou igual que metade do tamanho da imagem é encolhido
-            
-            
-            
-            se ele deve esticar ou se deve encolher para todas as imagens caberem no elemento 
-            
-
-            
-            
-            ele vai esticar caso o resto da divisão entre 
-        
-        verifica se o tamanho do elemento é menor que o tamanho da imagem mais a sua metade, se for, ele faz o tamanho da imagem ser igual ao do elemento, agora se for maior ele se pergunta se o valor entre o resto da divisão do tamanho do elemento e o tamanho da imagem divididos pelo tamanho da imagem é menor que 0.5 se for @@@@@ preguiça de escrever tudo o exemplo abaixo está como se fosse a lógica na linguagem python:
-
-            numintimg = imgelement // img
-
-            numrestimg = ( imgelement % img ) / img
-            
-            if ( imgelement < img + (img/2) )
-                {
-                    img = imgelement
-                    coloque a imagem no elemento
-                }
-
-            else ( imgelement >= img + (img/2) )
-                {
-                    if ( numrestimg < 0.5 )
-                    {
-                        restelement = (imgelement - numintimg * img) / numintimg
-
-                        img += restelement
-
-                        coloque numintimg imagens no elemento
-                    }
-
-                    else (numrestimg >= 0.5 )
-                    {
-                        restelement = (imgelement - numintimg * img) / ( numintimg + 1 )
-
-                        img -= restelement
-                        
-                        coloque numintimg + 1 imagens no elemento
-                    }
-                }
+        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento, a deformando e criando repetições de acordo com o necessário, na prática o que faz; verifica o tamanho do elemento, se for menor que a soma entre o tamanho da imagem mais sua metade, é configurado o tamanho da imagem para ficar o mesmo que o do elemento, agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, é verificado quantas imagens inteiras cabem no elemento. Se sobrar um espaço e for menor que metade do tamanho da imagem é esticado todas as imagens em um espaço relativo a quanto de espaço sobrou repartido por quantas imagens estão presentes, se sobrar um espaço e for maior ou igual que metade do tamanho da imagem é colocada mais uma imagem espremendo todas em um tamanho relativo a quanto de espaço cortaria a últmia imagem, dividido entre todas as outras imagens presentes
 */
 
 
@@ -236,10 +226,243 @@ background-repeat
 
 
 
+.fundo_topo_esquerda {
+    background-position: top left;
+}
+.fundo_topo_centro{
+    background-position: top center;
+}
+.fundo_topo_direita{
+    background-position: top right;
+}
+.fundo_topo{
+    background-position: top;
+}
+.fundo_centro_esquerda{
+    background-position: center left;
+}
+.fundo_centro{
+    background-position: center;
+}
+.fundo_centro_direita{
+    background-position: center right;
+}
+.fundo_baixo_esquerda{
+    background-position: bottom left;
+}
+.fundo_baixo_centro{
+    background-position: bottom center;
+}
+.fundo_baixo_direita{
+    background-position: bottom right;
+}
+.fundo_baixo{
+    background-position: bottom;
+}
+.fundo_posicao_porcentagem{
+    background-position: 20% 100%;
+}
+.fundo_posicao_px{
+    background-position: 100px;
+}
+.fundo_posicao_x{
+    background-position-x: 50%;
+}
+.fundo_posicao_y{
+    background-position-y: 50%;
+}
+.fundo_posicao{
+    background-position: 20% 50%;
+}
+/* background-position - Coloca o fundo em uma posição dentro de seu elemento
+    Valores:
+        Unidades de medidas, se colocar apenas um valor vai valer apenas para o eixo x sendo o y center, se colocar dois valores, define primeiro o x e depois o y
+
+        Apontamento de posição, sendo capaz de mistura-los, por exemplo: center right, left top ...
+*/
+/* background-position-x - posição do fundo no eixo x, indica em qual posição do eixo x deverá ficar a imagem com o eixo y top
+    Valores:
+        Unidades de medida
+        Apontamento de posição
+*/
+/* background-position-y - posição do fundo no eixo y, indica em qual posição do eixo y deverá ficar a imagem com o eixo x center
+    Valores:
+        Unidades de medida
+        Apontamento de posição
+*/
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.fundo_rola_scroll {
+    background-attachment: scroll;
+}
+.fundo_rola_fixo {
+    background-attachment: fixed;
+}
+.fundo_rola_local {
+    background-attachment: local;
+}
+
+/* background-attachment - fundo anexo em segundo plano, ajusta o efeito visual que o fundo possuirá ao rolar pela página
+    Valores:
+        scroll - rolagem, faz o fundo rolar junto da página dando um efeito visual de estático
+
+        fixed - fixado, conforme é rolada a página é apresentado o resto de seu conteúdo, aparentemente rouba 10% das laterais da imagem
+
+        local - local, o fundo se comporta como o fixed mas seu efeito só é gerado de dentro do elemento
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_origem_preenchimento {
+    background-origin: padding-box;
+}
+.fundo_origem_borda {
+    background-origin: border-box;
+}
+.fundo_origem_conteudo {
+    background-origin: content-box;
+}
+/* background-origin - origem do fundo, indica a partir de onde a imagem deve começar
+    Valores:
+        padding-box - a partir do preenchimento
+        border-box - a partir da borda
+        content-box - a partir do conteúdo
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_limite_borda{
+    background-clip: border-box;
+}
+.fundo_limite_preenchimento{
+    background-clip: padding-box;
+}
+.fundo_limite_conteudo{
+    background-clip: content-box;
+}
+/* background-clip - limite do fundo, coloca uma determinação para até onde o fundo pode ocupar.
+    Valores:
+        border-box - ocupa inclusive a borda
+        padding-box - ocupa até o preenchimento
+        content-box - ocupa somente o conteúdo do elemento
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_tamanho_auto {
+    background-size: auto;
+}
+.fundo_tamanho_contido {
+    background-size: contain;
+}
+.fundo_tamanho_coberto {
+    background-size: cover;
+}
+.fundo_tamanho_pixels {
+    background-size: 100px;
+}
+.fundo_tamanho_porcentagem {
+    background-size: 50%;
+}
+.fundo_tamanho_x_y {
+    background-size: 100% 100px;
+}
+/* background-size - tamanho do fundo define como suas dimensões devem se comportar em relação ao elemento
+    Valores:
+        auto - o tamanho da imagem de fundo deve ser as das dimensões da imagem
+
+        contain - verifica a altura do elemento e deixa a imagem com a mesma altura, fazendo após isso um ajuste de seu comprimento para caber completamente no elemento
+
+        cover - verifica a largura do elemento e deixa a imagem com a mesma largura, fazendo após isso um auto-ajuste de sua altura para não perder qualidade
+
+        Unidades de medida
+    
+    Uso:
+        Ao inserir um valor ele altera somente o eixo x, mas ao colocar dois valores ele altera tanto o eixo x quanto eixo y respectivamente aos valores na ordem em que foram inseridos
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_moldura{
+    background-color: red;
+    background-image: url('../../midia/imagens/quadro.png');
+}
+/* .fundo_diversificado{
+    background: ;
+}
+.fundo_criativo{
+    background: ;
+} */
+/* background - fundo, define as formatações gerais de como o fundo deve se comportar
+    Taquiografia:
+        background-color
+        background-image
+        background-repeat
+        background-attachment
+        background-position
+*/
 
 
 

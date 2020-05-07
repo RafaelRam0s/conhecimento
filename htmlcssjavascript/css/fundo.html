@@ -19,7 +19,7 @@
     <h1>Fundos</h1>
 
     <div>
-        <div class="fundo_preto">
+        <div class="fundo_escuro">
             <div class="fundo_verde">
                 <div class="fundo_verde_claro">
                     <h2>Cor de fundo:</h2>
@@ -66,6 +66,12 @@
 
 
 
+
+
+
+
+
+
             <div>
                 <h2>Imagem de Fundo:</h2>
 
@@ -103,14 +109,180 @@
 
                 <p class="texto_legivel_escuro minima_visualizacao fundo_img_cinza_degrade_lateral fundo_repete_y">A imagem que escolhi de fato não combina com o fundo do nosso site, mas se tivéssemos essa cor de cinza para nosso site ia ficar bonito e nem parecer que teria uma imagem por trás. Note que é sutil as mudanças, mas os detalhes fazem a diferença para uma boa página</p>
 
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_espaco">Com o formato space é dado um espaço entre as imagens se não estiver conseguindo visualizar o seu efeito altere o tamanho de tela para observar</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_estica">Com o formato esticado é feito uma análise do tamanho do elemento e a partir daí é decidido se a imagem deve ser esticada ou encolhida, altere o as dimensões da página para visualizar estes efeitos</p>
 
             </div>
+
+
+
+
+
+
+
+
+
 
             <div>
-                <h2></h2>
+                <h2>Posicionamento do fundo:</h2>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_esquerda">Fundo topo esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_centro">Fundo topo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_direita">Fundo topo direita</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo">Fundo topo</p>
+
+
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro_esquerda">Fundo centro esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro">Fundo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro_direita">Fundo centro direita</p>
+
+
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_esquerda">Fundo baixo esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_centro">Fundo baixo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_direita">Fundo baixo direita</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo">Fundo baixo</p>
+
+                <p>É possível usar números para posicionar o fundo e também usar propriedades de posicionamento específicas para os eixos x e y </p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_porcentagem">Fundo com porcentagem</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_px">Fundo com valor fixo</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_x">Fundo alterado no eixo x</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_y">Fundo alterado no eixo y</p>
+                
             </div>
 
 
+
+
+
+
+
+
+
+
+            <div id="rolagem">
+                <h2>Efeitos de fundo</h2>
+
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_scroll">
+                    <p>Scroll deixa o fundo seguindo a rolagem da tela, isto é, uma vez determinado o fundo ele manterá a mesma imagem independente de como for enteragido com a rolagem da página. Tenha em mente que para este efeito ficar diferente do - local - os containers não devem ficar no elemento de maior altura</p>
+                </div>
+                
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_fixo">
+                    <p>Fixed conforme você sobe ou desce em uma página é mostrado outras partes da imagem</p>
+                </div>
+
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_local">
+                    <p>Local age como o fixed, mas seu efeito só será ativado com interação relativa a rolagem do elemento e não da página</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Camadas de aparição do fundo:</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento">Cobrindo a partir do padding</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_borda">Cobrindo a partir da borda</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_conteudo">Cobrindo a partir do conteúdo</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Limites do fundo</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_borda">Cobrindo até a borda</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_preenchimento">Cobrindo até o padding</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_conteudo">Cobrindo até o conteúdo</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Tamanho do fundo:</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_auto">O tamanho do fundo age como um alterador do tamanho da imagem de fundo, por padrão ele vem automático, isto </p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_contido">Fundo contido, o que ele faz é esticar a imagem para ficar da mesma altura que o seu elemento e a cada pixel acrescentado ou tirado é modificado em sua largura</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_coberto">Fundo coberto, age de forma contrária ao fundo contido, ele estica a imagem para ficar com a mesma largura que o seu elemento e a cada pixel acrescentado ou tirado é modificado em sua altura</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_pixels">É possível selecionar um tamanho fixo para o fundo através dos pixels</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_porcentagem">Fundo com preenchimento de 50%, então ele pega 100% baseado no seu container e vai até metade dele</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_x_y">Ao darmos um valor para o fundo ele altera apenas o eixo x, mas ao colocarmos dois ele altera tanto o eixo x quanto o y</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Fundos mesclados:</h2>
+
+                <p>Como vimos anteriormente é possível mesclar fundos, e agora serão dados mais exemplos destes tipos de fundos, além de mostrar a capacidade de reunir diversas configurações e ajustá-las apenas com uma propriedade</p>
+
+
+                <div class="minima_visualizacao margem_dez fundo_moldura"></div>
+
+                <div class="minima_visualizacao margem_dez fundo_diversificado"></div>
+
+                <div class="minima_visualizacao margem_dez fundo_criativo"></div>
+
+            </div>
         </div>
         
     </div>
