@@ -174,7 +174,7 @@
                 </div>
                 
                 <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_fixo">
-                    <p>Fixed conforme você sobe ou desce em uma página é mostrado outras partes da imagem</p>
+                    <p>Fixed conforme você sobe ou desce em uma página é mostrado outras partes da imagem, aparentemente ao ser definida rouba 10% das laterais de uma imgaem, utilize o background-size: 90.1% 100%; (você aprenderá mais sobre essa propriedade futuramente)</p>
                 </div>
 
                 <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_local">
@@ -271,17 +271,23 @@
 
 
             <div>
-                <h2>Fundos mesclados:</h2>
+                <h2>Simplificação de código por taquiografia:</h2>
 
-                <p>Como vimos anteriormente é possível mesclar fundos, e agora serão dados mais exemplos destes tipos de fundos, além de mostrar a capacidade de reunir diversas configurações e ajustá-las apenas com uma propriedade</p>
+                <p>Ao definirmos uma mistura de fundos com imagens, não devemos colocar uma cor, pois isso por algum motivo @@@@@ faz todos os fundos desaparecerem</p>
 
-
-                <div class="minima_visualizacao margem_dez fundo_moldura"></div>
+                <div class="minima_visualizacao margem_dez fundo_simples"></div>
 
                 <div class="minima_visualizacao margem_dez fundo_diversificado"></div>
 
-                <div class="minima_visualizacao margem_dez fundo_criativo"></div>
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_misturado"></div>
 
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_errado">Ao definirmos uma mistura de fundos, não devemos colocar em nenhum momento uma cor de fundo pois isso acaba por fazer o fundo não funcionar</div>
+
+                <p>O background-origin e o background-clip, não funcionam na presença do background-attachment: fixed;</p>
+
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_moldura"></div>
+
+                <div class="minima_visualizacao margem_dez fundo_quadro"></div>
             </div>
         </div>
         

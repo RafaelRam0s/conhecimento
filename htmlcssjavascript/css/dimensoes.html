@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="author" content="Rafael Ramos" />
+    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
+    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="refresh" content="600" />
+
+    <link rel="icon" href="../midia/icones/icone_r.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dimensoes.css" />
+    
+    <title>Dimensões</title>
+
+</head>
+<body>
+
+    <h1>Dimensões</h1>
+
+    <h2>Bordas</h2>
+
+    <div>
+        <h3>Estilos de Bordas:</h3>
+
+        <p class="none">Sem borda</p>
+        <p class="dotted">Uma borda pontilhada</p>
+        <p class="dashed">Uma borda tracejada</p>
+        <p class="solid">Uma borda sólida</p>
+        <p class="double">Dupla borda</p>
+        <p class="groove">Uma borda estriada</p>
+        <p class="ridge">Uma borda cilíndrica</p>
+        <p class="inset">Uma borda espelhada para cima</p>
+        <p class="outset">Uma borda espelhada para baixo</p>
+        <p class="hidden">Uma borda escondida</p>
+        <p class="mix">Uma mistura de bordas</p>
+
+        <p id="bordaporpartes">Cada parte de borda deste parágrafo foi feita por uma propriedade diferente</p>
+
+
+        <h3>Tamanho de borda</h3>
+
+        <p id="bordag" class="solid">Borda grande</p>
+        <p id="bordam" class="solid">Borda média</p>
+        <p id="bordap" class="solid">Borda pequena</p>
+
+
+
+        <h3>Cor na Borda</h3>
+
+        <p class="bordacorazul solid">Cor de borda</p>
+        <p class="bordacorvermelho solid">Cor de borda</p>
+
+
+
+        <h3>Borda estilosa</h3>
+
+        <p id="bordatotal">Isso é uma borda com efeitos em apenas uma propriedade</p>
+        
+        <p id="bordatotaldividida">Isso é uma borda com efeitos em diversas propriedades</p>
+
+
+
+        <h3>Borda arredondada</h3>
+
+        <p id="bordaredonda" class="solid">A borda está mais circular</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Borda externa</h2>
+
+    <div>
+        <h3>Contorno:</h3>
+
+        <p>Diferentemente da borda é criada um contorno fora do elemento, então ele não funciona no reposicionamento de outros elementos, e nem participa no tamanho do elemento</p>
+
+        <p class="bordavazia non">Sem contorno</p>
+        <p class="bordavazia dotte">Um contorno pontilhado</p>
+        <p class="bordavazia dashe">Um contorno tracejado</p>
+        <p class="bordavazia soli">Um contorno sólido</p>
+        <p class="bordavazia doubl">Duplo contorno</p>
+        <p class="bordavazia groov">Um contorno estriado</p>
+        <p class="bordavazia ridg">Um contorno cilíndrico</p>
+        <p class="bordavazia inse">Um contorno espelhado para cima</p>
+        <p class="bordavazia outse">Um contorno espelhado para baixo</p>
+        <p class="bordavazia hidde">Um contorno escondido</p>
+
+
+
+        <h3>Tamanho do Contorno</h3>
+
+        <p class="soli contornop">Contorno grande</p>
+        <p class="soli contornog">Contorno pequeno</p>
+
+
+
+        <h3>Cor do Contorno:</h3>
+
+        <p class="soli contornop contornoazul"> Contorno azul</p>
+        <p class="soli contornop contornoverde"> Contorno verde</p>
+
+
+        <h3>Espaçamento do Contorno:</h3>
+
+        <p class="bordavazia soli espacocontorno">O contorno apresenta uma propriedade que nos permite criar um espaçamento da borda até ele</p>
+
+        <p id="contornototal">E para finalizar o tema contorno, aqui temos um contorno feito por taquiografia</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Tamanhos</h2>
+
+    <div>
+        <h3>Largura:</h3>
+
+        <p class="solid">A partir de agora colocarei bordas e fundos nos parágrafos para que possamos enxergar os efeitos visuais</p>
+
+        <p class="largura solid">E como podemos perceber neste parágrafo sua largura está menor que o de cima</p>
+
+        <h3>Altura:</h3>
+
+        <p class="largura altura solid">É importante termos cuidado com os tamanhos que colocamos, pois dependendo de qual valor coloquemos o seu conteúdo pode acabar vazando, por exemplo se diminuíssemos o height deste conteúdo para 10px</p>
+
+        <p class="minmaxtamanho solid">Também é possível além de mandar o elemento ter apenas um valor de altura e largura, podemos colocar um limite com as propriedades de min e max</p>
+
+        <p>Perceba que a altura e largura se referem ao tamanho do conteúdo e não do elemento, essa anotação é importante para entendermos as propriedades a seguir</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Margens</h2>
+
+    <div>
+        <h3>Espaçamento vazio:</h3>
+
+        <p>Apesar da margem parecer que altera o height e width de um elemento, ele não é utilixado para isso, serve mais para criar um espaçamento de um elemento até outro</p>
+
+        <p id="margem" class="solid">As margens laterais se somam já no caso das margens verticais de um elemento, quando encontram a margem de outro elemento elas não irão se somar e sim se misturar, por exemplo estes parágrafos que tem por padrão 16px tanto em cima quanto em baixo, então se quisermos aumentar o espaço entre eles temos que colocar um dos valores acima de 16px, agora caso queiramos diminuir a distância precisaremos modificar as margens dos dois elementos, já nas horizontais as margens se somarão</p>
+
+        <p id="margemtopogrande" class="solid">Por exemplo este que está com um espaçamento do topo maior que o convencional desta página</p>
+
+        <p id="margemautomatica" class="solid largura">E este parágrafo que está centralizado, por conta das margens automáticas e do width selecionado</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Preenchimento</h2>
+
+    <div>
+        <h3>Espaçamento interno:</h3>
+
+        <p id="preenchimento" class="solid">Como podemos observar essa propridade altera o espaço entre o conteúdo e a borda</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Tamanho da caixa</h2>
+
+    <p id="tamanhodacaixa">Ao colocarmos um tamanho, um preenchimento e uma borda seus valores fazem uma soma de cada parte para fora aumentando o tamanho total do elemento, mas podemos alterar isso para que influencie no conteúdo, mantendo desta forma o width selecionado fixo, como este parágrafo por exemplo</p>
+
+</body>
+</html>
