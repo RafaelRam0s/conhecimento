@@ -43,7 +43,15 @@ div#rolagem div p {
 
 
 /* Glossário */
-/* Pendentes: */
+/* Pendentes: 
+
+Valores do background-image
+
+background-blend-mode
+
+enable-background
+
+*/
 /*
 
 background-color
@@ -94,7 +102,7 @@ background
 }
 /* background-color - muda a cor do fundo
     Valores:
-        Padrões de cor
+        Padrões de cores
 */
 
 
@@ -445,24 +453,40 @@ background
 
 
 
-.fundo_moldura{
-    background-color: red;
-    background-image: url('../../midia/imagens/quadro.png');
+.fundo_simples {
+    background-color: blue;
+    background-image: url('../../midia/imagens/duzentosporduzentos.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
-/* .fundo_diversificado{
-    background: ;
+ .fundo_diversificado{
+    background: red url('../../midia/imagens/quadro.png') no-repeat fixed center;
 }
-.fundo_criativo{
-    background: ;
-} */
-/* background - fundo, define as formatações gerais de como o fundo deve se comportar
+.fundo_misturado {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+    background-size: 90.1% 100%;
+    background-clip: content-box;
+    background-origin: border-box;
+}
+.fundo_errado {
+    background: red url('../../midia/imagens/quadro.png') no-repeat scroll center, blue url('../../midia/imagens/t_gato.png') no-repeat scroll center, yellow url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+}
+.fundo_moldura {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariomontanha.jpg') no-repeat fixed center;
+    background-size: 90.1% 100%;
+}
+.fundo_quadro {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll, url('../../midia/imagens/cenariotempo.jpg') no-repeat fixed center;
+    background-size: 100% 100%;
+}
+/* background - fundo, define as formatações gerais de como o fundo deve se comportar, a cada vírgula colocada é acrescentado novos fundos
     Taquiografia:
-        background-color
-        background-image
-        background-repeat
-        background-attachment
-        background-position
+        background-color - cor do fundo
+        background-image - imagem de fundo
+        background-repeat - repetição de fundo
+        background-attachment - scroll de fundo
+        background-position - posição inicial do fundo
 */
-
 
 

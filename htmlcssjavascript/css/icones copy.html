@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../../midia/icones/fontawesome-free-5.13.0-web/css/all.min.css">
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div {
+            margin-bottom: 60vh;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <title>Icones</title>
+</head>
+<body>
+
+    <h1>Ícones</h1>
+
+    <p>Ícones são figuras que usamos para representar a ação ao invés de letras</p>
+    
+    <h2>Ícones do Font Awesome</h2>
+
+    <p>O font-awesome é uma biblioteca que abriga diversos ícones onde uns são pagos e outros gratuitos, o pacote que instalei é o disponibilizado gratuitamente, mas você não necessariamente precisa baixa-lo e colocar nas suas pastas, nessa página em seu head é demonstrado como inserí-lo por link uma vez baixado nas suas pastas e como chamar o arquivo externo dele que é como se chamasce a página onde eles estão armazenados e falasce baixe este pacote naquele site</p>
+
+    <p>Saiba mais sobre esse site, e a variedade de ícones disponíveis para uso aqui: <a href="https://fontawesome.com/icons?d=gallery" target="_blank">https://fontawesome.com/icons?d=gallery</a>, lembre-se que a versão que estou utilizando é a 5.13 então pode ser que ocorram mudanças conforme o tempo passar</p>
+
+    <div>
+        <div>
+            <h3>Inserindo ícones:</h3>
+
+            <p>Ícones podem ser colocados através de classes onde normalmente são colocadas dentro de tagnames como o - i - e o - span -, a seguir teremos dois ícones colocados respectivamente pelas tagnames mencionadas anteriormente:
+                <i class="fas fa-clock"></i>
+                
+                <span class="fas fa-clock"></span>
+            </p>
+        </div>
+        <div>
+            <h3>Formatos de ícones:</h3>
+
+            <p>Existem diversos modelos de ícones e combinações para ativá-los, no exemplo anterior usei um relógio, agora observe este: <i class="far fa-clock"></i> perceba que também é um relógio, mas em formato diferente, acredito que a diferença do fas para o far poderia ser a quantidade de cor, um é mais preenchido do que o outro, mas mantendo sempre o mesmo formato</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Ícones com CSS:</h3>
+
+            <p>Caso queira alterar o tamanho, cor e tantos outros estilos do ícone ele interage que com o css, essa é uma das diferenças para com as imagens que são mais limitadas na interação com o css</p>
+            
+            <p>Lembre-se que ele os ícones estão contidos dentro de tagnames - i - e - span - que possuem propriedades</p>
+
+            <p>Mudando cor e tamanho do texto: <i class="fas fa-clock" style="font-size: 35px; color: aqua;"></i></p>
+
+            <p>Mudando cor, tamanho e escrevendo junto do ícone: <i class="far fa-clock" style="font-size: 35px; color: darkorange;"> Não é o ideal escrever dentro de ícones, mas nada o impede, e esse é o efeito</i></p>
+        </div>
+    </div>
+</body>
+</html>
