@@ -1,148 +1,266 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br">
 <head>
 
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Rafael Ramos" />
-    <meta name="description" content="Ensinando funcionalidades do html, css e javascript" />
-    <meta name="keywords" content="front-end, html, css, javascript, codigos, dicas" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
 
-    <meta http-equiv="refresh" content="600" />
-
-    <link rel="stylesheet" type="text/css" href="_style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../css/icones.css" /> -->
-
-    <title>Icones</title>
-
+    <!-- <link rel="stylesheet" href="../../midia/icones/fontawesome-free-5.13.0-web/css/all.min.css"> -->
     <!-- <script src="https://kit.fontawesome.com/488a7f0ac1.js" crossorigin="anonymous"></script> -->
     <!-- Este script está pegando as informações do site na src e importando seus projetos para esta página -->
-    <link rel="stylesheet" href="../../midia/icones/fontawesome-free-5.13.0-web/css/all.min.css" />
-    <!-- Desta forma trazemos o arquivo com os icones -->
 
+    <link rel="stylesheet" href="_style.css">
+
+    <title>Icones</title>
 </head>
 <body>
 
-    <h1></h1>
+    Pendentes: diferentes funcionalidades para span e i, 
 
-    <h2>Icones</h2>
+    <h1>Ícones</h1>
+
+    <p>Ícones são figuras que usamos para representar a ação ao invés de letras</p>
+    
+    <h2>Ícones do Font Awesome</h2>
+
+    <p>O font-awesome é uma biblioteca que abriga diversos ícones onde uns são pagos e outros gratuitos, o pacote que instalei é o disponibilizado gratuitamente, mas você não necessariamente precisa baixa-lo e colocar nas suas pastas, nessa página em seu head é demonstrado como inserí-lo por link uma vez baixado nas suas pastas e como chamar o arquivo externo dele que é como se chamasce a página onde eles estão armazenados e falasse, baixe este pacote naquele site, comentei ambos no head descomente um deles para ver os efeitos</p>
+
+    <p>Saiba mais sobre esse site, e a variedade de ícones disponíveis para uso aqui: <a href="https://fontawesome.com/icons?d=gallery" target="_blank">https://fontawesome.com/icons?d=gallery</a>, lembre-se que a versão que estou utilizando é a 5.13 então pode ser que ocorram mudanças conforme o tempo passar</p>
+
+
+
+
+
+
+
+
+
+
+
 
     <div>
-        <h3>Como colocar icones:</h3>
+        <div>
+            <h3>Inserindo ícones:</h3>
 
-        <p>Os ícones podem ser colocados através de classes, por exemplo:
-            <i class="fas fa-clock"></i>
-            <i class="far fa-clock"></i>
-            <!-- As classes dos ícones foram feitas para acompanharem as tagnames <span> e <i> -->
-        </p>
+            <p>Ícones podem ser colocados através de classes onde normalmente são colocadas dentro de tagnames como o - i - e o - span - (@@@@@ o span serve para determinar o comportamento e o i para adicionar o ícone e sua aparência), a seguir teremos dois ícones colocados respectivamente pelas tagnames mencionadas anteriormente:
+                <i class="fas fa-clock"></i>
+                
+                <span class="fas fa-clock"></span>
+            </p>
+        </div>
 
-        <p>Como é possível observar existem classes com alguns intuitos, @@@@@ a classe - fas - apresenta o elemento em um formato sólido, já o - far - é o modo regular</p>
 
-        <p>Repare que a partir do css podemos mudar suas cores e tamanhos:
-            <i class="fas fa-clock" style="font-size: 35px; color: aqua;"> também existem</i>
-            <i class="far fa-clock" style="font-size: 35px; color: darkorange;"> classes já pré-programadas para tamanho de ícones, como:</i><br />
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Formatos de ícones:</h3>
+
+            <p>Existem diversos modelos de ícones e combinações para ativá-los, no exemplo anterior usei um relógio, agora observe este: <i class="far fa-clock"></i> perceba que também é um relógio, mas em formato diferente, acredito que a diferença do fas para o far poderia ser a quantidade de cor, um é mais preenchido do que o outro, mas mantendo sempre o mesmo formato</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Ícones com CSS:</h3>
+
+            <p>Caso queira alterar o tamanho, cor e tantos outros estilos do ícone ele interage que com o css, essa é uma das diferenças para com as imagens que são mais limitadas na interação com o css</p>
+            
+            <p>Lembre-se que ele os ícones estão contidos dentro de tagnames - i - e - span - que possuem propriedades</p>
+
+            <p>Mudando cor e tamanho do texto: <i class="fas fa-clock" style="font-size: 35px; color: aqua;"></i></p>
+
+            <p>Mudando cor, tamanho e escrevendo junto do ícone: <i class="far fa-clock" style="font-size: 35px; color: darkorange;"> Não é o ideal escrever dentro de ícones, mas nada o impede, e esse é o efeito</i></p>
+
+            <p>Também existem classes próprias do font-awesome que definem o tamanho:</p>
+
             <i class="fas fa-clock fa-xs"></i>
             <i class="fas fa-clock fa-sm"></i>
             <i class="fas fa-clock fa-lg"></i>
             <i class="fas fa-clock fa-2x"></i>
             <i class="fas fa-clock fa-5x"></i>
             <i class="fas fa-clock fa-10x"></i>
-        </p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Ícones em lista:</h3>
+
+            <p>Para que seja possível a sua utilização, devemos começar com uma unorded list com classe - fa-ul -, e a cada list item colocar um - span - com classe - fa-li - para que o ícone fiquem bem posicionado</p>
+            
+            <ul class="fa-ul">
+                <li><i class="fas fa-check-square"></i>Caso não siga a regra do fa-li isto acontece</li>
+                <li><i class="fas fa-square fa-li"></i>Se colocar o fa-li na classe do i dará certo porém fugirá dos padrões</li>
+                <li><span class="fa-li"><i class="far fa-square"></i></span>Caso não coloque o fa-ul na tagname ul os itens de lista ficarão como tópicos com um square e sem ícones</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Adicione estilos de lista em cada item para ficar bem estilizado</li>
+            </ul>
+
+
+            <ul>
+                <li><span class="fa-li"><i class="far fa-square"></i></span>Este é um exemplo de como daria errado pois o fa-li depende da fa-ul, logo ele não aparecerá</li>
+                <li><i class="far fa-square"></i> Não dependemos do fa-li, mas ficaríamos com o square atrás e um espaço de indent do texto menor</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Ícones animados:</h3>
+
+            <p>Ícones podem possuir movimentações tais como girar
+                <i class="fas fa-spinner fa-spin"></i>
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <i class="fas fa-sync-alt fa-spin"></i>
+                <i class="fas fa-cog fa-spin"></i>
+                <i class="fas fa-cog fa-pulse"></i>
+                <i class="fas fa-spinner fa-pulse"></i>
+            </p>
+        </div>
+
+
+
+
+
+        <div>
+            <h3>Posicionamento de ícones:</h3>
+    
+            <p>Podemos colocar o ícone em diferentes ângulos com o fa-rotate-90, fa-rotate-180 e fa-rotate-270, e até inverter a ordem de direção com fa-flip-horizontal e fa-flip-vertical, se combinar ambos ângulos e direção terá uma variedade vaste de possibilidades para o posicionamento 
+                <i class="fas fa-horse"></i>
+                <i class="fas fa-horse fa-rotate-90"></i>
+                <i class="fas fa-horse fa-rotate-180"></i>
+                <i class="fas fa-horse fa-rotate-270"></i>
+                <i class="fas fa-horse fa-flip-horizontal"></i>
+                <i class="fas fa-horse fa-flip-vertical"></i>
+            </p>
+    
+
+
+            <p style="max-width: 800px; margin: auto;">
+                <i class="fas fa-quote-left fa-1x fa-pull-left fa-border"></i> Para podermos acrescentar uma borda nos ícones existe uma classe própria para isso a - fa-border -, agora para colocarmos ícones <i class="fas fa-quote-left fa-1x fa-border fa-pull-right fa-rotate-180"></i> fixos do lado esquerdo usamos o - fa-pull-left - e na diretita o - fa-pull-right -,
+                <i class="fas fa-quote-left fa-1x fa-pull-left fa-border"></i> o que eles fazem é ser um elemento constante e conforme for escrevendo o texto eles são usados como base para saber a partir de onde o texto começa e a partir de ele termina, enquanto não for preenchido o tamanho do ícone o texto ficará por cima <i class="fas fa-quote-left fa-1x fa-border fa-pull-right fa-rotate-180"></i>
+            </p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Mistura de ícones</h3>
+    
+            <p>Para misturar vários ícones, use a classe fa-stack no pai, a fa-stack-1x para o ícone de tamanho regular e fa-stack-2x para o ícone maior. A fa-inverse pode ser usada como uma cor alternativa para o ícone, por padrão vem branca então cuidado. Você também pode adicionar classes de ícone maiores ao pai para controlar ainda mais o dimensionamento.</p>
+    
+            <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse" style="color: rgb(80, 80, 204);"></i>
+            </span>
+            Para produzirmos este efeito também é necessário criar um conteiner geral que seria esse span, possuindo a classe fa-lg, que indica para os próximos ícones que devem ocupar todo o espaço do elemento, e o fa-stack serve para ajustar o posicionamento, já que os fa-stack acabam por utilizar propriedades como posicionamento absoluto e alinhamento de texto<br />
+    
+            <span class="fa-stack fa-lg">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </span>
+            Basicamente o fa-stack-1x serve para falar que aquele ícone vai se manter, e os outros ícones se basearão nele<br />
+    
+            <span class="fa-stack fa-lg">
+                <i class="fas fa-camera fa-stack-1x"></i>
+                <i class="fas fa-ban fa-stack-2x" style="color:red;"></i>
+            </span>
+            Já o fa-stack-2x faz com que se adapte ao primeiro ícone
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <h3>Padronizando fila de ícones:</h3>
+    
+            <p>Sem largura fixa:<br/>
+                <i class="fas fa-arrows-alt-v"></i> Icon 1 <br/>
+                <i class="fas fa-band-aid"></i> Icon 2 <br />
+                <i class="fab fa-bluetooth-b"></i> Icon 3 <br />
+            </p>
+    
+            <p>Com largura fixa: <br />
+                <i class="fas fa-arrows-alt-v fa-fw"></i> Icon 1 <br />
+                <i class="fas fa-band-aid fa-fw"></i> Icon 2 <br />
+                <i class="fab fa-bluetooth-b fa-fw"></i> Icon 3 <br />
+            </p>
+        </div>
 
     </div>
-
-
-
-    <div>
-        <h3>Icones em lista:</h3>
-
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Necessário colocar a fa-ul na tagname ul</li>
-            <li><span class="fa-li"><i class="fas fa-square"></i></span>Podemos colocar qualquer icone que não haverá problema</li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>Podemos colocar qualquer icone que não haverá problema</li>
-            <li><span class="fa-li"><i class="far fa-check-square"></i></span>Indicado colocar a classe fa-li em uma tagname span a cada item de lista</li>
-        </ul>
-    </div>
-
-
-
-    <div>
-        <h3>Icones animados:</h3>
-
-        <p>Para o icone ficar girando podemos colocar a classe fa-spinclasse que faz com que qualquer ícone gire, e o fa-pulse faz com que qualquer ícone gire em 8 etapas.
-            <i class="fas fa-spinner fa-spin"></i>
-            <i class="fas fa-circle-notch fa-spin"></i>
-            <i class="fas fa-sync-alt fa-spin"></i>
-            <i class="fas fa-cog fa-spin"></i>
-            <i class="fas fa-cog fa-pulse"></i>
-            <i class="fas fa-spinner fa-pulse"></i>
-        </p>
-    </div>
-
-
-
-    <div>
-        <h3>Posicionamento de icones:</h3>
-
-        <p>Podemos colocar o icone em diferentes ângulos, por exemplo:
-            <i class="fas fa-horse"></i>
-            <i class="fas fa-horse fa-rotate-90"></i>
-            <i class="fas fa-horse fa-rotate-180"></i>
-            <i class="fas fa-horse fa-rotate-270"></i>
-            <i class="fas fa-horse fa-flip-horizontal"></i>
-            <i class="fas fa-horse fa-flip-vertical"></i>
-        </p>
-
-        <p style="max-width: 800px; margin: auto;"><i class="fas fa-quote-left fa-1x fa-pull-left fa-border"></i>Como também podemos ajustar seu local de aparecimento, o fa-border serve para criar uma borda, já o fa-pull-left e o fa-pull-right servem para fazerem os elementos ficarem fixos no início e fim do elemento <i class="fas fa-quote-left fa-1x fa-border fa-pull-right fa-rotate-180"></i></p>
-    </div>
-
-
-
-    <div>
-        <h3>Mistura de ícones</h3>
-
-        <p>Para misturar vários ícones, use a classe fa-stack no pai, a fa-stack-1x para o ícone de tamanho regular e fa-stack-2x para o ícone maior. A fa-inverse pode ser usada como uma cor alternativa para o ícone, por padrão vem branca então cuidado. Você também pode adicionar classes de ícone maiores ao pai para controlar ainda mais o dimensionamento.</p>
-
-        <span class="fa-stack fa-lg">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-twitter fa-stack-1x fa-inverse" style="color: rgb(80, 80, 204);"></i>
-        </span>
-        Para produzirmos este efeito também é necessário criar um conteiner geral que seria esse span, possuindo a classe fa-lg, que indica para os próximos ícones que devem ocupar todo o espaço do elemento, e o fa-stack serve para ajustar o posicionamento, já que os fa-stack acabam por utilizar propriedades como posicionamento absoluto e alinhamento de texto<br />
-
-        <span class="fa-stack fa-lg">
-            <i class="far fa-circle fa-stack-2x"></i>
-            <i class="fab fa-twitter fa-stack-1x"></i>
-        </span>
-        Basicamente o fa-stack-1x serve para falar que aquele ícone vai se manter, e os outros ícones se basearão nele<br />
-
-        <span class="fa-stack fa-lg">
-            <i class="fas fa-camera fa-stack-1x"></i>
-            <i class="fas fa-ban fa-stack-2x" style="color:red;"></i>
-        </span>
-        Já o fa-stack-2x faz com que se adapte ao primeiro ícone
-    </div>
-
-
-
-    <div>
-        <h3>Larguras de um ícone:</h3>
-
-        <p>Sem largura fixa:
-            <span style="display: block;"><i class="fas fa-arrows-alt-v"></i> Icon 1</span>
-            <span style="display: block;"><i class="fas fa-band-aid"></i> Icon 2</span>
-            <span style="display: block;"><i class="fab fa-bluetooth-b"></i> Icon 3</span>
-        </p>
-
-        <p>Com largura fixa:
-            <span style="display: block;"><i class="fas fa-arrows-alt-v fa-fw"></i> Icon 1</span>
-            <span style="display: block;"><i class="fas fa-band-aid fa-fw"></i> Icon 2</span>
-            <span style="display: block;"><i class="fab fa-bluetooth-b fa-fw"></i> Icon 3</span>
-        </p>
-
-    </div>
-
-
-
 </body>
 </html>
