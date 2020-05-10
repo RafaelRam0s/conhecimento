@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+
+
+
+
+
+
+
+.borda_estilo_none {border-style: none;}
+.borda_estilo_dotted {border-style: dotted;}
+.borda_estilo_dashed {border-style: dashed;}
+.borda_estilo_solid {border-style: solid;}
+.borda_estilo_double {border-style: double;}
+.borda_estilo_groove {border-style: groove;}
+.borda_estilo_ridge {border-style: ridge;}
+.borda_estilo_inset {border-style: inset;}
+.borda_estilo_outset {border-style: outset;}
+.borda_estilo_hidden {border-style: hidden;}
+.borda_estilo_mix {border-style: dotted dashed solid double;}
+/* border-style - estilo de borda, seleciona qual deve ser o formato da borda
+    Valores:
+        none - Define sem borda
+
+        dotted - Define uma borda pontilhada
+
+        dashed - Define uma borda tracejada
+
+        solid - Define uma borda sólida
+
+        double - Define uma borda dupla
+
+        groove- Define uma borda estriada 3D. O efeito depende do valor da cor da borda
+
+        ridge- Define uma borda sulcada em 3D. O efeito depende do valor da cor da borda
+
+        inset- Define uma borda inserida em 3D. O efeito depende do valor da cor da borda
+
+        outset- Define uma borda inicial 3D. O efeito depende do valor da cor da borda
+
+        hidden - Define uma borda oculta
+
+        Padrão cardinal com os valores listados
+*/
+
+
+
+
+
+
+
+
+
+
+
+.borda_estilo_misturada {
+    border-top-style: double;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: dashed;
+}
+/* 
+border-top-style
+border-right-style
+border-bottom-style
+border-left-style
+
+posição do estilo de borda, age como o border-style, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+.borda_tamanho_grossa {
+    border-width: 30px;
+}
+.borda_tamanho_media {
+    border-width: 15px;
+}
+.borda_tamanho_pequena {
+    border-width: 3px;
+}
+.borda_tamanho_misturado {
+    border-width: 10px 30px;
+}
+/* border-width - tamanho da borda, define sua grossura, segue o Padrão Cardinal
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+.borda_tamanho_diferente {
+    border-top-width: 3px;
+    border-right-width: 10px;
+    border-bottom-width: 20px;
+    border-left-width: 30px;
+}
+/*
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width 
+
+posição do tamanho da borda, age como o border-style, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+.borda_cor_turquesa {
+    border-color: turquoise;
+}
+.borda_cor_misturada {
+    border-color: turquoise crimson darkslategrey greenyellow;
+}
+.borda_cor_diferente {
+    border-top-color: darkblue;
+    border-right-color: rgb(139, 0, 0);
+    border-bottom-color: yellow;
+    border-left-color: darkgreen;
+}
+
+
+
+
+
+
+
+
+
+
+.borda_taquiografica {
+    border: 5px solid black;
+}
+.borda_taquiografica_diferente {
+    border-top: 5px solid darkblue;
+    border-right: 10px dashed rgb(139, 0, 0);
+    border-bottom: 20px dotted yellow;
+    border-left: 30px double darkgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_redonda_pixel {
+    border-radius: 16px;
+}
+.borda_redonda_porcentagem {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
