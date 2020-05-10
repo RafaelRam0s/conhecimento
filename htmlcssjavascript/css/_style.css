@@ -45,12 +45,30 @@
     
 */
 
+/* Paleta de cores
+
+rgb(139, 0, 0) // vermelho
+
+black
+rgba(6, 6, 7, 0.747)
+
+aqua
+rgb(28, 179, 128)
+
+gold
+
+rgba(255, 255, 240, 0.99)
+white
+
+
+*/
 
 body {
     background-color: rgba(6, 6, 7, 0.747);
     margin: 5%;
     color: rgba(255, 255, 240, 0.99);
     font-size: 16px;
+    font-family: serif;
 }
 
 
