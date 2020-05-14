@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.fundo_vermelho {
+    background-color: darkred;
+}
+
+/* Glossário */
+/* Pendentes: */
+/*
+padding-inline-start
+padding-inline-end
+padding-block-start
+padding-block-end
+padding-block
+padding-inline
+scroll-padding-inline-start
+scroll-padding-inline-end
+scroll-padding-block-start
+scroll-padding-block-end
+scroll-padding-block
+scroll-padding-inline
+scroll-padding-top
+scroll-padding-right
+scroll-padding-bottom
+scroll-padding-left
+scroll-padding
+
+*/
+
+.preenchimento {
+    padding: 10px;
+}
+
+
+
+
+.preenchimento_dividido {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* .preenchimento_teste {
+    padding-inline-start: ;
+    padding-inline-end: ;
+    padding-block-start: ;
+    padding-block-end: ;
+    padding-block: ;
+    padding-inline: ;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+

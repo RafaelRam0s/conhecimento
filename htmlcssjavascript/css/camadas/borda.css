@@ -1,0 +1,466 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: 
+
+border-collapse
+
+border-spacing
+
+border-bottom-left-radius
+border-top-left-radius
+border-bottom-right-radius
+border-top-right-radius
+border-start-start-radius
+border-start-end-radius
+border-end-start-radius
+border-end-end-radius
+
+
+mask-border
+mask-border-mode
+mask-border-outset
+mask-border-repeat
+mask-border-slice
+mask-border-source
+mask-border-width
+
+
+border-image
+border-image-width
+border-image-repeat
+border-image-slice
+border-image-outset
+border-image-source
+
+
+
+
+
+
+border-inline-end-width
+border-inline-end-style
+border-inline-end-color
+border-inline-end
+
+border-inline-start-width
+border-inline-start-style
+border-inline-start-color
+border-inline-start
+
+border-inline-style
+border-inline-width
+border-inline-color
+border-inline
+
+
+
+
+border-block-end-width
+border-block-end-style
+border-block-end-color
+border-block-end
+
+border-block-start-width
+border-block-start-style
+border-block-start-color
+border-block-start
+
+border-block-style
+border-block-width
+border-block-color
+border-block
+*/
+
+
+
+/*
+border-style
+border-top-style
+border-right-style
+border-bottom-style
+border-left-style
+
+border-width
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+
+border-color
+border-top-color
+border-right-color
+border-bottom-color
+border-left-color
+
+border
+border-top
+border-right
+border-bottom
+border-left
+
+
+*/
+
+
+
+
+
+.borda_estilo_none {border-style: none;}
+.borda_estilo_dotted {border-style: dotted;}
+.borda_estilo_dashed {border-style: dashed;}
+.borda_estilo_solid {border-style: solid;}
+.borda_estilo_double {border-style: double;}
+.borda_estilo_groove {border-style: groove;}
+.borda_estilo_ridge {border-style: ridge;}
+.borda_estilo_inset {border-style: inset;}
+.borda_estilo_outset {border-style: outset;}
+.borda_estilo_hidden {border-style: hidden;}
+.borda_estilo_mix {border-style: dotted dashed solid double;}
+/* border-style - estilo de borda, seleciona qual deve ser o formato da borda
+    Valores:
+        none - Define sem borda
+
+        dotted - Define uma borda pontilhada
+
+        dashed - Define uma borda tracejada
+
+        solid - Define uma borda sólida
+
+        double - Define uma borda dupla
+
+        groove- Define uma borda estriada 3D. O efeito depende do valor da cor da borda
+
+        ridge- Define uma borda sulcada em 3D. O efeito depende do valor da cor da borda
+
+        inset- Define uma borda inserida em 3D. O efeito depende do valor da cor da borda
+
+        outset- Define uma borda inicial 3D. O efeito depende do valor da cor da borda
+
+        hidden - Define uma borda oculta
+
+        Padrão cardinal com os valores listados
+*/
+.borda_estilo_misturada {
+    border-top-style: double;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: dashed;
+}
+/* 
+border-top-style
+border-right-style
+border-bottom-style
+border-left-style
+
+posição do estilo de borda, age como o border-style, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_tamanho_grossa {border-width: 30px;}
+.borda_tamanho_media {border-width: 15px;}
+.borda_tamanho_pequena {border-width: 3px;}
+.borda_tamanho_misturado {border-width: 10px 30px;}
+/* border-width - tamanho da borda, define a grossura da borda, segue o Padrão Cardinal
+    Valores:
+        Unidades de medidas
+*/
+.borda_tamanho_diferente {
+    border-top-width: 3px;
+    border-right-width: 10px;
+    border-bottom-width: 20px;
+    border-left-width: 30px;
+}
+/*
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width 
+
+posição do tamanho da borda, age como o border-style, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_cor_turquesa {
+    border-color: turquoise;
+}
+.borda_cor_misturada {
+    border-color: turquoise crimson darkslategrey greenyellow;
+}
+.borda_cor_diferente {
+    border-top-color: darkblue;
+    border-right-color: rgb(139, 0, 0);
+    border-bottom-color: yellow;
+    border-left-color: darkgreen;
+}
+/* border-color - cor da borda, configura o pigmento que a borda terá
+    Valores:
+        Padrões de cores
+*/
+/*
+border-top-color
+border-right-color
+border-bottom-color
+border-left-color
+
+cor da borda, age como o border-color, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_taquiografica {
+    border: 5px solid black;
+}
+.borda_taquiografica_diferente {
+    border-top: 5px solid darkblue;
+    border-right: 10px dashed rgb(139, 0, 0);
+    border-bottom: 20px dotted yellow;
+    border-left: 30px double darkgreen;
+}
+/* border - borda, define as configurações gerais de uma borda
+    Ordem taquiográfica:
+        border-width
+        border-style
+        border-color
+*/
+/*
+border-top
+border-right
+border-bottom
+border-left
+
+borda, age como o border, mas só onde for indicado para aparecer
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_redonda_pixel {
+    border-radius: 16px;
+}
+.borda_redonda_porcentagem {
+    border-radius: 50%;
+}
+/* border-radius - raio da borda, indica o quão bem arredondada deverá ficar a borda, @@@@@
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contorno_none {outline-style: none;}
+.contorno_dotted {outline-style: dotted;}
+.contorno_dashed {outline-style: dashed;}
+.contorno_solid {outline-style: solid;}
+.contorno_double {outline-style: double;}
+.contorno_groove {outline-style: groove;}
+.contorno_ridge {outline-style: ridge;}
+.contorno_inset {outline-style: inset;}
+.contorno_outset {outline-style: outset;}
+.contorno_hidden {outline-style: hidden;}
+/* outline-style - estilo do contorno, seleciona qual deve ser o formato da borda externa
+    Valores:
+        none - Define sem borda
+
+        dotted - Define uma borda pontilhada
+
+        dashed - Define uma borda tracejada
+
+        solid - Define uma borda sólida
+
+        double - Define uma borda dupla
+
+        groove- Define uma borda estriada 3D. O efeito depende do valor da cor da borda
+
+        ridge- Define uma borda sulcada em 3D. O efeito depende do valor da cor da borda
+
+        inset- Define uma borda inserida em 3D. O efeito depende do valor da cor da borda
+
+        outset- Define uma borda inicial 3D. O efeito depende do valor da cor da borda
+
+        hidden - Define uma borda oculta
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contorno_grosso {outline-width: 30px;}
+.contorno_medio {outline-width: 15px;}
+.contorno_pequeno {outline-width: 3px;}
+/* outline-width - tamanho do contorno, define a grossura da borda externa
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+.contorno_turquesa {outline-color: turquoise;}
+/* outline-color - cor do contorno, configura o pigmento que a borda externa terá
+    Valores:
+        Padrões de cores
+*/
+
+
+
+
+
+
+
+
+
+
+
+.contorno_taquiografico {
+    outline: 5px solid darkred;
+}
+/* outline - contorno, define as configurações gerais de uma borda externa
+    Ordem taquiográfica:
+        border-width
+        border-style
+        border-color
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contorno_separa_dez {
+    outline-offset: 10px;
+}
+/* outline-offset - deslocamento do contorno, indica qual a distância que deve ter entre a borda e a borda externa
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+

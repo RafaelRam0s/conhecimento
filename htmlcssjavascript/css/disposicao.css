@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+.preenchimento_dez {
+    background-color: darkred;
+    padding: 10px;
+}
+.tamanho_cem {
+    width: 100px;
+}
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+
+.bloco {
+    display: block;
+}
+.em_linha {
+    display: inline;
+    margin: 50px 50px 50px 50px;
+}
+.bloco_em_linha {
+    display: inline-block;
+}
+/* display - disposição, configura como o elemento deve se comportar em uma linha
+    Valores:
+        block - bloco, deve ocupar toda a linha que aparece e jogar o próximos elemento para baixo
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

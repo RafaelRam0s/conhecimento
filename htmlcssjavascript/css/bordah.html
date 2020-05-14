@@ -10,37 +10,13 @@
     <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
 
     <link rel="stylesheet" href="_style.css">
-    <link rel="stylesheet" href="camadas.css">
+    <link rel="stylesheet" href="borda.css">
 
-    <title>Camadas</title>
+    <title>Borda</title>
 </head>
 <body>
     
-    <h1>Dimensões</h1>
-
-    <p>Necessário ter um display block ou um inline-block @@@@@</p>
-
-    <div>
-        <h2>Formatos de exibição (display):</h2>
-
-        <p>display block ocupa toda a linha do elemento e joga as próximas informações para baixo</p>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <h1>Bordas</h1>
 
     <div>
         <h2>Estilos de bordas:</h2>
@@ -161,25 +137,38 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div>
         <h2>Borda externa:</h2>
 
         <p>As bordas criam um espaçamento que acaba aumentando a distância entre outros elementos, já as bordas externas criam uma borda que não interfere, porém são mais limitados pois não podem diferenciar cada parte delas</p>
 
-        <p class="bordavazia non">Sem contorno</p>
-        <p class="bordavazia dotte">Um contorno pontilhado</p>
-        <p class="bordavazia dashe">Um contorno tracejado</p>
-        <p class="bordavazia soli">Um contorno sólido</p>
-        <p class="bordavazia doubl">Duplo contorno</p>
-        <p class="bordavazia groov">Um contorno estriado</p>
-        <p class="bordavazia ridg">Um contorno cilíndrico</p>
-        <p class="bordavazia inse">Um contorno espelhado para cima</p>
-        <p class="bordavazia outse">Um contorno espelhado para baixo</p>
-        <p class="bordavazia hidde">Um contorno escondido</p>
-
-
-
-
+        <p class="borda_taquiografica contorno_none">Sem contorno</p>
+        <p class="borda_taquiografica contorno_dotted">Um contorno pontilhado</p>
+        <p class="borda_taquiografica contorno_dashed">Um contorno tracejado</p>
+        <p class="borda_taquiografica contorno_solid">Um contorno sólido</p>
+        <p class="borda_taquiografica contorno_double">Duplo contorno</p>
+        <p class="borda_taquiografica contorno_groove">Um contorno estriado</p>
+        <p class="borda_taquiografica contorno_ridge">Um contorno cilíndrico</p>
+        <p class="borda_taquiografica contorno_inset">Um contorno espelhado para cima</p>
+        <p class="borda_taquiografica contorno_outset">Um contorno espelhado para baixo</p>
+        <p class="borda_taquiografica contorno_hidden">Um contorno escondido</p>
 
 
 
@@ -188,8 +177,9 @@
 
         <h3>Tamanho do Contorno</h3>
 
-        <p class="soli contornop">Contorno grande</p>
-        <p class="soli contornog">Contorno pequeno</p>
+        <p class="contorno_solid contorno_grosso">Contorno grande</p>
+        <p class="contorno_solid contorno_medio">Contorno médio</p>
+        <p class="contorno_solid contorno_pequeno">Contorno pequeno</p>
 
 
 
@@ -203,9 +193,21 @@
 
         <h3>Cor do Contorno:</h3>
 
-        <p class="soli contornop contornoazul"> Contorno azul</p>
-        <p class="soli contornop contornoverde"> Contorno verde</p>
+        <p class="contorno_solid contorno_grosso contorno_turquesa">Contorno turquesa</p>
+        <p class="contorno_solid contorno_grosso contorno_colorido">O contorno definido por último terá uma sobreposição maior que a do outro, mas o conteúdo ainda sofrerá sobreposição dada por qualquer outra borda externa</p>
 
+
+
+
+
+
+
+
+
+
+        <h3>Contorno taquiográfico</h3>
+
+        <p class="contorno_taquiografico">Desta forma podemos definir diversas configurações de contorno para um elemento através de uma propriedade</p>
 
 
 
@@ -218,10 +220,10 @@
         
         <h3>Espaçamento do Contorno:</h3>
 
-        <p class="bordavazia soli espacocontorno">O contorno apresenta uma propriedade que nos permite criar um espaçamento da borda até ele</p>
+        <p class="borda_taquiografica contorno_taquiografico contorno_separa_dez">O contorno apresenta uma propriedade que nos permite criar um espaçamento vazio da borda até ele</p>
 
-        <p id="contornototal">E para finalizar o tema contorno, aqui temos um contorno feito por taquiografia</p>
-
+        <p class="borda_taquiografica contorno_turquesa contorno_medio contorno_solid contorno_separa_dez">Este espaço não interfere no tamanho e nem espaçamento do elemento</p>
     </div>
+    
 </body>
 </html>
