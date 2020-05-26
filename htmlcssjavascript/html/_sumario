@@ -16,6 +16,10 @@ index.html
     <body>
     @@@ Pendente: meta (viewport), link (type, rel), html (dir)
 
+
+
+
+
 texto.html
     <hgroup>
     <h1>
@@ -47,6 +51,10 @@ texto.html
     <address>
     @@@ Pendente: del (datetime), bdo (dir)
 
+
+
+
+
 tabela.html
     <table>
     <caption>
@@ -59,6 +67,11 @@ tabela.html
     <tbody>
     <tfoot>
 
+
+
+
+
+
 lista.html
     <ul>
     <li>
@@ -67,9 +80,19 @@ lista.html
     <dt>
     <dd>
 
+
+
+
+
+
 link.html
     <a>
     Pendente: a (media, ping, rel, type, href)
+
+
+
+
+
 
 imagens.html
     <img>
@@ -81,13 +104,18 @@ imagens.html
     <area>
     Pendentes: area (media, rel, type)
 
+
+
+
+
 iframe.html
     <iframe>
     Pendentes: iframe (referrerpolicy, sand-box, srcdoc)
 
 
 
-
+containers.html
+    <>
 
 
 
