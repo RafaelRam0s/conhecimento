@@ -7,8 +7,6 @@
     <meta name="keywords" content="front-end, html, elementos, tagname">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
-
     <style>
         body {
             background-color: rgba(6, 6, 7, 0.747);
@@ -42,7 +40,7 @@
             font-size: 125%;
         }
         div {
-            margin-bottom: 60vh;
+            margin-bottom: 50px;
         }
         div p {
             margin-left: 20px;
@@ -53,20 +51,64 @@
         a:hover {
             color: gold;
         }
+
+
+
+
+
+
+
+        div {
+            overflow: hidden;
+            max-height: 100px;
+            transition: max-height 1s ease-in-out;
+        }
+
+        div.hide {
+            max-height: 0;
+            pointer-events: none;
+        }
+
+
     </style>
 
-    <title>Document</title>
+    <title>Da internet</title>
 </head>
 <body>
     
-    <h1></h1>
+    <h1>Tentando fazer um elemento só aparecer quando for clicado (dobrável)</h1>
 
-    <h2></h2>
+    
 
-    <div>
-        <h3></h3>
-
-        
+    <div id="minhaId">
+        <h1>Hello, World!</h1>
+        <h2>Howdy?</h2>
     </div>
+    <button onclick="ocultar()">Hide</button>
+    <button onclick="mostrar()">Show</button>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function ocultar() {
+            var element = document.getElementById("minhaId");
+            element.classList.add("hide");
+        }
+
+        function mostrar() {
+            var element = document.getElementById("minhaId");
+            element.classList.remove("hide");
+        }
+    </script>
 </body>
 </html>
