@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="_style.css">
+    <link rel="stylesheet" href="tamanho.css">
+
+    <title>Tamanho</title>
+</head>
+<body>
+
+    <h1>Tamanho</h1>
+
+    <p>max e min @media </p>
+    <p>overflow hidden para esconder elemento vazado </p>
+
+
+
+    <div>
+        <h2>Largura:</h2>
+
+        <p class="fundo_vermelho preenchimento">O width seleciona a largura de um elemento</p>
+
+        <p class="fundo_vermelho largura_quinhentos">Ao colocar um width fixo cuidado com o tamanho definido, pois se for muito grande por exemplo uns 500 pixels ao visualizar em dispositivos menores a página poderá ter comportamentos indesejados, como: rolagem horizontal da página ou irá dar um zoom para apresentar toda a página, deixando tudo menor</p>
+
+        <p class="fundo_vermelho largura_cinquenta">Cuidado também para caso o faça muito pequeno, pois ao fazer isso o seu conteúdo pode acabar estravazando</p>
+
+        <p class="fundo_vermelho largura_cinquenta_porcentagem">O mais recomendável ao ter que definir um tamanho para o elemento é definir diferentes tamanhos que só devem agir em determinados tamanhos de tela, ou uma largura que age de acordo com o tamanho de tela como o uso do valor em porcentagem</p>
+
+        <p>Caso não visualize um dos efeitos descritos altere o tamanho de tela</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Altura: </h2>
+
+        <p>A propriedade altura funciona de forma semelhante a da largura</p>
+
+        <p class="fundo_vermelho altura_quinhentos">Aumentar o tamanho de um elemento para dar um espaçamento maior de um conteúdo até outro não é uma boa prática já que em casos assim utilizamos a margem</p>
+
+        <p class="fundo_vermelho altura_cinquenta">Temos que tomar cuidado para não deixá-la pequena demais ao ponto de vazar conteúdo</p>
+
+        <p class="fundo_vermelho altura_cinquenta_porcentagem">O valor porcentagem na altura não funciona, pois o porcentagem se baseia no elemento pai para definir uma parte que ocupará a partir dele, e como não tem um valor base e sim só automático, ele não funciona</p>
+
+        <p></p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Responsividade:</h2>
+
+        <p>Diminua e aumente a tela para poder ver os efeitos de responsividade dos elementos a seguir:</p>
+
+        <p class="fundo_vermelho responsividade_largura_maxima">O max significa que determinada ação, só ocorrerá até o tamanho máximo de tantos pixels da tela</p>
+
+        <p class="fundo_vermelho responsividade_largura_minima">O min seria o oposto, que determina a ação que só ocorre após o determinado tamanho de tela</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Box-sizing:</h2>
+
+        <p>Como deve se comportar o tamanho do elemento, se deve contar com padding border margin outline </p>
+    </div>
+</body>
+</html>
