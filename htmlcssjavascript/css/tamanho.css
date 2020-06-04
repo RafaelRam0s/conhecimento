@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.fundo_vermelho {
+    background-color: darkred;
+}
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+
+
+.largura_quinhentos {
+    width: 500px;
+}
+.largura_cinquenta {
+    width: 50px;
+}
+.largura_cinquenta_porcentagem {
+    width: 50%;
+}
+/* width - largura, define o tamanho horizontal de um elemento
+    Valores:
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.altura_quinhentos {
+    height: 500px;
+}
+.altura_cinquenta {
+    height: 10px;
+}
+.altura_cinquenta_porcentagem {
+    height: 50%;
+}
+/* height - altura, define o tamanho vertical que um elemento deve possuir */
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .responsividade_largura_maxima {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .responsividade_largura_minima {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
