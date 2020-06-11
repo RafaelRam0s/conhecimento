@@ -1,0 +1,78 @@
+
+
+
+
+Comandos de navegação, são comandos que nos permitem acessar determinados elementos que criamos no banco de dados
+
+Para acessar um banco de dados criado:
+    /* use database nome_do_banco; */
+    // Acessou o banco de dados chamado nome_do_banco
+
+    O comando "use" indicou que usará alguma coisa
+
+    O parâmetro "database" serviu para indicar que seria utilizado a partir de agora um determinado banco de dados como referência para os próximos comandos
+
+    O valor "nome_do_banco" serviu para indicar que seria o aberto um banco com o nome "nome_do_banco" @@@@@ caso existisce um
+
+Para ver uma tabela dentro de um banco de dados:
+    /* describe nome_da_tabela; */
+    // A tabela é apresentada com os nomes das colunas; Field, Type, Null, Kev, Default e Extra. Colocando em cada uma os campos e suas especificações respectivas
+
+    O comando "describe" serve para falar que será descrito um elemento com algum determinado elemento
+
+    O valor "nome_da_tabela" serviu para indicar que seria aberto o elemento com este nome.
+
+Para ver as informações inseridas nos campos de uma tebela:
+    /*
+    create database ola_mundo
+    default character set utf8
+    default collate uff8_general_ci;
+
+    use database ola_mundo;
+    
+    create table nome_da_tabela (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    ) default charset = utf8; 
+    
+    insert into nome_da_tabela
+    (nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    ('Godofredo', '1984-01-02', 'M', '78.5', '1.83', 'Brasil');
+
+    select * from nome_da_tabela;
+    */
+    // Irá aparecer a tabela com as informações cadastradas
+
+    O comando "select" serve para falar que algo será selecionado, para alguma coisa
+
+    A seleção de campo "*" (asterísco) serve para falar que selecionará todos os campos
+
+    O valor "nome_da_tabela" serve para falar que todos os campos da tabela com o nome nome_da_tabela foram selecionados para apresentação
+
+Para ver todas as tabelas existentes no seu banco de dados:
+    /* show tables; */
+    // Será retornado o nome de todas as tabelas existentes no banco de dados
+
+    O comando "show" serve para indicar que quer que seja mostrado tudo
+
+    O parâmetro "tables" serve para falar que o que queremos visulizar é o nome de todas as tabelas
+
+Para ver todos os banco de dados existentes:
+    /* show databases; */
+    // Será mostrado todos os bancos de dados disponíveis
+
+
+
+
+
+
+

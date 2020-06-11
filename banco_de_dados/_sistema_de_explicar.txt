@@ -1,0 +1,19 @@
+
+O "/* */" significa que o que estiver escrito entre esses sinais é um código executável
+
+O "//" significa um valor retornado ao executar um cógido
+
+@n n@ o "n" é um número qualquer, significa que o que estiver escrito entre esses sinais terá uma observação para uma explicação ao final da página
+
+@n* *n@ o "n" é um número qualquer, significa que o que estiver escrito entre esses sinais é desconsiderado do código original, e terá uma observação para uma explicação ao final da página
+
+
+@@@@@ significa que tenho que pesquisar mais sobre o assunto para entregar uma resposta mais completa e acertiva
+
+
+
+
+
+
+
+

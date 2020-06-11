@@ -1,0 +1,697 @@
+
+
+
+
+Para criar um banco de dados:
+    /* create database nome_do_banco; */
+    // Foi criado um banco de dados com o nome nome_do_banco (se já existir um banco com esse nome @@@@@ será substituido)
+
+    O comando "create" falou que iria criar algo
+
+    A especificação "database" serviu para falar que criaria um banco de dados
+
+    O valor nome_do_banco serviu para falar qual seria o nome do banco que seria criado
+
+Para criar um banco de dados um pouco mais complexo:
+    /*
+    create database nome_do_banco
+    default character set utf8
+    default collate utf8_general_ci;
+    */
+    O comando "default" coloca especificações no elemento
+
+    O parâmetro "character set" serve para indicar que será configurado algo nos conjuntos de caractéres
+
+    O valor "utf8" serve para falar que o banco de dados irá utilizar caractéres latinos, podendo assim aceitar valores com acentuação e outras diferenças que possuir da língua inglesa que é a que vem por padrão
+
+    O parâmetro "collate" serve para falar como serão agrupados alguns tipos de caractéres
+        Valores possíveis de se receber:
+            No valor é passado o conjunto de caractéres que neste caso exemplificamos com utf8, mas poderia ser latin1 ou qualquer outro conjunto de caractéres que o mysql aceite, e é concatenado com _genetal_ci ou _general_cs
+
+            - utf8_genetal_ci: Não distingue letras minúsculas e maiúsculas e nem caracteres acentuados e com cedilha, ou seja, o registro que contém a palavra “Intuição” será retornado quando houver uma procura pela palavra “intuicao”.
+
+            - utf8_general_cs: Distingue letras maiúsculas e minúsculas. Buscando por “teste” somente retornará “teste”. Opções como “Teste” e “TESTE” não serão retornadas.
+
+    O valor "utf8_general_ci" indica que em determinadas ações palavras com acentos, cecedilhas, ou maiúsculas não serão diferentes na hora de comparar com uma palavra parecida que não tenha nada disso, por exemplo: "intuição" seria lido como "intuicao" e "Palavrão" seria lido como "palavrao"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Para criar uma tabela dentro de um banco de dados:
+    /* create table nome_da_tabela (); */
+    // Foi criada uma tabela (se já existir uma tabela de mesmo nome será @@@@@ substituida) com o nome nome_da_tabela
+
+    O comando "create" falou que iria criar algo
+
+    A especificação "table" serviu para falar que criaria uma tabela
+
+    Ao abrir abrir e fechar o parênteses tudo o que estiver ali destro será para a criação de campos de uma tabela
+
+Para criar um campo em uma tabela, enquanto a tabela está sendo criada:
+    /* create table nome_da_tabela (
+        nome varchar(30),
+        idade tinyint(3),
+        sexo char(1),
+        peso float,
+        altura float,
+        nacionalidade varchar(20)
+    ); */
+    // Foi criada uma tabela com os seguintes campos; nome, idade, sexo, peso, altura e nacionalidade, recebendo os respectivos valores; varchar(30), tinyint(3), char(1), float, float e varchar(20)
+
+    O primeiro parâmetro irá indicar qual o nome que aquele campo deve possuir
+
+    Logo após definir o nome do campo iremos escolher a forma com a qual ele irá tratar os dados com base nos tipos primitivos
+
+Para criar uma tabela mais desenvolvida:
+    /* create table nome_da_tabela () default charset = utf8; */
+    // Cria uma tabela que aceite os conjuntos de caractéres do padrão utf8
+    
+    O comando "default" configura mais especificações sobre a tabela
+
+    O parâmetro "charset = " é selecionado para receber um valor que será correspondente ao conjunto de caractéres
+
+    O valor "utf8" é selecionado como o conjunto de caractéres que utilizará
+    
+Para criar campos mais desenvolvidos de uma tabela:
+    /* create table nome_da_tabela (
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+    ) default charset = utf8; */
+    // Foi criada uma tabela com diversos campos e suas configurações
+
+    O parâmetro "not null" define que determinado elemento não poderá ficar nulo, isto é, deve ser preenchido com alguma informação
+    
+    O parâmetro "default" define que caso não seja especificado determinado o campo um determinado valor será retornado
+
+    O valor "'Brasil'" caso o campo fique vazio será considerado que aquele campo irá receber o valor "Brasil"
+    
+@@@@@ Para acrescentar campos, mas definir cada linha do campo como pertencente há um indentificador:
+    /* create table nome_da_tabela (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    ) default charset = utf8; */
+    //
+
+    O campo id vai ser um indentificador único o qual não poderá se repetir, pois o valor que ele possuir não terá na mesma tabela outro id de mesmo valor, isto é se existir um campo com id 1, não existirá mais na mesma tabela uma outro seção com id 1
+
+    O parâmetro "auto_increment" serve para se auto-completar, isto é, ao ser gerado uma nova seção, então ao inserir uma nova seção ele irá verificar no mesmo campo da último seção inserida qual era o valor que estava colocado e apartir disso irá gerar um próximo valor, exemplo se tiver uma seção com id 1 o auto_increment irá verificar o campo id, ver o seu valor e falar: se o último valor foi 1 então devo colocar o 2 pois vem na sequência
+
+    O comando "primary key (nome_do_campo)" serve falar quem será a chave primária, isto é @@@@@ 
+
+Para colocar informações dentro dos campos:
+    /*
+    create database ola_mundo
+    default character set utf8
+    default collate uff8_general_ci;
+
+    use database ola_mundo;
+    
+    create table nome_da_tabela (
+        @1 id int not null auto_increment, 1@
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    ) default charset = utf8; 
+    
+    insert into nome_da_tabela
+    (@*1 id 1*@, nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    (@*1 '1' 1*@, 'Godofredo', '1984-01-02', 'M', '78.5', '1.83', 'Brasil');
+    */
+
+    O comando "insert into" serve para indicar que será inserido em algum lugar alguma coisa
+
+    O valor "nome_da_tabela" serve para falar que será inserido alguma coisa na tabela chamada nome_da_tabela
+
+    Entre os parênteses serão colocados os respectivos campos da tabela em que deseja inserir determinadas ações
+
+    O parâmetro "values" serve para falar que será inserido determinados valores nos campos indicados
+
+    Entre os parênteses serão colocados os respectivos valores, dos respectivos campos, onde cada valor deve ser colocado entre aspas simples
+
+    Outros exemplos:
+        /*
+        create database ola_mundo
+        default character set utf8
+        default collate uff8_general_ci;
+
+        use database ola_mundo;
+        
+        create table nome_da_tabela (
+            id int not null auto_increment,
+
+            nome varchar(30) not null,
+            nascimento date,
+            sexo enum('M', 'F'),
+            peso decimal(5, 2),
+            altura decimal(3, 2),
+            nacionalidade varchar(20) default 'Brasil'
+
+            primary key (id)
+        ) default charset = utf8; 
+        
+        insert into nome_da_tabela
+        (nome, nascimento, sexo, peso, altura, nacionalidade)
+        values
+        ('Godofredo', '1984-01-02', 'M', '78.5', '1.83', 'Brasil');
+
+        insert into nome_da_tabela
+        (nome, nascimento, sexo, peso, altura, nacionalidade)
+        values
+        ('Maria', '1999-12-30', 'F', '55.2', '1.65', 'Portugal');
+
+        insert into nome_da_tabela
+        (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+        values
+        (DEFAULT, 'Creusa', '1920-12-30', 'F', '50.2', '1.65', DEFAULT);
+
+        @2* insert into nome_da_tabela values
+        (DEFAULT, 'Creusa', '1920-12-30', 'F', '50.2', '1.65', DEFAULT); *2@
+
+        insert into nome_da_tabela
+        (nome, nascimento, sexo, peso, altura)
+        values
+        ('Creusa', '1920-12-30', 'F', '50.2', '1.65');
+
+        insert into nome_da_tabela values
+        (DEFAULT, 'Adalgiza', '1930-11-2', 'F', '63.2', '1.75', 'Irlanda');
+
+        insert into nome_da_tabela values
+        (DEFAULT, 'Ana', '1975-12-22', 'F', '56', '1.45', 'EUA'),
+        (DEFAULT, 'Pedro', '2000-07-15', 'M', '43', '1', 'Brasil'),
+        (DEFAULT, 'Maria', '1999-05-30', 'F', '75.9', '1.70', 'Portugal'),
+        (default, 'Cláudio', '1975-4-22', 'M', '99.0', '2.15', 'Brasil');
+
+        */
+
+Para adicionar um campo em uma tabela já criada:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    );
+    
+    alter table pessoas
+    add column profissao varchar(10);
+    */
+    // Será acrescentado na tabela o campo profissao como última coluna
+
+    O comando "alter" serve para indicar que algo será alterado
+
+    O parâmetro "table" serve indicar que será a tabela que deverá ser alterada
+
+    O valor "pessoas" indica o nome da tabela a qual deseja alterar
+
+    O comando "add" adiciona um elemento
+
+    O parâmetro "column" serve para adicionar uma nova seção na coluna e após ele, deverá ser descrito o nome da coluna e que tipo primitivo irá receber
+
+Para excluir um campo em uma tabela já criada:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    );
+    
+    alter table pessoas
+    drop column profissao;
+    */
+    // Será removido da tabela a seção profissao
+
+    O comando "drop" remove um elemento da seção
+
+    O parâmetro "column" serve para indicar qual deverá ser a coluna removida
+
+Para adicionar um campo em uma posição específica da tabela:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    );
+    
+    alter table pessoas
+    add column profissao varchar(10) after nome;
+    */
+    // Agora a coluna profissão será adicionada logo após a coluna nome
+
+    O parâmetro "after" indica que a coluna será acrescentada após um campo
+
+    O valor "nome" indica que será adicionado a coluna após o campo nome, então ficaria aparecendo em ordem; id, nome, profissao, nascimento...
+
+Para adicionar um campo como primeiro de uma tabela:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    );
+    
+    alter table pessoas
+    add column profissao varchar(10) first;
+    */
+    // O campo será adicionado como primeiro em uma tabela
+
+    O parâmetro "first" coloca o campo que será criado na primeira coluna
+
+Para modificar uma definição de um campo:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil',
+        profissao varchar(10)
+
+        primary key (id)
+    );
+    
+    alter table pessoas
+    modify column profissao varchar(30);
+    */
+    // Modifica a coluna profissao, colocando um outro tipo primitivo
+
+    O comando "modify" modifica um campo já existente
+
+    O parâmetro "profissao" define que a coluna com o seu nome terá modificações
+
+    O tipo primitivo que estiver após o parâmetro relacionado ao nome de um campo, que neste exemplo é o "varchar(30)" será o novo tipo primitivo do campo, podendo ser acrescentado após ele outras definições de campo como; not null, default 'Estudante' ....
+
+Cuidados ao modificar uma coluna:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil',
+        profissao varchar(10)
+
+        primary key (id)
+    );
+
+    insert into pessoas values
+    (DEFAULT, 'Ana', '1975-12-22', 'F', '56', '1.45', 'EUA'),
+    (DEFAULT, 'Pedro', '2000-07-15', 'M', '43', '1', 'Brasil'),
+    (DEFAULT, 'Maria', '1999-05-30', 'F', '75.9', '1.70', 'Portugal'),
+    (default, 'Cláudio', '1975-4-22', 'M', '99.0', '2.15', 'Brasil');
+    
+    alter table pessoas
+    modify column profissao varchar(30) not null;
+    */
+    // Neste exemplo é gerado um aviso de erro, pois como modificamos o campo profissao para not null e não haviamos nenhum valor para o campo profissão ele acabou por ficar nulo
+
+    Para concertarmos este erro vamos precisar falar que os cadastrados até agora ficaram com o campo profissao vazio
+
+    /*
+    alter table pessoas
+    modify column profissao varchar(30) not null default '';
+    */
+    // Agora foi modificado o tipo primitivo, suas definições e todos os cadastrados receberam '' (vazio, ou seja, nada, o nada não é considerado nulo, nulo != nada) no campo profissao
+
+    Após isso é recomendado configurar novamente o campo profissão para que seja obrigatório informarem o campo
+
+    /* alter table pessoas
+    modify column profissao varchar(30) not null; */
+
+Para modificar o nome de um campo:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil',
+        profissao varchar(30) not null
+
+        primary key (id)
+    );
+
+    alter table pessoas
+    change column profissao emprego varchar(50) default 'Desempregado';
+
+    */
+    // O nome da coluna profissao mudou para emprego e seu tipo primitivo foi alterado para varchar(50) default 'Desempregado', caso tivessem pessoas cadastradas na tabela a informação que estava antes se manteria
+
+    O comando "change" seleciona uma coluna para poder alterar
+
+    O valor "profissao" é usado para definir qual a coluna que será moficada, então neste caso será a coluna profissao
+
+    O valor "emprego" vai ser o novo nome que o campo selecionado terá
+
+    Os valores "varchar(50)" e "default 'Desempregado'" definem que tipo de dados serão aceitos no campo
+
+Para modificar o nome de uma tabela:
+    /* create table pessoas (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil',
+        profissao varchar(30) not null
+
+        primary key (id)
+    );
+
+    alter table pessoas 
+    rename to usuarios;
+    */
+    // A tabela chamada pessoas foi renomeada para tabela chamada usuarios
+
+    O comando "rename to" serve para renomear uma tabela
+
+    O valor "usuarios" refere-se ao nome que a tabela passará a ter
+
+Para criar uma tabela somente se ela já não existir:
+    /*
+    create table if not exists cursos (
+        nome varchar(30) not null unique,
+        descricao text,
+        carga int unsigned,
+        tataulas int unsigned,
+        ano year default '2016'
+    ) default charset = utf8;
+
+    */
+    // Será criada uma tabela com o nome cursos se ela não existir, com o campo nome não podendo ser nulo e avisando que não será permitido dois cadastros com este campo tendo o mesmo valor (exemplo se eu colocar que o nome do curso é mysql e depois for cadastrar outro curso com o mesmo valor o sistema irá negar essa possibilidade)
+
+    O comando "if" é um comando de condição onde só poderá ocorrer a ação se ele for verdadeiro
+
+    O valor "not exits" significa se não existir uma com esse nome crie esta tabela
+
+Para alterar valores de uma tabela já definida:
+    /*
+    create table if not exists cursos (
+        nome varchar(30) not null unique,
+        descricao text,
+        carga int unsigned,
+        tataulas int unsigned,
+        ano year default '2016'
+    ) default charset = utf8;
+
+    alter table cursos
+    add column idcurso int first,
+    add column primary key(idcurso);
+
+    insert to cursos values
+    ('1','HTML4','Curso de HTML5', '40','37','2014'),
+    ('2','Algoritmos','Lógica de Programação','20','15','2014'),
+    ('3','Photoshop','Dicas de Photoshop CC','10','8','2014'),
+    ('4','PGP','Curso de PHP para iniciantes','40','20','2010'),
+    ('5','Jarva','Introdução à Linguagem Java','10','29','2000'),
+    ('6','MySQL','Banco de Dados MySQL','30','15','2016'),
+    ('7','Word','Curso completo de Word','40','30','2016'),
+    ('8','Sapateado','Danças Rítmicas','40','30','2018'),
+    ('9','Cozinha Árabe','Aprenda a fazer Kibe','40','30','2018'),
+    ('10','Youtuber','Gerar polêmica e ganhar inscritos','5','2','2018');
+
+    update cursos
+    set nome = 'HTML5'
+    where idcurso = '1';
+
+    update cursos
+    set nome = 'PHP', ano = '2015'
+    where idcurso = '4';
+
+    @3 Caso tenha mais de um campo com o idcurso = '5' e você queira modificar somente um use o exemplo abaixo ao invés dos acima, onde o limit indica o limite de linhas onde a instrução deve ocorrer 3@
+
+    update cursos
+    set nome = 'Java', ano = '2015', carga = '40'
+    where idcurso = '5'
+    limit 1;
+    */
+    // Na tabela cursos foi informado que o campo nome receberá o valor HTML5 quando o campo idcurso for igual a 1, se houvessem mais de um campo com o idcurso = '1', todos teriam o campo nome modificado para HTML5
+
+    O comando "update" indica que algo será atualizado
+
+    O valor "cursos" indica qual tabela será atualizada
+
+    O parâmetro "set" indica qual campo deve ser configurado
+
+    O valor "nome = 'HTML5'" indica que o campo nome da tabela irá receber o valor 'HTML5'
+
+    O parâmetro "where" indica onde que a mudança deverá ocorrer
+
+    O valor "idcurso = '1'" avisa onde deve sofrer a atualização
+
+    O parâmetro "limit" indica o limite de linhas que determinada instrução deve ocorrer
+
+    O valor "1" indica quantas linhas podem ser alteradas
+
+    Outros exemplos de uso:
+        /*
+        create table if not exists cursos (
+            nome varchar(30) not null unique,
+            descricao text,
+            carga int unsigned,
+            tataulas int unsigned,
+            ano year default '2016'
+        ) default charset = utf8;
+
+        alter table cursos
+        add column idcurso int first,
+        add column primary key(idcurso);
+
+        insert to cursos values
+        ('1','HTML4','Curso de HTML5', '40','37','2014'),
+        ('2','Algoritmos','Lógica de Programação','20','15','2014'),
+        ('3','Photoshop','Dicas de Photoshop CC','10','8','2014'),
+        ('4','PGP','Curso de PHP para iniciantes','40','20','2010'),
+        ('5','Jarva','Introdução à Linguagem Java','10','29','2000'),
+        ('6','MySQL','Banco de Dados MySQL','30','15','2016'),
+        ('7','Word','Curso completo de Word','40','30','2016'),
+        ('8','Sapateado','Danças Rítmicas','40','30','2018'),
+        ('9','Cozinha Árabe','Aprenda a fazer Kibe','40','30','2018'),
+        ('10','Youtuber','Gerar polêmica e ganhar inscritos','5','2','2018');
+
+        update cursos
+        set nome = 'HTML5'
+        where idcurso = '1';
+
+        update cursos
+        set nome = 'PHP', ano = '2015'
+        where idcurso = '4';
+
+        update cursos
+        set nome = 'Java', ano = '2015', carga = '40'
+        where idcurso = '5'
+        limit 1;
+
+        update cursos
+        set ano = '2050', carga = '800'
+        where ano = '2018';
+
+        update cursos
+        set ano = '2018', carga = '0'
+        where ano = '2050'
+        limit 2;
+        */
+
+Para excluir deterinadas linhas de uma tabela:
+    /*
+        create table if not exists cursos (
+            nome varchar(30) not null unique,
+            descricao text,
+            carga int unsigned,
+            tataulas int unsigned,
+            ano year default '2016'
+        ) default charset = utf8;
+
+        alter table cursos
+        add column idcurso int first,
+        add column primary key(idcurso);
+
+        insert to cursos values
+        ('1','HTML5','Curso de HTML5', '40','37','2014'),
+        ('2','Algoritmos','Lógica de Programação','20','15','2014'),
+        ('3','Photoshop','Dicas de Photoshop CC','10','8','2014'),
+        ('4','PHP','Curso de PHP para iniciantes','40','20','2015'),
+        ('5','Java','Introdução à Linguagem Java','40','29','2015'),
+        ('6','MySQL','Banco de Dados MySQL','30','15','2016'),
+        ('7','Word','Curso completo de Word','40','30','2016'),
+        ('8','Sapateado','Danças Rítmicas','0','30','2018'),
+        ('9','Cozinha Árabe','Aprenda a fazer Kibe','800','30','2050'),
+        ('10','Youtuber','Gerar polêmica e ganhar inscritos','800','2','2050');
+
+        delete from cusos
+        where id = '8';
+
+        delete from cursos
+        where ano = '2018'
+        limit 2;
+        */
+        // Foram deletadas as 3 últimas linhas
+
+        O camando "delete" serve para indicar que algo será apagado
+
+        O parâmetro "from" indica que será deletado algo, de alguma coisa
+
+        O valor "cursos" define que na tabela cursos uma linha será apagada
+
+        O comando "where" indica que algo será apagando quando alguma coisa retornar true
+
+        O valor "id = '8'" indica que as linhas que possuirem o campo com o id = '8' serão apagadas
+
+Para excluir todas as linhas de uma tabela:
+    /* truncate table cursos; */
+    // Todas as linhas da tabela cursos foram apagadas
+
+    O comando "truncate" avisa que serão apagadas todas as linhas
+
+    O parâmetro "table" serve para indicar que serão apagadas todas as linhas de uma tabela
+
+    O valor "cursos" indica o nome de qual tabela deve ter seus campos apagados
+
+
+
+
+
+
+
+
+
+
+
+
+Para excluir um banco de dados:
+    /* drop database nome_do_banco; */
+    // O banco de dados chamado nome_do_banco foi excluido
+
+    O comando "drop" indica que será largado algum elemento
+
+    O parâmetro database indica que será largado um banco de dados
+
+    O valor "nome_do_banco" indica que caso exista um banco de dados com este nome ele será excluido
+
+Para excluir uma tabela:
+    /* drop table nome_da_tabela; */
+    // A tabela com o nome nome_da_tabela foi apagada
+
+    O comando "drop" exclui um elemento
+
+    O parâmetro "table" definiu que seria excluida uma rabela
+
+    O valor "nome_da_tabela" definiu que seria a tabela com nome nome_da_tabela que seria excluida
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@1 Como o id já possue o auto_complete, não é necessário defini-lo 1@
+
+@2 Se for inserir dados e a ordem for igual a da tabela podemos simplificar o código, isto é, caso todos os campos de dentro de uma tabela forem mencionados em sua respectiva ordem podemos omitir o primeiro parênteses, por exemplo:
+
+    create table nome_da_tabela (
+        id int not null auto_increment,
+
+        nome varchar(30) not null,
+        nascimento date,
+        sexo enum('M', 'F'),
+        peso decimal(5, 2),
+        altura decimal(3, 2),
+        nacionalidade varchar(20) default 'Brasil'
+
+        primary key (id)
+    ) default charset = utf8; 
+
+    / O código a seguir é faz a mesma coisa que...
+
+    insert into nome_da_tabela
+    (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    (DEFAULT, 'Creusa', '1920-12-30', 'F', '50.2', '1.65', DEFAULT);
+
+    / ...este código a baixo:
+
+    insert into nome_da_tabela values
+    (DEFAULT, 'Creusa', '1920-12-30', 'F', '50.2', '1.65', DEFAULT);
+ 2@
