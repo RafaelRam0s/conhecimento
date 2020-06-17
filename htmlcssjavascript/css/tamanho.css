@@ -55,7 +55,7 @@
 
 
 
-
+/* @media - média, define @@@@@ um bloco de ações que devem ocorrer quando a tela atingir um determinado tamanho */
 @media (max-width: 800px) {
     .responsividade_largura_maxima {
         width: 50%;
@@ -71,13 +71,29 @@
 
 
 
+.max_largura {
+    max-width: 50px;
+}
+.min_largura {
+    min-width: 300px;
+}
 
+.max_altura {
+    max-height: 50px;
+}
+.min_altura {
+    min-height: 300px;
+}
 
+/*
+max-width
+max-heigt
 
+min-width
+min-height
 
-
-
-
+max e min - máximo e mínimo conjuntos servem para limitar uma ação para ocorrer até um ponto 
+*/
 
 
 
