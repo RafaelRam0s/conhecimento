@@ -70,6 +70,201 @@ Para ver todos os banco de dados existentes:
     /* show databases; */
     // Será mostrado todos os bancos de dados disponíveis
 
+    O comando "show" informa que deverá ser mostrado todas as pastas que tem como função ser o que for definido
+
+    O valor "databases" informa que deverá ser mostrado todos os banco de dados
+
+Para ordenar a sua tabela em ordem alfabética crescente de um campo espeífico:
+    /*
+        select * from nome_da_tabela
+        order by nome_da_coluna asc;
+    */
+    // Desta forma será apresentado toda a tabela, mas será ordenada para visualização de acordo com o nome alfabético
+
+    O comando "order by" serve para indicar que os cadastros dentro de uma tabela irão ser organizados em ordem alfabética crescente de uma coluna que for informada
+
+    O valor "nome_da_coluna" indica por qual coluna que se deve usar de base para organizar a aparição da listagem
+
+    O parâmetro "asc" serve para ordenar a lista de forma alfabética crescente, como por padrão esse é o formato do order by se for omitido ainda possuirá o mesmo efeito
+
+Para ordenar a sua tabela em ordem alfabética decrescente de um campo espeífico:
+    /*
+        select * from nome_da_tabela
+        order by nome_da_coluna desc;
+    */
+    // Os campos da tabela nome_da_tabela foram ordenados de forma decrescente alfabética com base na coluna nome_da_coluna
+
+    O parâmetro "desc" inverteu a tabela, o que antes deveria ser mostrado em ordem crescente pelo comando "order by" será mostrado agora em ordem decrescente
+
+Para visualizar somente algumas colunas de uma tabela:
+    /*
+        select nome, idade, sexo from usuarios
+        order by nome, idade;
+    */
+    // Só será visualizado na tabela os campos nome, idade e curso ordenados em ordem alfabética crescente com base no nome
+
+    Os valores "nome", "idade" e "sexo" se referem as colunas que devem ser mostradas exatamente na ordem em que foram pedidas para serem mostradas
+
+    Os valores "nome" e "idade" após o comando "order by" indica que primeiro a tabela será ordenada por nome e depois por idade, então se tivermos dois Rafaeis cadastrados será mostrado primeiro o Rafael mais novo e depois o Rafael mais velho
+
+Para visualizar somente algumas linhas da tabela:
+    /*
+        select nome, sexo from usuarios
+        where idade <= '18'
+        order by nome desc;
+    */
+    // Será visualizado somente as linhas onde na coluna idade tiver valor igual ou maior que 18, e em ordem alfabética decrescente, sendo mostrado somente os campos nome e sexo
+
+    São aceitos lógicas de programação para definir o que deve ser mostrado aqui fizemos: "idade <= 18", mas tbm podemos fazer "idade <= 20 and sexo = 'M'", "idade <= 20 or idade >= 10", ...
+
+Para visualizar somente linhas que estejam entre um valor e outro:
+    /* 
+        select nome, idade from usuarios
+        where idade between 15 and 18
+        order by idade desc, nome asc;
+    */
+    // Será mostrada somente as linhas que estiverem com o campo idade entre maior igual a 15 e menor igual a 18
+
+    O comando "between and" indica que deverá ser mostrado o que estiver "entre" uma coisa "e" outra
+
+Para visualizar somente as linhas que estejam com um valor específico:
+    /*
+        select nome, idade from usuarios
+        where idade in ('10', '15', '18', '21')
+        order by idade desc, nome asc;
+    */
+    // Só iram aparecer as pessoas com 10, 15, 18 e 21 anos de idade
+    
+    O parâmetro "in" indica que algo em um valor poderá ser mostrado
+
+Para visualizar somente as linhas que estejam com uma parte do valor em um campo:
+    /*
+        select * from usuarios
+        where nome like 'R%';
+    */
+    // Serão apresentados todas as pessoas com inicial R no nome (é como se falasse serão mostradas os valores com R de inicial e com qualquer coisa após isso)
+
+    O comando "like" indica para somente retornar as linhas em que tiver o campo nome com a inicial R
+
+    O caractere "%"  @@@@@ é um caractere "coringa" que substitui nenhum ou vários caracteres
+
+    /*
+        select * from usuarios
+        where nome like '%r';
+    */
+    // Será mostrado todas as linhas que possuirem o caractere r no final do valor do campo nome (é como se falasse serão apresentadas qualquer coisa encerradas com r)
+
+    /*
+        select * from usuarios
+        where nome like '%r%';
+    */
+    // Será mostrado todas as linhas que possuirem o caractere r em qualquer parte do valor do campo nome
+
+    /*
+        select * from usuarios
+        where nome like 'R%l_';
+    */
+    // Será mostrado todas as linhas que possuirem o caractere r no início do valor do campo nome e que possuir no final da palavra a letra l seguida de qualquer caractere
+
+    O sinal "_" indica que poderá ser substituido por qualquer caractere
+
+Para distinguir quando ouverem duas linhas com um mesmo valor e só fazer aparecer uma, isto é, quiser pegar um exemplo de cada valor que ouver cadastrado:
+    /*
+        select distinct nacionalidade from usuarios
+        order by nacionalidade;
+    */
+    // Só serão apresentados a coluna tabela com uma vez cada valor então se tivermos 3 pessoas duas do Brasil e uma dos EUA só seriam mostradas uma vez a nacionalidade Brasil e EUA
+
+    O comando "distinct" distingue os campos então só será apresentado um campo quando ele for diferente dos anteriores
+
+Para contar quantos campos de uma coluna existem em uma tabela:
+    /*
+        select count(*) from usuarios;
+    */
+    // Será retornado o valor do números de cadastrados
+
+    O parâmetro "count()" serve para contar uma quantidade de valores cadastrados inseridos em um campo definido dentro do seu parênteses
+
+Para contar quantos campos de uma coluna quando tiver algum valor específico existem em uma tabela:
+    /*
+        select count(*) from usuarios
+        where idade >= 60;
+    */
+    // Será contado quantas pessoas com idade maior ou igual a 60 existem na tabela
+
+Para saber o maior valor cadastrado dentro de um campo de uma coluna de uma tabela:
+    /* select max(idade) from usuarios; */
+    // Será retornado o valor máximo identificado na tabela
+
+    A função de agregação "max" informa qual o valor máximo registrado em um campo específicado dentro do seu parênteses
+
+Para saber o menor valor cadastrado dentro de um campo de uma coluna de uma tabela:
+    /* select min(idade) from usuarios where sexo = 'F'; */
+    // Será retornado o valor mínimo identificado na tabela de um cadastrado que seje do sexo F
+
+    A função de agregação "min" informa qual o valor mínimo registrado em um campo específicado dentro do seu parênteses
+
+Para saber o qual foi a linha que teve o maior valor registrado:
+    /* select *, max(idade) from usuarios where sexo = 'M'; */
+    // Será mostrado toda a linha do homem mais velho na tabela
+
+Para somar todos os valores dos campos de uma coluna:
+    /* select sum(idade) from usuarios; */
+    // É somado a idade de todos os cadastrados e retornado o valor da soma de cada um
+
+    A função de agregação "sum" soma todos os valores da coluna informada
+
+Para fazer a média de todos os valores dos campos de uma coluna:
+    /* select avg(idade) from usuarios; */
+    // É feita a média da idade de todos os cadastrados e retornado o valor dessa média
+
+    A função de agregação "avg" faz a média todos os valores da coluna informada
+
+Para agrupar todas as linhas que possuirem um valor específico:
+    /*
+        select nacionalidade from usuarios
+        group by nacionalidade;
+    */
+    // Serão mostrados os campos que possuem nacionalidades diferentes agindo parecido com o distinct
+
+    O comando "group by" agrupa os campos por um valor definido
+
+Para agrupar todas as linhas que possuirem um valor específico e saber a quantidade de linhas que possuem determinado grupo:
+    /*
+        select nacionalidade, count(*) from usuarios
+        group by nacionalidade
+        order by nacionalidade;
+    */
+    // Serão mostrados os campos que possuem nacionalidades diferentes, agindo parecido com o distinct
+
+    O comando "group by" agrupa os campos por um valor definido
+
+Para agrupar as linhas que possuirem um valor com definições nos outros campos espeíficas e saber a quantidade de linhas que possuem esses valores:
+    /*
+        select nacionalidade, count(nome) from usuarios
+        group by nacionalidade
+        having count(nome) > 3;
+    */
+    // Antes de aparecer o comando having: Foi selecionado os campos nacionalidade colocando um exemplo de cada nação e foi criado um campo para contar quantos elementos que possuem aquela nacionalidade possuem um nome, e depois foi informado que seriam agrupado os campos por nacionalidade. Quando apareceu o comando having foi informado que só devem aparecer as linhas da tabela que possuirem a contagem total do campo nome como maior que 3
+
+    O comando "having" indica que só irão aparecer somente quem tiver uma ação retornando verdadeira
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
