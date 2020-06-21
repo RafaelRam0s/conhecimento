@@ -18,11 +18,6 @@
 
     <h1>Tamanho</h1>
 
-    <p>max e min @media </p>
-    <p>overflow hidden para esconder elemento vazado </p>
-
-
-
     <div>
         <h2>Largura:</h2>
 
@@ -35,6 +30,8 @@
         <p class="fundo_vermelho largura_cinquenta_porcentagem">O mais recomendável ao ter que definir um tamanho para o elemento é definir diferentes tamanhos que só devem agir em determinados tamanhos de tela, ou uma largura que age de acordo com o tamanho de tela como o uso do valor em porcentagem</p>
 
         <p>Caso não visualize um dos efeitos descritos altere o tamanho de tela</p>
+
+        <h6>Não funciona com display: inline;</h6>
     </div>
 
 
@@ -57,9 +54,9 @@
 
         <p class="fundo_vermelho altura_cinquenta">Temos que tomar cuidado para não deixá-la pequena demais ao ponto de vazar conteúdo</p>
 
-        <p class="fundo_vermelho altura_cinquenta_porcentagem">O valor porcentagem na altura não funciona, pois o porcentagem se baseia no elemento pai para definir uma parte que ocupará a partir dele, e como não tem um valor base e sim só automático, ele não funciona</p>
+        <p class="fundo_vermelho altura_cinquenta_porcentagem">O valor porcentagem na altura não funciona, pois o porcentagem se baseia no elemento pai para definir uma parte que ocupará a partir dele, e como não tem um valor base e sim só automático, ele não funciona, mas se definirmos para todos os elementos começando pelo body as suas alturas poderemos usar o porcentagem nele</p>
 
-        <p></p>
+        <h6>Não funciona com display: inline;</h6>
 
     </div>
 
@@ -85,7 +82,6 @@
         <p class="fundo_vermelho max_largura min_açtura">Os valores max e min não dependem do @media</p>
 
         <p class="fundo_vermelho min_largura max_altura">Caso o limite do tamanho do elemento seja menor que o espaço necessário para o conteúdo aparecer as informações do conteúdo extravazarão</p>
-
     </div>
 
 
@@ -97,9 +93,84 @@
 
 
     <div>
-        <h2>Box-sizing:</h2>
+        <h2>Tamanho da caixa:</h2>
 
-        <p>Como deve se comportar o tamanho do elemento, se deve contar com padding border margin outline </p>
+        <p>O box-sizing define como deve se comportar o width e o height se eles devem só se referir ao conteúdo ou ao preenchimento e borda</p>
+
+        <p class="fundo_vermelho preenchimento_20 borda_20 margem_20 largura_quinhentos altura_quinhentos camadas_relatividade_na_borda">Se for definido o modelo de caixa de borda os tamanhos são considerados em todo o elemento</p>
+
+        <p class="fundo_vermelho preenchimento_20 borda_20 margem_20 largura_quinhentos altura_quinhentos camadas_relatividade_no_conteudo">Se for definido o modelo de caixa de conteúdo os tamanhos são considerados somente no interior</p>
+
+        <h6>Não funciona com display: inline;</h6>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Vazamento de conteúdo</h2>
+
+        <p>Como foi observado se diminuirmos demais um elemento sendo que seu conteúdo é maior acaba estravazando informações</p>
+
+        <p>A propriedade overflow fornece maneiras de lidar com isso, segue exemplos a baixo:</p>
+
+        <h4>Deixando o conteúdo vazar como é o padrão</h4>
+
+        <p class="fundo_vermelho vazar_lorem vazamento_visivel">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixando o conteúdo vazado escondido</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_escondido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (mesmo que não esteja vazando)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (só quando vazar)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem_automatica">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+
+
+
+
+        <h3>Os mesmos efeitos só que somente no eixo x</h3>
+
+        <p class="fundo_vermelho vazar_lorem vazamento_visivel-x">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixando o conteúdo vazado escondido</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_escondido-x">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (mesmo que não esteja vazando)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem-x">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (só quando vazar)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem_automatica-x">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+
+
+
+        <h3>Os mesmos efeitos só que somente no eixo y</h3>
+
+        <p class="fundo_vermelho vazar_lorem vazamento_visivel-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixando o conteúdo vazado escondido</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_escondido-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (mesmo que não esteja vazando)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h4>Deixar rolagns disponíveis (só quando vazar)</h4>
+        <p class="fundo_vermelho vazar_lorem vazamento_rolagem_automatica-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+        <h6>Só funciona com display: block;</h6>
     </div>
 </body>
 </html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="fundo.css">
+
+    <title>Plano de Fundo</title>
+</head>
+<body>
+    
+    <h1>Fundos</h1>
+
+    <div>
+        <div class="fundo_escuro">
+            <div class="fundo_verde">
+                <div class="fundo_verde_claro">
+                    <h2>Cor de fundo:</h2>
+
+                    <p>Ao colocar uma cor de fundo verifique se não possui nenhum outro elemento do mesmo pigmento, senão ao colocar um fundo diferente poderá não encherga-lo e achar que algo está dando errado</p>
+
+                    <p class="texto_legivel_claro">Tome cuidado com qual cor escolherá para não ficar ruim de visualizar as informações para os usuários. Se por algum motivo a presença do fundo for mais importante do que a padronização do texto, você pode adicionar efeitos; como sombra, outro fundo para as palavras e/ou deixar a marca do texto mais forte </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <h2>Transparência:</h2>
+
+            <div class="margem_zero opacidade_oito">
+                <h3>Opacidade</h3>
+
+                <p>Ao modificar a opacidade de um elemento todos os elementos filho acabam por erdar a determinada opacidade como máxima possível de se ter</p>
+
+                <p class="opacidade_alta">Este parágrafo é um exemplo da explicação acima, apesar de no css eu modificar a opacidade dele para ser maior que a do elemento pai, não ocorre alterações</p>
+
+                <p class="opacidade_seis">Porém se modificar-mos o parágrafo filho para ficar ainda mais fraco ele altera</p>
+            </div>
+            <div class="alfa_oito">
+                <h3>Valor Alfa</h3>
+
+                <p class="alfa_seis">Com o sistema RGBA de cores podemos modificar a transparência por métodos alternativos</p>
+
+                <p class="alfa_dez">Ele age melhor que a propriedade opacity, pois seus elementos filhos não dependem do valor do elemento pai</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Imagem de Fundo:</h2>
+
+                <p class="fundo_img_duzentos texto_legivel_escuro">Ao colocarmos uma imagem de fundo devemos ter os mesmos cuidados de visualização que os das "Cores de fundo" para nenhum elemento sumir, esteja preparado caso o arquivo da imagem não se encontre no local referenciado ou um navegador não suporte sua extensão, pois o que aconteceria com este parágrafo caso a imagem de fundo sumisce é que as letras iriam parecer que desapareceram se eu não colocasse sombra branca</p>
+
+                <p class="fundo_img_externa texto_legivel_escuro">O parágrafo anterior ativou uma imagem de fundo pesquisando nas pastas do site, quanto a este parágrafo, puxei uma imagem de fundo de um link externo, então caso não esteja aparecendo aqui uma imagem de fundo pode ser que a sua internet não a carregou ou a referência a ela esteja inválida</p>
+
+                <p class="fundo_img_misturada minima_visualizacao">É possível fazer combinações de fundo, para o seu efeito ocorrer precisamos de imagens que contenham fundos transparentes ou imagens de tamanhos diferentes ( @@@@@ para usar esta segunda opção avance um pouco mais aqui nos seus estudos de imagens de fundo onde poderá aprender a controlar determinadas propriedades)</p>
+            </div>
+
+            
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Repetições de fundo:</h2>
+
+                <p>Os parágrafos a seguir estão com larguras e alturas mínimas para poder visualizar as diferenças de efeito da repetição de fundo</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete">Observe que fundos com imagens pequenas tendem a se repetir diversas vezes, isto é feito pelo css e não porque a imagem foi editada para possuir essa aparência</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_x">Pode-se ajustar as repetições para ocorrerem em apenas um dos eixos, neste caso a imagem só deve repetir na horizontal</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_y">Agora a repetição só deve aparecer na vertical. Esses tipos de configurações, para repetir em determinados eixos, não servem muito com a imagem que estou usando de exemplo, normalmente utilizamos fundos mais simples que servem para dar estilo</p>
+                
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao">Caso não queira que ocorra repetição, só será inserida uma cópia da imagem, útil para caso a aparência vá ficar feia se a imagem se repetir, usada também caso possua uma imagem grande o suficiente que cubra o elemento, mas esteja ciente que em diferentes tamanhos de tela pode não ser suficiente apenas uma imagem e que além de tudo imagens maiores consomem mais dados de internet e por este motivo pode-se acarretar em maiores tarifas para o seu provedor, ou lentidão de carregamento de página para seus usuários</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_cinza_degrade fundo_repete_x">Este e o próximo parágrafo são exemplos de tipos de imagens que utilizamos com a repetição de eixos, repare que a imagem é pequena mas tem um efeito de maneira a parecer contínua</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_cinza_degrade_lateral fundo_repete_y">A imagem que escolhi de fato não combina com o fundo do nosso site, mas se tivéssemos essa cor de cinza para nosso site ia ficar bonito e nem parecer que teria uma imagem por trás. Note que é sutil as mudanças, mas os detalhes fazem a diferença para uma boa página</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_espaco">Com o formato space é dado um espaço entre as imagens se não estiver conseguindo visualizar o seu efeito altere o tamanho de tela para observar</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_estica">Com o formato esticado é feito uma análise do tamanho do elemento e a partir daí é decidido se a imagem deve ser esticada ou encolhida, altere o as dimensões da página para visualizar estes efeitos</p>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Posicionamento do fundo:</h2>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_esquerda">Fundo topo esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_centro">Fundo topo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo_direita">Fundo topo direita</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_topo">Fundo topo</p>
+
+
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro_esquerda">Fundo centro esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro">Fundo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_centro_direita">Fundo centro direita</p>
+
+
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_esquerda">Fundo baixo esquerda</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_centro">Fundo baixo centro</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo_direita">Fundo baixo direita</p>
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_baixo">Fundo baixo</p>
+
+                <p>É possível usar números para posicionar o fundo e também usar propriedades de posicionamento específicas para os eixos x e y </p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_porcentagem">Fundo com porcentagem</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_px">Fundo com valor fixo</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_x">Fundo alterado no eixo x</p>
+
+                <p class="texto_legivel_escuro minima_visualizacao fundo_img_duzentos fundo_repete_nao fundo_posicao_y">Fundo alterado no eixo y</p>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div id="rolagem">
+                <h2>Efeitos de fundo</h2>
+
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_scroll">
+                    <p>Scroll deixa o fundo seguindo a rolagem da tela, isto é, uma vez determinado o fundo ele manterá a mesma imagem independente de como for enteragido com a rolagem da página. Tenha em mente que para este efeito ficar diferente do - local - os containers não devem ficar no elemento de maior altura</p>
+                </div>
+                
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_fixo">
+                    <p>Fixed conforme você sobe ou desce em uma página é mostrado outras partes da imagem, aparentemente ao ser definida rouba 10% das laterais de uma imgaem, utilize o background-size: 90.1% 100%; (você aprenderá mais sobre essa propriedade futuramente)</p>
+                </div>
+
+                <div class="margem_dez texto_legivel_escuro fundo_img_duzentos fundo_repete margem_zero fundo_rola_local">
+                    <p>Local age como o fixed, mas seu efeito só será ativado com interação relativa a rolagem do elemento e não da página</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Camadas de aparição do fundo:</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento">Cobrindo a partir do padding</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_borda">Cobrindo a partir da borda</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_conteudo">Cobrindo a partir do conteúdo</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Limites do fundo</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_borda">Cobrindo até a borda</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_preenchimento">Cobrindo até o padding</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete fundo_rola_scroll borda_pontilhada preenchimento_trinta fundo_origem_preenchimento fundo_limite_conteudo">Cobrindo até o conteúdo</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Tamanho do fundo:</h2>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_auto">O tamanho do fundo age como um alterador do tamanho da imagem de fundo, por padrão ele vem automático, isto </p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_contido">Fundo contido, o que ele faz é esticar a imagem para ficar da mesma altura que o seu elemento e a cada pixel acrescentado ou tirado é modificado em sua largura</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_coberto">Fundo coberto, age de forma contrária ao fundo contido, ele estica a imagem para ficar com a mesma largura que o seu elemento e a cada pixel acrescentado ou tirado é modificado em sua altura</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_pixels">É possível selecionar um tamanho fixo para o fundo através dos pixels</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_porcentagem">Fundo com preenchimento de 50%, então ele pega 100% baseado no seu container e vai até metade dele</p>
+
+                <p class="texto_legivel_escuro fundo_img_duzentos fundo_repete_nao fundo_rola_scroll fundo_origem_preenchimento fundo_limite_borda minima_visualizacao fundo_tamanho_x_y">Ao darmos um valor para o fundo ele altera apenas o eixo x, mas ao colocarmos dois ele altera tanto o eixo x quanto o y</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+                <h2>Simplificação de código por taquiografia:</h2>
+
+                <p>Ao definirmos uma mistura de fundos com imagens, não devemos colocar uma cor, pois isso por algum motivo @@@@@ faz todos os fundos desaparecerem</p>
+
+                <div class="minima_visualizacao margem_dez fundo_simples"></div>
+
+                <div class="minima_visualizacao margem_dez fundo_diversificado"></div>
+
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_misturado"></div>
+
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_errado">Ao definirmos uma mistura de fundos, não devemos colocar em nenhum momento uma cor de fundo pois isso acaba por fazer o fundo não funcionar</div>
+
+                <p>O background-origin e o background-clip, não funcionam na presença do background-attachment: fixed;</p>
+
+                <div class="minima_visualizacao margem_dez borda_pontilhada preenchimento_trinta fundo_moldura"></div>
+
+                <div class="minima_visualizacao margem_dez fundo_quadro"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
