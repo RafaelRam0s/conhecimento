@@ -1,0 +1,492 @@
+@charset "UTF-8";
+
+.margem_zero {
+    margin: 0px;
+}
+
+.texto_legivel_claro {
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+
+.texto_legivel_escuro {
+    color: black;
+    font-weight: bolder;
+    text-shadow: 3px 3px 1px white;
+}
+
+.minima_visualizacao {
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.margem_dez {
+    margin: 10px 0px;
+}
+
+div#rolagem div {
+    overflow-x: auto;
+    height: 100px;
+}
+
+div#rolagem div p {
+    min-height: 400px;
+}
+
+.borda_pontilhada {
+    border: 20px dotted rgb(28, 179, 128);
+}
+
+.preenchimento_trinta {
+    padding: 30px;
+}
+
+
+/* Glossário */
+/* Pendentes: 
+
+Valores do background-image
+
+background-blend-mode
+
+enable-background
+
+*/
+/*
+
+background-color
+
+opacity
+
+background-image
+
+background-repeat
+
+background-position
+background-position-x
+background-position-y
+
+background-attachment
+
+background-origin
+
+background-clip
+
+background-size
+
+background
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+.fundo_escuro {
+    background-color: rgb(83, 83, 83);
+}
+.fundo_verde {
+    background-color: lawngreen;
+}
+.fundo_verde_claro {
+    background-color: springgreen;
+}
+.texto_legivel_claro {
+    background-color: rgb(41, 168, 72);
+}
+/* background-color - muda a cor do fundo
+    Valores:
+        Padrões de cores
+*/
+
+
+
+
+
+
+
+
+
+
+
+.opacidade_oito {
+    opacity: 0.8;
+}
+.opacidade_seis {
+    opacity: 0.6;
+}
+.opacidade_alta {
+    opacity: 99;
+}
+/* opacity - opacidade, muda a transparência, seu valor acaba por interferir na opacidade dos elementos filhos só permitindo ficar mais fraco e não deixando retornar ao que era antes
+    Valores:
+        variam de 0 a 1 (Porcentagem minimizada)
+*/
+
+.alfa_oito {
+    color: rgba(255, 255, 255, 0.8);
+}
+.alfa_seis {
+    color: rgba(255, 255, 255, 0.6);
+}
+.alfa_dez {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+.fundo_img_duzentos {
+    background-image: url('../../midia/imagens/duzentosporduzentos.png');
+}
+.fundo_img_externa {
+    background-image: url("https://s2.glbimg.com/PzijMfcV12zBe3dE-RPTOuIZIpQ=/0x0:695x463/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/05/29/google-hardware-1.jpg");
+}
+.fundo_img_misturada {
+    background-image: url("../../midia/imagens/quadro.png"), url("../../midia/imagens/cenariodeserto.jpg");
+}
+/* back-ground-image - define uma imagem de fundo
+        Usos:
+            Possibilidade de usar mais de um fundo ao mesmo tempo, e para isso utilizando arquivos com fundo vazio podemos sobrepor um ou mais fundos, basta separar por vírgulas o primeiro a ser mencionado será o plano que ficará mais na frente
+        @@@@@ Valores:
+            url() - entre aspas duplas coloque o caminho da imagem ou sua url
+*/
+
+
+
+
+
+
+
+
+
+
+
+.fundo_repete {
+    background-repeat: repeat;
+}
+.fundo_repete_x {
+    background-repeat: repeat-x;
+}
+.fundo_repete_y {
+    background-repeat: repeat-y;
+}
+.fundo_repete_nao {
+    background-repeat: no-repeat;
+}
+.fundo_img_cinza_degrade {
+    background-image: url('../../midia/imagens/fundo_detalhe_cinza.jpg');
+}
+.fundo_img_cinza_degrade_lateral {
+    background-image: url('../../midia/imagens/fundo_detalhe_cinza_lateral.jpg');
+}
+.fundo_repete_espaco {
+    background-repeat: space;
+}
+.fundo_repete_estica {
+    background-repeat: round;
+}
+/* background-repeat - repetição de fundo, configura como deve ser apresentada as imagens de fundo
+    Valores:
+        repeat - repetição é usado para quando acabar o tamanho da imagem, verificar se está cobrindo todo o elemento caso não esteja é colocada outra imagem e assim por diante tanto no sentido horizontal quanto vertical
+
+        repeat-x - repetição apenas na horizontal quantas vezes forem necessárias para cobrir o elemento
+
+        repeat-y - repetição apenas na vertical quantas vezes forem necessárias para cobrir o elemento
+
+        no-repeat - impede repetições de imagens e só é mostrada uma cópia
+
+        space - espaço, ele pega a imagem e coloca lá no ponto inicial do elemento, depois disso é verificado quantas imagens após ela conseguem aparecer inteiras, aí se tiver alguma imagem que ao se repetir ficasse cortada, ela deixa um espaço vazio, então seria analisado qual foi essa distância que sobrou e repartiria em tamanhos iguais entre cada imagem que teve a mais do que a inicial.
+            Exemplo: se escolhescemos uma imagem de 200px de largura para ficar em um elemento de 1100px de largura, seria colocada a primeira imagem, então 1100 - 200 = 900 esse resultado foi o espaço que sobrou, fazendo o cálculo de quantas outras inteiras apareceriam faríamos assim; 900 / 200 = 4 inteiros com resto 100 esse espaço que sobrou é dividido por cada imagem a mais e inserido a sua esquerda 100 / 4 = 25 colocando-se assim um espaço a esquerda de 25px em cada imagem que repetiu a mais.
+
+        round - arredondamento do preenchimento, bem resumidamente falando ele preenche o fundo fazendo a imagem caber no elemento, a deformando e criando repetições de acordo com o necessário, na prática o que faz; verifica o tamanho do elemento, se for menor que a soma entre o tamanho da imagem mais sua metade, é configurado o tamanho da imagem para ficar o mesmo que o do elemento, agora se o elemento for maior ou igual que a soma do tamanho mais a sua metade, é verificado quantas imagens inteiras cabem no elemento. Se sobrar um espaço e for menor que metade do tamanho da imagem é esticado todas as imagens em um espaço relativo a quanto de espaço sobrou repartido por quantas imagens estão presentes, se sobrar um espaço e for maior ou igual que metade do tamanho da imagem é colocada mais uma imagem espremendo todas em um tamanho relativo a quanto de espaço cortaria a últmia imagem, dividido entre todas as outras imagens presentes
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_topo_esquerda {
+    background-position: top left;
+}
+.fundo_topo_centro{
+    background-position: top center;
+}
+.fundo_topo_direita{
+    background-position: top right;
+}
+.fundo_topo{
+    background-position: top;
+}
+.fundo_centro_esquerda{
+    background-position: center left;
+}
+.fundo_centro{
+    background-position: center;
+}
+.fundo_centro_direita{
+    background-position: center right;
+}
+.fundo_baixo_esquerda{
+    background-position: bottom left;
+}
+.fundo_baixo_centro{
+    background-position: bottom center;
+}
+.fundo_baixo_direita{
+    background-position: bottom right;
+}
+.fundo_baixo{
+    background-position: bottom;
+}
+.fundo_posicao_porcentagem{
+    background-position: 20% 100%;
+}
+.fundo_posicao_px{
+    background-position: 100px;
+}
+.fundo_posicao_x{
+    background-position-x: 50%;
+}
+.fundo_posicao_y{
+    background-position-y: 50%;
+}
+.fundo_posicao{
+    background-position: 20% 50%;
+}
+/* background-position - Coloca o fundo em uma posição dentro de seu elemento
+    Valores:
+        Unidades de medidas, se colocar apenas um valor vai valer apenas para o eixo x sendo o y center, se colocar dois valores, define primeiro o x e depois o y
+
+        Apontamento de posição, sendo capaz de mistura-los, por exemplo: center right, left top ...
+*/
+/* background-position-x - posição do fundo no eixo x, indica em qual posição do eixo x deverá ficar a imagem com o eixo y top
+    Valores:
+        Unidades de medida
+        Apontamento de posição
+*/
+/* background-position-y - posição do fundo no eixo y, indica em qual posição do eixo y deverá ficar a imagem com o eixo x center
+    Valores:
+        Unidades de medida
+        Apontamento de posição
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_rola_scroll {
+    background-attachment: scroll;
+}
+.fundo_rola_fixo {
+    background-attachment: fixed;
+}
+.fundo_rola_local {
+    background-attachment: local;
+}
+
+/* background-attachment - fundo anexo em segundo plano, ajusta o efeito visual que o fundo possuirá ao rolar pela página
+    Valores:
+        scroll - rolagem, faz o fundo rolar junto da página dando um efeito visual de estático
+
+        fixed - fixado, conforme é rolada a página é apresentado o resto de seu conteúdo, aparentemente rouba 10% das laterais da imagem
+
+        local - local, o fundo se comporta como o fixed mas seu efeito só é gerado de dentro do elemento
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_origem_preenchimento {
+    background-origin: padding-box;
+}
+.fundo_origem_borda {
+    background-origin: border-box;
+}
+.fundo_origem_conteudo {
+    background-origin: content-box;
+}
+/* background-origin - origem do fundo, indica a partir de onde a imagem deve começar
+    Valores:
+        padding-box - a partir do preenchimento
+        border-box - a partir da borda
+        content-box - a partir do conteúdo
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_limite_borda{
+    background-clip: border-box;
+}
+.fundo_limite_preenchimento{
+    background-clip: padding-box;
+}
+.fundo_limite_conteudo{
+    background-clip: content-box;
+}
+/* background-clip - limite do fundo, coloca uma determinação para até onde o fundo pode ocupar.
+    Valores:
+        border-box - ocupa inclusive a borda
+        padding-box - ocupa até o preenchimento
+        content-box - ocupa somente o conteúdo do elemento
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_tamanho_auto {
+    background-size: auto;
+}
+.fundo_tamanho_contido {
+    background-size: contain;
+}
+.fundo_tamanho_coberto {
+    background-size: cover;
+}
+.fundo_tamanho_pixels {
+    background-size: 100px;
+}
+.fundo_tamanho_porcentagem {
+    background-size: 50%;
+}
+.fundo_tamanho_x_y {
+    background-size: 100% 100px;
+}
+/* background-size - tamanho do fundo define como suas dimensões devem se comportar em relação ao elemento
+    Valores:
+        auto - o tamanho da imagem de fundo deve ser as das dimensões da imagem
+
+        contain - verifica a altura do elemento e deixa a imagem com a mesma altura, fazendo após isso um ajuste de seu comprimento para caber completamente no elemento
+
+        cover - verifica a largura do elemento e deixa a imagem com a mesma largura, fazendo após isso um auto-ajuste de sua altura para não perder qualidade
+
+        Unidades de medida
+    
+    Uso:
+        Ao inserir um valor ele altera somente o eixo x, mas ao colocar dois valores ele altera tanto o eixo x quanto eixo y respectivamente aos valores na ordem em que foram inseridos
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fundo_simples {
+    background-color: blue;
+    background-image: url('../../midia/imagens/duzentosporduzentos.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+ .fundo_diversificado{
+    background: red url('../../midia/imagens/quadro.png') no-repeat fixed center;
+}
+.fundo_misturado {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+    background-size: 90.1% 100%;
+    background-clip: content-box;
+    background-origin: border-box;
+}
+.fundo_errado {
+    background: red url('../../midia/imagens/quadro.png') no-repeat scroll center, blue url('../../midia/imagens/t_gato.png') no-repeat scroll center, yellow url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+}
+.fundo_moldura {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariomontanha.jpg') no-repeat fixed center;
+    background-size: 90.1% 100%;
+}
+.fundo_quadro {
+    background: url('../../midia/imagens/quadro.png') no-repeat scroll, url('../../midia/imagens/cenariotempo.jpg') no-repeat fixed center;
+    background-size: 100% 100%;
+}
+/* background - fundo, define as formatações gerais de como o fundo deve se comportar, a cada vírgula colocada é acrescentado novos fundos
+    Taquiografia:
+        background-color - cor do fundo
+        background-image - imagem de fundo
+        background-repeat - repetição de fundo
+        background-attachment - scroll de fundo
+        background-position - posição inicial do fundo
+*/
+
+

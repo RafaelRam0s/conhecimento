@@ -1,0 +1,759 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: 
+
+@font-face - src
+
+font-feature-settings
+font-stretch
+font-display
+font-variant-ligatures
+font-kerning
+font-variant-numeric
+font-variant-caps
+font-variant-east-asian
+font-variation-settings
+font-optical-sizing
+font-size-adjust
+font-language-override
+font-synthesis
+font-variant-alternates
+font-variant-position
+
+text-decoration-skip
+text-decoration-skip-ink
+text-decoration-thickness
+
+text-overflow
+text-rendering
+text-size-adjust
+text-align-last
+text-anchor
+text-underline-position
+text-orientation
+text-combine-upright
+text-decoration-thickness
+text-emphasis
+text-emphasis-color
+text-emphasis-position
+text-emphasis-style
+text-underline-offset
+
+white-space
+
+*/
+
+
+
+/*
+
+color
+
+font-weight
+
+font-style
+
+font-size
+
+font-family
+
+@font-face
+
+font-variant
+
+font
+
+text-decoration-line
+
+text-decoration-color
+
+text-decoration-style
+
+text-decoration
+
+text-shadow
+
+text-indent
+
+line-height
+
+word-spacing
+
+letter-spacing
+
+text-align
+
+text-transform
+
+direction
+
+unicode-bidi
+
+*/
+
+
+
+.cor_verde {
+    color: rgb(28, 179, 128);
+    /* color - cor, atera a cor do texto, mas ao usá-la esteja ciente que a cor de outras popriedades que utilizam da cor do texto como também serão alteradas
+        Valores:
+            Padrões de cores
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fonte_grossura_grossa {
+    font-weight: 900;
+}
+.fonte_grossura_forte {
+    font-weight: 700;
+}
+.fonte_grossura_normal {
+    font-weight: 500;
+}
+.fonte_grossura_clara {
+    font-weight: 100;
+}
+/* font-weight - define o nível de negrito, a grossura da fonte
+    Valores:
+        Números de 100 a 900 pulando de 100 em 100 definem a espessura da fonte variando da mais fraca, quase invisível, 100, até a mais grossa 900, dependendo do navegador e da família da fonte não será possível ver todas as suas variações
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fonte_estilo_italica {
+    font-style: italic;
+}
+.fonte_estilo_obliquoa {
+    font-style: oblique;
+}
+.fonte_estilo_normal {
+    font-style: normal;
+}
+/* font-style - define o itálico do texto. 
+    Valores:
+        normal - sem inclinação
+        italic - itálico
+        oblique - mais inclinado que o itálico
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 350%;
+}
+h2 {
+    font-size: 300%;
+}
+h3 {
+    font-size: 250%;
+}
+h4 {
+    font-size: 225%;
+}
+h5 {
+    font-size: 200%;
+}
+h6 {
+    font-size: 175%;
+}
+p {
+    font-size: 125%;
+}
+.fonte_tamanho_grande {
+    font-size: 175%;
+}
+.fonte_tamanho_pequena {
+    font-size: 75%;
+}
+/* font-size - define o tamanho do texto 
+    Valores:
+        Unidades de medidas
+
+    Uso responsivo: as porcentagens se baseiam no tamanho do body ou de seu container pai
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.familia_serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+.familia_sans_serif {
+    font-family: sans-serif;
+}
+.familia_monospace {
+    font-family: monospace;
+}
+/* font-family - seleciona qual a formatação que os caractéres devem ter, deve conter vários nomes de fontes separados por vírgula para um sistema de "fallback", se o navegador não suportar a primeira fonte, ele tenta a próxima fonte e assim por diante 
+    Valores:
+        Nomes de fontes
+*/
+
+
+
+
+
+
+@font-face {
+    font-family: "fonte-pessoal";
+    src: url("../../midia/fontes/LEMONMILK-Light.otf");
+}
+.familia_externa {
+    font-family: "fonte-pessoal", monospace;
+}
+/* @font-face - cara da fonte, serve para importar uma fonte de texto, o font-family definido nele serve para nomear, ai quando vc precisar utilizá-lo é só usar o font-family com o seu nome, o src logo abaixo serve para pegar onde está o arquivo junto do url() @@@@@ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fonte_maiuscula {
+    font-variant: small-caps;
+    /* font-variant - específica se um texto deve ou não ser exibido em uma fonte com letras maiúsculas. Em uma fonte com letras maiúsculas, todas as letras minúsculas são convertidas em letras maiúsculas. No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor que as letras maiúsculas originais no texto (Em outras palavras define se deve ser escrito por extenso). 
+        Valores: 
+            normal - o normal seria ver as letras maiúsculas e minúsculas com uma diferença de representação
+            small-caps - Todas as letras ficam como se fossem maiúsculas, porém a sepração de qual é maiúscula ou minúscula é dada pelo seu tamanho
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fonte_taquiografica {
+    font: italic normal 900 25px monospace, sans-serif;
+}
+/* font - fonte, define as configurações gerais de uma fonte
+    Taquiografia:
+        font-style - estilo da fonte, sua inclinação
+        font-variant - variação da fonte se deve diferir quanto a maiúsculas e minúsculas
+        font-weight - grossura da fonte
+        font-size - tamanho da fonte
+        font-family - família da fonte, podendo conter famílias alternativas caso a primeira não funcione
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_lina_nao {
+    text-decoration-line: none;
+}
+.texto_linha_cima {
+    text-decoration-line: overline;
+}
+.texto_linha_cima_centro {
+    text-decoration-line: overline line-through;
+}
+.texto_linha_cima_centro_baixo{
+    text-decoration-line: overline line-through underline;
+}
+.texto_linha_cima_baixo {
+    text-decoration-line: overline underline;
+}
+.texto_linha_centro {
+    text-decoration-line: line-through;
+}
+.texto_linha_centro_baixo {
+    text-decoration-line: line-through underline;
+}
+.texto_linha_baixo {
+    text-decoration-line: underline;
+}
+/* text-decoration-line - decoração de linha de texto, indica se deve ou não possuir uma linha e onde devem ficar, é possível acrescentar mais de uma linha ao mesmo tempo
+    Valores:
+        none - não possui traço
+        line-through - traço no meio
+        overline - traço em cima
+        underline - traço em baixo
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_linha_verde {
+    text-decoration-color: rgb(28, 179, 128);
+    /* text-decoration-color - escolhe uma cor para o traço do texto 
+        Valores:
+            Padrões de cor
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_linha_solida {
+    text-decoration-style: solid;
+}
+.texto_linha_duplicada {
+    text-decoration-style: double;
+}
+.texto_linha_pontilhada {
+    text-decoration-style: dotted;
+}
+.texto_linha_tracejada {
+    text-decoration-style: dashed;
+}
+.texto_linha_ondulada {
+    text-decoration-style: wavy;
+}
+/* text-decoration-style - escolhe o estilo do traço 
+    Valores:
+        solid - traço simples
+        double - dois traços simples
+        dashed - tracejados
+        dotted - pontilhados
+        wavy - tremulo
+        none - sem estilo, age como o solid
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_decorado_taquiografico {
+    text-decoration: underline solid rgb(28, 179, 128);
+    /* text-decoration - decoração de texto
+        Taquiografia:
+            text-decoration-line
+            text-decoration-color
+            text-decoration-style
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_sombreado {
+    text-shadow: 5px 5px 3px rgb(230, 190, 50);
+    /* text-shadow - sombra de texto, acrescenta um sombreamento em cada caracter
+        Uso:
+            Com o primeiro valor é definido a distância que a sombra deve ter da palavra no eixo x, no segundo valor a distância no eixo y, já o terceiro valor define a força da sombra o quão espalhada ficará, e o quarto valor define a cor da sombra
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_comeca {
+    text-indent: 40px;
+    /* text-indent - começo de texto, define o tamanho do espaçamento antes de um texto 
+        Valores:
+            Unidades de medida
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.espaco_linha_pequeno {
+    line-height: 10px;
+}
+.espaco_linha_grande {
+    line-height: 100px;
+}
+/* line-height - altura de linha, é usado para especificar o espaço entre as linhas 
+    Valores:
+        normal
+        Unidades de medida
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.espaco_palavra {
+    word-spacing: 40px;
+    /* word-spacing - define o tamanho do espaçamento entres as palavras 
+        Valores:
+            normal
+            Unidades de medidas
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.espaco_letra {
+    letter-spacing: 30px;
+    /* letter-spacing - define o tamanho do espaço entre os caractéres 
+        Valores:
+            normal
+            Unidades de medidas
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_alinhar_esquerda {
+    text-align: left;
+}
+.texto_alinhar_centro {
+    text-align: center;
+}
+.texto_alinhar_direita {
+    text-align: right;
+}
+.texto_alinhar_justificado {
+    text-align: justify;
+}
+.texto_alinhar_comeco {
+    text-align: start;
+}
+.texto_alinhar_fim {
+    text-align: end;
+}
+/* text-align - alinhamento de texto, ajusta o texto para caber dentro do seu elemento de diferentes formas
+    Valores:
+        left - á esquerda
+        center - no centro
+        right - á direita
+        justify - justificado, fica com cada linha do começo ao fim encaixada no seu conteinêr, basicamente ele ajusta os espaços entre cada letra para os textos terminarem na borda do preenchimento
+        start - início, centraliza no começo do elemento age como o left
+        end - fim, 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_transformado_normal {
+    text-transform: none;
+}
+.texto_transformado_maiusculo {
+    text-transform: uppercase;
+}
+.texto_transformado_minusculo {
+    text-transform: lowercase;
+}
+.texto_transformado_capitalizado {
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.direcao_inversa {
+    direction: rtl;
+    /* @@@@@@@@@@@@@@@@@ direction - define a direção que o texto deve ser lido, ele age parecido com o text-align
+        Valores:
+            ltr - esquerda para a direita
+            rtl - direita para a esquerda
+    */
+    unicode-bidi: bidi-override;
+    /* @@@@@@@@@@@@@@@@@@ unicode-bidi - 
+        Valores:
+            bidi-override, isolate-override - a cada palavra ele troca a ordem de qual letra veem primeiro
+
+            normal, embed, isolate - padrão que conhecemos porém suas pontuações finais vão para o início da linha
+    */
+}
+/* Ao definir o direction para rtl é bom especificar o unicode-bidi */
+/* O navegador geralmente determina em qual direção o texto embutido fluirá, dependendo do lang atributo dos elementos, da localidade do navegador e font-family de elementos específicos. unicode-bidi é útil quando um elemento contém texto LTR e texto RTL: A unicode-bidi propriedade possui três valores amplamente suportados:
+
+a palavra-chave "normal", que não oferece níveis adicionais de texto bidirecional incorporado (o comportamento padrão do navegador). Um elemento com essa propriedade conterá apenas texto LTR ou RTL.
+a palavra-chave "embed", que permite texto bidirecional em um elemento (por exemplo, texto RTL que flui entre o texto LTR). Isso é determinado pela directionpropriedade e deve ser aplicado a um elemento embutido.
+a palavra-chave "bidi-override", que age da mesma forma que "incorporar" quando aplicada a elementos embutidos. Nos elementos no nível do bloco, ele substitui o algoritmo de texto bidirecional do navegador e flui o texto dentro de qualquer filho embutido estritamente de acordo com a directionpropriedade*/
+
+
+
+.direcao_dir {
+    direction: rtl;
+}
+
+.codigo_bidi_override {
+    unicode-bidi: bidi-override;
+}
+.codigo_embed {
+    unicode-bidi: embed;
+}
+.codigo_isolate {
+    unicode-bidi: isolate;
+}
+.codigo_isolate_override {
+    unicode-bidi: isolate-override;
+}
+.codigo_normal {
+    unicode-bidi: normal;
+}
+.codigo_plaintext {
+    unicode-bidi: plaintext;
+}
+
+
+
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="disposicao.css">
+
+    <title>Disposição</title>
+</head>
+<body>
+    
+    <h1>Display</h1>
+
+    <div>
+        <h2>Bloco</h2>
+
+        <p class="preenchimento_dez disposicao_bloco">A disposição de um bloco faz com que um elemento ocupe uma linha inteira</p>
+
+        <p class="preenchimento_dez disposicao_bloco">Desta forma o elemento que for um bloco cria uma linha só para ele, sem permitir elementos aos seus lados</p>
+
+        <p class="preenchimento_dez disposicao_bloco tamanho_cem">Mesmo se a largura do elemento for pequena, o display block continua a jogar o próximo elemento para baixo</p>
+        
+        <p class="preenchimento_dez disposicao_bloco tamanho_cem">@@@@@ Testar combinações de outras propriedades e não só valor, testar tbm um bloco dentro de um inline e por aí em diante</p>
+
+        <p>@@@@@ A configuração da propriedade de exibição de um elemento altera apenas a maneira como o elemento é exibido , NÃO o tipo de elemento que é. Portanto, um elemento inline com display: block;não pode ter outros elementos de bloco dentro dele.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Em linha</h2>
+
+        <p>A disposição em linha permite um elemento continuar na linha em que é inserido, por exemplo <mark class="disposicao_em_linha">o grifado</mark> que se fosse bloco ficaria <mark class="disposicao_bloco">assim</mark>, criando uma linha só para ele</p>
+
+        <p>Este valor "inline" não permite modificarmos seu width, nem o height, nem margens de topo ou de baixo, por este motivo cuidado ao colocar determinadas propriedades</p>
+
+        <p>Logo abaixo temos um exemplo de como pode dar errado, usando um padding quando o espaço entre as linhas é curto e as informações se sobrepoem, caso não veja altere o tamanho da tela</p>
+
+        <p class="preenchimento_dez disposicao_em_linha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae velit unde, non quae, vitae libero quo nam ea blanditiis eius laborum? Sint officiis aliquid amet necessitatibus atque fuga repellat! Enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime beatae quaerat quo, voluptatem harum dolorum numquam autem natus quia. Saepe molestias minima, cupiditate tempore possimus quibusdam similique ullam aut unde.</p>
+
+        <p>Para concertar aquele problema podemos inserir um tamanho maior entre as linhas</p>
+
+        <p class="preenchimento_dez disposicao_em_linha espaco_linha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias alias autem non illo iure voluptates soluta, explicabo eligendi officiis similique perspiciatis? Veritatis ea eveniet debitis nobis veniam, cumque temporibus incidunt?</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Bloco em linha</h2>
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha">O bloco em linha nos permite ter outros elementos ao seu lado, bem parecido com o em linha só que diferentemente, este nos permite modificar altura, largura, margens do eixo y, e tantas outras, claro que se o conteúdo for muito grande joga a próxima informação para baixo</p>
+        
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">Se um bloco em linha for maior que outro:</p>
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">O maior bloco se manterá e posicionará os elementos anteriores e posteriores para baixo, tal como este elemento está fazendo</p>
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">@@@@@ Para arrumar isto tente usar align-self</p>
+        
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">@@@@@ Tente deixar o bloco em cima e não aqui em baixo</p>
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha">Se um elemento tiver um tamanho muito grande e não for limitado ele não continuará na linha, mas será jogado para baixo, caso não esteja vendo este efeito altere o tamanho da tela</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Escondendo um elemento</h2>
+
+        <p>Deixar um elemento escondido é feito para interações da tela, não deve ser usado simplesmente para posicionar um outro elemento</p>
+
+        <div>
+            <button id="disposicao_sumir_clique" onclick="document.getElementById('disposicao_sumir_clique').classList.add('disposicao_sumir_clique')">display: none;</button>
+
+            <button id="visibilidade_escondido" onclick="document.getElementById('visibilidade_escondido').classList.add('visibilidade_escondido')">visibility: hidden;</button>
+
+            <button onclick="revelar()">Fazer todos aparecerem</button>
+        </div>
+
+        <script>
+            function revelar() {
+                document.getElementById('visibilidade_escondido').classList.remove('visibilidade_escondido')
+
+                document.getElementById('disposicao_sumir_clique').classList.remove('disposicao_sumir_clique')
+            }
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>combina entre si</h2>
+
+        <p>@@@@@ Com hierarquia</p>
+
+        <p class="preenchimento_dez disposicao_bloco tamanho_cem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt corrupti necessitatibus magnam earum doloribus? Inventore obcaecati, minus numquam porro dolor voluptate ut, tenetur soluta et iste molestias architecto doloremque minima!</p>
+
+        <p class="preenchimento_dez disposicao_em_linha tamanho_cem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos impedit suscipit doloribus dicta possimus dolores autem ea exercitationem hic, saepe, accusamus nemo id reprehenderit eum nihil voluptate porro dignissimos. Numquam?</p>
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic culpa nobis vel! Magni facilis soluta amet perspiciatis, sunt maiores, dignissimos expedita dolore magnam cumque blanditiis voluptas, laudantium accusantium alias.</p>
+
+        <p class="preenchimento_dez disposicao_bloco tamanho_cem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem doloribus voluptatum iure cumque porro deleniti sit dicta odio ullam. Molestias dignissimos, quos quis odio dolore tempore culpa sequi ducimus.</p>
+
+
+
+
+
+        <p class="preenchimento_dez disposicao_bloco_em_linha tamanho_cem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic culpa nobis vel! Magni facilis soluta amet perspiciatis, sunt maiores, dignissimos expedita dolore magnam cumque blanditiis voluptas, laudantium accusantium alias.</p>
+
+        <p class="preenchimento_dez disposicao_bloco tamanho_cem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem doloribus voluptatum iure cumque porro deleniti sit dicta odio ullam. Molestias dignissimos, quos quis odio dolore tempore culpa sequi ducimus.</p>
+
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>
