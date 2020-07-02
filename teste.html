@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../midia/icones/logo.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        h2 {
+            font-size: 300%;
+        }
+        h3 {
+            font-size: 250%;
+        }
+        h4 {
+            font-size: 225%;
+        }
+        h5 {
+            font-size: 200%;
+        }
+        h6 {
+            font-size: 175%;
+        }
+        p {
+            font-size: 125%;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        a {
+            color: aqua;
+        }
+        a:hover {
+            color: gold;
+        }
+    </style>
+
+    <title>Teste</title>
+</head>
+<body>
+
+    <div class="tabela">
+        <h3 class="clicar">Teste de número 1</h3>
+
+        <h3 class="clicar">Teste de número 2</h3>
+
+        <h3 class="clicar">Teste de número 3</h3>
+
+        <h3 class="clicar">Teste de número 4</h3>
+
+        <h3 class="clicar">Teste de número 5</h3>
+    </div>
+
+    <div>
+        <h3 class="clicar">Teste de número 6</p>
+    </div>
+
+
+    <p id="altere" style="border: 1px solid white; padding: 10px; display: inline-block;">Parágrafo para testar</p>
+
+
+    <script>
+
+        var tabela = document.getElementById("tabela")
+        var classe_clicar = document.querySelectorAll(".tabela .clicar")
+        var resposta = document.getElementById("altere")
+        var classe_clicavel = document.getElementsByClassName("clicar")
+
+        var numero = 0;
+
+        function funcaoTeste() {
+            numero++
+            resposta.innerHTML = numero + " cliques"
+        }
+        
+        for(var x = 0; classe_clicavel[x] != null; x++) {
+            classe_clicar[x].addEventListener("click", funcaoTeste)
+        }
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

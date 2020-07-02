@@ -1,0 +1,52 @@
+
+bool - 1 byte - true e false
+byte - 1 byte - 0 a 255
+sbyte - 1 byte - -128 a 127
+short - 2 bytes - -327628 a 32767
+ushort - 2 bytes - 0 a 65535
+int - 4 bytes - -2147483648 a 2147483647
+uint - 4 bytes - 0 a 4294967295
+long - 8 bytes - -9223372036854775808L até 9223372036854775807L
+ulong - 8 bytes - 0 a 18446744073709551615
+float - 4 bytes - números até 10 elevado a 308
+decimal - 16 bytes - números com até 28 casas decimais
+char - 2 bytes - caractéres delimitados entre aspas simples
+
+int valor = 1;
+long valorGrande = valor;
+// Como pegamos a informação de uma variável e a colocamos depois em uma variável maior os dados se mantem e é uma ação segura
+int valor = 1;
+short valorPequeno = valor;
+// Passar os dados de uma variáel grande para uma pequena é perigoso pois dados podem acabar se perdendo, e ao tentar compilarmos (rodar, colocar em execução) este código é gerado um erro de compilação nesta conversão
+int valor = 1;
+short valorPequeno = (short) valor;
+// Desta forma, forçamos o programa a passar uma variável grande para uma pequena, por um evento conhecido como casting
+
+
+int x = 3;
+// Inteiros, define que o valor que a variável irá receber é inteiro, tais como -1, -2, 0, 100, 102 ...
+
+double y = 100.0;
+// Dobráveis, define que o valor que a variável irá receber é dobrável ou seja pode receber qualquer número
+
+string mensagem = "Minha Mensagem";
+// Texto, define que o valor que a variável irá receber é um texto, e além de colocar string no início é necessário colocar entre aspas duplas o seu conteúdo
+int numero = 6;
+string texto = numero;
+// Não precisa colocar aspas duplas se você estiver tentando fazer uma variável de outro tipo passar a ser string, o que neste caso o que a variável texto retorna é "6", se estivesse assim: string texto = "numero"; então o valor que ficaria na variáel, não seria a outra variável e sim só um texto com a palavra numero
+
+double saldo = 100.0;
+double valorSaque = 10.0;
+bool podeSacar = (saldo >= valorSaque);
+// O bool define valores booleanos que seriam valores que devem retorna ou true ou false
+
+
+
+
+
+
+
+
+
+
+

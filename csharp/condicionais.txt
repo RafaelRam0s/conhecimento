@@ -1,0 +1,87 @@
+5 >= 2
+// true
+2 >= 5
+// false
+
+2 <= 5
+// true
+5 <= 2
+// false
+
+2 == 2
+// true
+2 == 5
+// false
+2 == "2"
+// @@@@@
+
+2 != 5
+// true
+2 != 2
+// false
+2 != "2"
+// @@@@@
+
+&&
+// "E" lógico
+2 == 2 && 5 == 5
+// true
+2 == 5 && 5 == 5
+// false
+2 == 2 && 2 == 5
+// false
+2 == 5 && 2 == 5
+// false
+
+
+||
+// "Ou" lógico
+2 == 2 || 5 == 5
+// true
+2 == 5 || 5 == 5
+// true
+2 == 2 || 2 == 5
+// true
+2 == 5 || 2 == 5
+// false
+
+
+if (true)
+{
+
+}
+
+
+if (true)
+{
+
+}
+else
+{
+
+}
+
+
+
+if ()
+{
+
+}
+else if ()
+{
+
+}
+else
+{
+
+}
+
+
+condição ? verdadeira : falsa
+@@@@@ condição (que deve retornar true ou false) ? se for verdadeira execute isto : se não execute isto
+@@@@@ string teste == "1";
+teste == "1" ? MessageBox.Show("sim") : MessageBox.Show("não");
+// sim
+@@@@@ string teste == "2";
+teste == "1" ? MessageBox.Show("sim") : MessageBox.Show("não");
+// não

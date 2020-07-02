@@ -1,0 +1,88 @@
+
+
+
+
+Para realizar cálculos matemáticos podemos usar alguns símbolos para efetuar as contas
+
+    Somar - usa-se o símbolo de mais (+)
+        int somando = 2 + 5;
+        // A variável somando, possui agora o valor 7 em sua memória
+
+        int dois = 2;
+        int cinco = 5;
+        int somaDeVariaveis = cinco + dois;
+        // A variável somaDeVariaveis, possui agora o valor 7 em sua memória
+
+        Se usado em uma string será concatenado as variáveis que estiverem após ele
+            string texto = "Olá Mundo!";
+            int dois = 2;
+            MessageBox.Show(texto + dois);
+            // Será retornado "Olá Mundo!2"
+            string texto = "Olá Mundo!";
+            int dois = 2;
+            int tres = 3;
+            MessageBox.Show(dois + tres + texto);
+            // Será retornado "5Olá Mundo!"
+
+    Subtrair - usa-se o sinal de menos (-)
+        int subtraindo = 2 - 5;
+        // A variável subtraindo, possui agora o valor -3 em sua memória
+
+        int dois = 2;
+        int cinco = 5;
+        int subtracaoDeVariaveis = cinco - dois;
+        // A variável subtracaoDeVariaveis, possui agora o valor 3 em sua memória
+
+    Multiplicar - usa-se o sinal de asterisco (*)
+        int multiplicando = 2 * 5;
+        // A variável multiplicando, possui agora o valor 10 em sua memória
+
+        int dois = 2;
+        int cinco = 5;
+        int multiplicacaoDeVariaveis = cinco * dois;
+        // A variável multiplicacaoDeVariaveis, possui agora o valor 10 em sua memória
+
+    Dividir - usa-se o sinal de barra (/)
+        int dividindo = 2 / 5;
+        // A variável dividindo, possui agora o valor 0.4 em sua memória
+
+        int dois = 2;
+        int cinco = 5;
+        int divisaoDeVariaveis = cinco / dois;
+        // A variável divisaoDeVariaveis, possui agora o valor 2.5 em sua memória
+
+    Dividir inteiro
+        int dividindoSaberResto = 2 % 5;
+        // A variável dividindoSaberResto, possui agora o valor 2 em sua memória
+
+        int dois = 2;
+        int cinco = 5;
+        int divisaoDeVariaveisSaberResto = cinco / dois;
+        // A variável divisaoDeVariaveisSaberResto, possui agora o valor 1 em sua memória
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atalhos
+    double saldo = 100.0;
+    double valorDoSaque = 10.0;
+    saldo -= valorDoSaque;
+    -=
+    +=
+    *=
+    /=
+
+    ++
+    --
