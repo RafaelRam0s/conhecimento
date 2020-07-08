@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="espaco_textual.css">
+
+    <title>Espaçamentos no Texto</title>
+</head>
+<body>
+
+
+    <div>
+        <h3>Espaçamentos de um texto:</h3>
+
+        <p>Este é um parágrafo modelo para que possam comparar os próximos parágrafos e seus efeitos com css. Se atente aos espaços, lembrando que nem sempre precisamos usar só valores positivos para esses espaçamentos as vezes é aceito utilizar valores negativos.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Espaço entre letras:</h3>
+
+        <p class="espaco_letra_5">Dando espaço, entre as letras com valor positivo.</p>
+
+        <p class="espaco_letra_-5">Dando espaço, entre as letras com valor negativo.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Espaço entre palavras:</h3>
+
+        <p class="espaco_palavra_10">Dando espaço, entre as palavras com valor positivo.</p>
+
+        <p class="espaco_palavra_-10">Dando espaço, entre as palavras com valor negativo.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div>
+        <h3>Espaço inicial de um texto:</h3>
+
+        <p class="espaco_inicial_10">Dando um espaçamento inicial em um texto, isto é, somente a primeira linha ficará mais avançada, então se um texto ficasse muito grande ou houvesse um - br - conseguiriamos ver a diferença clara deste efeito.<br>Caso não tenha conseguido observar este efeito diminua e aumente a tela.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Espaço entre as linhas:</h3>
+
+        <p class="espaco_linha_50">Dando espaço entre as linhas de um texto, para conseguirmos ver isto, é preciso de um parágrafo com ao menos duas linhas então para conseguir este efeito que descrevi, estou enrolando sobre como é possível visualizar o efeito.<br>Se bem que a tagnema - br - pode deixar isto ocorrer mais facilmente, bem estes são os efeitos entre as linhas:</p>
+
+        <p class="espaco_linha_10">Se deixar um valor muito pequeno tem-se um problema de mal conseguir visualizar.<br>
+        Lembrando que esta propriedade não aceita valores negativos</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Regras de espaço</h3>
+
+        <p>O html por padrão não conta espaços a mais dados, nem considera os tabs que damos, também não considere enters dados no meio do código e ele ajusta uma quebra de linha automática quando o conteúdo está prestes a vazar do elemento, mas estas regras de leitura podem ser modificadas criando diversas combinações destas regras.</p>
+
+        <p class="espaco_regra_normal">Três   espaços
+            Três tabs
+
+            Três enters
+            Linha gigante: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias non voluptates quo a tenetur dignissimos animi. Perspiciatis, eius magnam nemo sint deleniti impedit fuga est! Accusantium rem impedit fugiat.
+        </p>
+
+        <p class="espaco_regra_nowrap">Três   espaços
+            Três tabs
+
+            Três enters
+            Linha gigante: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias non voluptates quo a tenetur dignissimos animi. Perspiciatis, eius magnam nemo sint deleniti impedit fuga est! Accusantium rem impedit fugiat.
+        </p>
+
+        <p class="espaco_regra_pre">Três   espaços
+            Três tabs
+
+            Três enters
+            Linha gigante: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias non voluptates quo a tenetur dignissimos animi. Perspiciatis, eius magnam nemo sint deleniti impedit fuga est! Accusantium rem impedit fugiat.
+        </p>
+
+        <p class="espaco_regra_pre-line">Três   espaços
+            Três tabs
+
+            Três enters
+            Linha gigante: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias non voluptates quo a tenetur dignissimos animi. Perspiciatis, eius magnam nemo sint deleniti impedit fuga est! Accusantium rem impedit fugiat.
+        </p>
+
+        <p class="espaco_regra_pre-wrap">Três   espaços
+            Três tabs
+
+            Três enters
+            Linha gigante: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias non voluptates quo a tenetur dignissimos animi. Perspiciatis, eius magnam nemo sint deleniti impedit fuga est! Accusantium rem impedit fugiat.
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Alinhamento textual:</h3>
+
+        <p>Farei esse parágrafo se repetir algumas vezes para mostrar as regras com maiores detelhes, o 1° parágrafo está normal, sem nenhuma classe, o 2° está com o alinhamento a esquerda, que é o que vem por padrão então aparentará não ter efeito, o 3° é alinhado no centro então os textos tendem a começar no meio, o 4° será o alinhamento na direita, então parecerá que foi tudo empurrado para o lado e barrado em uma coluna na direita e o 5° será o alinhamento justificado que faz com que todas as palavras tentem se encaixar ao máximo na esquerda e na direita ajustando assim, o espaço entre as palavras</p>
+
+        <p class="texto_alinhado_esquerda">Farei esse parágrafo se repetir algumas vezes para mostrar as regras com maiores detelhes, o 1° parágrafo está normal, sem nenhuma classe, o 2° está com o alinhamento a esquerda, que é o que vem por padrão então aparentará não ter efeito, o 3° é alinhado no centro então os textos tendem a começar no meio, o 4° será o alinhamento na direita, então parecerá que foi tudo empurrado para o lado e barrado em uma coluna na direita e o 5° será o alinhamento justificado que faz com que todas as palavras tentem se encaixar ao máximo na esquerda e na direita ajustando assim, o espaço entre as palavras</p>
+
+        <p class="texto_alinhado_centro">Farei esse parágrafo se repetir algumas vezes para mostrar as regras com maiores detelhes, o 1° parágrafo está normal, sem nenhuma classe, o 2° está com o alinhamento a esquerda, que é o que vem por padrão então aparentará não ter efeito, o 3° é alinhado no centro então os textos tendem a começar no meio, o 4° será o alinhamento na direita, então parecerá que foi tudo empurrado para o lado e barrado em uma coluna na direita e o 5° será o alinhamento justificado que faz com que todas as palavras tentem se encaixar ao máximo na esquerda e na direita ajustando assim, o espaço entre as palavras</p>
+
+        <p class="texto_alinhado_direita">Farei esse parágrafo se repetir algumas vezes para mostrar as regras com maiores detelhes, o 1° parágrafo está normal, sem nenhuma classe, o 2° está com o alinhamento a esquerda, que é o que vem por padrão então aparentará não ter efeito, o 3° é alinhado no centro então os textos tendem a começar no meio, o 4° será o alinhamento na direita, então parecerá que foi tudo empurrado para o lado e barrado em uma coluna na direita e o 5° será o alinhamento justificado que faz com que todas as palavras tentem se encaixar ao máximo na esquerda e na direita ajustando assim, o espaço entre as palavras</p>
+
+        <p class="texto_alinhado_justificado">Farei esse parágrafo se repetir algumas vezes para mostrar as regras com maiores detelhes, o 1° parágrafo está normal, sem nenhuma classe, o 2° está com o alinhamento a esquerda, que é o que vem por padrão então aparentará não ter efeito, o 3° é alinhado no centro então os textos tendem a começar no meio, o 4° será o alinhamento na direita, então parecerá que foi tudo empurrado para o lado e barrado em uma coluna na direita e o 5° será o alinhamento justificado que faz com que todas as palavras tentem se encaixar ao máximo na esquerda e na direita ajustando assim, o espaço entre as palavras</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Altura de um elemento na linha</h3>
+
+        <p>Temos como deixar um elemento mais alto ou mais baixo na linha dependendo de como configuramos suas propriedades no css, possibilitando-nos de fazer representações de exponenciações e de elementos químicos.</p>
+
+        <p>Por exemplo o 2 de um número x ao quadrado (X<span class="altura_linha_7">2</span>)</p>
+
+        <p>E/ou por exemplo o 2 do elemento químico da água (H<span class="altura_linha_-7">2</span>O)</p>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes:
+initial-letter
+initial-letter-align
+
+word-wrap
+word-break
+
+line-height-step
+
+text-align-last
+*/
+
+/*
+letter-spacing
+
+word-spacing
+
+line-height
+
+white-space
+
+text-align
+
+vertical-align
+*/
+
+
+.espaco_letra_5 {
+    letter-spacing: 5px;
+}
+.espaco_letra_-5 {
+    letter-spacing: -5px;
+}
+/* letter-spacing - define o tamanho do espaço entre os caractéres
+    Valores:
+        normal
+        Unidades de medidas
+*/
+
+
+
+
+
+.espaco_palavra_10 {
+    word-spacing: 10px;
+}
+.espaco_palavra_-10 {
+    word-spacing: -10px;
+}
+/* word-spacing - define o tamanho do espaçamento entres as palavras
+    Valores:
+        normal
+        Unidades de medidas
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.espaco_linha_50 {
+    line-height: 50px;
+}
+.espaco_linha_10 {
+    line-height: 10px;
+}
+/* line-height - altura de linha, é usado para especificar o espaço entre as linhas
+    Valores:
+        normal
+        Unidades de medida
+*/
+
+
+
+
+
+
+
+
+.espaco_regra_normal {
+    white-space: normal;
+}
+.espaco_regra_nowrap {
+    white-space: nowrap;
+}
+.espaco_regra_pre {
+    white-space: pre;
+}
+.espaco_regra_pre-line {
+    white-space: pre-line;
+}
+.espaco_regra_pre-wrap {
+    white-space: pre-wrap;
+}
+/* white-space - espaço verdadeiro, configura a forma com a qual as regras do html devem se comportar em relação ao que digita e ao que aparece
+    Valores:
+        normal - normal, é o que vem por padrão (não conta espaços a mais, não conta tabs a mais, não conta enters a mais e faz quebra-de-linha automática)
+
+        nowrap - deixa tudo em uma linha só (não conta espaços a mais, não conta tabs a mais, não conta enters a mais e não faz quebra-de-linha automática)
+
+        pre - leva tudo como pré-formatado (conta espaços a mais, conta tabs a mais, conta enters a mais e não faz quebra-de-linha automática)
+
+        pre-line - leva somente a quebra-de-linha como pré-formatada (não conta espaços a mais, não conta tabs a mais, conta enters a mais e faz quebra-de-linha automática)
+
+        pre-wrap - leva tudo como pré-formatado e possui quebra-de-linha (conta espaços a mais, conta tabs a mais, conta enters a mais e faz quebra-de-linha automática)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_alinhado_esquerda {
+    text-align: left;
+}
+.texto_alinhado_centro {
+    text-align: center;
+}
+.texto_alinhado_direita {
+    text-align: right;
+}
+.texto_alinhado_justificado {
+    text-align: justify;
+}
+/* text-align - alinhamento de texto, ajusta o texto para caber dentro do seu elemento de diferentes formas
+    Valores:
+        left - á esquerda
+        center - no centro
+        right - á direita
+        justify - justificado, fica com cada linha do começo ao fim encaixada no seu conteinêr, basicamente ele ajusta os espaços entre cada letra para os textos terminarem na borda do preenchimento
+        @@@@@ start -
+        @@@@@ end -
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.altura_linha_7 {
+    vertical-align: 7px;
+}
+.altura_linha_-7 {
+    vertical-align: -7px;
+}
+/* vertical-align - alinhamento vertical, ajusta um elemento mais para baixo ou mais para cima
+    @@@@@ Valores:
+        Unidades de medida
+*/
+
+
+
+

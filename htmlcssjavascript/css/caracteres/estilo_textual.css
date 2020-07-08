@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: 
+
+text-decoration-skip
+text-decoration-skip-ink
+
+font-feature-settings
+font-display
+font-stretch
+font-variant-ligatures
+font-kerning
+font-variant-numeric
+font-variant-caps
+font-variant-east-asian
+font-variation-settings
+font-optical-sizing
+font-size-adjust
+font-language-override
+font-synthesis
+font-variant-alternates
+font-variant-position
+
+text-emphasis
+text-overflow
+text-rendering
+text-size-adjust
+text-anchor
+text-underline-position
+text-orientation
+text-combine-upright
+text-justify
+text-emphasis
+text-emphasis-color
+text-emphasis-position
+text-emphasis-style
+text-underline-offset
+*/
+/*
+font-size
+font-weight
+font-variant
+font-style
+font-family
+@font-face
+font
+
+text-transform
+
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+text-decoration
+
+text-shadow
+*/
+
+
+
+.fonte_tamanho_10 {
+    font-size: 10px;
+}
+.fonte_tamanho_30 {
+    font-size: 30px;
+}
+.fonte_tamanho_porcentagem_200 {
+    font-size: 200%;
+}
+/* font-size - define o tamanho do texto 
+    Valores:
+        Unidades de medidas
+
+    Uso responsivo: as porcentagens se baseiam no tamanho do body e de seu container pai
+*/
+
+
+
+
+
+
+.fonte_espessa_100 {
+    font-weight: 100;
+}
+.fonte_espessa_900 {
+    font-weight: 900;
+}
+/* font-weight - define o nível de negrito, a grossura da fonte
+    Valores:
+        Números de 100 a 900 pulando de 100 em 100 definem a espessura da fonte variando da mais fraca, quase invisível, 100, até a mais grossa 900, dependendo do navegador e da família da fonte não será possível ver todas as suas variações
+*/
+
+
+
+
+
+
+
+.fonte_variada_small-caps {
+    font-variant: small-caps;
+}
+.fonte_variada_normal {
+    font-variant: normal;
+}
+/* font-variant - específica se um texto deve ou não ser exibido em uma fonte com letras maiúsculas. Em uma fonte com letras maiúsculas, todas as letras minúsculas são convertidas em letras maiúsculas. No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor que as letras maiúsculas originais no texto (Em outras palavras define se deve ser escrito por extenso). 
+    Valores: 
+        normal - o normal seria ver as letras maiúsculas e minúsculas com uma diferença de representação
+        small-caps - Todas as letras ficam como se fossem maiúsculas, porém a sepração de qual é maiúscula ou minúscula é dada pelo seu tamanho
+*/
+
+
+
+
+
+.fonte_estilo_normal {
+    font-style: normal;
+}
+.fonte_estilo_italico {
+    font-style: italic;
+}
+.fonte_estilo_obliquo {
+    font-style: oblique;
+}
+/* font-style - define o itálico do texto. 
+    Valores:
+        normal - sem inclinação
+        italic - itálico
+        oblique - mais inclinado que o itálico
+*/
+
+
+
+
+
+
+
+
+.fonte_familia_serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+.fonte_familia_sans_serif {
+    font-family: sans-serif;
+}
+.fonte_familia_monospace {
+    font-family: monospace;
+}
+/* font-family - seleciona qual a formatação que os caractéres devem ter, deve conter vários nomes de fontes separados por vírgula para um sistema de "fallback", se o navegador não suportar a primeira fonte, ele tenta a próxima fonte e assim por diante 
+    Valores:
+        Nomes de fontes
+*/
+
+@font-face {
+    font-family: "fonte-pessoal";
+    src: url("../../../midia/fontes/LEMONMILK-Light.otf");
+}
+.fonte_familia_externa {
+    font-family: "fonte-pessoal";
+}
+/* @font-face - cara da fonte, serve para importar uma fonte de texto, o font-family definido nele serve para nomear, ai quando vc precisar utilizá-lo é só usar o font-family com o seu nome, o src logo abaixo serve para pegar onde está o arquivo junto do url() @@@@@ */
+
+
+
+
+
+
+
+
+
+.fonte_grande {
+    font: italic small-caps 900 30px sans-serif;
+}
+/* font - fonte, define as configurações gerais de uma fonte
+    Taquiografia:
+        font-style - estilo da fonte, sua inclinação
+        font-variant - variação da fonte se deve diferir quanto a maiúsculas e minúsculas
+        font-weight - grossura da fonte
+        font-size - tamanho da fonte
+        font-family - família da fonte, podendo conter famílias alternativas caso a primeira não funcione
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+.texto_transformado_nao {
+    text-transform: none;
+}
+.texto_transformado_minusculas {
+    text-transform: lowercase;
+}
+.texto_transformado_maiusculas {
+    text-transform: uppercase;
+}
+.texto_transformado_capitalizada {
+    text-transform: capitalize;
+}
+/* text-transform - modifica a configuração de quais textos devem ser maiusculos ou minusculos
+    Valores:
+        normal - o que escreve é considerado
+        lowercase - tudo minusculo
+        uppercase - tudo maiusculo
+        captalize - a primeira letra maiuscula e o resto a forma que for escrita é considerada
+*/
+
+
+
+
+
+
+
+
+.texto_decorado_linha_nao {
+    text-decoration-line: none;
+}
+.texto_decorado_linha_cima {
+    text-decoration-line: overline;
+}
+.texto_decorado_linha_meio {
+    text-decoration-line: line-through;
+}
+.texto_decorado_linha_baixo {
+    text-decoration-line: underline;
+}
+.texto_decorado_linha_misturada {
+    text-decoration-line: overline line-through underline;
+}
+/* text-decoration-line - decoração de linha de texto, indica se deve ou não possuir uma linha e onde devem ficar, é possível acrescentar mais de uma linha ao mesmo tempo
+    Valores:
+        none - não possui traço
+        line-through - traço no meio
+        overline - traço em cima
+        underline - traço em baixo
+*/
+
+
+
+
+.texto_decorado_cor_azul {
+    text-decoration-color: aqua;
+}
+.texto_decorado_cor_vermelho {
+    text-decoration-color: red;
+}
+.texto_decorado_cor_verde {
+    text-decoration-color: green;
+}
+/* text-decoration-color - escolhe uma cor para o traço do texto 
+    Valores:
+        Padrões de cor
+*/
+
+
+
+.texto_decorado_linha_solida {
+    text-decoration-style: solid;
+}
+.texto_decorado_linha_duplicada {
+    text-decoration-style: double;
+}
+.texto_decorado_linha_pontilhada {
+    text-decoration-style: dotted;
+}
+.texto_decorado_linha_tracejada {
+    text-decoration-style: dashed;
+}
+.texto_decorado_linha_ondulada {
+    text-decoration-style: wavy;
+}
+/* text-decoration-style - escolhe o estilo do traço 
+    Valores:
+        solid - traço simples
+        double - dois traços simples
+        dashed - tracejados
+        dotted - pontilhados
+        wavy - tremulo
+        none - sem estilo, age como o solid
+*/
+
+
+.texto_decorado_20 {
+    text-decoration-thickness: 20px;
+}
+/* text-decoration-thickness - grossura da decoração de texto, configura o tamanho da linha
+    Valores: 
+        Unidades de medidas
+    Observação: só funciona no Safari e Firefox
+*/
+
+
+
+
+.texto_decorado {
+    text-decoration: underline solid aqua 10px;
+}
+/* text-decoration - decoração de texto
+    Taquiografia:
+        text-decoration-line
+        text-decoration-color
+        text-decoration-style
+        text-decoration-thickness
+*/
+
+
+
+
+
+
+.texto_sombreado {
+    text-shadow: 15px 10px 5px blue;
+}
+.texto_sombreado_legenda {
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    background-color: white;
+}
+/* text-shadow - sombra de texto, adiciona uma sombra para cada caracter
+    Valores:
+        Unidades de medida
+        Padrão de cores
+    Uso:
+        O primeiro valor configura o quão horizontalmente ficará
+        O segundo valor configura o quão verticalmente ficará
+        O terceiro define o espalhamento da sombra
+        O quarto define a cor da sombra
+        Ao adicionar vírgula é possível colocar mais de uma sombra em um mesmo elemento
+*/
+
+
+
+
+
+
+
+
+
+
+
+

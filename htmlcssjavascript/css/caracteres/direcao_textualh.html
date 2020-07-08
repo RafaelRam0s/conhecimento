@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <!-- <link rel="stylesheet" href="direcao_textual.css"> -->
+
+    <title>Direção do texto</title>
+</head>
+<body>
+
+    Fazer resumo e explicações sobre as propriedades: direction, unicode-bidi
+
+    Fazer lógica de espelhamento de uma palavra, tipo para inverter o sentido da letra
+
+    <!-- 
+        
+.direcao_inversa {
+    direction: rtl;
+    /* @@@@@@@@@@@@@@@@@ direction - define a direção que o texto deve ser lido, ele age parecido com o text-align
+        Valores:
+            ltr - esquerda para a direita
+            rtl - direita para a esquerda
+    */
+    unicode-bidi: bidi-override;
+    /* @@@@@@@@@@@@@@@@@@ unicode-bidi - 
+        Valores:
+            bidi-override, isolate-override - a cada palavra ele troca a ordem de qual letra veem primeiro
+
+            normal, embed, isolate - padrão que conhecemos porém suas pontuações finais vão para o início da linha
+    */
+}
+/* Ao definir o direction para rtl é bom especificar o unicode-bidi */
+/* O navegador geralmente determina em qual direção o texto embutido fluirá, dependendo do lang atributo dos elementos, da localidade do navegador e font-family de elementos específicos. unicode-bidi é útil quando um elemento contém texto LTR e texto RTL: A unicode-bidi propriedade possui três valores amplamente suportados:
+
+a palavra-chave "normal", que não oferece níveis adicionais de texto bidirecional incorporado (o comportamento padrão do navegador). Um elemento com essa propriedade conterá apenas texto LTR ou RTL.
+a palavra-chave "embed", que permite texto bidirecional em um elemento (por exemplo, texto RTL que flui entre o texto LTR). Isso é determinado pela directionpropriedade e deve ser aplicado a um elemento embutido.
+a palavra-chave "bidi-override", que age da mesma forma que "incorporar" quando aplicada a elementos embutidos. Nos elementos no nível do bloco, ele substitui o algoritmo de texto bidirecional do navegador e flui o texto dentro de qualquer filho embutido estritamente de acordo com a directionpropriedade*/
+
+
+
+.direcao_dir {
+    direction: rtl;
+}
+
+.codigo_bidi_override {
+    unicode-bidi: bidi-override;
+}
+.codigo_embed {
+    unicode-bidi: embed;
+}
+.codigo_isolate {
+    unicode-bidi: isolate;
+}
+.codigo_isolate_override {
+    unicode-bidi: isolate-override;
+}
+.codigo_normal {
+    unicode-bidi: normal;
+}
+.codigo_plaintext {
+    unicode-bidi: plaintext;
+}
+
+    <div>
+        <h2>Direção do texto</h2>
+
+        <p class="direcao_inversa direcao_dir">@@@@@ Invertendo a direção do texto</p>
+
+        <p class="codigo_bidi_override direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+
+        <p class="codigo_embed direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+
+        <p class="codigo_isolate direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+
+        <p class="codigo_isolate_override direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+
+        <p class="codigo_normal direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+
+        <p class="codigo_plaintext direcao_dir">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto debitis eveniet aut illum quibusdam quod. Ullam repellendus iure dignissimos consequuntur corporis necessitatibus laboriosam minima. Amet tempore quis ipsa pariatur.</p>
+    </div> -->
+
+</body>
+</html>
