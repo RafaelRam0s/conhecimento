@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
+
+.borda_1_tabela, .borda_1_tabela th, .borda_1_tabela tr, .borda_1_tabela td {
+    border: 1px solid white;
+}
+
+.mg-top-20 {
+    margin-top: 20px;
+}
 /* Glossário */
 /* Pendentes: 
-
-border-collapse
-
-border-spacing
-
 border-bottom-left-radius
 border-top-left-radius
 border-bottom-right-radius
@@ -107,6 +110,9 @@ outline-color
 outline
 outline-offset
 
+border-collapse
+
+border-spacing
 
 */
 
@@ -459,6 +465,50 @@ borda, age como o border, mas só onde for indicado para aparecer
     Valores:
         Unidades de medidas
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borda_separada {
+    border-collapse: separate;
+}
+.borda_mesclada {
+    border-collapse: collapse;
+}
+/* border-collapse - borda colapsada, define se as bordas devem se misturar em uma só ou se devem ficar separadas
+    Valores:
+        separate - separada
+        collapse - colapsada (junta)
+*/
+
+
+
+
+
+.borda_espaco_5 {
+    border-spacing: 5px;
+}
+.borda_espaco_25 {
+    border-spacing: 25px;
+}
+/* border-spacing - espaçamento da borda, define o quanto a borda deve ter de distância entre uma e outra
+    Valores:
+        Unidades de medida
+*/
+
+
 
 
 

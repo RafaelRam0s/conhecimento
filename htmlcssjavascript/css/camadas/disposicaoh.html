@@ -125,7 +125,7 @@
     <div>
         <h2>Escondendo um elemento</h2>
 
-        <p>Deixar um elemento escondido é feito para interações da tela, não deve ser usado simplesmente para posicionar um outro elemento</p>
+        <p>O display: none; faz parecer que determinado elemeto nem existe, mas na real ele existe, mas na hora de rodar a tela o elemento que estiver com ele não irá ser contando para o ajustamento das outras e "desaparece", mas ele ainda continua ali e pode realizar comandos</p>
 
         <div>
             <button id="disposicao_sumir_clique" onclick="document.getElementById('disposicao_sumir_clique').classList.add('disposicao_sumir_clique')">display: none;</button>
@@ -133,6 +133,8 @@
             <button id="visibilidade_escondido" onclick="document.getElementById('visibilidade_escondido').classList.add('visibilidade_escondido')">visibility: hidden;</button>
 
             <button onclick="revelar()">Fazer todos aparecerem</button>
+        
+            <p>Deixar um elemento escondido é feito para interações da tela, não deve ser usado simplesmente para posicionar um outro elemento</p>
         </div>
 
         <script>

@@ -13,19 +13,13 @@
     line-height: 30px;
 }
 
-.visibilidade_escondido {
-    visibility: hidden;
-}
-
 /* Glossário */
 /* Pendentes:
-
-visibility
-
 */
 /*
 display
 
+visibility
 
 */
 
@@ -61,14 +55,15 @@ display
 
 
 
-
-
-
-
-
-
-
-
+.visibilidade_escondido {
+    visibility: hidden;
+}
+/* visibility - visibilidade, indica se um elemento deve ou não aparecer
+    Valores:
+        visible - visivel
+        hidden - escondido
+        collapse - deixa escondido e ajusta uma cédula de uma tabela para as próximas cédulas se ajustarem automaticamente em um reposicionamento como se uma não existisse
+*/
 
 
 

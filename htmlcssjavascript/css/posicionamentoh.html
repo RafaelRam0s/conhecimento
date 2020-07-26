@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="_style.css">
+    <link rel="stylesheet" href="posicionamento.css">
+
+    <title>Posicionamento</title>
+
+</head>
+<body>
+
+
+
+    <div>
+        <h2>Posicionamento Estático:</h2>
+
+        <p class="posicao_estatico">O posicionamento estático está posicionado de acordo com o fluxo da página, onde seu elemento foi colocado é onde ele vai aparecer e ficar</p>
+
+        <p>Com os próximos valores do posicionamento é possível usarmos outras 4 propriedades, que são; top, right, bottom, left. Com essas classes podemos ajustar a sua posição para o lados da segunda dimensão</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Posicionamento Fixo:</h2>
+
+        <p>O posicionamento fixo deixa um elemento sobrepondo-se a todos os outros, e ficará prezo em um local da tela que for escolhido</p>
+
+        <div class="posicao_fixa">
+            <p>Este elemento está fixo na tela, ele acompanha a rolagem da página</p>
+        </div>
+        <div class="posicao_fixa baixo_0 direita_0" style="margin: 0px;">
+            <p>Este elemento está fixo na tela, ele acompanha a rolagem da página</p>
+        </div>
+
+        <p>Caso não configure onde na tela ele deve se enquadrar ele acaba por ficar fixo a partir de onde seu elemento apareceu, então lembre-se de configurar suas coordenadas com top, right,bottom e left. Caso o escreva muito em baixo ele poderá nunca ser visto se não for configurado corretamente.</p>
+
+        <p>Cuidado, suas outras propriedades ainda funcionam tal como o padding, margin e tantas outras então ao posicionar o elemento esteja ciente que essas propriedades irão atrapalhar no seu enquadramento</p>
+
+        <p>Ao deixar um elemento fixo ele não deixa um espaço vazio de onde ele deveria ter ficado, então basicamente nenhum elemento sofre seus efeitos de posicionamento, é como se ele houvesse sido inserido por último. Mesmo que haja outros elementos fixos um não interfere no espaço do outro então o que acaba acontecendo é que o último a ser escrito possui vantagem de sobreposição sobre o outro</p>
+
+        <button onclick="revelarElementoFixo()">Clique aqui para adiciona-lo</button>
+
+        <button onclick="esconderElementoFixo()">Clique aqui para tirar esse elemento fixo</button>
+
+
+        <script>
+            document.body.onload = esconderElementoFixo
+            function esconderElementoFixo() {
+                document.getElementsByClassName("posicao_fixa")[0].style.display = "none"
+                document.getElementsByClassName("posicao_fixa")[1].style.display = "none"
+            }
+            function revelarElementoFixo() {
+                document.getElementsByClassName("posicao_fixa")[0].style.display = "block"
+                document.getElementsByClassName("posicao_fixa")[1].style.display = "block"
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Posicionamento Grudado:</h2>
+
+        <p>O posicionamento grudado, gruda na tela quando a própria tela passa por seu elemento, mas se depois voltar por onde seria o local dele ele desgruda. Age como uma mistura de estático com fixed, estático enquanto não passar com a tela sobre ele, depois que passa é fixo, se voltar ele desgruda e fica estático novamente</p>
+
+        <div class="posicao_grudada topo_0 baixo_0" style="background-color: aquamarine; height: 20px; margin: 0px;"></div>
+
+        <p>Se definido um top indica que quando o topo da janela passar nele, ele irá grudar a partir da distância que foi definido em seu valor, se for bottom é quando for a parte de baixo, quando for right é a parte da direita e quando for left é a esquerda</p>
+
+        <p>Ele fica com sua propriedade parecida com o fixed <strong>enquanto ele tiver elementos irmãos para percorrer</strong>. Basicamente ele só funciona a parte do grudado nos elementos irmãos.</p>
+
+        <p>Para esta propriedade funcionar é preciso ao mínimo configurar um de seus lados, top, right, bottom ou left</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Posicionamento relativo e absoluto:</h2>
+
+        <p>Um posicionamento relative funciona parecido com o estatico, mas a crucial diferença é que este pode utilizar propriedades como top, right, bottom e left para ajustar sua posição</p>
+
+        <p class="posicao_relativa" style="top: -30px;">Por exemplo este parágrafo que a partir da posição dele estarei ajustando ele para ficar mais para cima, mesmo que se eu ajustasce a margem daria um efeito muito parecido</p>
+
+        <p>@@@@@ Verificar se esses elementos com posição relativa são superiores entre os próximos e anteriores elementos </p>
+
+        <p>Mas o que mais difere ele não é essa possibilidade de deslocamento, o que o faz ser mesmo útil é servir como uma base de onde o posicionamento absoluto pode interferir</p>
+
+        <p>O posicionamento absoluto por padrão é bem complexo então vamos por partes. Uma coisa que é constante no posicionamento absoluto junto de um display: block; é que a partir da onde for definida a posição do elemento ele irá se esticar até atingir o fim lateral da página ou até onde for definido seu right.</p>
+
+        <h4>Só o absoluto</h4>
+
+        <p>1° Quando você só adiciona a posição absoluta o que ele faz é o elemento ficar destacado a partir de onde está. Isso indica que a partir de agora o que for escrito após esse elemento será escrito como se o elemento com posição absoluta não existisce, então na hora da página carregar o que acontece é como se o elemento de posição absoluta não existisce, então a página coloca o próximo elemento normalmente, mas como existe sim o elemento de posição absoluta ele adiciona depois.</p>
+
+        <p>Note que como ele adiciona depois, as margens dos outros elementos já foram definidas, então esse elemento absoluto sofre influência da margem do elemento irmão anterior a ele, mas só para se posicionar. Quer dizer que as margens verticais teriam efeito estre si neste caso então se a margem de baixo do elemento anterior ao elemento absoluto tiver 30px e a margem de cima do elemento absoluto tiver 30px também elas serão somadas totalizando em 60px de espaçamento</p>
+
+        <p>Somente os elementos anteriores ao elemento absoluto interferem nele <strong>se não tiver uma propriedade de posição como top, right, bottom e left</strong>, claro</p>
+
+        <p style="border: 1px solid white;">Segue exemplo desta primeira explicação, caso não consiga ler veja o código:</p>
+
+        <p class="posicao_absoluta" style="border: 1px solid white; margin-top: 0px; text-shadow: 1px 1px 1px black, -1px -1px 2px black; background-color: white;">Este é o elemento absoluto, como ao carregar a página ele é adicionado por último, tive que zerar a sua margem do topo se não ele desceria mais. Tente adicionar um background-color neste parágrafo para ver que ele se sobrepoem ao elemento que foi escrito depois</p>
+
+        <p>Como este parágrafo vai ficar sobreposto estou enchendo ele de baboseiras nas falas para poder bater a mesma quantidade de caracteres que o elemento absoluto, desta forma ao ir visualizar em outros dispositivos ele não ocupará outras linhas dos elementos.</p>
+
+        <h4>Absoluto com posições</h4>
+
+        <p>2° Agora quando adicionamos o posicionamento absoluto e uma configuração de posição, A propriedade left posiciona a parte esquerda do elemento mais para a direita se positivo e para a esquerda se negativo. A propriedade right é o inverso da left ele posiciona a parte direita do elemento mais para a esquerda se positivo e para a direita se negativo.<br /> Agora a propriedade top, posiciona o elemento no topo de seu elemento relativo, quando não temos um elemento relativo sendo seu conteiner, ao qual ele possa se posicionar, ele pega como base o body, então ao definirmos um valor positivo para o top ele se enquadra mais para baixo e se dermos um valor negativo ele vai mais para cima, lembrando que como base ele pegou o body então ele vai lá para cima no site.<br /> O valor bottom não age da forma contrária ao do top, o que o bottom faz é a partir da parte visível do site coloca em baixo o elemento então ele não para no final do body ele só para no final da parte visível do site</p>
+
+        <button onclick="revelarElementoAbsoluto()">Clique aqui para adicionar um exemplo com bottom e posição absoluta</button>
+
+        <button onclick="esconderElementoAbsoluto()">Clique aqui para remover um exemplo com bottom e posição absoluta</button>
+
+        <p id="absoluto_com_bottom" class="posicao_absoluta" style="border: 1px solid white; margin: 0px; bottom: 0px; background-color: black; display: none;">Este é o elemento de posição absoluta que você adicionou</p>
+
+        <script>
+            function revelarElementoAbsoluto() {
+                document.getElementById("absoluto_com_bottom").style.display = "block"
+            }
+            function esconderElementoAbsoluto() {
+                document.getElementById("absoluto_com_bottom").style.display = "none"
+            }
+        </script>
+
+        <p>Suba a página para ver o elemento que adicionou após clicar no botão acima. @@@@@ se você adicionar um width:100%; em um absoluto, com relatividade no body, ele vai ocupar todo o body</p>
+
+        <h4>Absoluto com Relativo</h4>
+
+        <p>Com um elemento relativo e um absoluto juntos podemos definir a posição do elemento absoluto com referencial no relativo</p>
+
+        <div class="posicao_relativa" style="margin: 0px; height: 1000px; border: 1px solid rgb(255, 94, 94);">
+            <p class="posicao_absoluta" style="bottom: 0px; right: 10px;">Por exemplo este parágrafo, ele está absoluto, mas como a sua div tem posicionamento relativo este parágrafo vai pegar como base a div para se posicionar, então o bottom por exemplo vai posicionar no fim do elemento div.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Sobreposição/Profundidade</h2>
+
+        <p>Quando temos um elemento sobre o outro, podemos ver que sua ordem de precedência escrita no código html é o que define se ele deve ficar por cima de outro elemento, quem for escrito por último possui mais prioridade.</p>
+
+        <p>Com o z-index podemos alterar essa ordem de precedência, então o elemento com maior valor fica com maior importância.</p>
+
+        <div class="posicao_relativa" style="margin: 0px; background-color: red; height: 30px; width: 30px; z-index: 15;"></div>
+        <div class="posicao_relativa" style="margin: 0px; margin-top: -10px; background-color: chartreuse; height: 30px; width: 30px; z-index: -10;"></div>
+
+        <p>O z-index só funciona em elementos que não possuem o position como static</p>
+
+        <div style="margin: 0px; background-color: red; height: 30px; width: 30px; z-index: 15;"></div>
+        <div style="margin: 0px; margin-top: -10px; background-color: chartreuse; height: 30px; width: 30px; z-index: 10;"></div>
+
+        
+        <p>Por padrão elementos que possuem um mesmo valor de z-index resolve quem deve ser prioridade por quem foi escrito por último</p>
+
+        <div class="posicao_relativa" style="margin: 0px; background-color: red; height: 30px; width: 30px; z-index: 10;"></div>
+        <div class="posicao_relativa" style="margin: 0px; margin-top: -10px; background-color: chartreuse; height: 30px; width: 30px; z-index: 10;"></div>
+
+        <p>Um elemento pai com z-index não deixa seus filhos se esconderem atrás dele com um z-index menor.</p>
+
+        <div class="posicao_relativa" style="margin: 0px;background-color: white; height: 100px; z-index: -2;">
+            <div class="posicao_absoluta" style="background-color: red; height: 30px; width: 30px; z-index: -5;"></div>
+            <div class="posicao_absoluta" style="background-color: chartreuse; height: 30px; width: 30px; top: 15px; z-index: 10;"></div>
+            <div class="posicao_absoluta profundidade5" style="background-color: royalblue; height: 30px; width: 30px; top: 30px;"></div>
+        </div>
+
+        <p>Mas se o elemento pai só tiver o position static ai é possível se você tornar o valor negativo</p>
+
+        <div style="margin: 0px; background-color: white; height: 100px;">
+            <div class="posicao_relativa" style="margin: 0px; background-color: red; height: 30px; width: 30px; z-index: -5;"></div>
+            <div class="posicao_relativa" style="margin: 0px; background-color: chartreuse; height: 30px; width: 30px; z-index: 10;"></div>
+            <div class="posicao_relativa profundidade5" style="margin: 0px; background-color: royalblue; height: 30px; width: 30px; top: -5px;"></div>
+        </div>
+
+        <p>Se um elemento fixo tiver um z-index maior que um elemento pai os elementos filhos também vão ter um z-index menor que o do elemento fixo, mesmo se você configurar para ser maior isso só contará para os elementos irmãos</p>
+
+        <div class="posicao_fixa" style="width: 100%; height: 30px; background-color: saddlebrown; bottom: 10px; z-index: -1;"></div>
+
+        <div class="posicao_relativa" style="background-color: white; height: 100px; z-index: -2;">
+            <div class="posicao_absoluta" style="background-color: red; height: 30px; width: 30px; z-index: -5;"></div>
+            <div class="posicao_absoluta" style="background-color: chartreuse; height: 30px; width: 30px; top: 15px; z-index: 10;"></div>
+            <div class="posicao_absoluta profundidade5" style="background-color: royalblue; height: 30px; width: 30px; top: 30px;"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

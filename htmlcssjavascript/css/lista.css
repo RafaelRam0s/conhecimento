@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.borda_1_li li {
+    border: 1px solid white;
+}
+/* Glossário */
+/* Pendentes: */
+/*
+
+
+*/
+/* .teste {
+    list-style: ;
+    list-style-type: ;
+    list-style-position: ;
+    list-style-image: ;
+} */
+
+
+
+
+.estilo_lista_nao {list-style-type: none;}
+.estilo_lista_armeno {list-style-type: armenian;}
+.estilo_lista_circulo {list-style-type: circle;}
+.estilo_lista_decimal {list-style-type: decimal;}
+.estilo_lista_decimal_com_zero {list-style-type: decimal-leading-zero;}
+.estilo_lista_disco {list-style-type: disc;}
+.estilo_lista_georgeano {list-style-type: georgian;}
+.estilo_lista_alfabeto_minusculo {list-style-type: lower-alpha;}
+.estilo_lista_grego_minusculo {list-style-type: lower-greek;}
+.estilo_lista_latin_minusculo {list-style-type: lower-latin;}
+.estilo_lista_romano_minusculo {list-style-type: lower-roman;}
+.estilo_lista_quadrado {list-style-type: square;}
+.estilo_lista_simbolos {list-style-type: symbols();}
+.estilo_lista_alfabeto_maiusculo {list-style-type: upper-alpha;}
+.estilo_lista_latim_maiusculo {list-style-type: upper-latin;}
+.estilo_lista_romano_maiusculo {list-style-type: upper-roman;}
+/* list-style-type - estilo de tipo de lista, simbolo que aparece atrás de um elemento <li> para representar uma lista
+    Valores:
+        none - nenhuma
+
+        armenian - armeno, usa uns símbolos estranhos, @@@@@ acho que usa os símbolos de uma linguagem armena
+
+        circle - círculo
+        decimal - decimal, numeros de 1 a 4
+        decimal-leading-zero - decimal com zeros na frente
+        disc - disco, bolinha
+
+        georgian - geordanio, usa uns símbolos estranhos, @@@@@ acho que usa os síbolos de uma liguagem geordana
+
+        lower-alpha - abecedario minúsculo
+        lower-greek - alfabeto grego minúsculo
+        lower-latin - alfabeto latin minúsculo
+        lower-roman - numeração romana minúsculo
+        square - quadrado
+        simbols() - simbolos @@@@@@@@@@@@@@@
+        upper-alpha - alfabeto maiúsculo
+        upper-latin - alfabeto latim minúsculo
+        upper-roman - numeração romana maiúscula
+*/
+
+
+
+
+
+
+
+
+
+
+.estilo_lista_quadrado_roxo {list-style-image: url("../../midia/gifs/quadrado_roxo.gif");}
+
+/* list-style-image - estilo de imagem de lista 
+    @@@@@ Valores:
+        url() - por url sendo que dentro do parênteses deve ser indicado o caminho relativo ou a url da página do site em que está a imagem
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lista_posicao_fora {
+    list-style-position: outside;
+}
+.lista_posicao_dentro {
+    list-style-position: inside;
+}
+/* list-style-position - estilo de posição da lista, escolhe se os símbolos da lista devem ou não aparecer junto do conteúdo
+    Valores:
+        outside - fora
+        inside - dentro
+*/
+
+
+
+
+
+
+
+
+.lista_taquiografica {
+    list-style: square outside url("../../midia/gifs/quadrado_roxo.gif");
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: 
+clip
+clip-rule
+background-clip
+mask-clip
+*/
+/*
+clip-path
+
+*/
+/* ellipse(25% 40% at 50% 50%)
+ellipse(25% 25% at 50% 50%)
+polygon(50% 0%, 0% 100%, 100% 100%)
+polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+inset(5% 20% 15% 10%) */
+.recorte {
+    clip-path: ;
+}
+.recorte_circular {
+    clip-path: circle(20%);
+}
+/* clip-path - recorte, configura a forma com a qual um elemento deve ter
+    Valores:
+        @@@@@ none - sem corte
+        @@@@@ margin-box - 
+        @@@@@ fill-box - 
+        @@@@@ stroke-box - 
+        @@@@@ view-box - 
+        url() - 
+        
+        circle() - círculo, dentro do parênteses usa-se uma unidade de medida, esse valor será referente ao raio de um círculo que será criado a partir do centro deste elemento
+
+        ellipse() - 
+        inset() - 
+        polygon() - 
+*/
+
+
+
+
