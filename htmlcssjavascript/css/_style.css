@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-
-
-
-
-
 body {
     background-color: rgba(6, 6, 7, 0.747);
     margin: 5%;
@@ -12,8 +7,6 @@ body {
     font-size: 16px;
     font-family: serif;
 }
-
-
 
 h1 {
     text-decoration-line: underline;
@@ -41,19 +34,13 @@ p {
     font-size: 20px;
 }
 
-
-
 div {
     margin-bottom: 60vh;
 }
 
-
-
 div p {
     margin-left: 20px;
 }
-
-
 
 a {
     color: aqua;
@@ -61,16 +48,6 @@ a {
 a:hover {
     color: gold;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

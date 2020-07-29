@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="_style.css">
+    <link rel="stylesheet" href="tabela.css">
+
+    <title>Tabela</title>
+</head>
+<body>
+    
+    <h2>Tabela</h2>
+
+    <div>
+        <h3>Subtítulo de tabela</h3>
+        
+        <p>Apesar de no código o subtítulo ser escrito em cima existe uma propriedade no css que consegue configura-lo para aparecer em baixo</p>
+        
+        <table class="borda_1_tabela subtitulo_tabela_em_cima">
+            <caption>Subtítulo de tabela exemplo em cima</caption>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Berglunds snabbköp</td>
+                <td>Christina Berglund</td>
+                <td>Sweden</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+        </table>
+
+        <table class="borda_1_tabela subtitulo_tabela_em_baixo" style="margin-top: 50px;">
+            <caption>Subtítulo de tabela exemplo em baixo</caption>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Berglunds snabbköp</td>
+                <td>Christina Berglund</td>
+                <td>Sweden</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Cédulas vazias de uma tabela</h3>
+
+        <table class="borda_1_tabela celula_mostrada">
+            <tr>
+                <th>Qunado uma célula não tem conteúdo</th>
+                <th>Por padrão ela ainda aparece se colocarmos que ela existe no html</th>
+            </tr>
+            <tr>
+                <td>Seja como td ou th, por exemplo veja que apesar de não ter conteúdo a cédula ao lado ainda existe</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table class="borda_1_tabela celula_escondida" style="margin-top: 50px;">
+            <tr>
+                <th>Temos como alterar para quando não tiver um conteúdo ela não aparecer</th>
+                <th>Isso é usado para quando precisamos criar uma coluna bônus mas sem muita explicação</th>
+            </tr>
+            <tr>
+                <td>Como por exemplo as cédulas ao lado:</td>
+                <td></td>
+                <td>Apesar de a cédula anterior existir ela não aparece</td>
+            </tr>
+        </table>
+
+        <table class="borda_1_tabela" style="margin-top: 50px;">
+            <tr>
+                <th>E temos como colocar a essa classe e uma própria cédula</th>
+                <th>Mas lembrando que só funciona esse desaparecimento se não tiver um conteúdo dentro</th>
+            </tr>
+            <tr>
+                <td class="celula_escondida">Como por exemplo esta que tem a propriedade mas por ter conteúdo ela ainda aparece</td>
+                <td class="celula_escondida"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h2>Layout da Tabela:</h2>
+
+        <p>Apesar das duas tabelas abaixo estarem iguais, possuem propriedade com valores diferentes</p>
+        
+        <table class="borda_1_tabela layout_tabela_auto">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+          
+        <table class="borda_1_tabela layout_tabela_fixed" style="margin-top: 25px;">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+        
+        <p>O efeito só é visível ao tentarmos modificar sua largura, como os exemplos abaixo em que deixei como valor 150px:</p>
+
+        <table class="borda_1_tabela layout_tabela_auto" style="width: 150px;">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+          
+        <table class="borda_1_tabela layout_tabela_fixed" style="margin-top: 25px; width: 150px;">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+
+        <p>Perceba que o primeiro, apesar de falar que sua largura deveria ser 150px ele desobedeceu essa regra para que suas cédulas pudessem ficar com o conteúdo dentro sem extravasar, já no segundo ele ficou com o tamanho que lhe foi ordenado</p>
+
+        <p>Agora com porcentagem podemos ter outros efeitos legais:</p>
+
+        <table class="borda_1_tabela layout_tabela_auto" style="width:  100%;">
+            <tr>
+                <th>Country</th>
+                <th>Company</th>
+                <th>Contact</th>
+                <!-- <th>Country</th> -->
+            </tr>
+            <tr>
+                <td>Germany</td>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <!-- <td>Germany</td> -->
+            </tr>
+            <tr>
+                <td>UK</td>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <!-- <td>UK</td> -->
+            </tr>
+            <tr>
+                <td>Italy</td>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <!-- <td>Italy</td> -->
+            </tr>
+        </table>
+          
+        <table class="borda_1_tabela layout_tabela_fixed" style="margin-top: 25px; width: 100%;">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+
+        <p>No segundo ele falou que o tamanho da tabela seria toda sua largura, isso acabou ocasionando depois em uma repartição igualitária entre as colunas do tamanho que deveriam ocupar, já na primeira ele verifica o tamanho de todas as cédulas e depois fornece proporções com base no maior conteúdo de uma das colunas</p>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

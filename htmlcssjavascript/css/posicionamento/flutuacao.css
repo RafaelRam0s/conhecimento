@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: */
+/*
+float
+
+clear
+
+*/
+
+
+
+
+.voar_direita {float: right;}
+.voar_esquerda {float: left;}
+.voar_em_linha_inicial {float: inline-start;}
+.voar_em_linha_final {float: inline-end;}
+.voar_nao {float: none;}
+/* float - flutuação, faz um elemento ter uma posição na qual os próximos o respeitam e usam como referência
+    Valores:
+        none - sem, tira a flutuação
+        right - direita, deixa na direita
+        left - esquerda, deixa na esquerda
+        @@@@@ inline-start
+        @@@@@ inline-end
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.limpar_esquerda {clear: left;}
+.limpar_direita {clear: right;}
+.limpar_corpo {clear: both;}
+.limpar_nao {clear: none;}
+/* clear - limpar, limpa o efeito do float em uma posição indicada
+    Valores:
+        none - sem, não limpa
+        right - direita, limpa só na direita se tiver um elemento flutuante
+        left - esquerda, limpa só na esquerda se tiver um elemento flutuante
+        both - corpo, limpa qualquer elemento flutuante em volta
+*/
+
+
+
+
+
+
+

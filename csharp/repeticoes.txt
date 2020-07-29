@@ -1,0 +1,36 @@
+
+
+
+
+for (inicialização; condição; atualização)
+{
+    // Esse código será executado enquanto a condição for verdadeira
+}
+@@@@@ Consegue declarar uma váriavel, condição e realizar uma atualização em uma mesma linha
+
+double valorInvestido = 1000.0;
+for (int i = 1; i <= 12; i += 1)
+{
+    valorInvestido = valorInvestido * 1.01;
+}
+MessageBox.Show("Valor investido agora é " + valorInvestido);
+
+
+
+double valorInvestido = 1000.0;
+int i = 1;
+while (i <= 12)
+{
+    valorInvestido = valorInvestido * 1.01;
+    i += 1;
+}
+MessageBox.Show("Valor investido agora é " + valorInvestido);
+@@@@@ parecido com o for, mas neste caso é necessário fazer o procedimento em diversas linhas para explicar o que será repetido enquanto alguma outra coisa ocorre e o que deve acontecer
+
+
+do
+{
+    // corpo do loop
+}
+while(condição);
+@@@@@ o corpo do loop é executado e depois a condição é checada

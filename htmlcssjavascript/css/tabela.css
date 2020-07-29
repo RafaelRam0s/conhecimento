@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.borda_1_tabela, .borda_1_tabela th, .borda_1_tabela tr, .borda_1_tabela td {
+    border: 1px solid white;
+}
+
+/* Glossário */
+/* Pendentes: */
+/*
+
+caption-side
+
+empty-cell
+
+*/
+
+
+
+
+
+
+.subtitulo_tabela_em_cima {
+    caption-side: top;
+}
+.subtitulo_tabela_em_baixo {
+    caption-side: bottom;
+}
+/* caption-side - local do subtitulo, define se o subtitulo deve ser em cima ou em baixo
+    Valores:
+        top - topo
+        bottom - em baixo
+*/
+
+
+
+
+
+
+
+
+.celula_mostrada {
+    empty-cells: show;
+}
+.celula_escondida {
+    empty-cells: hide;
+}
+/* empty-cells - limpar célula, configura o que deve ser feito com a cédula quando não tiver um conteúdo
+    Valores:
+        show - mostra
+        hide - esconde
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.layout_tabela_auto {
+    table-layout: auto;
+}
+.layout_tabela_fixed {
+    table-layout: fixed;
+}
+/* table-layout - layout da tabela, configura a aparência das cédulas da tabela
+    Valores:
+        auto - automatico, conforme o conteúdo eles se ajustam
+        fixed - fixado, mantem todos um tamanho
+*/
+
+

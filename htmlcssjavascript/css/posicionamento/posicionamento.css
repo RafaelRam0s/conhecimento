@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: */
+/*
+position
+
+top
+right
+bottom
+left
+
+z-index 
+*/
+
+.posicao_estatico {
+    position: static;
+}
+.posicao_fixa {
+    position: fixed;
+}
+.posicao_grudada {
+    position: sticky;
+}
+.posicao_relativa {
+    position: relative;
+}
+.posicao_absoluta {
+    position: absolute;
+}
+/* position - posição, define a forma com a qual a posição do elemento deve ser interpretada
+    Valores:
+        static - estatico, segue a formatação no html e não aceita as propriedades top, right, bottom e left.
+        fixed - fixa, fica preso onde foi configurado age de forma independente a rolagem da página
+        sticky - grudada, onde uma propriedade top, right, bottom ou left for definida e alguma parte da tela pegar em uma dessas partes torna o elemento fixo, mas se não passar por ele age como estático
+        relative - relativo, torna o elemento relativo a si mesmo e como local relativo para o posicionamento de um elemento filho com propriedade absoluta
+        absolute - absoluto, torna um elemento absoluto algo que deve se posicionar em relação a alguma parte da páginar ou a partir de um elemento pai com posição relativa
+*/
+
+
+
+
+.topo_0 {top: 0px;}
+.direita_0 {right: 0px;}
+.baixo_0 {bottom: 0px;}
+.esquerda_0 {left: 0px;}
+/* 
+top - topo
+right - direita
+bottom - em baixo
+left - esquerda
+
+São propriedades que ajustam a posição de um elemento com base em sua propriedade position
+
+    Valores:
+        Unidades de medida
+*/
+
+
+.profundidade5 {
+    z-index: 5;
+}
+/* z-index - eixo z, cuida da profundidade de um elemento
+    Valores:
+        Inteiros
+    Como usar:
+        Se tiver um valor negativo irá ficar abaixo de qualquer outro elemento da página, se tiver um valor positivo fica acima, caso dois elementos com z-index se encontrem o que for escrito por último no html terá preferência, para ativar essa propriedade é preciso ter um position != static
+*/
+

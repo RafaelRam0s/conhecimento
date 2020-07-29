@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="estilo_textual.css">
+
+    <title>Estilos de Texto</title>
+</head>
+<body>
+    
+    <h1>Font-family ok, font-weight ok, font-variant ok, font-size ok, font-style ok, font ok, text-transform e text-decoration</h1>
+
+    <div>
+        <h3>Tamanho da fonte:</h3>
+
+        <p>Podemos deixar uma fonte com diversos tamanhos <span class="fonte_tamanho_30">seja ele grande</span> ou <span class="fonte_tamanho_10">muito pequeno</span>.</p>
+
+        <p>Se fizermos por pixels seu valor fica fixo</p>
+
+        <p class="fonte_tamanho_porcentagem_200">Mas se colocarmos por porcentagem temos que tomar cuidado com o - body - pois a porcentagem se baseia nele, então lembre-se de definir ele, pois cada navegador pode modifica-lo</p>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Grossura da fonte:</h3>
+
+        <p>Podemos deixar uma fonte <span class="fonte_tamanho_30 fonte_espessa_900">mais espessa</span> ou <span class="fonte_tamanho_30 fonte_espessa_100">menos preenchida</span></p>
+
+        <p>Seus valores de níveis se alternam de 100 a 900 pulando de 100 em 100, então o nível mais baixo é 100 o mais alto é 900 e o que em média vem é o 400</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Variação da fonte:</h3>
+
+        <p class="fonte_variada_small-caps">O que a variação de fonte faz é bem simples, ela define como as letras devem aparecer, isto é, neste exemplo estamos com todas as letras maiúsculas, porém as que forem de fato maiúscula irão aparecer maior que as normais. É uma propriedade simples com apenas dois valores, este que é o small-caps, e o normal.</p>
+
+        <p class="fonte_variada_normal">Logo a frente você aprenderá famílias de fonte onde terá um conhecimento mais abrangente de como mudar os caractéres</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Estilo de fonte:</h3>
+
+        <p>Um estilo de fonte serve para ajustar sua inclinação</p>
+
+        <p class="fonte_estilo_normal">Podendo ser normal</p>
+        <p class="fonte_estilo_italico">Podendo ser itálico</p>
+        <p class="fonte_estilo_obliquo">Podendo ser obliqua</p>
+    </div>
+
+
+
+
+
+    
+    <div>
+        <h3>Família de fonte:</h3>
+
+        <p>As famílias de fontes se dividem em 3 ramificações principais:</p>
+
+        <p class="fonte_familia_serif">Família serifada possue um espalhamento nas pontas das palavras</p>
+
+        <p class="fonte_familia_sans_serif">Família sem ser serifada isto é mostra só o tronco da palavra</p>
+
+        <p class="fonte_familia_monospace">Família monospace alterna em letras com e sem serif</p>
+
+        <h3>Fonte Externa:</h3>
+
+        <p class="fonte_familia_externa">Também podemos trazer fontes externas, lembre-se que ao definir uma família é importante colocar outras de reserva para caso a primeira não funcione, pois nunca se sabe quando um navegador não a suportará</p>
+
+        <p>*Observação importante: Quando mudamos uma familia de fonte acabamos por modificar tudo relacionado a ela então temos que configurar diversas propriedades novamente, pois apesar de ambas afirmarem possuir 16px o jeito que tratam suas dimensões é diferente, e não só com o tamanho da fonte que isto acontece, diversas propriedades ficarão diferentes e dependendo de como você as configura não irá ter algumas propriedades, então cuidado ao alterar as famílias de fonte e ao importar uma, lembre-se de configurar tudo novamente.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Fonte taquiográfica:</h3>
+
+        <p>Para configurarmos as diversas propriedades de fontes podemos utilizar só a propriedade - font -</p>
+
+        <p class="fonte_tamanho_30 fonte_espessa_900 fonte_variada_small-caps fonte_estilo_italico fonte_familia_sans_serif">Por exemplo este parágrafo ficou cheia de classes e poluida no html</p>
+
+        <p class="fonte_grande">Mas este parágrafo não, e desta forma podemos fazer uma manutenção do código bem mais prática</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Transformações do texto:</h3>
+
+        <p>Podemos modificar os textos para que fiquem em 4 formatos principais:</p>
+
+        <p class="texto_transformado_nao">O padrão que é o formato em que o que eu escrever é o que SERÁ cOnsiDeraDO</p>
+
+        <p class="texto_transformado_minusculas">Com tudo minúsculo, onde mesmo eu escrevendo palavras em maiúsculo no código, NÃO É CONSIDERADO.</p>
+
+        <p class="texto_transformado_maiusculas">Com tudo maiúsculo, onde mesmo eu escrevendo palavras em minúsculo no código, NÃO É CONSIDERADO.</p>
+
+        <p class="texto_transformado_capitalizada">Com todas as primeiras letras em MAIÚSCULO e o resto vaRiAndo da forma com a qual eu escrever.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Decoração de linha de texto:</h3>
+
+        <p>O texto pode ter uns estilos a mais mesmo que não informado/configurado na fonte, como por exemplo traços</p>
+
+        <p class="texto_decorado_linha_cima">Podemos colocar uma linha em cima</p>
+
+        <p class="texto_decorado_linha_meio">Podemos colocar uma linha no meio</p>
+
+        <p class="texto_decorado_linha_baixo">Podemos colocar uma linha em baixo</p>
+
+        <p class="texto_decorado_linha_misturada">Podemos mistura-las</p>
+
+        <p class="texto_decorado_linha_nao">Claro podemos retira-los também</p>
+
+
+
+
+
+
+
+
+
+
+
+        <h3>Decoração da cor da linha de texto:</h3>
+
+        <p class="texto_decorado_linha_cima texto_decorado_cor_azul">Mudando a cor das linhas</p>
+
+        <p>Também podemos fazer uma mixagem de cada linha com uma cor</p>
+
+        <p class="texto_decorado_linha_cima texto_decorado_cor_azul"><span class="texto_decorado_linha_meio texto_decorado_cor_verde"><span class="texto_decorado_linha_baixo texto_decorado_cor_vermelho">É possível fazer uma mistura de linhas se for feita em diversas tags html, pois se tentarmos definir essas linhas em uma só classe teriamos o problema de sobre-escrição do código</span></span></p>
+
+
+
+
+
+
+
+
+
+
+        <h3>Estilos das linhas do texto:</h3>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_linha_solida">Linha sólida</p>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_linha_duplicada">Linha duplicada</p>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_linha_pontilhada">Linha pontilhada</p>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_linha_tracejada">Linha tracejada</p>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_linha_ondulada">Linha ondulada</p>
+
+
+
+
+
+        <h3>Grossura da decoração de texto:</h3>
+
+        <p class="texto_decorado_linha_baixo texto_decorado_20">Esta propriedade atualmente em 08/07/2020 só funciona no firefox e no safari.</p>
+
+
+
+
+
+        <h3>Decoração do texto taquiográfica:</h3>
+
+        <p class="texto_decorado">Texto decorado com diversas propriedades sendo ajustadas em só uma, o que ajuda na hora da manutenção do código.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div>
+        <h3>Sombreamento do texto:</h3>
+
+        <p class="texto_sombreado">O texto sombreado usa diversos valores na sua propriedade, os 3 primeiros se referem as dimensões da sombra, o 1° define o quanto horizontalmente deve ir, o 2° define o quanto verticalmente tem que ir e o 3° refere ao quanto espalhada ela deve ficar, já a 4° propriedade define a cor que deve ter</p>
+
+        <p class="texto_sombreado_legenda">Para legendas é interessante colocarmos sombreamentos nas palavras, pois em muitos casos podemos ter o problema de não visualização, mas não coloque o sombreamento em apenas uma direção a espalhe colocando mais de uma, para que nenhuma parte das palavras sumam, para isso coloque vírgula e adicione outra sombra</p>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

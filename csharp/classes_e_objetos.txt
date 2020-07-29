@@ -1,0 +1,48 @@
+
+
+
+
+Para representarmos diversas pessoas precisariamos criar 3 tipos de novas variáveis, por exemplo:
+
+int numeroDaConta1 = 1;
+string titularDaConta1 = "Joaquim José";
+double saldoDaConta1 = 1500.0;
+
+int numeroDaConta2 = 2;
+string titularDaConta2 = "Silva Xavier";
+double saldoDaConta2 = 2500.0;
+
+
+
+
+@@@@@ As "class" servem para armazenar um conjunto de variáveis atribuidas a um objeto, desta forma poderemos atribuir diversas 
+Como o exemplo abaixo, onde definimos que um objeto "Conta" possui caracterísitcas como um "numero" de identificação,  um "titular" nome do dono dessa conta e um "saldo" onde representa a quantia de dinheiro que ele pode sacar
+class Conta
+{
+    int numero;
+    string titular;
+    double saldo;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

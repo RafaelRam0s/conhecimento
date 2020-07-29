@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* Glossário */
+/* Pendentes: 
+clip
+clip-rule
+background-clip
+mask-clip
+*/
+/*
+clip-path
+
+*/
+
+.recorte_circular {clip-path: circle(20%);}
+.recorte_em_elipse_de_pe {clip-path: ellipse(25% 40% at 50% 50%);}
+.recorte_em_elipse_deitado {clip-path: ellipse(25% 25% at 50% 50%);}
+.recorte_triangulo {clip-path: polygon(50% 0%, 0% 100%, 100% 100%);}
+.recorte_poligonal {clip-path: polygon(100% 50%, 80% 100%, 50% 0%, 20% 100%, 0% 100%, 0% 50%);}
+.recorte_teste {clip-path: inset(5% 20% 15% 10%);}
+/* clip-path - recorte, configura a forma com a qual um elemento deve ter
+    Valores:
+        @@@@@ none - sem corte
+        @@@@@ margin-box - 
+        @@@@@ fill-box - 
+        @@@@@ stroke-box - 
+        @@@@@ view-box - 
+        @@@@@ url() - 
+        
+        circle() - círculo, dentro do parênteses usa-se unidade de medida, esse valor será referente ao raio de um círculo que será criado a partir do centro do elemento. Opcional: usar após os valores o "at" para posicionar o elemento, após escrever ele (o at) o primeiro valor será onde o conteúdo fica posicionado no eixo x do elemento e o segundo a mesma coisa só que com relação ao eixo y
+
+        ellipse() - elipse, dentro do parênteses usa-se unidade de medida, o primeiro valor será referente as laterais do elemento, isso indica que pegará a largura do elemento e então irá achatar ou expandir de acordo com o valor informado, o segundo é a mesma coisa que o primeira, mas referente a altura e não largura. Opcional: usar após os valores o "at" para posicionar o elemento, após escrever ele (o at) o primeiro valor será onde o conteúdo fica posicionado no eixo x do elemento e o segundo a mesma coisa só que com relação ao eixo y
+
+        polygon() - através de pares de valores ele define pontos onde terão âncoras, as quais irão se ligar delimitando uma área que será mostrada. A ponta da figura no canto superior esquerdo é marco 0, o primeiro valor de um conjunto indicará a posição no eixo x e o segundo a posição do ponto no eixo y
+
+        @@@@@ inset() - já tem um exemplo dele, mas não compreendi
+*/
+
+
+
+
