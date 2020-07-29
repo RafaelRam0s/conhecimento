@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="flutuacao.css">
+
+    <title>Flutuação</title>
+
+</head>
+<body>
+    
+    <h3>Flutuando:</h3>
+
+    <div>
+        <p>Para flutuar é necessário que o elemento que vá ter a opção de float tenha display: inline-block;</p>
+    
+        <div style="margin: 10px; border: 1px solid white;">
+            <p class="voar_esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+            <img width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular">
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <p>Ao fazermos um elemento flutuar ele acaba se tornando um corpo físico que faz com que outros elementos se posicionem ao seu entorno. Se este elemento, for maior do seu elemento pai (sem contar com o elemento flutuante) o elemento vaza do seu conteiner e ainda se mantem de parâmetro para o posicionamento dos próximos elementos. aumente e diminua a página para ver a diversidade deste efeito</p>
+
+        <div style="margin: 10px; border: 1px solid white;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+
+
+        <p>Para concertar isso (de extravazar o conteúdo), modifique o overflow do elemento pai para qualquer outro valor sem ser visible, desta forma será englobado o elemento flutuante dentro de seu elemento pai</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+
+
+
+
+
+
+
+
+        <p>Assim como fizemos flutuar para a esquerda é possível fazer para a direita</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_direita" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+
+
+
+
+
+
+
+        <p>Até agora testamos com a imagem sendo escrita no início, mas e se ela for colocada no fim e tiver float? Bem o que acontece é que o elemento fica posicionado na direita (neste caso, mas ele poderia ficar a esquerda também) a espera de próximos elementos irmãos que poderão ocupar a outra parte</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+            <img class="voar_direita" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <p>Temos como tirar a flutuação também:</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_direita voar_nao" width="100" height="200" src="..././../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Limpando:</h2>
+
+    <div>
+        <p>O limpar faz com que caso você queira que um elemento não se posicione conforme o elemento flutuante ele pode tirar o efeito de flutuação</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_direita" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p class="limpar_direita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        
+        <p>Perceba que quando um elemento sai, os próximos o acompanham</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <img class="voar_direita" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at hic quibusdam et voluptates repellendus corporis beatae animi voluptatibus? Iure, ipsum? Sit exercitationem mollitia rem blanditiis esse dolorem repellendus officia.</p>
+            <p class="limpar_esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at hic quibusdam et voluptates repellendus corporis beatae animi voluptatibus? Iure, ipsum? Sit exercitationem mollitia rem blanditiis esse dolorem repellendus officia.</p>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+        <p>Tem como você tirar o efeito de flutuação de apenas um dos lados ou de ambos</p>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <img class="voar_direita" width="100" height="400" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p class="limpar_esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at hic quibusdam et voluptates repellendus corporis beatae animi voluptatibus? Iure, ipsum? Sit exercitationem mollitia rem blanditiis esse dolorem repellendus officia.</p>
+        </div>
+
+        <div style="margin: 10px; border: 1px solid white; overflow: auto;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <img class="voar_direita" width="100" height="400" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p class="limpar_corpo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at hic quibusdam et voluptates repellendus corporis beatae animi voluptatibus? Iure, ipsum? Sit exercitationem mollitia rem blanditiis esse dolorem repellendus officia.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <p>E o limpar também nos permite reposicionar sem precisar modificar o overflow do elemento pai</p>
+        <div style="margin: 10px; border: 1px solid white;">
+            <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque eveniet ipsa porro delectus, officia repudiandae officiis nostrum aliquid quaerat consectetur est, cum nihil deserunt quam iure eum aperiam vel?</p>
+        </div>
+
+        <p class="limpar_corpo">Caso não visualize o efeito modifique o tamanho da tela</p>
+        
+        <img class="voar_esquerda" width="100" height="200" src="../../../midia/imagens/celular.png" alt="Celular" style="margin: 5px;">
+        
+        <p class="limpar_corpo limpar_nao">E também temos como desabilitar a limpeza do flutuante com um clear: none;</p>
+
+    </div>
+
+
+
+</body>
+</html>
