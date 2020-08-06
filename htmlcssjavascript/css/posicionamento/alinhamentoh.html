@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="alinhamento.css">
+
+    <title>Alinhamento</title>
+
+</head>
+<body>
+    /* Pendentes:
+align-items
+align-self
+align-content
+text-align
+
+*/
+explicar margem automatica para centralizar um elemento
+
+    <div>
+        <h2>Alinhamento vertical:</h2>
+
+        <p>Serve para posicionar elementos que estejam uns ao lado dos outros normalmente é visto sendo utilizado quando temos elementos irmãos com disposição de bloco em linha</p>
+        
+        <p>Colococa na base da linha do elemento</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_linha_base">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+        
+        <p>O elemento se posiciona em baixo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_baixo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com metade do elemento para cima e a outra metade abaixo do maior elemento, caso queira deixar os elementos no meio coloque em todos a propriedade com o valor middle</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica meia linha mais abaixo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_inferior">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica meia linha mais para cima</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_superior">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com o elemento uma linha a mais para cima</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_texto_baixo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com o elemento abaixo dos outros</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_texto_topo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>O elemento se posiciona no topo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_topo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Temos como controlar a distância do quão para cima e o quão para baixo ele irá ficar</p>
+
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_100">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

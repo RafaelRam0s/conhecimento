@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+.preenchimento_dez_vermelho {
+    background-color: darkred;
+    padding: 10px;
+}
+.tamanho_cem {
+    width: 100px;
+}
+
+.disposicao_bloco_em_linha {display: inline-block;}
+
+/* Glossário */
+/* Pendentes:
+margin: auto;
+
+*/
+/*
+vertical-align
+
+*/
+
+
+.posicao_vertical_linha_base { vertical-align: baseline;}
+.posicao_vertical_baixo { vertical-align: bottom;}
+.posicao_vertical_meio { vertical-align: middle;}
+.posicao_vertical_inferior { vertical-align: sub;}
+.posicao_vertical_superior { vertical-align: super;}
+.posicao_vertical_texto_baixo { vertical-align: text-bottom;}
+.posicao_vertical_texto_topo { vertical-align: text-top;}
+.posicao_vertical_topo {vertical-align: top;}
+.posicao_vertical_100 { vertical-align: 100px;}
+/* vertical-align - alinhamento vertical, configura como um elemento deve ficar ao lado de outros elemento
+    Valores:
+        @@@@@auto
+        baseline - linha base, colococa na base da linha do elemento
+        bottom - baixo, o elemento se posiciona em baixo
+        middle - meio, fica no meio do maior elemento
+        sub - subscrito, fica meia linha mais abaixo
+        super - sobrescrito, fica meia linha mais para cima
+        text-bottom - texto abaixo, fica com o elemento uma linha a mais para cima
+        text-top - texto acima, fica com o elemento abaixo dos outros
+        top - topo, elemento se posiciona no topo
+        Unidades de medida
+*/
+
+
+
+
+
+
+
+
+
