@@ -14,21 +14,9 @@
 }
 
 /* Glossário */
-/* Pendentes:
-
-align-items
-align-content
-align-self
-text-align
-
-flex-grow
-flex-shrink
-flex-basis
-flex
-
-*/
+/* Pendentes:*/
 /*
-display
+@@@@@ display
 
 visibility
 
@@ -38,6 +26,17 @@ flex-flow
 
 @@@@@ justify-content
 
+align-items
+align-content
+
+flex-grow
+flex-shrink
+flex-basis
+flex
+
+order
+
+align-self
 */
 
 .disposicao_bloco {display: block;}
@@ -55,7 +54,7 @@ flex-flow
 
         none - nenhum, faz o elemento sumir, deixa ele e todos os elementos filhos desativados, parecendo que nunca foram escritos, mas se olhar com o inspecionar notará que ele estará lá
 
-        flex - 
+        flex - flexibilidade, permite ao elemento pai ajustar seus elementos filhos, disponibilizando propriedades de alinhamento
 
 */
 
@@ -147,7 +146,7 @@ flex-flow
 .flex_fluxo_linha_sem_quebra {flex-flow: row nowrap;}
 /* flex-flow - fluxo do flex, define duas propriedades dos elementos flex
     Valores:
-        Combinações de valores das propriedades flex-wrap e flex-direction
+        Combinações de valores das propriedades flex-wrap e flex-direction respectivamente
 */
 
 
@@ -238,6 +237,21 @@ Onde posso usar os outros valores? Indique em comentário onde estão
 
 
 
+.conteudo_alinhado_esticado {align-content: stretch;}
+.conteudo_alinhado_centro {align-content: center;}
+.conteudo_alinhado_final_flex {align-content: flex-end;}
+.conteudo_alinhado_comeco_flex {align-content: flex-start;}
+.conteudo_alinhado_espaco_ao_redor {align-content: space-around;}
+.conteudo_alinhado_espaco_entre {align-content: space-between;}
+/* align-content - alinhamento do conteúdo, se o elemento pai for flex, tiver uma altura maior do que a soma dos seus elementos filhos e for wrap é possível utilizar esta propriedade para posicionar os elementos filhos
+    Valores:
+        stretch - esticado
+        center - centralizado
+        flex-end - no final do flex
+        flex-start - no começo do flex
+        space-around - um espaço ao redor dos elementos filhos
+        space-between - um espaço entre os elementos filhos
+*/
 
 
 
@@ -250,6 +264,48 @@ Onde posso usar os outros valores? Indique em comentário onde estão
 
 
 
+.flex_crescer_0 {flex-grow: 0;}
+.flex_crescer_1 {flex-grow: 1;}
+.flex_crescer_2 {flex-grow: 2;}
+/* flex-grow - crescimento flex, indica o a porcentagem que um elemento poderá ocupar de largura dentro do conteiner flex
+    Valores:
+        Numeros
+    Como usar:
+        O número 1 refere a porcentagem de ocupação na largura do elemento dentro conteiner, onde 1 é igual a 100% e seguindo essa lógica 0 é 0% e 0.5 é 50%
+*/
+
+
+
+
+
+
+
+
+.base_flex_automatica {flex-basis: auto;}
+.base_flex_conteudo {flex-basis: content;}
+.base_flex_0 {flex-basis: 0;}
+.base_flex_40pc {flex-basis: 40%;}
+/* flex-basis - base flex, age como um tamanho de base, mas que é possível sofrer influências para diminuir ou aumentar
+    Valores:
+        Unidades de medidas
+        auto - automatica
+        @@@@@ content - conteudo
+*/
+
+
+
+
+
+
+
+
+.encolher_flex_0 {flex-shrink: 0;}
+.encolher_flex_1 {flex-shrink: 1;}
+.encolher_flex_3 {flex-shrink: 3;}
+/* flex-shrink - encolhimento do flex, indica o quanto do conteúdo pode ser diminuido
+    @@@@@ Valores:
+        Números inteiros
+*/
 
 
 
@@ -259,6 +315,30 @@ Onde posso usar os outros valores? Indique em comentário onde estão
 
 
 
+.flex_ocupar_max {flex: 1 1 auto;}
+/* flex - flex, configura para os itens flex algumas propriedades
+    Ordem taquiográfica:
+        flex-grow
+        flex-shrink
+        flex-basis
+*/
+
+
+
+
+
+
+
+
+.ordem_1 {order: 1;}
+.ordem_2 {order: 2;}
+.ordem_3 {order: 3;}
+.ordem_4 {order: 4;}
+.ordem_5 {order: 5;}
+/* order - ordem, indica onde cada elemento item-flex deve se posicionar em relação aos outros itens flex
+    Valores:
+        Números inteiros
+*/
 
 
 
@@ -268,12 +348,21 @@ Onde posso usar os outros valores? Indique em comentário onde estão
 
 
 
-
-
-
-
-
-
+.auto_alinhamento_auto {align-self: auto;}
+.auto_alinhamento_linha_base {align-self: baseline;}
+.auto_alinhamento_centro {align-self: center;}
+.auto_alinhamento_final_flex {align-self: flex-end;}
+.auto_alinhamento_comeco_flex {align-self: flex-start;}
+.auto_alinhamento_esticado {align-self: stretch;}
+/* align-self - auto-alinhamento, posiciona um item flex em relação aos outros itens
+    Valores
+        auto
+        baseline
+        center
+        flex-end
+        flex-start
+        stretch
+*/
 
 
 
