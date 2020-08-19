@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="../_style.css">
+    <link rel="stylesheet" href="alinhamento.css">
+
+    <title>Alinhamento</title>
+
+</head>
+<body>
+
+@@@@@ Pendente: explicar margem automatica para centralizar um elemento
+
+
+    <div>
+        <h2>Alinhamento vertical de blocos em linha:</h2>
+
+        <p>Serve para posicionar elementos que estejam uns ao lado dos outros normalmente é visto sendo utilizado quando temos elementos irmãos com disposição de bloco em linha</p>
+        
+        <p>Colococa na base da linha do elemento</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_linha_base">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+        
+        <p>O elemento se posiciona em baixo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_baixo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com metade do elemento para cima e a outra metade abaixo do maior elemento, caso queira deixar os elementos no meio coloque em todos a propriedade com o valor middle</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_meio">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica meia linha mais abaixo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_inferior">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica meia linha mais para cima</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_superior">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com o elemento uma linha a mais para cima</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_texto_baixo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Fica com o elemento abaixo dos outros</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_texto_topo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>O elemento se posiciona no topo</p>
+        
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_topo">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+        <p>Temos como controlar a distância do quão para cima e o quão para baixo ele irá ficar</p>
+
+        <div style="margin: 0px; border: 1px solid white;">
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem posicao_vertical_100">Um bloco pequeno para ver os efeitos do alinhamento vertical</p>
+
+            <p class="preenchimento_dez_vermelho disposicao_bloco_em_linha tamanho_cem">Um texto grandão para poder comparar onde o elemento de menor tamanho irá ficar posicionado dependendo do valor que for configurado dentro alinhamento vertical</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div>
+        <h2>Alinhamentos de conteiners de disposição flex:</h2>
+
+        <p>@@@@@ Coloquei um ctrl+c ctrl+v da página disposicaoh.html, ajuste as classes e as explicações</p>
+
+        
+        <h3>Embrulho flex</h3>
+
+        <p>O valor nowrap, permite apenas uma linha para os elementos filhos se ajustarem. Caso tenha muitos elementos na linha ele comprimirá o mínimo possível para caberem dentro do elemento pai</p>
+        
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho_unico" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 6</p>
+            </div>
+        </div>
+
+        <p>É possível editar os seus elementos filhos para possuirem outras caracteríticas, como por exemplo, permitir a existência de outras linhas para o bloco</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho" style="margin: 0px; border: 1px solid white;">
+                <p style="height: 40px; margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 6</p>
+            </div>
+        </div>
+
+        <p>E além de criar outras linhas se quiser podemos inverter a ordem em que esses elementos ficarão, podendo deixa-los ao contrário</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho_reverso" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 6</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <h3>Direção do flex</h3>
+
+        <p>Temos como ajustar a direção dos elementos filhos do flex, normalmente aparecem da esquerda para a direita</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_linha" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Podemos organizá-los da direita para a esquerda</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_linha_reversa" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Podemos até mesmo inverter, colocando-os em coluna, no modo coluna se colocarmos um width maior que o do elemento pai os elementos filhos extravazam</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna" style="margin: 0px; border: 1px solid white;">
+                <p style="width: 320px; margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>E além de colocar em coluna podemos colocar em coluna só que reversa</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna_reversa" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        
+        <h3>Flex flow</h3>
+
+        <p>O flex-flow é um atalho para as propriedades flex-direction e flex-wrap. Você não verá muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap. E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que é row.</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <h3>Conteúdo Justificado</h3>
+
+        <p>@@@@@ Essa propriedade possui outros valores mas não funcionam no display flex, descubra onde funcionam e adicione explicações</p>
+
+        <p>Temos como organizar os elementos para começarem no início do elemento flex</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_flex_inicio" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+        <p>Temos como organizar os elementos para começarem no final do elemento flex</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_flex_final" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+        <p>Temos como organizar os elementos para começarem do centro</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_centralizado" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+        <p>Temos como organizar os elementos para dividirem um espaço igual entre si</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_espaco_entre_si" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Testando 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+        <p>Temos como organizar os elementos para dividirem um espaço igual entre suas laterais</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_espaco_conteiner" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Testando 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+        <p>Temos como organizar os elementos para dividirem um espaço igual entre suas laterais, contando com a lateral do elemento pai</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra conteudo_justificado_espaco_uniforme" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Testando 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <h2>Alinhamento dos itens</h2>
+
+        <p>O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas. Essa propriedade permite o tão sonhado alinhamento central no eixo vertical, algo que antes só era possível com diferentes hacks.</p>
+
+        <p>O esticamento é o valor padrão, ele que faz com que os flex itens cresçam igualmente</p>
+        
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra itens_alinhados_esticado" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens flex no iníco</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra itens_alinhados_comeco_flex" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens flex no fim</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra itens_alinhados_final_flex" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens no centro</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra itens_alinhados_centro" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinha os itens de acordo com a linha base da tipografia</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_fluxo_linha_sem_quebra itens_alinhados_linha_base" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <h4>Agora na vertical</h4>
+
+        <p>O esticamento é o valor padrão, ele que faz com que os flex itens cresçam igualmente</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna itens_alinhados_esticado" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens flex no iníco</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna itens_alinhados_comeco_flex" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens flex no fim</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna itens_alinhados_final_flex" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinhamento dos itens no centro</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna itens_alinhados_centro" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Alinha os itens de acordo com a linha base da tipografia</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_direcao_coluna itens_alinhados_linha_base" style="margin: 0px; border: 1px solid white;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+        <h3>Alinhamento do conteúdo</h3>
+
+        <p>Alinha as linhas do container em relação ao eixo vertical. A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.</p>
+
+        <p>Além disso o efeito dela apenas será visualizado caso o container seja maior que a soma das linhas dos itens. Isso significa que se você não definir height para o container, a propriedade não influencia no layout.</p>
+
+        <p>Por padrão ele vem esticado</p>
+        
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_esticado" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Mas os elementos também podem ficar centralizados</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_centro" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Ou ficar no final do conteiner</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_final_flex" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Ou ficar no inicio</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_comeco_flex" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Ou ter um espaço para separa-los igualmente</p>
+
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_espaco_ao_redor" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+        <p>Ou ter um espaço entre os elementos</p>
+        <div style="margin: 5px; width: 300px;">
+            <div class="disposicao_flex flex_embrulho conteudo_alinhado_espaco_entre" style="margin: 0px; border: 1px solid white; height: 400px;">
+                <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+        <div>
+            <h2>Itens Flex:</h2>
+
+            <p>Os Flex Itens são os filhos diretos do Flex Container, lembrado que uma tag se torna um flex container a partir do momento que você definir display: flex. É possível que um Flex Item seja também um Flex Container, basta definir display: flex nele. Assim os filhos desse item também serão flex itens.</p>
+
+            <p>Define a habilidade de um flex item crescer. Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido. Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma largura e vão ocupar 100% do container. Digo tentarão pois caso um elemento possua um conteúdo muito largo, ele irá respeitar o mesmo. Se você tiver uma linha com quatro itens, onde três são flex-grow: 1 e um flex-grow: 2, o flex-grow: 2 tentará ocupar 2 vezes mais espaço extra do que os outros elementos. OBS: justify-content não funciona em items com flex-grow definido.</p>
+
+            <p>Valor 0 só cobrirá o próprio conteúdo</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="flex_crescer_0" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="flex_crescer_0" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="flex_crescer_0" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            <p>Valor 1 ocupará 100% da linha</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            <p>Valor 2 ocupará 200% do conteiner</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="flex_crescer_2" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            <p>Se tiver um elemento muito grande o próprio elemento já lida para ajustar, lembrando que somente se tiver espaço ele irá crescer</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste com um textinho maior para verificar a distribuição dos elementos e seus tamanhos 3</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <h3>Base Flex:</h3>
+
+            <p>Indica o tamanho inicial do flex item antes da distribuição do espaço restante. Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é distribuído ao redor do conteúdo do flex-item.</p>
+
+            <p>O flex-basis age semelhante ao max-width do elemento</p>
+
+            <p>Com a base flex 0 o item tenta ocupar o menor espaço possível</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+            
+            <p>Com os valores automatico e @@@@@ conteudo, o elemento tenta ocupar o menor espaço possível sem ter que criar outras linhas</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+            
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste com mais conteudo para verificar efeitos 3</p>
+                    <p class="base_flex_auto" style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                </div>
+            </div>
+
+            <p>Podemos selecionar unidades de medidas que preferirmos para ocupar um espaçamento</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_40pc" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="flex_crescer_1" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <h3>Encurtamento flex</h3>
+
+            <p>@@@@@ Testar possíveis valores e como eles alteram os elementos</p>
+
+            <p>flex-shrink: 1; // Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_40pc encolher_flex_1" style="margin: 5px; border: 1px solid black;">Teste com mais palavras 1</p>
+                    <p class="base_flex_40pc encolher_flex_1" style="margin: 5px; border: 1px solid black;">Teste com mais palavras 2</p>
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            <p>flex-shrink: 0; // Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_40pc encolher_flex_0" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="base_flex_40pc encolher_flex_0" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            <p>flex-shrink: número; // Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="base_flex_40pc encolher_flex_3" style="margin: 5px; border: 1px solid black;">Teste com mais palavras 1</p>
+                    <p class="base_flex_40pc encolher_flex_3" style="margin: 5px; border: 1px solid black;">Teste com mais palavras 2</p>
+                    <p class="base_flex_0" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+            
+
+
+
+
+
+
+            <h3>Flex</h3>
+
+            <p>Atalho para as propriedades flex-grow, flex-shrink e flex-basis respectivamente. Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados. Para melhor consistência entre os browsers, é recomendado utilizar a propriedade flex ao invés de cada propriedade separada. No exemplo é possível ver as mesmas configurações do exemplo do flex-basis porém agora utilizando apenas a propriedade flex.</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="flex_ocupar_max" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <h3>Ordem:</h3>
+
+            <p>É possível numerarmos cada item para ficarem posicionados onde queremos, então mesmo se escrevermos no código um elemento como penúltimo ele poderá se ajustar com classe para ficar em primeiro</p>
+
+            <p>Por padrão todos possuem ordem 0 e são ajustados conforme quem aparece primeiro</p>
+
+            <div style="margin: 5px; width: 600px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="ordem_1" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <div style="margin: 5px; width: 600px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="ordem_4" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p class="ordem_1" style="margin: 5px; border: 1px solid black;">Teste 2</p>
+                    <p class="ordem_2" style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p class="ordem_5" style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p class="ordem_3" style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h3>Alinhamento de si mesmo:</h3>
+            
+            <p>O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container. Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.</p>
+
+            <p>Temos o automático que segue o que tiver no conteiner flex</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex itens_alinhados_comeco_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_auto" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <p>Temos o linha base que cobrirá só o que o conteúdo ocupa</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_linha_base" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <p>Alinhamento no centro</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_centro" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <p>Alinhamento no final do conteiner flex</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_final_flex" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <p>Alinhamento no começo do conteiner flex</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_comeco_flex" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+
+            <p>Alinhamento esticado, tentará ficar com a mesma altura do maior item flex da linha</p>
+
+            <div style="margin: 5px; width: 300px;">
+                <div class="disposicao_flex itens_alinhados_comeco_flex" style="margin: 0px; border: 1px solid white;">
+                    <p class="auto_alinhamento_esticado" style="margin: 5px; border: 1px solid black;">Teste 1</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste com mais palavras criando assim outras linhas 2</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 3</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 4</p>
+                    <p style="margin: 5px; border: 1px solid black;">Teste 5</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

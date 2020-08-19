@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+
+.preenchimento_dez_vermelho {
+    background-color: darkred;
+    padding: 10px;
+}
+.tamanho_cem {
+    width: 100px;
+}
+
+.espaco_linha {
+    line-height: 30px;
+}
+
+/* Glossário */
+/* Pendentes:*/
+/*
+@@@@@ display
+
+visibility
+
+flex-wrap
+flex-direction
+flex-flow
+
+@@@@@ justify-content
+
+align-items
+align-content
+
+flex-grow
+flex-shrink
+flex-basis
+flex
+
+order
+
+align-self
+*/
+
+.disposicao_bloco {display: block;}
+.disposicao_em_linha {display: inline;}
+.disposicao_bloco_em_linha {display: inline-block;}
+.disposicao_nenhuma {display: none;}
+.disposicao_flex {display: flex;}
+/* display - disposição, configura como o elemento deve se comportar em uma linha
+    @@@@@ Valores:
+        block - bloco, deve ocupar toda a linha que aparece e jogar o próximo elemento para baixo
+
+        inline - em linha, o elemento permanece na sua linha e não sofre efeitos das propriedades width e heigth
+
+        inline-block - bloco em linha, permite a existência de elementos ao seu lado e diferentemente do inline pode ser modificada a sua altura e largura
+
+        none - nenhum, faz o elemento sumir, deixa ele e todos os elementos filhos desativados, parecendo que nunca foram escritos, mas se olhar com o inspecionar notará que ele estará lá
+
+        flex - flexibilidade, permite ao elemento pai ajustar seus elementos filhos, disponibilizando propriedades de alinhamento
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.visibilidade_escondido {visibility: hidden;}
+.visibilidade_visivel {visibility: visible;}
+/* visibility - visibilidade, indica se um elemento deve ou não aparecer
+    Valores:
+        visible - visivel
+        hidden - escondido
+        collapse - colapsado, deixa escondido e ajusta uma cédula de uma tabela para as próximas cédulas se ajustarem automaticamente em um reposicionamento como se uma não existisse.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex_sem_embrulho {flex-wrap: nowrap;}
+.flex_embrulho {flex-wrap: wrap;}
+.flex_embrulho_reverso {flex-wrap: wrap-reverse;}
+/* flex-wrap - 
+    Valores:
+        nowrap - sem embrulho, deixa todos os elementos em uma única linha
+        wrap - embrulho, permite o surgimento de outras linhas para um elemento ocupar
+        wrap-reverse - embrulho reverso, permite o surgimento de outras linhas para um elemento ocupar, ordenando ao contrário, então o último elemento será o primeiro na ordem dos blocos
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex_direcao_linha {flex-direction: row;}
+.flex_direcao_linha_reversa {flex-direction: row-reverse;}
+.flex_direcao_coluna {flex-direction: column;}
+.flex_direcao_coluna_reversa {flex-direction: column-reverse;}
+/* flex-direction - direção flex, ajusta como deve ficar o posicionamento dos elementos filhos do elemento pai flex 
+    Valores:
+        row - linha
+        row-reverse - linha reversa
+        column - coluna reversa
+        column-reverse - coluna reversa
+*/
+
+
+
+
+
+
+
+
+
+.flex_fluxo_linha_sem_quebra {flex-flow: row nowrap;}
+/* flex-flow - fluxo do flex, define duas propriedades dos elementos flex
+    Valores:
+        Combinações de valores das propriedades flex-wrap e flex-direction respectivamente
+*/
+
+
+
+
+
+
+
+
+
+
+
+.conteudo_justificado_flex_inicio {justify-content: flex-start;}
+.conteudo_justificado_flex_final {justify-content: flex-end;}
+.conteudo_justificado_centralizado {justify-content: center;}
+.conteudo_justificado_espaco_entre_si {justify-content: space-between;}
+.conteudo_justificado_espaco_conteiner {justify-content: space-around;}
+.conteudo_justificado_espaco_uniforme {justify-content: space-evenly;}
+/* 
+Onde posso usar os outros valores? Indique em comentário onde estão
+.conteudo_justificado_inicio {justify-content: start;}
+.conteudo_justificado_final {justify-content: end;}
+.conteudo_justificado_esquerda {justify-content: left;}
+.conteudo_justificado_direita {justify-content: right;}
+.conteudo_justificado_seguro {justify-content: safe;}
+.conteudo_justificado_inseguro {justify-content: unsafe;}
+.conteudo_justificado_esticado {justify-content: stretch;}
+.conteudo_justificado_linha_de_base {justify-content: baseline;}
+.conteudo_justificado_primeira_linha_de_base {justify-content: first baseline;}
+.conteudo_justificado_ultima_linha_de_base {justify-content: last baseline;} */
+
+/* justify-content - conteúdo justificado, posiciona elementos de uma determinada forma
+    Valores:
+        *Funciona no display flex
+            flex-start - no lado esquerdo 
+            flex-end - no lado direito
+            center - no centro
+            space-between - espaço igual entre cada elemento
+            space-around - espaço igual para cada lateral do elemento
+            space-evenly - espaços iguais para cada lateral, contando com o do elemento pai
+
+        @@@@@ A descobrir
+            start
+            end
+            left
+            right
+            safe
+            unsafe
+            stretch
+            baseline
+            first baseline
+            last baseline
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.itens_alinhados_esticado {align-items: stretch;}
+.itens_alinhados_centro {align-items: center;}
+.itens_alinhados_final_flex {align-items: flex-end;}
+.itens_alinhados_comeco_flex {align-items: flex-start;}
+.itens_alinhados_linha_base {align-items: baseline;}
+/* align-items - alinhamento dos itens, serve ajustar como os elementos
+    Valores:
+        stretch - esticado
+        center - centro
+        flex-end - no fim do elemento flex
+        flex-start - no início do elemento flex
+        baseline - linha base
+*/
+
+
+
+
+
+
+
+
+
+
+.conteudo_alinhado_esticado {align-content: stretch;}
+.conteudo_alinhado_centro {align-content: center;}
+.conteudo_alinhado_final_flex {align-content: flex-end;}
+.conteudo_alinhado_comeco_flex {align-content: flex-start;}
+.conteudo_alinhado_espaco_ao_redor {align-content: space-around;}
+.conteudo_alinhado_espaco_entre {align-content: space-between;}
+/* align-content - alinhamento do conteúdo, se o elemento pai for flex, tiver uma altura maior do que a soma dos seus elementos filhos e for wrap é possível utilizar esta propriedade para posicionar os elementos filhos
+    Valores:
+        stretch - esticado
+        center - centralizado
+        flex-end - no final do flex
+        flex-start - no começo do flex
+        space-around - um espaço ao redor dos elementos filhos
+        space-between - um espaço entre os elementos filhos
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+.flex_crescer_0 {flex-grow: 0;}
+.flex_crescer_1 {flex-grow: 1;}
+.flex_crescer_2 {flex-grow: 2;}
+/* flex-grow - crescimento flex, indica o a porcentagem que um elemento poderá ocupar de largura dentro do conteiner flex
+    Valores:
+        Numeros
+    Como usar:
+        O número 1 refere a porcentagem de ocupação na largura do elemento dentro conteiner, onde 1 é igual a 100% e seguindo essa lógica 0 é 0% e 0.5 é 50%
+*/
+
+
+
+
+
+
+
+
+.base_flex_automatica {flex-basis: auto;}
+.base_flex_conteudo {flex-basis: content;}
+.base_flex_0 {flex-basis: 0;}
+.base_flex_40pc {flex-basis: 40%;}
+/* flex-basis - base flex, age como um tamanho de base, mas que é possível sofrer influências para diminuir ou aumentar
+    Valores:
+        Unidades de medidas
+        auto - automatica
+        @@@@@ content - conteudo
+*/
+
+
+
+
+
+
+
+
+.encolher_flex_0 {flex-shrink: 0;}
+.encolher_flex_1 {flex-shrink: 1;}
+.encolher_flex_3 {flex-shrink: 3;}
+/* flex-shrink - encolhimento do flex, indica o quanto do conteúdo pode ser diminuido
+    @@@@@ Valores:
+        Números inteiros
+*/
+
+
+
+
+
+
+
+
+
+.flex_ocupar_max {flex: 1 1 auto;}
+/* flex - flex, configura para os itens flex algumas propriedades
+    Ordem taquiográfica:
+        flex-grow
+        flex-shrink
+        flex-basis
+*/
+
+
+
+
+
+
+
+
+.ordem_1 {order: 1;}
+.ordem_2 {order: 2;}
+.ordem_3 {order: 3;}
+.ordem_4 {order: 4;}
+.ordem_5 {order: 5;}
+/* order - ordem, indica onde cada elemento item-flex deve se posicionar em relação aos outros itens flex
+    Valores:
+        Números inteiros
+*/
+
+
+
+
+
+
+
+
+
+.auto_alinhamento_auto {align-self: auto;}
+.auto_alinhamento_linha_base {align-self: baseline;}
+.auto_alinhamento_centro {align-self: center;}
+.auto_alinhamento_final_flex {align-self: flex-end;}
+.auto_alinhamento_comeco_flex {align-self: flex-start;}
+.auto_alinhamento_esticado {align-self: stretch;}
+/* align-self - auto-alinhamento, posiciona um item flex em relação aos outros itens
+    Valores
+        auto
+        baseline
+        center
+        flex-end
+        flex-start
+        stretch
+*/
+
+
+
+
+
+
