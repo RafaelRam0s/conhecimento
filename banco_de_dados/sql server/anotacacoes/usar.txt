@@ -1,0 +1,17 @@
+
+Selecionar banco de dados:
+
+    /*
+        create database nome_do_banco;
+        
+        // use nome_do_banco; 
+    */
+
+    Em um banco de dados, quando você for acessar um banco de dados específico, para começar a criação de tabelas, é importante especificar para qual banco de dados será criada a tabela.
+
+    - use - usar, informa que a partir de agora seus próximos comandos serão refentes a um banco de dados
+
+    - nome_do_banco - valor mutável ao qual deve ser informado o nome do banco que você deseja usar
+
+
+

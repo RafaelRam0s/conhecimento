@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {text-align: left;}
+        h2 {font-size: 300%;}
+        h3 {font-size: 250%;}
+        h4 {font-size: 225%;}
+        h5 {font-size: 200%;}
+        h6 {font-size: 175%;}
+        p {font-size: 125%;}
+        div {margin-bottom: 60vh;}
+        div p {margin-left: 20px;}
+        a {color: aqua;}
+        a:hover {color: gold;}
+    </style>
+
+    <title>Formulário</title>
+</head>
+<body>
+
+    <div>
+        <h2>Formulário</h2>
+
+        <p>Formúlarios são campos em que o usuário pode interagir enviando uma resposta para a página</p>
+
+        <p>Um formulário é iniciado pela tagname - form - que serve para englobar todas as informações que o usuário for preencher</p>
+
+        <p>Farei um exemplo de formulário e a partir dele vamos desenvolver o que seria cada parte:</p>
+
+        <form action="" id="formulario1">
+            <p>Se quiséssemos pedir informações como o nome de uma pessou faríamos assim:</p>
+
+            <label for="nome_do_usuario">Nome:</label>
+            <input type="text" id="nome_do_usuario" name="nomedousuario">
+            
+            <button type="submit">Enviar por botão</button>
+            <input type="submit" value="Enviar por input">
+        </form>
+
+        <p>Note que possuimos o - label - ele serve para indicar a informação que está sendo pedida.</p>
+
+        <p>Na inserção é onde damos a opção para o usuário inserir uma informação, neste caso é aquele elemento branco digitável</p>
+
+        <p>No label possuimos o atributo - for - que indica a quem está conectado, isso serve para caso clique no label o campo input, seja ativado, o valor do - for - deverá ser o mesmo que o id do input para que funcione o redirecionamento</p>
+
+        <p>Quando enviamos uma informação pro javascript é diferente de quando enviamos uma informação para o servidor, no servidor é preciso ter algumas informações para que trate os dados, por conta disto quando for utilizar campos de informações é importante colocar um - name - no elemento que recebeu a informação</p>
+
+        <p>Para enviar os dados coletados criamos um botão ou um input de tipo - submit -, que então coletará todos os dados de dentro do form e envia a um local que for indicado no atributo - action - do - form - através de url</p>
+
+        <p>Como não definimos um caminho ele pega as informações e joga na própria url desta página</p>
+
+        <p>@@@@@ Explicar atributos do form: method, </p>
+
+    </div>
+    
+
+
+
+
+
+
+    <div>
+        <h3>Inserção</h3>
+
+        <p>@@@@@ Atributo - form - caso faça uma tagname form com alguns formulários e feche o conteiner, ainda é possível adicionar elementos no formulário utilizando o atributo form, sendo que a tagname form deva possuir um id e esse id deve ser informado como valor dentro do atributo form</p>
+
+        <p>@@@@@ Atributo minlength e maxlength - serve para inputs em que é possível escrever valores (como os tipos: text, number, email, password, search, tel e link). Configura em seu valor um número que corresponde respectivamente o minimo (minlength) e o maximo (minlength) de caracteres que deverá possuir a resposta do formulário</p>
+
+        <p>@@@@@ Atriburto min e max - aceita um valor mínimo e um valor máximo para a resposta de um input (funciona em number só permitindo aceitar valores compreendidos dentro desses dois atributos, funciona em range indicando entre quais valores o range atuará, funciona em date, datetime-local, month e week delimitando seguindo o padrão do value para configurar)</p>
+
+        <p>@@@@@ Parâmetro - multiple - permite inserir multiplas informações: <b>no email</b> permite acrescentar e-mails, você cadastra um e-mail ai ao final usa vírgula e espaço (, ) e então pode ser acrescentado outro e-mail e <b>no file</b>, permite selecionar e enviar mais de um arquivo</p>
+
+        <p>@@@@@ Atributo - step - permite pular intervalor de números especificados em seu valor, funciona em: number, range, date, datetime-local, month, time e week</p>
+
+        <p>@@@@@ Parâmetro - checked - permite uma opção já iniciar marcada, funciona nos tipos radio e checkbox</p>
+
+        <p>@@@@@ Atributo - placeholder - permite deixar um campo que ainda não foi preenchido pelo usuário com uma sombra de um texto, esse texto será referente ao que você colocou como valor, funciona em: text, search, url, tel, email, e password</p>
+
+        <p>@@@@@ Parâmetro - required - diz que é requerido que tal campo seja preenchido para que o envio do formulário possa ocorrer</p>
+
+        <p>@@@@@ Atributo - pattern - serve para configurar a forma com a qual você permite receber o formulário a partir do que for definido no valor,funciona em: text, date, search, url, tel, email, e password. <br> Em outras palavras o que ele faz é configurar valores que o formulário pode ou não pode ter</p>
+
+        <details>
+            <p>@@@@@ Uso do pattern: <br> <a href="https://tableless.com.br/o-basico-sobre-expressoes-regulares/">Site que explica seus valores do Código Regex</a> <br> <a href="http://turing.com.br/material/regex/introducao.html">Tabela de uso</a></p>
+
+            <img src="../../midia/imagens/regex.jpg" alt="Tabela regex">
+    
+            <details> 
+                <details>A expressão [a-z] reconhece todas as letras minúsculas. <br> A expressão [A-Z] reconhece todas as letras maiúsculas. <br> A expressão [A-z] reconhece todas as letras maiúsculas e minúsculas. <br> A expressão [A-Z0-9] reconhece todas as letras maiúsculas e números. <br> A expressão [a-e] reconhece as letras a, b, c, d e e.</details> 
+    
+                <p>A classe \w recupera todos os caracteres alpha numericos, ou seja, letras e números, mas não acentos ou caracteres especiais. É o equivalente a [a-zA-Z_0-9] A classe \W pega TODOS os caracteres que não seja alpha numericos, ou seja, pontuações e espaços. A classe \s é o equivalente [ \t\n\x0B\f\r] A classe \d é o equivalente [0-9] E as classses de negação. Lembrando que basta colocar o sinal de ^ logo depois do colchete inicial [: A expressão de classe [^y] reconhece qualquer caractere, exceto y. A expressão de classe [^a-e] reconhece qualquer caractere, exceto a, b, c, d e e. A expressão de classe [^\d] reconhece qualquer caractere, exceto 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9. Múltiplos padrões Imagine agora que você queira encontrar dois padrões diferentes de caracteres, por exemplo, duas palavras. Bastando usar o símbolo | (pipe), que vai significar OU. Nesse caso a expressão irá reconhecer um ou o outro padrão. Veja esse exemplo onde recuperamos o retorno das palavras dolor ou labore. Âncoras As âncoras recuperam a posição entre os caracteres, mas não os caracteres em si. Por exemplo, a expressão ^dolor, vai recuperar as palavras dolor que estiverem no início da linha (veja o exemplo). A expressão dolor$ vai recuperar o termo que estiver no final da linha (veja o exemplo). Modos Agora, suponha que você queira pegar uma sequência que contenha um termo parecido, mas que possa estar com algumas letras maiúsculas ou minúsculas. Por exemplo os termos Lorem, lorem, loRem, lOrEm etc, bastaria usar a representação (?i) antes do termo a ser buscada. A expressão ficaria assim (?i)lorem. Veja este exemplo aqui. Brincando de validar um email Uma tarefa muito corriqueira é a validação de campos de e-mail. Sem entrar nas polêmicas (validar essas coisas sempre é chato), mas é legal para treinar o que você acabou de ler. A expressão para fazer a validação é essa:^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$ Explicando: A expressão ^ indica o começo da string/linha. \w* pega qualquer caracteres alpha numericos, é o equivalente a [a-zA-Z0-9_]. O asterísco é quantitativo, detectando qualquer quantidade desses caracteres, iniciando no 0 e indo até o infinito. A expressão (\.\w*)? significa: parenteses inicia um agrupamento. A expressão \. detecta literamente um ponto .. A expressão \w* qualquer quantidade de caracteres alpha numéricos. O ponto de interrogação (?) é quantitativo: determina que o que vier imediatamente antes dele aparecer na expressão 0 ou 1 vez. Nessa expressão ele aparece duas vezes. O arroba seria o arroba do email mesmo… \w* que aparece depois do arroba já falamos várias vezes logo acima. \.[a-z] pega um ponto seguido de letras minúsculas. vai detectar algo como .com, .net, etc… + significa que o que estiver imediatamente antes dele precisa aparecer 1 ou mais vezes no termo. (\.[a-z]+): abrimos novamente um agrupamento com o parenteses. \. pega o ponto. A classe [a-z] seleciona qualquer letra minúscula. E o mais aparece novamente, dizendo que tudo aquilo que estiver antes dele deve aparecer pelo menos 1 vez E a expressão $ pra finalizar significa final da string.</p>
+            </details>
+    
+            <div>
+                <form action="">
+                    <label for="teste_pattern_1">Aceita só um ou outro valor que eu quiser (<var>valor1</var>)|(<var>valor2</var>)</label>
+                    <input type="text" name="testepattern1" id="teste_pattern_1" pattern="(123)|(124)">
+                    <input type="submit" value="Enviar">
+                </form>
+    
+                <form action="">
+                    <label for="teste_pattern_2">Aceita apenas valores maiúculos a a z [A-Z] com quantidade infinita de letras</label>
+                    <input type="text" name="testepattern2" id="teste_pattern_2" pattern="[A-Z]{1,}">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </details>
+
+        <p>@@@@@ Atributo - accept - especifica os tipos de arquivos que o servidor aceita (que podem ser enviados por meio de um upload de arquivo), só funcona com tipo file. Possíveis valores @@@@@: <br> image/ - já filtra pro usuário ver só imagens, mas ainda é possível do usuário configurar para mandar audio, o arquivo deve ser tratado no servidor</p>
+
+        <p>@@@@@ Atributo - autocomplete - o preenchimento automático permite que o navegador preveja o valor. Quando um usuário começa a digitar em um campo, o navegador deve exibir opções para preencher o campo, com base nos valores digitados anteriormente, funciona com os tipos: text, search, url, tel, email, password, datepickers, range, e color. Em alguns navegadores, pode ser necessário ativar uma função de preenchimento automático para que isso funcione (veja em "Preferências" no menu do navegador). Valores: <br> on - ligado <br> off - desligado</p>
+
+        <p>@@@@@ Parâmetro - disabled - desabilitado, torna um campo incapaz de ser alterado, cuidado que ainda podemos através do inspecionar tira-lo</p>
+
+        <p>@@@@@ Atributo - formaction - especifica a URL do arquivo que irá processar o controle de entrada quando o formulário for enviado. O atributo formaction substitui o atributo action do elemento - form -. O atributo formaction é usado com type = "submit" e type = "image".</p>
+
+        <p>@@@@@ Atributo - formenctype - especifica como os dados do formulário devem ser codificados ao enviá-los ao servidor (apenas para formulários com método = "post"). O atributo formenctype substitui o atributo enctype do elemento form. Nota: O atributo formenctype é usado com type = "submit" e type = "image". <br> Possíveis valores: <br> application/x-www-form-urlencoded	<br> multipart/form-data <br> text/plain</p>
+
+        <p>@@@@@ Parâmetro - readonly - quando presente, especifica que um campo de entrada é somente leitura. Um campo de entrada somente leitura não pode ser modificado (no entanto, um usuário pode tabular até ele, destacá-lo e copiar o texto dele), adicione um value e veja que o texto aparece é selecionável, mas não alterável. Funciona com os tipos: text, number @@@@@</p>
+        
+        <p>@@@@@ Atributo - size - configura o tamanho do input de caracteres visiveis, sendo o menor valor possível igual a 1. Funciona com os seguintes tipos: text, search, tel, url, email, e password.</p>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p>O elemento input possui diversas formas dependendo do seu atributo type, segue alguns exemplos:</p>
+
+        
+        <h5>Tipo Texto:</h5>
+        <div style="margin: 0px;">
+            <p>O usuário pode digitar uma informação simples, que não requer muitas linhas para responder</p>
+
+            <label for="comida_favorita">Qual é a sua comida favorita?</label>
+            <!-- <label> - título da pergunta, indica que o campo a ser preenchido deve ter a finalidade de responder a questão no label
+                Funciona a ligação nas seguintes tagnames: <meter> <progress> <select> <textarea> <input>
+                Código:
+                    label {cursor: default;}
+            -->
+            <!-- for="" - para, indica para qual pergunta o usuario será enviado ao clicar no <label> -->
+            <input type="text" id="comida_favorita" name="comidafavorita">
+            <!-- <input /> - inserção, permite ao usuário ter interação com o elemento -->
+            <!-- type="" - tipo, configura o tipo de inserção que o usuário poderá ter com o input -->
+        </div>
+
+
+
+        <h5>Tipo Botão:</h5>
+        <div style="margin: 0px;">
+            <p>O botão é simplesmente um botão, não é passado nenhuma informação dele para o formulário assim como ele não altera nada no formulário</p>
+
+            <p>Utilizado para interações com o javascript</p>
+
+            <input type="button" value="Botão do 'Oi'" onclick="alert('Olá')">
+        </div>
+
+
+
+        <h5>Tipo Caixa marcável:</h5>
+        <div style="margin: 0px;">
+            <p>Usado para poder marcar e desmarcar itens de uma lista</p>
+
+            <label>Assinale a seguir somente as palavras que começam com "M":</label><br />
+
+            <input type="checkbox" id="fruta_banana" name="frutabanana"><label for="fruta_banana">Banana</label><br />
+
+            <input type="checkbox" id="fruta_maca" name="frutamaca"><label for="fruta_maca">Maça</label><br />
+
+            <input type="checkbox" id="fruta_manga" name="frutamanga"><label for="fruta_manga">Manga</label><br />
+        </div>
+        
+
+
+
+        <h5>Tipo Cor:</h5>
+        <div style="margin: 0px;">
+            <p>Permite ao usuário selecionar um aspecto de cor</p>
+
+            <label for="cor_preferida">Selecione a cor que você mais gosta:</label>
+            <input type="color" id="cor_preferida" name="corpreferida">
+        </div>
+
+        
+        
+        <h5>Tipo Data:</h5>
+        <div style="margin: 0px;">
+            <p>Configura uma data com dia, mês e ano, dependendo do navegador ele pode abrir em mês, dia e ano respectivamente</p>
+
+            <label for="data_de_nascimento">Qual a data em que você nasceu?</label>
+            <input type="date" id="data_de_nascimento" name="datadenascimento">
+
+            <p>Mas os seus valores são passados na ordem de ano, mês e dia sendo separados pelo traço de subtração, exemplo: 2020-08-19 e em seu value para que tenha uma data selecionada desde o início é preciso seguir esse padrão</p>
+
+            <label for="data_da_alteracao">Data em que você criou este arquivo?</label>
+            <input type="date" id="data_da_alteracao" name="datadaalteracao" value="2020-08-19" min="2020-08-20" max="2020-08-25">
+        </div>
+
+
+
+
+        <h5>Tipo Data e hora:</h5>
+        <div style="margin: 0px;">
+            <p>@@@@@ Parece que foi removido ou ainda não possui suporte ele está sendo alterado por type="text"</p>
+            <input type="datetime">
+        </div>
+
+
+
+
+        <h5>Tipo Data e hora local:</h5>
+        <div style="margin: 0px;">
+            <p>Usado para pedir informações de data e hora </p>
+            <label for="data_hora_visto">Qual a data e hora que você leu essa mensagem?</label>
+            <input type="datetime-local" id="data_hora_visto" name="datahoravisto">
+
+            <p>Para ajustar um valor inicial ele usa em ordem os seguintes parâmetros <var>ano</var>-<var>mês</var>-<var>dia</var>T<var>hora</var>:<var>minuto</var></p>
+
+            <label for="data_hora_nascimento">Que dia e horas você nasceu?</label>
+            <input type="datetime-local" id="data_hora_nascimento" name="datahoranascimento" value="2002-07-13T08:00">
+        </div>
+
+
+
+
+        <h5>Tipo E-mail:</h5>
+        <div style="margin: 0px;">
+            <p>Usado para quando pedimos um e-mail</p>
+
+            <label for="email_teste">Como você nomearia um e-mail teste?</label>
+            <input type="email" id="email_teste" name="emailteste">
+
+            <p>Ele tem a vantagem de notar a presença de determinados elementos que compõem e não compõem um e-mail e então avisa o usuário caso tenha preenchido errado e tentado enviar o formulário, forçando o usuário a corrigir, pois caso não corrija ele não envia o formulário e redireciona o usuário para a caixa que está com erro e solta um title de aviso</p>
+            
+            <form action="">
+                <label for="email_errado">Escreva um e-mail de forma incorreta:</label>
+                <input type="email" id="email_errado" name="emailerrado" value="emailquevaidarerradopoisestasemarroba">
+
+                <button type="submit">Testar exemplo</button>
+            </form>
+
+            <p>@@@@@ Atributo - multiple - permite inserir mais de um e-mail, você cadastra um e-mail ai ao final usa vírgula e espaço (, ) e então pode ser acrescentado outro e-mail</p>
+        </div>
+
+
+
+
+        <h5>Tipo Arquivo:</h5>
+        <div style="margin: 0px;">
+            <p>@@@@@ Você seleciona o elemento, então é retornado para você o seu diretório de arquivos, onde você poderá selecionar apenas um arquivo, ao clicar em abrir o elemento salva o nome do arquivo, @@@@@ mas não o caminho para o arquivo?</p>
+
+            <label for="imagem_fundo">Escolha um arquivo que poderia ser usado como imagem de fundo</label>
+            <input type="file" id="imagem_fundo" name="imagemfundo">
+
+            <p>O label ativa o input de tipo file, então se quiser colocar um display none no input e editar o label ao seu gosto poderá ter um efeito bacana</p>            
+
+            <label for="arquivo_teste">Escolha um arquivo que poderia ser usado como imagem de fundo ao clicar neste label</label>
+            <input type="file" id="arquivo_teste" name="arquivoteste" style="display: none;">
+
+            <p>@@@@@ Atributo - multiple - permite selecionar mais de um para envio</p>
+        </div>
+
+
+
+
+
+        <h5>Tipo Escondido:</h5>
+        <div style="margin: 0px;">
+            <p>O tipo escondido serve para gerar ações que o usuário não precisa ver, um usuário comum não vê, mas se usar o inspecionar elemento ainda é possível ler seu elemento</p>
+
+            <input type="hidden" name="inputescondido" value="mensagem secreta">
+        </div>
+
+
+
+        
+
+        <h5>Tipo Imagem:</h5>
+        <div style="margin: 0px;">
+            <p>Com o imagem podemos colocar uma imagem que ao ser clicada terá o papel de um submit, enviando assim os dados preenchidos</p>
+            
+            <p>Além de retornar os dados preenchidos se a pessoa decide enviar as informações clicando na imagem, é acrescentado nas informações que serão transferidas a posição x e y de onde foi clicado na imagem para enviar o formulário</p>
+
+            <form action="">
+                <input type="hidden" name="inputescondidonoformdaimg" value="A seguir será passado as coordenadas de onde você clicou na imagem">
+
+                <input type="image" src="../../midia/imagens/lampadapequena.jpg" alt="Lâmpada acesa" width="32" height="32">
+            </form>
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Mês:</h5>
+        <div style="margin: 0px;">
+            <p>É pedido para informar o mês por extenso e o ano</p>
+
+            <label for="mes_folga">Qual a data da sua próxima folga?</label>
+            <input type="month" id="mes_folga" name="mesfolga">
+
+            <p>caso queira configurar um valor padrão tanto o mês quanto o ano devem ser informados por número, como: ano-mês</p>
+            <label for="mes_teste">Exemplo:</label>
+            <input type="month" id="mes_teste" name="mesteste" value="2020-07">
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Número:</h5>
+        <div style="margin: 0px;">
+            <p>Aceita números e expressões matemáticas, como a letra "e" o ponto final e a vírgula, serve para pedir um valor numérico</p>
+
+            <label for="numero_sorte">Qual o seu número da sorte?</label>
+            <input type="number" id="numero_sorte" name="numerosorte">
+
+            <p>@@@@@ Os atributos min e max configuram entre quais valores a aplicação irá aceitar para o envio do formulário, caso o valor não esteja compreendido entre os valores solicitados é retornado um title de aviso</p>
+
+            <form action="">
+                <label for="numero_certo">Coloque um número menor que 3 ou maior que 5 para poder ver o que é retornado neste exemplo:</label>
+                <input type="number" id="numero_certo" name="numerocerto" min="3" max="5" value="2">
+                <input type="submit" value="Enviar">
+            </form>
+
+            <p>@@@@@ O atributo - step - só deixará o formulário aceitar números que que são múltiplos de seu valor</p>
+
+            <form action="">
+                <label for="numero_multiplo">Coloque um número não múltiplo de 3 e tente enviar para ver o que ocorre:</label>
+                <input type="number" id="numero_multiplo" name="numeromultiplo" step="3" value="1">
+                <input type="submit" value="Enviar">
+            </form>
+
+        </div>
+
+
+
+
+
+        <h5>Tipo Senha:</h5>
+        <div style="margin: 0px;">
+            <p>O tipo senha serve para esconder o que o usuário está digitando, mas só esconde visualmente, já que ele age como um tipo texto na hora de enviar a informação</p>
+
+            <label for="senha_qualquer">Crie uma senha:</label>
+            <input type="password" id="senha_qualquer" name="senhaqualquer">
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Seleção:</h5>
+        <div style="margin: 0px;">
+            <p>Serve para dentro de uma gama de alternativas só ser possível de escolher uma opção</p>
+
+            <p>Para indicar que uma alternativa está relacionada a outra é preciso declarar um mesmo name para todas</p>
+
+            <p>Indique um value para que o formulário consiga interpetrar do que se trata</p>
+
+            <p>@@@@@ Ao marcar uma das bolinhas não é possível desmarcar todas, ao menos uma tem que ser selecionada, a menos que você use o atributo</p>
+
+            <h6 style="margin: 5px 0px; font-size: 18px;">Qual o seu sexo?</h6>
+
+            <input type="radio" id="sexo_masculino" name="sexo" value="masculino">
+            <label for="sexo_masculino">Masculino</label> <br />
+
+            <input type="radio" id="sexo_feminino" name="sexo" value="feminino">
+            <label for="sexo_feminino">Feminino</label> <br />
+
+            <input type="radio" id="sexo_diferente" name="sexo" value="outro">
+            <label for="sexo_diferente">Outro</label> <br />
+        </div>
+
+
+
+
+
+
+
+        <h5>Tipo Raio :</h5>
+        <div style="margin: 0px;">
+            <p>É possível mover de um lado para o outro a bolinha dentro da barra, quanto mais para a esquerda menor o valor e quanto mais para a direita maior será, é preciso definir um min e um max para este elemento funcionar</p>
+
+            <p></p>
+            
+            <label for="nota_aluno">Que nota como aluno você se considera?</label> <br/>
+
+            1 <input type="range" min="1" max="10" id="nota_aluno" name="notaaluno" onmousemove="document.getElementById('valor_nota_aluno').textContent = document.getElementById('nota_aluno').value"> 10
+
+            <br/>
+            <var id="valor_nota_aluno">x</var>
+            
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Reinicio:</h5>
+        <div style="margin: 0px;">
+            <p>Com isto é possível apagar todos os campos preenchidos para recomeçar o preenchimento do formulário</p>
+
+            <form action="">
+                <label for="nome_da_mae">Qual o nome da sua mãe?</label>
+                <input type="text" name="nomedamae" id="nome_da_mae">
+
+                <input type="reset" value="Resetar respostas">
+            </form>
+        </div>
+
+
+
+
+
+        <h5>Tipo Encontrar:</h5>
+        <div style="margin: 0px;">
+            <p>@@@@@ Com isso o usuário pode pesquisar por uma dúvida que ele tenha ou por uma informação que esteja atrás, mas esse tipo age igual ao texto, então é preciso programar o search para de fato pesquisar</p>
+
+            <form action="">
+                <label for="procura">O que está procurando?</label>
+                <input type="search" name="procurar" id="procura">
+                <input type="submit" value="Procurar">
+            </form>
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Enviar:</h5>
+        <div style="margin: 0px;">
+            <p>Envia as informações do formulário</p>
+            <form action="">
+                <input type="submit" value="Enviar formulário">
+            </form>
+        </div>
+
+
+
+
+        <h5>Tipo Telefone:</h5>
+        <div style="margin: 0px;">
+            <p>Serve para a pessoa informar o número de telefone, mas age igual ao text aceitando até mesmo letras</p>
+            <label for="numero_telefone">Qual o número do seu celular?</label>
+            <input type="tel" name="numerotelefone" id="numero_telefone">
+        </div>
+
+
+
+        
+        <h5>Tipo Tempo:</h5>
+        <div style="margin: 0px;">
+            <p>Pede informações como hora e minuto</p>
+            <label for="hora_minuto">Que horas são?</label>
+            <input type="time" name="horaminuto" id="hora_minuto">
+
+            <p>Para já deixar um valor definido em seu value deve ser usada a seguinte expressão <var>hora</var>:<var>minuto</var></p>
+            <label for="hora_minuto">Que horas você editou esta página?</label>
+            <input type="time" name="horaminutoedicao" id="hora_minuto_edicao" value="10:58">
+        </div>
+
+
+
+
+
+
+        <h5>Tipo Link:</h5>
+        <div style="margin: 0px;">
+            <p>Serve para ser inserido um link, uma url ou caminho de arquivo</p>
+            <label for="url_pagina">Qual o link do site que você está agora?</label>
+            <input type="url" name="urlpagina" id="url_pagina">
+        </div>
+
+
+
+
+        <h5>Tipo Semana:</h5>
+        <div style="margin: 0px;">
+            <p>Recebe o valor da semana do ano</p>
+            <label for="semana_atual">Em que semana você está?</label>
+            <input type="week" name="semanaatual" id="semana_atual">
+
+            <p>Para já ter um valor em seu value use a seguinte expressão: <var>ano</var>-W<var>número_do_mês</var></p>
+            <label for="semana_editada">Em que semana você editou esta página?</label>
+            <input type="week" name="semanaeditada" id="semana_editada" value="2020-W34">
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div>
+        <h3>Botões:</h3>
+
+        <p>O button faz um simples botão sem nenhuma instrução</p>
+        <button type="button">Botão button</button>
+
+        <p>O reset reseta um formulário</p>
+        <form action="">
+            <input type="text" name="testebuttonreset">
+            <button type="reset">Botão reset</button>
+        </form>
+
+        <p>O submit envia um formulário</p>
+        <form action="">
+            <input type="text" name="testebuttonsubmit">
+            <button type="submit">Botão enviar</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <div>
+        <h3>Seleção:</h3>
+
+        <p>Permite ter uma lista com diversos valores onde um usuário pade selecionar uma das opções.</p>
+
+        <form action="">
+            <label for="mora_estado">Em qual estado você mora?</label>
+            <select name="moraestado" id="mora_estado">
+                <option value="AM">Amazonas</option>
+                <option value="RR">Roraima</option>
+                <option value="AP">Amapá</option>
+                <option value="PA">Pará</option>
+                <option value="TO">Tocantins</option>
+                <option value="RO">Rondônia</option>
+                <option value="AC">Acre</option>
+                <option value="MA">Maranhão</option>
+                <option value="PI">Piauí</option>
+                <option value="CE">Ceará</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PB">Paraíba</option>
+                <option value="SE">Sergipe</option>
+                <option value="AL">Alagoas</option>
+                <option value="BA">Bahia</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="GO">Goiás</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PR">Paraná</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SC">Santa Catarina</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+
+
+        
+
+
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars" size="2" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="uno">Uno</option>
+        </select>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <h3>Área de texto</h3>
+
+        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+        <textarea name="mensagem" style="width:200px; height:600px;">The cat was playing in the garden.</textarea>
+    </div>
+
+
+
+    <div>
+        <h3>Campo de arquivo</h3>
+
+        <p>O - fieldset - elemento é usado para agrupar dados relacionados em um formulário</p>
+
+        <p>O legend elemento define uma legenda para o fieldset elemento.</p>
+
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>Personalia:</legend>
+
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+
+    <div>
+        <h3>Lista de opções</h3>
+
+        <p>O datalist elemento especifica uma lista de opções predefinidas para um input elemento. Os usuários verão uma lista suspensa das opções predefinidas à medida que inserem os dados. O list atributo do input elemento deve se referir ao id atributo do datalist elemento.</p>
+
+        <form action="/action_page.php">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+
+
+    <div>
+        <h3>Saída de informação:</h3>
+
+        <p>O output elemento representa o resultado de um cálculo (como um executado por um script).</p>
+
+        <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+
+</body>
+</html>

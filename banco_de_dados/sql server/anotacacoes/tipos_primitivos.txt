@@ -1,0 +1,76 @@
+
+
+Tipos primitivos:
+    Tipos existentes:
+        bigint
+        binary(50)
+        bit
+        char(10)
+        date
+        datetime
+        datetime2(7)
+        datetimeoffset(7)
+        decimal(18, 0)
+        float
+        geography
+        geometry
+        hierarchyind
+        image 
+        int
+        money
+        nchar(10)
+        ntext
+        numeric(18, 0)
+        nvarchar(50)
+        nvarchar(MAX)
+        real
+        smalldatetime
+        smallint
+        smallmoney
+        sql_variant
+        text
+        time(7)
+        timestamp
+        tinyint
+        uniqueidentifier
+        varbinary(50)
+        varbinary(MAX)
+        varchar(50)
+        varchar(MAX)
+        xml
+
+    Numericos (aceita somente números - 0123456789 -):
+        @@@@@ Quando o banco de dados armazena um numérico se começar com 0 ele desconsidera o 0, logo valor 01 é para ele somente 1, 001 tbm é somente 1, mas 10 ele considera e 100 tbm
+
+        int - inteiro, permite o cadastro de até 9 dígitos de números
+            Exemplo de uso:
+                CPF int
+
+    Textuais (aceita tudo que estiver entre aspas simples, como texto - '' -):
+
+        varchar - aceita até 255 caracteres, mas você pode configurar até quantos caracteres ele poderá receber ao colocar um parênteses com um número entre 1 e 255, esse número será respectivo a quantidade máxima de caracteres que poderá ter determinado dado
+            Exemplo de uso:
+                Nome varchar(255)
+
+
+
+
+@@@@@ Acopladores de tipos primitivos:
+    not null - não permite ser nulo
+
+    identity(1,1) - irá cadastrar automaticamente um valor, dento do parenteses o primeiro valor se refere a partir de qual numeral irá começar a contagem, e o segundo valor define de quanto em quanto deve ser acrescentado. Exemplo: um primeiro registro terá 1 o segundo 2, mas se tivesse um indentity(2, 3) nessa coluna o primeiro seria 2 o segundo seria 5 e assim por diante
+
+    primary key - chave primária, só é possível ter uma por tabela irá configurar @@@@@
+
+    @@@@@ default 'valor_qualquer' - caso deixem o campo vazio será colocado no lugar o que estiver após o default, neste exemplo uma string chamada valor_qualquer
+
+
+
+
+
+
+
+
+
+
+

@@ -20,39 +20,17 @@
             text-decoration-line: underline;
             font-size: 350%;
         }
-        h2, h3, h4, h5, h6 {
-            text-align: left;
-        }
-        h2 {
-            font-size: 300%;
-        }
-        h3 {
-            font-size: 250%;
-        }
-        h4 {
-            font-size: 225%;
-        }
-        h5 {
-            font-size: 200%;
-        }
-        h6 {
-            font-size: 175%;
-        }
-        p {
-            font-size: 125%;
-        }
-        div {
-            margin-bottom: 60vh;
-        }
-        div p {
-            margin-left: 20px;
-        }
-        a {
-            color: aqua;
-        }
-        a:hover {
-            color: gold;
-        }
+        h2, h3, h4, h5, h6 {text-align: left;}
+        h2 {font-size: 300%;}
+        h3 {font-size: 250%;}
+        h4 {font-size: 225%;}
+        h5 {font-size: 200%;}
+        h6 {font-size: 175%;}
+        p {font-size: 125%;}
+        div {margin-bottom: 60vh;}
+        div p {margin-left: 20px;}
+        a {color: aqua;}
+        a:hover {color: gold;}
     </style>
 
     <title>Texto</title>
@@ -62,9 +40,7 @@
     <hgroup>
         <!-- <hgroup> - grupo de títulos, serve para indicar um conjunto de títulos.
             Código:
-                hgroup {
-                    display: block;
-                }
+                hgroup {display: block;}
         -->
         <h1>Título mais importante</h1>
         <h2>Título</h2>
@@ -170,9 +146,7 @@
         <div>
         <!-- <div> - define uma divisão ou seção em um documento html, utilizado para ser editado, na falta de uma tag para saber como classificar o bloco de informações, use este elemento
             Código:
-                div {
-                    display: block;
-                }
+                div {display: block;}
         -->
             <h2>Formatações de texto:</h2>
 
@@ -181,33 +155,25 @@
             <p>Texto em <b>negrito, porém sem importância semântica,</b> isto é, será negrito apenas para a visualização do usuário, mas não para o navegador</p>
             <!-- <b> - deixa o texto em negrito
                 Código:
-                    b {
-                        font-weight: bold;
-                    }
+                    b {font-weight: bold;}
             -->
             
             <p>Texto em <strong>negrito com importância semântica</strong>, como estamos com um estilo de texto de cor branca pode estar ruim a visualização do seu efeito, se atente a esses fatos na sua página</p>
             <!-- <strong> - indica que é um texto importante
                 Código:
-                    strong {
-                        font-weight: bold;
-                    }
+                    strong {font-weight: bold;}
             -->
 
             <p>Texto em <i>itálico, mas sem importância semântica</i>, a tagname "i", também serve para inserir ícones, será explicado futuramente neste tutorial</p>
             <!-- <i> - deixa o texto em itálico
                 Código:
-                    i {
-                        font-style: italic;
-                    }
+                    i {font-style: italic;}
             -->
             
             <p>Texto em <em>itálico, com importância semântica</em></p>
             <!-- <em> - indica que o texto é enfatizado 
                 Código:
-                    em {
-                        font-style: italic;
-                    }
+                    em {font-style: italic;}
             -->
 
             <p>Texto <mark>grifado</mark></p>
@@ -222,24 +188,18 @@
             <p>Texto <small>pequeno</small></p>
             <!-- <small> - torna o texto pequeno 
                 Código:
-                    small {
-                        font-size: smaller;
-                    }
+                    small {font-size: smaller;}
             -->
     
             <p>Texto <del cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_removido.com" datetime="2020-04-16T18:46:50">delete</del> <ins cite="www.url_de_um_site_que_explique_porque_esse_texto_teve_que_ser_inserido.com" datetime="2020-04-16T08:48:12">deletado</ins> e inserido, usa-se o del para marcar textos que foram removidos, e ins para textos que foram inseridos, não os utilize simplesmente para colocar um traço nas palavras pois ambos possuem uma função para leitores de tela</p>
             <!-- <del> - deletado, torna o texto como deletado, serve para avisar aos usuários que aquele texto foi removido e não simplesmente para colocar um traço no meio
                 Código:
-                    del {
-                        text-decoration: line-through;
-                    }
+                    del {text-decoration: line-through;}
             -->
     
             <!-- <ins> - torna o texto inserido, com um underline 
                 Código:
-                    ins {
-                        text-decoration: underline;
-                    }
+                    ins {text-decoration: underline;}
             -->
     
             <!-- cite="" - cita uma url a qual deverá conter o motivo para tal texto ser removido ou inserido, por exemplo um site de dicionário -->
@@ -371,17 +331,9 @@
             <p>Para citações, vulgo o aspas, usamos o <q cite="https://www.w3schools.com/tags/tag_q.asp">quotation</q> e <q>Assim que tivermos <q>quotation dentro de outro <q>quotation</q> será feita aspas simples</q>, se houvesse três ou mais quotations dentro um do outro</q>, a partir do segundo quotation só serão adicionadas aspas simples</p>
             <!-- <q> - cria aspas e ao colocar-se um <q> dentro de outro <q> independente de quantos coloque todos ficarão com aspas simples e o único que ficará com aspas duplas é o primeiro <q> 
                 Código:
-                    q {
-                        display: inline;
-                    }
-    
-                    q:before {
-                        content: open-quote;
-                    }
-    
-                    q:after {
-                        content: close-quote;
-                    }
+                    q {display: inline;}
+                    q:before {content: open-quote;}
+                    q:after {content: close-quote;}
             -->
             <!-- cite="" - serve para citar a url de onde foi tirado o determinado trecho. -->
 
@@ -433,12 +385,8 @@
             <p>Ao mercionarmos palavras abreviadamente, é recomendado que a marquemos com a tagname - abbr - e adicionando o atributo - title - podemos explicar o seu significado por extenso, e para o usuário visualizar o que seria a abreviação bastaria passar com o mouse em cima da palavra, seguem exemplos, passe com o mouse sobre eles para poder ver o efeito que mencionei: <abbr title="Computador">PC</abbr>, <abbr title="Televisão">TV</abbr>, <abbr title="Hyper Text Markup Language">html</abbr>... </p>
             <!-- <abbr> - indica uma abreviação 
                 Código:
-                    abbr {
-                        display: inline;
-                    }
-                    abbr[title] {
-                        text-decoration: underline dotted;
-                    }
+                    abbr {display: inline;}
+                    abbr[title] {text-decoration: underline dotted;}
             -->
     
             <!-- title="" - título como elemento, geralmente são mostradas como um texto de dica de ferramenta quando o mouse se move sobre o elemento, revelando assim uma pequena caixa de texto. -->
@@ -448,29 +396,60 @@
             <p>Ao mencionarmos um título de uma obra tipo a <cite>Monalisa</cite> ou a música <cite>Highway to Hell</cite> da banda <cite>AC/DC</cite>, é correto marca-los com a tagname apropriada</p>
             <!-- <cite> - citação é usado para citar um título de uma obra (por exemplo, um livro, uma música, um filme, um programa de TV, uma pintura, uma escultura etc.)
                 Código:
-                    cite {
-                        font-style: italic;
-                    } 
+                    cite {font-style: italic;} 
             -->
 
             <h2>Código de computador:</h2>
     
-            <p>E caso estejamos falando de algum código de computador utilizamos a tagname - code - que tem o estilo no css da seguinte maneira: <code>code {font-family: monospace;}</code>, normalmente quando o utilizamos tambem colocaos a tagname - pre - para que possa mostrar um código mais rápido e fácil, por exemplo:
-            <pre>
-    <code>
-        var nome = "Ramos"
-        window.alert(nome)
-    </code>
-            </pre>
+            <p>Para indicar que estamos nos referindo a um código de computador utilizamos - code - para representar, exemplo:</p>
             
-            </p>
+            <code>var nome = "Ramos"<br />window.alert(nome)</code>
             <!-- <code> - indica um pedaço de código de computador. 
                 Código:                               
-                code {
-                    font-family: monospace;
-                }
+                    code {font-family: monospace;}
             -->
-    
+
+            <p>Este foi um exemplo de código javascript que digitei como texto</p>
+            
+
+
+
+
+            <h2>Entrada de teclado</h2>
+
+            <p>Usamos a tagname - kbd - para indicar uma tecla que o usuário possa clicar, por exemplo se eu demonstrasce como copiar um texto falaria assim: selecione o texto que deseje copiar e clique <kbd>Ctrl + C</kbd> e aperte <kbd>Ctrl + V</kbd> para colar</p>
+            <!-- <kbd> - keyboard, tecla de entrada, indica uma tecla que o usuário pode pressionar
+                Código:
+                    kbd {font-family: monospace;}
+            -->
+
+
+
+
+
+
+
+            <h2>Variáveis:</h2>
+
+            <p>Quando temos uma variável em uma equação ou na programação representamos da seguinte maneira: <var>x</var><sup>2</sup> + 2.<var>x</var>.<var>y</var> + <var>y</var><sup>2</sup> = 0</p>
+            <!-- var - variável, indica que está sendo tratada de uma variável no texto
+                Código:
+                    var {font-style: italic;}
+            -->
+
+
+
+
+
+
+            <h2>Resposta de um programa</h2>
+
+            <p>Quando um programa retorna uma mensagem é indicado fazer da seguinte maneira:</p>
+            <p><samp>File not found.<br />Press F1 to continue</samp></p>
+            <!-- <samp> - saída de programa, indica um mensagem que o programa retorna
+                Código:
+                    samp {font-family: monospace;}
+             -->
         </div>
     
     
@@ -499,9 +478,7 @@
             <p><bdo dir="rtl">Para visualizar o efeito da tagname - bdo - farei dois parágrafos, o 1° será um parágrafo normal, o 2° terá seu efeito ativo com direção textual da direita para a esquerda!</bdo></p>
             <!-- <bdo> - Indica uma mudança de sentido de leitura
                 Código:
-                    bdo {
-                        unicode-bidi: bidi-override;
-                    }
+                    bdo {unicode-bidi: bidi-override;}
             -->
     
             <!-- dir="" - modifica o sentido de leitura age como um text-align @@@@@@@@@@@@@@@@ -->
@@ -531,11 +508,7 @@
             <h2>Direitos à:</h2>
             
             <p>Existe uma tagname que define as informações de contato, sejam elas referentes a sua página (tipo contato de empresas), quanto pessoal</p>
-            <address>
-                Escrito por: Rafael Ramos<br />
-                Apoie-me no github: <a href="https://github.com/RafaelRam0s" target="_blank">https://github.com/RafaelRam0s</a><br />
-                Mora em: SP - São Paulo
-            </address>
+            <address>Escrito por: Rafael Ramos<br /> Apoie-me no github: <a href="https://github.com/RafaelRam0s" target="_blank">https://github.com/RafaelRam0s</a> <br /> Mora em: SP - São Paulo</address>
             <!-- <address> - define as informações de contato (autor / proprietário) de um documento ou artigo.
                 Código:
                     address {

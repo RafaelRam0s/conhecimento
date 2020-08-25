@@ -13,44 +13,24 @@ h1 {
     font-size: 40px;
 }
 
-h2 {
-    font-size: 35px;
-}
+h2 {font-size: 35px;}
 
-h3 {
-    font-size: 33px;
-}
+h3 {font-size: 33px;}
 
-h4 {
-    font-size: 30px;
-}
+h4 {font-size: 30px;}
 
-h5 {
-    font-size: 26px;
-}
+h5 {font-size: 26px;}
 
-h6 {
-    font-size: 23px;
-}
+h6 {font-size: 23px;}
 
-p {
-    font-size: 20px;
-}
+p {font-size: 20px;}
 
-div {
-    margin-bottom: 60vh;
-}
+div {margin-bottom: 60vh;}
 
-div p {
-    margin-left: 20px;
-}
+div p {margin-left: 20px;}
 
-a {
-    color: aqua;
-}
-a:hover {
-    color: gold;
-}
+a {color: aqua;}
+a:hover {color: gold;}
 
 /* Cabeçalho */
 
@@ -96,7 +76,5 @@ div.menu_direita {
 
 /* Corpo do Documento */
 
-div#corpo {
-    margin: 5%;
-}
+div#corpo {margin: 5%;}
 
