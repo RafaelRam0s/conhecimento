@@ -40,7 +40,7 @@ Tipo primitivos:
 
     Literal
         - Caractere (usa para guardar informações simples, que seja prático contar o número de caractéres)
-            Char - se indicar que um nome possui 30 letras, vão ser armazenados 30 espaços, mesmo que o nome só ocupe 2 espaços, tipo "Zé" apesar de ter 2 espaços seria armazenado com 30 espaços, @@@@@ se o nome tivesse mais de 30
+            Char - se indicar que um nome possui 30 letras, vão ser armazenados 30 espaços, mesmo que o nome só ocupe 2 espaços, tipo "Zé" apesar de ter 2 espaços seria armazenado com 30 espaços, @@@@@ testar se o nome tivesse mais de 30
 
             VarChar - varchar coloca um limite, o nome vai ter até 30 letras, conforme preenche a é preenchido uma informação ele irá ocupando espaços, se o seu nome for Rafael ele vai preencher com somente 6 espaços e deixar o resto livre, @@@@@ se o nome tivesse mais de 30
                 campo de uma tabela -> nome varchar(30)

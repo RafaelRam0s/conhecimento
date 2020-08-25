@@ -1,0 +1,13 @@
+
+
+
+
+@@@@@ Para ver todos os cadastros de uma tabela:
+    /* select * from paises */
+
+    select - indica que irá selecionar para visualização alguma coisa
+
+    * - pega todas as colunas de uma tabela, o - * -pode ser substituido, por um nome de tabela. @@@@@ Se inserimos um valor ao qual não tem uma coluna é retornado uma coluna sem nome com cadastros preenchidos com o valor que está no lugar de *
+
+    paises - nome da tabela
+
