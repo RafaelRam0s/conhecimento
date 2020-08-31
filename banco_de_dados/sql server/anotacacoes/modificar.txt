@@ -1,5 +1,6 @@
 
 
+------------@@@@@EXEC SP_RENAME-------------
 
 Para modificar o nome de uma coluna:
     /* exec sp_rename 'NomeTabela.[nomeCampo]', 'NovoNomeCampo', 'column'; */
@@ -28,6 +29,12 @@ Para modificar o nome de uma coluna:
     - 'nome_do_pais', - No segundo valor deve ser informardo o nome que deseja que fique ao renomeação
 
     - 'column' - No terceiro valor é informado onde a alteração será feita
+
+---------------------------------------------
+
+
+
+-------------ALTER COLUMN----------------
 
 Para modificar o tipo primitivo de uma coluna já existente de uma tabela:
     /*
@@ -67,11 +74,12 @@ Para modificar o tipo primitivo de uma coluna já existente de uma tabela:
 
     Obs: Se você modificar para ter um valor - not null - e tiver um nulo cadastrado dá problema
 
+------------------------------------------
 
 
+--------------UPDATE---------------
 
-
-Alterando cadastros todos os cadastros com um valor, por outro:
+Alterando todos os cadastros com um valor, por outro:
     /*
         create database nome_do_banco;
         use nome_do_banco;
@@ -107,7 +115,7 @@ Alterando cadastros todos os cadastros com um valor, por outro:
 
     Obs: O where só executa o update, onde sua pesquisa retornar true
 
-    Alterar varios os campos que possuem várias especificações:
+    Alterar varios campos que possuem várias especificações:
         /*
             create database nome_do_banco;
             use nome_do_banco;
@@ -171,6 +179,7 @@ Alterando cadastros todos os cadastros com um valor, por outro:
         where pais = 'Canada'
     */
 
+---------------------------------------
 
 
 

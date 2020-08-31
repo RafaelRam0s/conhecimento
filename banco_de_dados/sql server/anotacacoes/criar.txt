@@ -1,5 +1,9 @@
 
 
+
+
+------------CREATE DATABASE/TABLE------------
+
 Criar um banco de dados:
     /* create database nome_do_banco; */
 
@@ -15,11 +19,6 @@ Criar um banco de dados:
         - Deve seguir as regras de sinais que podem ter uma pasta
 
 @@@@@ Criar um banco de dados configurado com linguagem utf8:
-
-
-
-
-
 
 Criar uma tabela:
     /* 
@@ -48,10 +47,12 @@ Criar uma tabela:
 
 @@@@@ Criar uma tabela configurada com linguagem utf8:
 
+------------------------------------------------
 
 
 
 
+------------INSERT INTO () VALUES ()---------
 
 Criar um cadastro em uma tabela já criada:
     /*
@@ -107,11 +108,11 @@ Criar um cadastro em uma tabela já criada:
     Obs: Para escrever um booleano escreva - true - ou - false -
     Obs: Pra dar como nulo escreva - null -
 
+----------------------------------------------
 
 
 
-
-
+----------ADD/ADD COLUMN---------------
 
 Criar uma coluna em uma tabela existente:
     /*
@@ -147,7 +148,7 @@ Criar uma coluna em uma tabela existente:
 
 @@@@@ Criar uma coluna em uma posição específica de uma tabela existente:
 
-
+----------------------------------------
 
 
 

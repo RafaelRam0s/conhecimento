@@ -1,13 +1,770 @@
 
 
+----------SELECT FROM----------
 
-
-@@@@@ Para ver todos os cadastros de uma tabela:
+Para ver todos os cadastros e colunas de uma tabela:
     /* select * from paises */
 
-    select - indica que irá selecionar para visualização alguma coisa
+    - select - indica que irá selecionar para visualização alguma coisa
 
-    * - pega todas as colunas de uma tabela, o - * -pode ser substituido, por um nome de tabela. @@@@@ Se inserimos um valor ao qual não tem uma coluna é retornado uma coluna sem nome com cadastros preenchidos com o valor que está no lugar de *
+    - * - pega todas as colunas de uma tabela
 
-    paises - nome da tabela
+    - from - indica que irá pegar as colunas de uma tabela
+
+    - paises - Valor mutável, indica qual a tabela que deve ser apresentada
+
+Para ver só uma coluna específica de uma tabela:
+    /* select nome_coluna_1 from nome_da_tabela */
+
+Para ver algumas colunas específicas
+    /* select nome_coluna_1, nome_coluna_2, nome_coluna_3 from nome_da_tabela */
+
+    Para ver algumas colunas específicas em uma ordem diferente
+        /* select nome_coluna_2, nome_coluna_3, nome_coluna_1 from nome_da_tabela */
+
+Para ver a mesma coluna mais de uma vez:
+    /* select nome_coluna_1, nome_coluna_1, nome_coluna_1 from nome_da_tabela */
+
+-------------------------------
+
+
+
+
+-------------AS---------
+
+Para ver uma coluna de determinado nome, com outro nome (efeito só visual não afeta a coluna):
+    /* select nome_coluna_1, nome_coluna_1 as nome_coluna_2 from nome_da_tabela */
+
+Cuidado colunas que possuem espaços devem ser chamadas entre aspas simples:
+    /* select nome_coluna_1, 'nome coluna 2', 'nome coluna_3' from nome_da_tabela */
+
+Ver um cálculo em uma coluna e o nome da coluna como outra coisa sem ser o nome próprio:
+    /* select 10+20 as calculo; */
+
+-------------------------
+
+
+
+---------------WHERE, OR, AND, NOT----------
+
+Para ver colunas onde um cadastro possui um determinado valor:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600);
+
+        select * from paises 
+        where pais = 'Brasil';
+    */
+
+    - where - onde, solicita uma operação lógica onde com base nos cadastros da tabela a informação tem que ser verdadeira
+
+    - pais = 'Brasil' - valor mutável, neste exemplo pedimos que seja verificado na coluna pais todos os cadastros onde o valor armazenado é uma string de nome Brasil
+
+Para ver colunas onde um cadastro possui um conjunto de valores que devem ser atendidos para visualizar o cadastro:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises 
+        where pais = 'Brasil' and capital = 'Ottawa' or ano_descobrimento = 1389;
+    */
+
+    O where solicita os cadastros onde a próxima operação lógica for verdadeira
+
+    Se na tabela não possuir nenhum dado compatível a tabela retorna vazia com somente os nomes das colunas pedidas após o select
+
+Para ver colunas onde não tem um cadastro com um valor específico:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises 
+        where not pais = 'Brasil' and capital = 'Ottawa' or ano_descobrimento = 1389;
+    */
+
+    O not inverte o que deveria ser mostrado
+
+-------------------------------------------
+
+
+
+-------BETWEEN AND---------
+
+Para ver colunas com cadastro entre 2 valores:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises 
+        where ano_descobrimento between 600 and 1554;
+    */
+
+    - between and - entre e, serve para procurar cadastros entre dois valores, basicamente age como um menor igual e maior igual, o primeiro valor tem que ser menor que o segundo para conseguir pesquisar
+
+Para ver colunas entre 2 datas de nascimento:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento date
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500-09-01),
+        ('Egito', 'Cairo', 0-01-01),
+        ('Canada', 'Ottawa', 1554-12-15),
+        ('Brasil', 'Ottawa', 1554-09-13),
+        ('canada', 'Ottawa', 600-02-23),
+        ('Brasil', 'Rio de Janeiro', 1389-04-04),
+        ('Croacia', 'Pernambuco', 1205-03-01),
+        ('Etiopia', 'Paris', 50-10-25);
+
+        select * from paises between 600-02-23 and 1554-09-13;
+    */
+
+Para ver colunas entre 2 nomes:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where pais between 'Ba' and 'Capadocia';
+    */
+
+    Pega pelos caracteres então o que estiver entre Ba e Capadocia em questão de ordem de caracter irá aparecer, então Brasil pode ser visto pois é maior ou igual em ordem de caracter que o - a - do Ba
+
+--------------------------------
+
+
+
+
+
+-----------IN, NOT IN-----------------
+
+Para ver muitos cadastros com valores específicos:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            id int not null identity(1,1),
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where id in (1, 3, 7);
+    */
+
+    - in - seleciona valores dos parênteses para comparar com a coluna, nos seus parênteses deve ser informado o valor que deseja buscar, caso aja mais de um coloque vírgula e acrescente o valor que procura
+
+Para NÃO ver muitos cadastros com valores específicos:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            id int not null identity(1,1),
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where id not in (1, 3, 7);
+    */
+
+--------------------------------
+
+
+
+
+-------------DISTINCT------------
+
+Para ver, SEM REPETIR, todos os valores cadastrados de uma coluna:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select distinct pais from paises;
+    */
+    
+    Então será mostrado todos os paises cadastrados, retornando assim Brasil, Canada e Egito
+
+---------------------------------
+
+
+
+--------------ORDER BY, ASC, DESC-----------------
+
+Para organizar a visualização dos cadastros por ordem alfabética de uma determinada coluna:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises order by pais;
+    */
+
+    - order by - organizar por, indica uma organização numérica/alfabética da coluna que for usada de modelo para organizar, o order by deve ficar após toda a lógica de pesquisa
+
+Para organizar a visualização dos cadastros de determinadas colunas:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises order by pais, ano_descobrimento;
+    */
+
+    Caso tenha 2 nomes na coluna pais iguais, o próximo critério de organização será o ano_descobrimento
+
+Para organizar a visualização dos cadastros por ordem ascendente:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises order by pais asc;
+    */
+
+Para organizar a visualização dos cadastros por ordem decrescente:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises order by pais desc;
+    */
+
+Para organizar a visualização de colunas por ordem ascendente e decrescente se empatar:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('Canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389);
+
+        select * from paises order by pais asc, ano_descobrimento desc;
+    */
+
+---------------------------------------------------------
+
+
+
+----------------LIKE-------------
+
+Para procurar em uma coluna cadastros que comece por determinados caracteres:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1201);
+
+        select * from paises where pais like 'C%';
+    */
+
+    - like - Destrava opções de procurar de determinados conjuntos de caracteres
+
+    - '' - Deve ser definido no interior das aspas simples o código referente ao que deve ser buscado nos cadastros da coluna especificada
+
+    Neste exemplo é procurado cadastros na coluna pais que comecem pela letra C não diferenciando a maiúcula da letra minuscula
+
+    Se fosse definido após o like 'Ca%' procuraria na coluna pais os cadastros que comecem pelas letras Ca
+
+Para procurar em uma coluna cadastros que terminem por determinados caracteres:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1201),
+        ('Etiopia', 'Paris', 0);
+
+        select * from paises where pais like '%ia';
+    */
+
+    - % - o que estiver antes do % será procurado como o que inicia por aquilo, o que após o % será procurado pelo que termina com aquilo
+
+Para procurar em uma coluna cadastros que comecem por determinados caracteres e terminem por determinados caracteres:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1201),
+        ('Etiopia', 'Paris', 0);
+
+        select * from paises where pais like 'C%ia';
+    */
+
+Para procurar em uma coluna cadastros que contenham determinados caracteres:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where ano_descobrimento like '%5%';
+    */
+
+    Perceba que ele procura o que contenha 5, para o sistema 1500, 1554, 1205 e 50 são válidos
+
+Para procurar em uma coluna cadastros que tenham em uma posição específica um caracter:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where ano_descobrimento like '1_5%';
+    */
+
+    - _ - indica que aceita qualquer caracter
+
+Para procurar cadastros em uma coluna que não tenham um caracter:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select * from paises where ano_descobrimento not like '%5%';
+    */
+
+-----------------------------------
+
+
+
+
+---------------TOP/@@@@@LIMIT--------------
+
+Para procurar cadastros e só retornar um determinado número de linhas:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select top 4 * from paises;
+    */
+
+    - top - Indica um limite para a visualização da pesquisa
+
+    - 4 - Valor mutável, indica o número de linhas que poderão ser visualizadas
+
+---------------------------------------
+
+
+
+--------------MIN---------------
+
+Para ver o menor valor cadastrado em uma coluna:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select min(ano_descobrimento) from paises;
+    */
+    
+    - min() - seleciona o minímo valor encontrado na coluna
+
+Para ver o menor valor cadastrado em várias colunas:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select min(ano_descobrimento), min(pais) from paises;
+    */
+
+----------------------------------
+
+
+
+
+---------------MAX--------------
+
+Para ver o maior valor cadastrado em uma coluna:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select max(ano_descobrimento) from paises;
+    */
+
+    - max() - encontra o máximo valor cadastrado na coluna
+
+Para ver o maior valor cadastrado em várias colunas:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Brasil', 'Ottawa', 1554),
+        ('canada', 'Ottawa', 600),
+        ('Brasil', 'Rio de Janeiro', 1389),
+        ('Croacia', 'Pernambuco', 1205),
+        ('Etiopia', 'Paris', 50);
+
+        select max(ano_descobrimento), max(pais) from paises;
+    */
+
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

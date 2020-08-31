@@ -1,0 +1,37 @@
+
+
+create database nome_do_banco_rpg;
+use nome_do_banco_rpg;
+
+create table nome_da_tabela_personagens (
+    id int identity(1,1) not null primary key,
+    nivel int,
+    nome nvarchar(250) not null,
+    altura float,
+    nascimento date,
+    dinheiro money,
+    historia text
+);
+
+insert into nome_da_tabela_personagens
+(nivel, nome, altura, nascimento, dinheiro, historia)
+values
+(99, 'Julius', 2.14, '1838-09-24', 5644, 'Um camponês'),
+(99, 'Julius', 2.14, '1838-09-24', 5644, 'Um camponês'),
+(21, 'Alexandre', 1.75, '1999-02-21', 368.55, 'Um louco muito doido'),
+(12, 'Jorge', 1.54, '1963-03-12', 678.02, 'Um servente de pedreiro'),
+(56, 'Seu Jorge', 1.80, '2013-07-29', 124.00, 'Um pedreiro'),
+(49, 'Breno', 1.93, '1994-11-17', 1034.87, 'Um guerreiro'),
+(12, 'Carlos', 0.45, '2012-09-04', 782.00, 'Um viajante'),
+(23, 'Diana', 4.21, '2002-04-30', 123.456, 'Uma cozinheira'),
+(89, 'Alexa', 1.77, '1783-01-25', 8781293.02, 'Uma pedreira'),
+(1, 'Ernaldo', 0.75, '0001-10-15', 0, 'Um bebê'),
+(40, 'Perial', 1.66, '1001-02-02', 538, 'Um mercador'),
+(40, 'Figueredo', 9.10, '1987-06-06', 823.82, 'Um guerreiro'),
+(40, 'Godofredo', 1.80, '2010-07-13', 29.01, 'Um pobre'),
+(54, 'Godolores', 1.75, '2020-08-28', 293847.29, 'Uma nobre'),
+(41, 'Homiro', 1.20, '2000-12-05', 1.99, 'Um guarda'),
+(67, 'Maria', 1.04, '1890-12-26', 425.2, 'Uma rainha'),
+(56, 'Seu Jorge', 1.80, '2013-07-29', 124.00, 'Um pedreiro');
+
+select * from nome_da_tabela_personagens;

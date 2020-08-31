@@ -83,9 +83,9 @@
 
         <p>@@@@@ Atributo - form - caso faça uma tagname form com alguns formulários e feche o conteiner, ainda é possível adicionar elementos no formulário utilizando o atributo form, sendo que a tagname form deva possuir um id e esse id deve ser informado como valor dentro do atributo form</p>
 
-        <p>@@@@@ Atributo minlength e maxlength - serve para inputs em que é possível escrever valores (como os tipos: text, number, email, password, search, tel e link). Configura em seu valor um número que corresponde respectivamente o minimo (minlength) e o maximo (minlength) de caracteres que deverá possuir a resposta do formulário</p>
+        <p>@@@@@ Atributo - minlength e maxlength - serve para inputs em que é possível escrever valores (como os tipos: text, number, email, password, search, tel e link). Configura em seu valor um número que corresponde respectivamente o minimo (minlength) e o maximo (minlength) de caracteres que deverá possuir a resposta do formulário</p>
 
-        <p>@@@@@ Atriburto min e max - aceita um valor mínimo e um valor máximo para a resposta de um input (funciona em number só permitindo aceitar valores compreendidos dentro desses dois atributos, funciona em range indicando entre quais valores o range atuará, funciona em date, datetime-local, month e week delimitando seguindo o padrão do value para configurar)</p>
+        <p>@@@@@ Atriburto - min e max - aceita um valor mínimo e um valor máximo para a resposta de um input (funciona em number só permitindo aceitar valores compreendidos dentro desses dois atributos, funciona em range indicando entre quais valores o range atuará, funciona em date, datetime-local, month e week delimitando seguindo o padrão do value para configurar)</p>
 
         <p>@@@@@ Parâmetro - multiple - permite inserir multiplas informações: <b>no email</b> permite acrescentar e-mails, você cadastra um e-mail ai ao final usa vírgula e espaço (, ) e então pode ser acrescentado outro e-mail e <b>no file</b>, permite selecionar e enviar mais de um arquivo</p>
 
@@ -137,23 +137,8 @@
 
         <p>@@@@@ Parâmetro - readonly - quando presente, especifica que um campo de entrada é somente leitura. Um campo de entrada somente leitura não pode ser modificado (no entanto, um usuário pode tabular até ele, destacá-lo e copiar o texto dele), adicione um value e veja que o texto aparece é selecionável, mas não alterável. Funciona com os tipos: text, number @@@@@</p>
         
-        <p>@@@@@ Atributo - size - configura o tamanho do input de caracteres visiveis, sendo o menor valor possível igual a 1. Funciona com os seguintes tipos: text, search, tel, url, email, e password.</p>
+        <p>@@@@@ Atributo - size - configura o tamanho do input com base em tamanho de caracteres visiveis, sendo o menor valor possível igual a 1. Funciona com os seguintes tipos: text, search, tel, url, email, e password.</p>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <p>O elemento input possui diversas formas dependendo do seu atributo type, segue alguns exemplos:</p>
 
         
@@ -518,6 +503,31 @@
             <label for="semana_editada">Em que semana você editou esta página?</label>
             <input type="week" name="semanaeditada" id="semana_editada" value="2020-W34">
         </div>
+
+
+
+
+        <h3>@@@@@ Lista de pré-valores selecionáveis para o input</h3>
+        <div>
+
+            <p>Podemos montar um ou mais inputs conectados a uma lista de respostas possíveis, isso permite que o usuário tenha uma lista de opções a qual poderá escolher um dos itens enquanto digita</p>
+
+            <p>O seu uso é feito através da tagname datalist, que deverá possuir um id, o nome desse id deve ser mencionado como um valor do atributo list, que deverá ser um atributo presente no input</p>
+            
+            <label for="navegadorPreferido">Qual o seu navegador predileto?</label>
+            <input type="text" list="navegadores" id="navegadorPreferido" name="navegador_preferido">
+            <datalist id="navegadores">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+            <label for="piorNavegador">Qual o pior navegador para você?</label>
+            <input type="text" list="navegadores" id="piorNavegador" name="pior_navegador">
+            
+        </div>
     </div>
 
 
@@ -559,7 +569,9 @@
         <form action="">
             <label for="mora_estado">Em qual estado você mora?</label>
             <select name="moraestado" id="mora_estado">
+                <!-- <select> - selecionável, permite armazenar opções em que o usuário poderá escolher um dos elementos -->
                 <option value="AM">Amazonas</option>
+                <!-- <option> - opção, junto do select fornece uma escolha em uma pseudo-lista -->
                 <option value="RR">Roraima</option>
                 <option value="AP">Amapá</option>
                 <option value="PA">Pará</option>
@@ -589,24 +601,75 @@
             <input type="submit" value="Enviar">
         </form>
 
+        <p>@@@@@ Parâmetro - multiple - nos permite selecionar mais de um item das opções, porém só clicando não tem efeito, precisa segurar o CTRL e então clicar com o botão esquerdo para funcionar.</p>
 
-        
+        <p>@@@@@ Atributo - size - permite visualizar uma quantidade de linhas das opções</p>
 
+        <p>@@@@@ Parâmetro - selected no option permite já começar selecionável o item</p>
 
-        <label for="cars">Choose a car:</label>
-        <select id="cars" name="cars" size="2" multiple>
+        <label for="carros">Escolha um modelo de carro:</label>
+        <select id="carros" name="carros" size="4" multiple>
             <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
+            <option value="saab" selected>Saab</option>
+            <option value="fiat" selected>Fiat</option>
             <option value="audi">Audi</option>
             <option value="uno">Uno</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="ford">Ford</option>
         </select>
+
+        <p>Dentro do select podemos agrupar os tipos de opções, ao agrupálos podemos colocar como se fosse um título não selecionável dentro do select</p>
+
+        <p>Podemos tornar uma lista de opções de grupo desabilitadas com o disabled no grupo de opções</p>
+
+        <p>O valor do atributo label é quem faz aparecer um conteúdo de texto na lista de opção</p>
+
+        <form action="">
+            <label for="estados">Em qual estado você mora?</label>
+            <select name="estados" id="estados">
+                <optgroup label="Brasil">
+                    <optgroup label="Norte">
+                        <option value="AM">Amazonas</option>
+                        <option value="RR">Roraima</option>
+                        <option value="AP">Amapá</option>
+                        <option value="PA">Pará</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="AC">Acre</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PI">Piauí</option>
+                        <option value="CE">Ceará</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="GO">Goiás</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </optgroup>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+
     </div>
-
-
-
-
-
 
 
 
@@ -620,55 +683,72 @@
     <div>
         <h3>Área de texto</h3>
 
-        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+        <p>Funciona semelhante ao input do tipo text, só que aqui podemos escrever maiores informações textuais</p>
 
-        <textarea name="mensagem" style="width:200px; height:600px;">The cat was playing in the garden.</textarea>
+        <p>@@@@@ Atributo - rows - linhas define a quantidade de linhas que deve ter o textarea com base em tamanho de caracter, tem a função semelhante ao height</p>
+
+        <p>@@@@@ Atributo - cols - colunas define a quantidade de colunas que deve ter o textarea com base em tamanho de caracter, tem a função semelhante ao width</p>
+
+        <form action="">
+            <label for="mensagem">Faça uma descrição breve sobre você</label>
+            <textarea id="mensagem" name="mensagem" style="width:200px; height:200px;">Texto prévio que pode ser mudado, e se quiser deixar vazio de início, aparece com nenhuma mensagem dentro</textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+        
     </div>
+
+
+
+
+
 
 
 
     <div>
         <h3>Campo de arquivo</h3>
 
-        <p>O - fieldset - elemento é usado para agrupar dados relacionados em um formulário</p>
+        <p>O - fieldset - elemento é usado para agrupar dados relacionados em um formulário, por exemplo um campo dados pessoais e outro de endereço</p>
 
-        <p>O legend elemento define uma legenda para o fieldset elemento.</p>
+        <p>O legend elemento define uma legenda para o fieldset</p>
 
         <form action="/action_page.php">
-            <fieldset>
-                <legend>Personalia:</legend>
+            <fieldset disabled>
+                <!-- <fieldset> - agrupamento de campos, agrupa visualmente dados de um formulário
+                    Código:
+                        fieldset {
+                            display: block;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                            padding-top: 0.35em;
+                            padding-bottom: 0.625em;
+                            padding-left: 0.75em;
+                            padding-right: 0.75em;
+                            border: 2px groove (internal value);
+                        }
+                -->
+                <legend>Dados Pessoais:</legend>
+                <!-- <legend> - legenda, define uma legenda para o fieldset
+                    Código:
+                        legend {
+                            display: block;
+                            padding-left: 2px;
+                            padding-right: 2px;
+                            border: none;
+                        }
+                 -->
 
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="seuNome">Nome completo:</label><br>
+                <input type="text" id="seuNome" name="seu_nome" value="John"><br>
 
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <label for="suaIdade">Idade:</label><br>
+                <input type="number" id="suaIdade" name="sua_idade" value="31"><br><br>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Enviar">
             </fieldset>
         </form>
-    </div>
 
-
-
-
-
-    <div>
-        <h3>Lista de opções</h3>
-
-        <p>O datalist elemento especifica uma lista de opções predefinidas para um input elemento. Os usuários verão uma lista suspensa das opções predefinidas à medida que inserem os dados. O list atributo do input elemento deve se referir ao id atributo do datalist elemento.</p>
-
-        <form action="/action_page.php">
-            <input list="browsers" name="browser">
-            <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-            </datalist>
-            <input type="submit">
-        </form>
+        <p>@@@@@ Parâmetro disabled dentro do fildset impossibilita o preenchimento dos campos do formulário</p>
     </div>
 
 
@@ -680,7 +760,8 @@
 
         <p>O output elemento representa o resultado de um cálculo (como um executado por um script).</p>
 
-        <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <p>Altere o range para ver o cálculo</p>
             0
             <input type="range" id="a" name="a" value="50">
             100 +
