@@ -2,7 +2,7 @@
 
 Em c#
 
-string nascimento = "13/07/2002";
+string nascimento = "21/09/2000";
 
 while (nascimento.IndexOf("-") != -1 || nascimento.IndexOf("/") != -1)
 {
