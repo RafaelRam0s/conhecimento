@@ -1,5 +1,7 @@
 
 
+--------------DROP TABLE/DATABASE--------------
+
 Excluir um banco de dados:
     /* 
         create database nome_do_banco
@@ -11,10 +13,6 @@ Excluir um banco de dados:
     - database - banco de dados, especifica para o drop que deverá ser excluido um banco de dados
 
     - nome_do_banco - valor mutável, especifica exatamente qual banco de dados deve ser excluido
-
-
-
-
 
 Excluir uma tabela:
     /*
@@ -31,8 +29,12 @@ Excluir uma tabela:
 
     - nome_da_tabela - valor mutável, especifica exatamente qual tabela deve ser excluida
 
+------------------------------------------------
 
 
+
+
+----------------DELETE FROM--------------
 
 Excluir todos os cadastros de uma tabela:
     /*
@@ -57,7 +59,7 @@ Excluir todos os cadastros de uma tabela:
 
     - paises - valor mutável que indicou que o que deveria ser exluido são os cadastros da tabela paises
 
-Excluir um cadastro de uma tabela:
+@@@@@Excluir um cadastro de uma tabela:
     /*
         create database nome_do_banco;
         use nome_do_banco;
@@ -82,13 +84,17 @@ Excluir um cadastro de uma tabela:
 
     - paises - valor mutável que indicou que o que deveria ser excluido são os cadastros da tabela paises
 
-    - where - falou que deve ser modificado onde for indicado como true
+    @@@@@- where - falou que deve ser modificado onde for indicado como true
 
     - id = 2 - valor mutável que indica qual a condição que o cadastro tem que ter para ser excluído
 
+------------------------------------------
 
 
 
+
+
+--------------DROP COLUMN--------------
 
 Excluir uma coluna:
     /*
@@ -124,7 +130,7 @@ Excluir uma coluna:
 
     - moeda_oficial - Define qual o nome da coluna a qual deve ser excluida
 
-    
+---------------------------------------
 
 
 
