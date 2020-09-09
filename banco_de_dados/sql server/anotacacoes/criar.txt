@@ -25,7 +25,7 @@ Criar uma tabela:
         create database nome_do_banco;
         use nome_do_banco;
 
-        // create table nome_da_tabela ( id int );
+        create table nome_da_tabela ( id int );
     */
 
     - create - indica que algo será criado
@@ -46,6 +46,18 @@ Criar uma tabela:
             - Deve seguir as regras de sinais que podem ter uma pasta
 
 @@@@@ Criar uma tabela configurada com linguagem utf8:
+
+Criar uma tabela a partir de outra tabela:
+    /* 
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table nome_da_tabela ( id int );
+        insert into nome_da_tabela values (1),(23),(409),(5);
+
+        select *
+        into nome_da_tabela_2
+        from nome_da_tabela;
+    */
 
 ------------------------------------------------
 
@@ -104,9 +116,9 @@ Criar um cadastro em uma tabela já criada:
     Só precisaremos acrescentar uma vírgula ao final de um parenteses secundário, logo no exemplo acima possuimos 3 parenteses secundários, e dentro cada valor faz conexão com uma coluna da tabela
 
     Obs: Para cadastrar um tipo string use aspas simples - '' -
-    Obs: Para cadastrar um numeral basta escrever o número
-    Obs: Para escrever um booleano escreva - true - ou - false -
-    Obs: Pra dar como nulo escreva - null -
+    Obs: Para cadastrar um numeral basta escrever o número - 1234567890 -
+    Obs: Para cadastrar um booleano escreva - true - ou - false -
+    Obs: Para cadastrar como nulo escreva - null -
 
 ----------------------------------------------
 
@@ -148,9 +160,168 @@ Criar uma coluna em uma tabela existente:
 
 @@@@@ Criar uma coluna em uma posição específica de uma tabela existente:
 
+Criar uma coluna com espaço entre as palavras:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            "ano descobrimento" int
+        );
+        insert into paises
+        (pais, capital, "ano descobrimento")
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554);
+
+        alter table paises
+        add "moeda oficial" varchar(255);
+    */
+
 ----------------------------------------
 
 
+
+
+
+
+---------VIEW---------
+
+Para criar uma view:
+    /*
+        create database dbteste;
+        use dbteste;
+        create table pessoa (id int primary key identity(1,1));
+
+        go
+        create view teste_de_view
+        as 
+        select * from pessoa
+        go
+    */
+
+-----------------------
+
+
+
+
+
+-----------PROCEDURE------------
+
+Para criar uma procedure:
+    /*
+        create table dbtestes;
+        use dbtestes;
+        create table paises (
+            id primary key identity(1,1) not null,
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        )
+
+        insert into paises
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Canada', 'Ottawa', 1594),
+        ('Canada', 'Quebec', 1600),
+        ('Brasil', 'Acre', 100),
+        ('Canada', 'Montreal', 1324),
+        ('Japão', 'Tóquio', 1200),
+        ('Mexico', 'Taco', 1800),
+        ('Capadocia', 'Cacapadocia', 0),
+        ('Nova Zelândia', 'Parana Pi Acaba', 1300),
+        ('teste Brasil com br no meio', '', 123),
+        ('Teste com br no fim Brasil', 'alguma capital louca', 321),
+        ('Teste com letras para pesquisa em partes barril', 'nenhuma', 9289);
+
+        go
+        create procedure selecionar_pais
+        @este varchar(255)
+        as
+        select * from paises
+        where pais = @este;
+        go
+    */
+
+---------------------------------
+
+
+
+
+
+
+----------BACKUP, TO DISK------------
+
+Para criar um backup do banco de dados:
+    /*
+        create database dbteste;
+        use dbteste;
+
+        backup database dbteste
+        to disk = 'C:\';
+    */
+
+Para salvar somente o que foi alterado do último backup do banco para o mais recente
+    /*
+        create database dbteste;
+        use dbteste;
+
+        backup database dbteste
+        to disk = 'C:\'
+        with differential;
+    */
+
+---------------------------------------
+
+
+
+
+
+@@@@@Para criar uma constraint:
+    /*
+       create table dbtestes;
+        use dbtestes;
+        create table paises (
+            id primary key identity(1,1) not null,
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+
+            constraint nao_nulo unique (pais, capital)
+        )
+
+        insert into paises
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Canada', 'Ottawa', 1594),
+        ('Canada', 'Quebec', 1600),
+        ('Brasil', 'Acre', 100),
+        ('Canada', 'Montreal', 1324),
+        ('Japão', 'Tóquio', 1200),
+        ('Mexico', 'Taco', 1800),
+        ('Capadocia', 'Cacapadocia', 0),
+        ('Nova Zelândia', 'Parana Pi Acaba', 1300),
+        ('teste Brasil com br no meio', '', 123),
+        ('Teste com br no fim Brasil', 'alguma capital louca', 321),
+        ('Teste com letras para pesquisa em partes barril', 'nenhuma', 9289);
+        --Dará erro pois a coluna pais não possui cadastros únicos
+        
+    */ 
+
+    - constraint  nome_para_a_restricao nome_da_restricao (coluna_afetada) - 
+
+
+
+
+
+
+
+
+@@@@@Para criar uma variavel:
+    declare @nome_variavel tipo_primitivo = valor
+    declare @nome varchar(255) = 'Rafael'
 
 
 
