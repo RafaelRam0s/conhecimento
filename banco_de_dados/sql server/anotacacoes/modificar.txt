@@ -36,6 +36,8 @@ Para modificar o nome de uma coluna:
 
 -------------ALTER COLUMN----------------
 
+@@@@@ Verificar se ao alterar a coluna é perdido as especificações após o tipo primitivo
+
 Para modificar o tipo primitivo de uma coluna já existente de uma tabela:
     /*
         create database nome_do_banco;
@@ -77,9 +79,63 @@ Para modificar o tipo primitivo de uma coluna já existente de uma tabela:
 ------------------------------------------
 
 
---------------UPDATE---------------
 
-Alterando todos os cadastros com um valor, por outro:
+@@@@@Para modificar a restrição de uma coluna já existente de uma tabela:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554);
+        alter table paises
+        add moeda_oficial varchar(100);
+
+        alter table paises
+        alter constraint moeda_oficial unique not null;
+    */
+
+
+
+--------------UPDATE SET---------------
+
+Alterando todos os valores de uma coluna:
+    /*
+        create database nome_do_banco;
+        use nome_do_banco;
+        create table paises ( 
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+        );
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1554),
+        ('Canada', 'Quebec', 1900);
+
+        update paises
+        set pais = 'Canadá';
+    */
+    
+    - update - indica que uma tabela irá receber uma atualização
+
+    - paises - valor mutável, indica qual a tabela que deve receber uma atualização
+
+    - set - seleciona pelo que deverá ser alterado
+
+    - pais = 'Canadá' - indicamos que a coluna - pais - deve receber o valor string Canadá
+
+Alterar todos os valores de uma coluna que possuam um determinado valor em uma coluna:
     /*
         create database nome_do_banco;
         use nome_do_banco;
@@ -100,64 +156,8 @@ Alterando todos os cadastros com um valor, por outro:
         set pais = 'Canadá'
         where pais = 'Canada';
     */
-    
-    - update - indica que uma tabela irá receber uma atualização
 
-    - paises - valor mutável, indica qual a tabela que deve receber uma atualização
-
-    - set - seleciona pelo que deverá ser alterado
-
-    - pais = 'Canadá' - indicamos que a coluna - pais - deve receber o valor string Canadá
-
-    - where - seleciona onde deve ser feita a alteração
-
-    - pais = 'Canada' - Todos os registros que possuem na coluna pais um valor string Canada devem ser alterados
-
-    Obs: O where só executa o update, onde sua pesquisa retornar true
-
-    Alterar varios campos que possuem várias especificações:
-        /*
-            create database nome_do_banco;
-            use nome_do_banco;
-            create table paises ( 
-                pais varchar(255),
-                capital varchar(255),
-                ano_descobrimento int
-            );
-            insert into paises
-            (pais, capital, ano_descobrimento)
-            values
-            ('Brasil', 'Brasília', 1500),
-            ('Egito', 'Cairo', 0),
-            ('Canada', 'Ottawa', 1900),
-            ('Canada', 'Quebec', 1600);
-
-            update paises
-            set pais = 'Canadá', ano_descobrimento = '1554'
-            where pais = 'Canada' and capital = 'Ottawa';
-        */
-
-        A vírgula na linha do set configura uma nova modificação a ser feita
-
-        O and na linha do where serve para falar uma nova pesquisa e solicitar que seja verdadeira para o bloco executar
-
-        /*
-            insert into paises
-            (pais, capital, ano_descobrimento)
-            values
-            ('Brasil', 'Brasília', 1500),
-            ('Egito', 'Cairo', 0),
-            ('Canada', 'Ottawa', 1900),
-            ('Canada', 'Quebec', 1600);
-
-            update paises
-            set pais = 'Canadá', ano_descobrimento = '1554'
-            where capital = 'Ottawa' or ano_descobrimento = 1900;
-        */
-
-        Na linha do where também poderíamos inserir o - or - que pede que entre duas coisas se houver uma verdadeira a pesquisa será verdadeira
-
-@@@@@ Alterando uma linha por vez nos cadastros que estamos a substituir:
+Alterar varios campos que possuem várias especificações:
     /*
         create database nome_do_banco;
         use nome_do_banco;
@@ -171,13 +171,33 @@ Alterando todos os cadastros com um valor, por outro:
         values
         ('Brasil', 'Brasília', 1500),
         ('Egito', 'Cairo', 0),
-        ('Canada', 'Ottawa', 1554),
-        ('Canada', 'Quebec', 1900);
+        ('Canada', 'Ottawa', 1900),
+        ('Canada', 'Quebec', 1600);
 
         update paises
-        set pais = 'Canadá'
-        where pais = 'Canada'
+        set pais = 'Canadá', ano_descobrimento = '1554'
+        where pais = 'Canada' and capital = 'Ottawa';
     */
+
+    A vírgula na linha do set configura uma nova modificação a ser feita
+
+    O and na linha do where serve para falar uma nova pesquisa e solicitar que seja verdadeira para o bloco executar
+
+    /*
+        insert into paises
+        (pais, capital, ano_descobrimento)
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Egito', 'Cairo', 0),
+        ('Canada', 'Ottawa', 1900),
+        ('Canada', 'Quebec', 1600);
+
+        update paises
+        set pais = 'Canadá', ano_descobrimento = '1554'
+        where capital = 'Ottawa' or ano_descobrimento = 1900;
+    */
+
+    Na linha do where também poderíamos inserir o - or - que pede que entre duas coisas se houver uma verdadeira a pesquisa será verdadeira
 
 ---------------------------------------
 
@@ -187,8 +207,15 @@ Alterando todos os cadastros com um valor, por outro:
 
 
 
+Para modificar uma procedure
 
-
+    go
+    alter procedure cadastros_nome
+    @nome varchar(255),
+    @sobrenome varchar(255)
+    as
+    select * from cadastros
+    where nome like ''+@nome+'%'+@sobrenome;
 
 
 
