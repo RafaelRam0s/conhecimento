@@ -59,7 +59,54 @@ Criar uma tabela a partir de outra tabela:
         from nome_da_tabela;
     */
 
+    Observação: Algumas restrições não são herdadas nessa cópia, tal como a primary key.
+
 ------------------------------------------------
+
+
+
+@@@@@Para criar uma constraint:
+    /*
+       create table dbtestes;
+        use dbtestes;
+        create table paises (
+            id primary key identity(1,1) not null,
+            pais varchar(255),
+            capital varchar(255),
+            ano_descobrimento int
+
+            constraint nao_nulo unique (pais, capital)
+        )
+
+        insert into paises
+        values
+        ('Brasil', 'Brasília', 1500),
+        ('Canada', 'Ottawa', 1594),
+        ('Canada', 'Quebec', 1600),
+        ('Brasil', 'Acre', 100),
+        ('Canada', 'Montreal', 1324),
+        ('Japão', 'Tóquio', 1200),
+        ('Mexico', 'Taco', 1800),
+        ('Capadocia', 'Cacapadocia', 0),
+        ('Nova Zelândia', 'Parana Pi Acaba', 1300),
+        ('teste Brasil com br no meio', '', 123),
+        ('Teste com br no fim Brasil', 'alguma capital louca', 321),
+        ('Teste com letras para pesquisa em partes barril', 'nenhuma', 9289);
+        --Dará erro pois a coluna pais não possui cadastros únicos
+        
+    */ 
+
+    - constraint  nome_para_a_restricao nome_da_restricao (coluna_afetada) - 
+
+@@@@@ Criar uma restrição em uma tabela já criada:
+    Para criar chave-primária
+        /*
+            create database Clientes;
+            create table cadastros {id int};
+            add constraint Clientes_cadastros_id primary key clustered (id);
+        */
+
+
 
 
 
@@ -278,39 +325,6 @@ Para salvar somente o que foi alterado do último backup do banco para o mais re
 
 
 
-
-@@@@@Para criar uma constraint:
-    /*
-       create table dbtestes;
-        use dbtestes;
-        create table paises (
-            id primary key identity(1,1) not null,
-            pais varchar(255),
-            capital varchar(255),
-            ano_descobrimento int
-
-            constraint nao_nulo unique (pais, capital)
-        )
-
-        insert into paises
-        values
-        ('Brasil', 'Brasília', 1500),
-        ('Canada', 'Ottawa', 1594),
-        ('Canada', 'Quebec', 1600),
-        ('Brasil', 'Acre', 100),
-        ('Canada', 'Montreal', 1324),
-        ('Japão', 'Tóquio', 1200),
-        ('Mexico', 'Taco', 1800),
-        ('Capadocia', 'Cacapadocia', 0),
-        ('Nova Zelândia', 'Parana Pi Acaba', 1300),
-        ('teste Brasil com br no meio', '', 123),
-        ('Teste com br no fim Brasil', 'alguma capital louca', 321),
-        ('Teste com letras para pesquisa em partes barril', 'nenhuma', 9289);
-        --Dará erro pois a coluna pais não possui cadastros únicos
-        
-    */ 
-
-    - constraint  nome_para_a_restricao nome_da_restricao (coluna_afetada) - 
 
 
 

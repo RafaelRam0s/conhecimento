@@ -4,9 +4,7 @@
     background-color: darkred;
 }
 
-/* Glossário */
-/* Pendentes: */
-/*
+/* Pendentes: 
 padding-inline-start
 padding-inline-end
 padding-block-start
@@ -27,7 +25,8 @@ scroll-padding-left
 scroll-padding
 
 */
-/* 
+
+/* Glossário:
 padding
 
 padding-top
@@ -36,6 +35,7 @@ padding-bottom
 padding-left
 
 */
+
 .preenchimento {
     padding: 10px;
 }
