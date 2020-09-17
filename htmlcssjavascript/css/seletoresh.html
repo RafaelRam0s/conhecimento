@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <link rel="stylesheet" href="_style.css">
+
+    <title>Seletores</title>
+
+</head>
+<body>
+
+
+
+    <h2>Seletores de elemento:</h2>
+
+    <div>
+        <div>
+            <h3>Seletor por nome:</h3>
+
+            <style>
+                #alterador_p_contido p {background-color: rgb(55, 139, 139);}
+            </style>
+
+            <div id="alterador_p_contido" style="margin: 0px;">
+                <h6>Teste com outras tagnames dentro do conteiner</h6>
+
+                <p>Todos os elementos - p - dentro da div ficam com a configuração</p>
+
+                <p>Se tiver um elemento que dentro da - div - seja um conteiner, como por exemplo um - span - e dentro do span existir um - p - esse p ainda recebe a configuração</p>
+
+                <div style="margin: 0px;">
+                    <p>Este é um parágrafo para visualizar o que foi descrito no parágrafo anterior</p>
+                </div>
+            </div>
+
+            <div style="margin: 0px;">
+                <p>Este é outro parágrafo só para explicar que para ver que a regra só se aplicou a div de id alterador_p_contido</p>
+            </div>
+        </div>
+
+
+
+
+        <div>
+            <h3>Selecionando somente seu filho e não todas as gerações:</h3>
+
+            <style>
+                #alterador_p_filho > p {background-color: rgb(55, 139, 139);}
+            </style>
+
+            <div id="alterador_p_filho" style="margin: 0px;">
+                <h6>Teste com outras tagnames dentro do conteiner</h6>
+
+                <p>Com o sinal de maior (&lt;) indicamos que só queremos que os efeitos ocorram nos elementos filhos.</p>
+
+                <p>É importante que seja informado um elemento logo após o sinal de maior, senão estará errado o código</p>
+
+                <div style="margin: 0px;">
+                    <p>Este parágrafo não tem a propriedade dos outros pois está dentro de um outro conteiner, sendo assim não é filho direto dos outros que estão na div de id alterador_p_filho</p>
+                </div>
+            </div>
+
+            <div style="margin: 0px;">
+                <p>Este é outro parágrafo para exemplo de como não afeta divs exteriores</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div>
+            <h3>Selecionando somente o elemento que estiver logo após o elemento com a classe:</h3>
+
+            <style>
+                .alterador_p_proximo + p {background-color: rgb(55, 139, 139);}
+            </style>
+
+            <div class="alterador_p_proximo" style="margin: 0px;">
+                <p>O efeito só ocorrerá no elemento adjacente, se ele estiver como elemento posterior</p>
+
+                <p>Veja o código para poder entender a explicação</p>
+            </div>
+
+            <p>Parágrafo 3</p>
+
+            <p>Parágrafo 4</p>
+
+            <div class="alterador_p_proximo" style="margin: 0px;">
+                <p>Parágrafo 5</p>
+
+                <p>Parágrafo 6</p>
+            </div>
+
+            <div style="margin: 0px;">
+                <p>Parágrafo 7</p>
+
+                <p>Parágrafo 8</p>
+            </div>
+
+            <p>Parágrafo 9</p>
+
+        </div>
+
+
+
+
+        <div>
+            <h3>Selecionando todos os irmãos de 1° grau:</h3>
+
+            <style>
+                .alterador_p_irmao ~ p {background-color: rgb(55, 139, 139);}
+            </style>
+
+            <div class="alterador_p_irmao" style="margin: 0px;">
+                <p>O efeito só ocorrerá nos elementos irmãos posteriores ao elemento que possue a classe</p>
+
+                <p>Veja o código para poder entender a explicação</p>
+            </div>
+
+            <p>Parágrafo 3</p>
+
+            <p>Parágrafo 4</p>
+
+            <div style="margin: 0px;">
+                <p>Parágrafo 5</p>
+
+                <p>Parágrafo 6</p>
+            </div>
+
+            <p>Parágrafo 7</p>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+
+    <h2>Seletores de atributo:</h2>
+
+    <div>
+        <div>
+            <style>
+                #teste_seletor_atributo_1[title] {background-color: black;}
+            </style>
+
+            <p>Para selecionar um elemento que contenha um atributo</p>
+
+            <p id="teste_seletor_atributo_1" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                #teste_seletor_atributo_2[title="teste de elemento com um atributo preenchido com valores"] {background-color: black;}
+            </style>
+
+            <p>Para selecionar um elemento que contenha um atributo com um valor específico</p>
+
+            <p id="teste_seletor_atributo_2" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                #teste_seletor_atributo_3[title ~= "com"] {background-color: black;}
+            </style>
+
+            <p>Para procurar no valor do atributo uma palavra-chave.</p>
+
+            <p id="teste_seletor_atributo_3" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                .teste_seletor_atributo_4[title |= "teste viu"] {background-color: black;}
+            </style>
+
+            <p>Para selecionar um elemento, que contenha um atributo, iniciado com uma palavra específica</p>
+
+            <p>Cuidado: apesar de falar iniciada por uma palavra, não é bem a melhor das definições, se eu procuro algo que inicie pela palavra "en" ele acha os valores dos elementos que começam por "en" e valores que possuem o en e um sinal de menos, após esse sinal de menos pode ser escrito qualquer coisa, segue exemplos:</p>
+
+            <p class="teste_seletor_atributo_4" title="teste viu-1">Parágrafo para exemplo</p>
+
+            <p class="teste_seletor_atributo_4" title="teste viu 2">Parágrafo para exemplo</p>
+
+            <p class="teste_seletor_atributo_4" title="teste viu-oi 3 oi">Parágrafo para exemplo</p>
+
+            <p class="teste_seletor_atributo_4" title="teste viu-oi4">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                #teste_seletor_atributo_5[title ^= "test"] {background-color: black;}
+            </style>
+
+            <p>Para selecionar um elemento que contenha um atributo que tenha o valor iniciado por uma certa palavra</p>
+
+            <p id="teste_seletor_atributo_5" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                #teste_seletor_atributo_6[title $= "ores"] {background-color: black;}
+            </style>
+
+            <p>Para selecionar um elemento que contenha um atributo que tenha o valor finalizado por uma certa palavra</p>
+
+            <p id="teste_seletor_atributo_6" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+
+        <div>
+            <style>
+                #teste_seletor_atributo_7[title *= "com"] {background-color: black;}
+            </style>
+
+            <p>Para procurar no valor do atributo um valor.</p>
+
+            <p>Mesmo se tivessemos a palavra paralelepipedo como valor de um atributo e procurassemos "alele" este elemento seria achado</p>
+
+            <p id="teste_seletor_atributo_7" title="teste de elemento com um atributo preenchido com valores">Parágrafo para exemplo</p>
+        </div>
+
+    </div>
+    
+
+
+
+</body>
+</html>

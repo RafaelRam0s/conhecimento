@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="front-end, html, elementos, tagname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        body {
+            background-color: rgba(6, 6, 7, 0.747);
+            margin: 5%;
+            color: rgba(255, 255, 240, 0.99);
+            font-size: 16px;
+        }
+        h1 {
+            text-decoration-line: underline;
+            font-size: 350%;
+        }
+        h2, h3, h4, h5, h6 {text-align: left;}
+        h2 {font-size: 300%;}
+        h3 {font-size: 250%;}
+        h4 {font-size: 225%;}
+        h5 {font-size: 200%;}
+        h6 {font-size: 175%;}
+        p {font-size: 125%;}
+        div {margin-bottom: 60vh;}
+        div p {margin-left: 20px;}
+        a {color: aqua;}
+        a:hover {color: gold;}
+    </style>
+
+    <title>Multimídia</title>
+</head>
+<body>
+
+    <div>
+        <h3>Vídeo</h3>
+
+        <p>Ao inserirmos um vídeo é importante que configuremos sua dimensões, como largura e altura, para que não fique piscando a página enquanto é carregada</p>
+
+        <p>Configurar diversas extensões de um mesmo vídeo é importante para caso um navegador não rode um tipo de extensão</p>
+
+        <p>Dentro da tagname vídeo deverá ser informados os source, com ordem de preferência para quem aparecerá de cima para baixo, e caso seje escrito algo dentro de vídeo, só irá aparecer caso nenhum source carregue</p>
+
+        <p>Dependendo da extensão pode ser que o vídeo carregue, mas não saia o áudio, por exemplo videos com extensão mkv rodavam em partes no navegador Chrome, pois tinha tela de vídeo, mas não havia som</p>
+
+        <video style="width: 300px; height: 165px;" controls>
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+        <!-- <video> - vídeo, permite a inclusão de documentos de vídeo -->
+        <!-- controls - controles, adiciona automaticamente funções de vídeo, pausar/continuar, volume, tela cheia, fazer download e tranformar em miniatura -->
+
+        <!-- <source/> - fonte, fornece uma fonte da qual o vídeo é proveniente -->
+        <!-- src - fonte, indica de onde o video está sendo tirado
+            Valores:
+                url de um site
+                caminho de arquivo
+        -->
+        <!-- type - tipo, especifica o tipo de arquivo em vídeos teremos o valor video/nome_da_extensão -->
+
+        <p>Começar um vídeo automaticamente ao ser carregado o html:</p>
+
+        <p>Atualmente (12/09/2020) em alguns navegadores, só é permitido o uso de iniciar o vídeo automaticamente se ele começar mutado</p>
+
+        <video style="width: 300px; height: 165px;" controls autoplay muted>
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        <p>Fazer o vídeo carregar novamente ao terminar</p>
+
+        <video style="width: 300px; height: 165px;" controls loop>
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        <p>Para ter uma imagem de poster antes de ser pedido que o vídeo comece</p>
+
+        <video style="width: 300px; height: 165px;" controls poster="../../midia/imagens/copodecafe.jpg">
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        <p>Para ajustar a forma com a qual o vídeo é previamente carregado:</p>
+
+        <p>Sem carregar:</p>
+
+        <video style="width: 300px; height: 165px;" controls preload="none">
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        <p>Para carregar somente os metadados (neste caso já permite que os controles do vídeo por exemplo, sejam carregados previamente):</p>
+
+        <video style="width: 300px; height: 165px;" controls preload="metadata">
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        <p>Carregar todo o vídeo:</p>
+
+        <video style="width: 300px; height: 165px;" controls preload="auto">
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        <h3>@@@@@É possível adicionarmos legendas ao vídeo com a tagname - track -</h3>
+        
+        <p>Ao adicionarmos um tack é automaticamente feito um bloco de legendas contendo opções</p>
+
+        <video style="width: 300px; height: 165px;" controls preload="auto">
+            <source src="../../midia/videos/mov_bbb.mp4" type="video/mp4" />
+            <source src="../../midia/videos/mov_bbb.ogv" type="video/ogg" />
+            <track src="../../midia/" kind="subtitles" srclang="pt-br" label="Legenda em português">
+            <track src="../../midia/" kind="subtitles" srclang="en" label="Inglês">
+            O vídeo não pode ser carregado devido ao seu navegador não possuir suporte aos vídeos que foram cadastrados dentro desta tagname conteiner - video -
+        </video>
+        <!-- <track /> - localizar -->
+        <!-- kind - tipo
+            @@@@@Valores:
+                subtitles - legenda
+        -->
+        <!-- srclang - local da linguagem, de onde veio o idioma 
+            Valores:
+                Nomenclatura de abreviação de idioma
+        -->
+        <!-- label - título, será o nome que o usuário poderá ver para selecionar
+            Valor:
+                Qualquer texto
+        -->
+    </div>
+
+
+
+
+
+    <div>
+        <h3>Áudio</h3>
+
+        <p>Configurar diversas extensões de um mesmo áudio é importante para caso um navegador não rode um tipo de extensão</p>
+
+        <p>Dentro da tagname audio deverá ser informado os source, com ordem de preferência para quem aparecerá de cima para baixo, e caso seje escrito algo dentro de vídeo, só irá aparecer caso nenhum source carregue</p>
+
+        <audio controls>
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Para iniciar automaticamente (funciona somente em alguns navegadores)</p>
+
+        <audio controls autoplay>
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Para recomeçar automaticamente</p>
+
+        <audio controls loop>
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Para começar com o som mutado</p>
+
+        <audio controls muted>
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Para ajustar a forma com a qual o vídeo é previamente carregado:</p>
+
+        <p>Sem carregar:</p>
+
+        <audio controls preload="none">
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Para carregar somente os metadados (neste caso já permite que os controles do áudio por exemplo, sejam carregados previamente):</p>
+
+        <audio controls preload="metadata">
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+
+        <p>Carregar todo o áudio:</p>
+
+        <audio controls preload="auto">
+            <source src="../../midia/audios/musicadejogo.mp3" type="audio/mpeg">
+            Seu navegador não suporte as extensões de áudio incrementadas
+        </audio>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

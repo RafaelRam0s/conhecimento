@@ -8,7 +8,6 @@
 .mg-top-20 {
     margin-top: 20px;
 }
-/* Glossário */
 /* Pendentes: 
 border-bottom-left-radius
 border-top-left-radius
@@ -35,8 +34,6 @@ border-image-repeat
 border-image-slice
 border-image-outset
 border-image-source
-
-
 
 
 
@@ -75,9 +72,8 @@ border-block-color
 border-block
 */
 
+/* Glossário:
 
-
-/*
 border-style
 border-top-style
 border-right-style
@@ -328,7 +324,7 @@ borda, age como o border, mas só onde for indicado para aparecer
 .borda_redonda_porcentagem {
     border-radius: 50%;
 }
-/* border-radius - raio da borda, indica o quão bem arredondada deverá ficar a borda, @@@@@
+/* border-radius - raio da borda, indica o quão arredondada deverá ficar a borda
     Valores:
         Unidades de medidas
 */

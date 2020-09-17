@@ -17,8 +17,6 @@
 </head>
 <body>
 
-@@@@@ Pendente: explicar margem automatica para centralizar um elemento
-
 
     <div>
         <h2>Alinhamento vertical de blocos em linha:</h2>
@@ -801,6 +799,36 @@
     </div>
 
 
+
+
+    <div>
+        <h3>Para centralizar um elemento pela margem automatica</h3>
+
+        <p>O que ocorre é que quando colocamos uma margem automático é feita uma leitura da largura do elemento e da linha vazia em que ele se encontra, após isso é distribuido um espaço para as margens. Tendo em mente seu funcionamento utilizando a leitura do tamanho é preciso que seja especificado o tamanho do bloco, isso podemos fazer pelo width</p>
+
+        <div style="margin: 0px;">
+            <div class="margem_automatica" style="width: 200px; padding: 3px; border: 5px solid white">
+                <p>Bloco para demonstração</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div>
+        <h3>Para centralizar um elemento tanto na vertical quanto na horizontal</h3>
+
+        <p>@@@@@ O que o transform (translate(translateX, translateY)) faz é verificar o tamanho de seu elemento e então movimenta ele conforme o tanto que foi informado nos parâmetros. O valor do parâmetro quando em porcentagem se refere ao próprio tamanho do elemento. Não é preciso especificar o width para que ele possa ler o tamanho, mas é necessário que para funcionar seu elemento esteja em posição absoluta ou esteja com disposição de bloco-em-linha</p>
+
+        <div style="height: 200px; margin: 0px; position: relative; border: 1px solid white;">
+            <p style="margin: 0px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Este é um parágrafo centralizado via transform</p>
+        </div>
+
+        
+    </div>
     
 </body>
 </html>
