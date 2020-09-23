@@ -1,0 +1,110 @@
+
+
+/* Menu de navegação */
+.navegacao_menu {
+    position: sticky;
+    top: 0px;
+}
+
+    .navegacao_menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 4px;
+        background-color: rgb(88, 88, 88);
+        word-spacing: -4px;
+    }
+
+        .navegacao_menu ul li {
+            margin: 0px;
+            display: inline-block;
+            padding: 0px;
+            background-color: grey;
+        }
+
+        .navegacao_menu ul li:hover {
+            background-color: rgb(70, 70, 70);
+        }
+
+        .navegacao_menu ul li a {
+            display: inline-block;
+            border-right: 2px solid rgb(5, 5, 5);
+            color: white;
+            text-decoration: none;
+            word-spacing: 4px;
+            padding: 5px 8px;
+        }
+
+        .navegacao_menu ul li:hover > a {
+            color: lightseagreen;
+        }
+
+.sub_menu ul {
+    display: none;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+
+    .sub_menu ul li {
+        display: block;
+        border: 2px solid black;
+    }
+
+.navegacao_menu ul li:hover .sub_menu ul {
+    display: block;
+}
+
+/* Menu de navegação html
+<nav class="navegacao_menu">
+    <ul>
+        <li>
+            <a href="#">Menu 1</a>
+            <div class="sub_menu">
+                <ul>
+                    <li><a href="#">Sub-menu 1</a></li>
+                    <li><a href="#">Sub-menu 2</a></li>
+                    <li><a href="#">Sub-menu 3</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+        <li>
+            <a href="#">Menu 4</a>
+            <div class="sub_menu">
+                <ul>
+                    <li><a href="#">Sub-menu 1</a></li>
+                    <li><a href="#">Sub-menu 2</a></li>
+                    <li><a href="#">Sub-menu 3</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Menu 5</a></li>
+        <li><a href="#">Menu 6</a></li>
+    </ul>
+</nav>
+*/
+
+/* Fim menu de navegação */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
