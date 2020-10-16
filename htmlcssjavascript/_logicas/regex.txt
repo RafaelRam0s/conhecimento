@@ -1,0 +1,120 @@
+
+
+Regra regex é um padrão feito com o intuito de ser um mecanismo de busca por caracteres.
+
+Por exemplo o abecedario:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Em que posição está a letra D?
+Na quarta
+
+Como fariamos em um javascript normal sem uso do regex para achar isso?
+var abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log(abecedario.search("D")) // 4
+
+Agora com regra regex:
+console.log(abecedario.search(/D/)) // 4
+
+O que estiver entre barra barra // é considerado como para ser usado a regra regex
+
+Ambos retornam a mesma coisa, só que de maneiras diferentes. Se é a mesma coisa então para que utilizar isso?
+
+Pensemos na seguinte situação: você quer ver se dentro de uma string existe somente números.
+
+Obs: não sei se existe uma outra forma de fazer esse sistema, mas seria da seguinte forma que eu faria se não tivesse regex.
+
+var texto_qualquer = "Abacaxi não f4z x123"
+var verificar_texto = texto_qualquer
+for (var x = 0; x < 10; x++) {
+    while (verificar_texto.search(x) != -1) {
+        verificar_texto.replace(x, "")
+    }
+}
+if (verificar_texto.length != 0) {
+    console.log("Não há somente números em " + texto_qualquer)
+} else {
+    console.log("Há somente números em " + texto_qualquer)
+}
+
+E isso foi porque queriamos ver se só tinha número, imagina se quiséssemos ver se só tinha letra, teríamos que criar vários while ou usar a tabela ASCII, ia ser bem longo as linha de código, já com regex evitamos todo esse percurso.
+
+var texto_qualquer = "Abacaxi não f4z x123"
+if (texto_qualquer.search(/[^0-9]/) != -1) {
+    console.log("Não há somente números em " + texto_qualquer)
+} else {
+    console.log("Há somente números em " + texto_qualquer)
+}
+
+Não se preocupe quanto a essa parte cheia de símbolos "/[^0-9]/" isso é a mesma coisa que falar: "procure em texto_qualquer um caracter que esteja fora do intervalo de 0 à 9"
+
+Se é encontrado algo na busca, seria retornado a sua posição e se não for encontrado é retornado -1
+
+
+
+
+--------------------------------------------------------
+
+
+
+
+Agora que foi visto para que usamos regex, vamos ver seu pontecial, até onde se abrange suas pesquisas e como funcionam:
+
+
+
+-----------------------------------------------------------
+
+
+
+
+Para ativar a possibilidade de uso do regex escreva // e o que estiver entre essas barras será formatado para uso regex. Ou use o construtor:
+let regra_reg = new RegExp("")
+
+
+
+Quando simplesmente tacamos um valor dentro, no texto é selecionado a primeira aparição
+Texto: "Texto para teste do regex"
+Regex: /e/
+É feito a procura do primeiro indício da palavra "e", logo, aqui ele seleciona a segunda posição
+
+Texto: "Texto para teste do regex"
+Regex: / par/
+É feito a procura do primeiro indício da palavra " par", logo, aqui ele seleciona a quinta posição esse espaço avulço é considerado parte da busca.
+
+Texto: "Texto para teste do regex"
+Regex: /a par/
+É feito a procura do primeiro indício da palavra "a par", logo, aqui ele seleciona nada, pois não foi achado um valor correspondente.
+
+Texto: "Texto para teste do regex"
+Regex: /ra te/
+É feito a procura do primeiro indício da palavra "ra te", logo, aqui ele seleciona a oitava posição
+
+
+
+
+
+
+
+Caso queira colocar um símbolo, que normalmente o regex interpetraria como filtro
+
+Texto: "Texto / para teste do regex"
+Regex: /to \/ pa/
+É feito a procura do primeiro indício da palavra "to / pa"
+
+Texto: "Texto /\\ para teste do regex"
+Regex: /to \/\\ pa/
+É feito a procura do primeiro indício da palavra "to /\ pa"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

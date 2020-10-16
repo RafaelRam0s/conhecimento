@@ -57,5 +57,66 @@
     </div>
 
 
+    --------------------------------
+
+
+    
+    
+    <p>Please click on the checkbox control.</p>
+    
+    <form>
+        <input type="checkbox" id="my-checkbox" />
+        <label for="my-checkbox">Checkbox</label>
+    </form>
+
+    <script>
+        function stopDefAction(evt) {
+            evt.preventDefault();
+        }
+            
+        document.getElementById('my-checkbox').addEventListener(
+            'click', stopDefAction, false
+        );
+    </script>
+
+    --------------------------------
+
+
+
+
+
+
+
+
+    
+    --------------------------------
+    <form> 
+        <input type="text" id="my-textbox" /> 
+    </form> 
+    <script>
+        function Init () {
+            var myTextbox = document.getElementById('my-textbox');
+            myTextbox.addEventListener( 'keypress', checkName, false );
+        }
+
+        function checkName(evt) {
+            var charCode = evt.charCode;
+            if (charCode != 0) {
+                if (charCode < 97 || charCode > 122) {
+                    evt.preventDefault();
+                    alert(
+                        "Please use lowercase letters only."
+                        + "\n" + "charCode: " + charCode + "\n"
+                    );
+                }
+            }
+        } 
+
+        document.body.onload = Init
+    </script>
+
+    --------------------------------
+
+    
 </body>
 </html>
