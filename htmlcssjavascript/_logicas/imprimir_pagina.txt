@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="teste">
+
+  <h2>The window.print() Method</h2>
+
+  <p>Click the button to print the current page.</p>
+
+</div>
+
+<button onclick="printDiv()">Print this page</button>
+
+<script>
+
+function printDiv() {
+   
+   var page = document.getElementById("teste").innerHTML;
+   tela_impressao = window.open();
+   tela_impressao.document.write('<div style="max-width: 500px; margin: 0 auto;">' + page  + '</div>');
+   tela_impressao.window.print();
+   tela_impressao.window.close();
+} 
+
+</script>
+
+</body>
+</html>
