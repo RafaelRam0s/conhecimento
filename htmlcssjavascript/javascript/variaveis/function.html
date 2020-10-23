@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+        }
+    </style>
+
+    <title>Funções</title>
+</head>
+<body>
+    
+    <div>
+        <h2>O que é o function?</h2>
+       
+        <div>
+            <p>Imagine que você tem um código que pergunta ao usuário dois números e retorna depois a soma entre eles, aí você vai e cria um botão que faz isso através de alertas:</p>
+
+            <button onclick="let num1 = Number(window.prompt('Informe um número:'));let num2 = Number(window.prompt('Informe outro número:'));window.alert('A soma entre os números informados é: ' + (num1 + num2));">Botão do exemplo descrito</button>
+
+            <p>Ai pensa que você continua criando a sua página e quer chamar este mesmo código novamente, o que você acaba tendo que fazer então é recriar todas as intruções. Ai pensa que você coloca outras tantas vezes esse mesmo elemento.</p>
+
+            <button onclick="let num1 = Number(window.prompt('Informe um número:'));let num2 = Number(window.prompt('Informe outro número:'));window.alert('A soma entre os números informados é: ' + (num1 + num2));">Botão do exemplo descrito</button>
+
+            <button onclick="let num1 = Number(window.prompt('Informe um número:'));let num2 = Number(window.prompt('Informe outro número:'));window.alert('A soma entre os números informados é: ' + (num1 + num2));">Botão do exemplo descrito</button>
+
+            <p>Perceba que além da linha ficar gigante com um código tão simples, tivemos que repetir 1 código, várias vezes, com o intuito de ajudar a minimizar todo este problema nasce as functions</p>
+
+            <p>E não só para isso que foi feita as functions "organizar a visualização", foi feito para ser prático, imagine que agora você pare e pense "Putz ao invés de fazer a ação de somar vou querer que multiplique os números", nesta página colocamos até agora, 3 vezes o código, mas pense que fizessemos centenas, iriamos ter que ir em cada linha e mudar cada parte do código, você acaba tendo que ir caçar e modificar todos, onde no meio disso você pode acabar cometendo um erro e esquecendo de mudar uma parte</p>
+
+            <p>E pense em outra situação, você tem esse código de somar, agora pensa que você aproveita ele para criar outros dois códigos diferentes, mas que o utilizam em uma parte o código original.</p>
+
+            <button onclick="let num1 = Number(window.prompt('Informe um número:'));let num2 = Number(window.prompt('Informe outro número:'));window.alert('A soma entre os números informados é: ' + (num1 + num2));num1 > 5 ? window.alert('O ' + num1 + ' é maior que 5') : window.alert('O ' + num1 + ' é menor que 5');">Botão do exemplo descrito</button>
+
+            <button onclick="let num1 = Number(window.prompt('Informe um número:'));let num2 = Number(window.prompt('Informe outro número:'));window.alert('A soma entre os números informados é: ' + (num1 + num2));num2 > 5 ? window.alert('O ' + num2 + ' é maior que 5') : window.alert('O ' + num2 + ' é menor que 5')">Botão do exemplo descrito</button>
+
+            <p>Ai volto a supor se quisessemos alterar a soma por multiplicação, o código repetiu muito e para fazer uma alteração precisaria sair atrás de todas as linhas que usaram o código.</p>
+
+            <p>Agora vem a mágica da function, e se escrevessemos esse código apenas uma vez, aí para ativar ele usassemos apenas um nome (bem parecido com o que as variáveis fazem, mas ao invés de armazenar 1 valor, armazenaríamos vários códigos), facilitaria muito a manutenção, pois ele estaria apenas em um local</p>
+
+            <p>Para fazer uma função precisamos ter em mente a seguinte estrutura básica - function nomeDaFunction(parametros) { bloco }; - abordarei posteriormente sobre o que seriam os "parametros" que está escrito no código, por hora imagine que ele não existe, tudo começa avisando que você irá criar uma função, para isso você escreve "function" ao falar isso você está falando que uma função será gerada e que se for informado um nome, este nome será usado para ativar um "bloco", os blocos seriam as instruções que queremos que o código realize, todas as instruções devem ficam dentro das chaves da função, agora vamos mostrar um exemplo de como ficaria o nosso código inicial dentro de uma função:</p>
+
+            <code>
+                
+                function somarNumerosPorAlertas() {
+                    let num1 = Number(window.prompt('Informe um número:'));
+                    let num2 = Number(window.prompt('Informe outro número:'));
+                    window.alert('A soma entre os números informados é: ' + (num1 + num2));
+                }
+
+            </code>
+
+            <p>Aí para ativar esse código escrito no bloco da função, usamos o nome da função - somarNumerosPorAlertas() - assim que esta linha é escrita aí que o código é rodado, é bem parecido com as variaveis, ao falarmos "function somarNum..." só estamos guardando uma ação, que poderá ser utilizada, dentro de um nome, mas ao falarmos depois de criado, o nome com o parênteses em seguida, temos o código funcionando:</p>
+
+            <script>
+
+                function somarNumerosPorAlertas() {
+                    let num1 = Number(window.prompt('Informe um número:'));
+                    let num2 = Number(window.prompt('Informe outro número:'));
+                    window.alert('A soma entre os números informados é: ' + (num1 + num2));
+                }
+
+            </script>
+
+            <button onclick="somarNumerosPorAlertas()">Rodar script</button>
+        </div>
+
+
+
+
+        <h2>O que são os parâmetros de uma function?</h2>
+
+        <div>
+
+            <p>Pense que você tem uma função que pega 2 números informados pelo usuário e sorteia um número inteiro no intervalo dos números informados:</p>
+
+            <div>
+                <h5>Sortear um número entre 2 valores</h5>
+
+                <label for="sorteio_numero_1">Informe de onde deve começar:</label>
+                <input type="number" id="sorteio_numero_1">
+                <br>
+                <label for="sorteio_numero_2">Informe até onde deve sortear:</label>
+                <input type="number" id="sorteio_numero_2">
+                <br>
+                <button onclick="sorteioPorId()">Sortear</button>
+
+                <script>
+
+                    function sorteioPorId() {
+                        var numero_max = Number(document.getElementById('sorteio_numero_2').value) - Number(document.getElementById('sorteio_numero_1').value) + 1
+
+                        var numero_max_digitos = ('' + Math.abs(numero_max)).length
+
+                        var numero_sorteado = parseInt(Math.random() * (10 ** numero_max_digitos)) + 1
+
+                        var numero_maximo_sorteado = ''
+                        for (var x = 0; numero_max_digitos - x != 0; x++) {
+                            numero_maximo_sorteado += 9
+                        }
+                        numero_maximo_sorteado = Number(numero_maximo_sorteado) + 1
+
+                        numero_sorteado = (numero_max * numero_sorteado) / numero_maximo_sorteado
+
+                        if (numero_sorteado % 1 > 0) {
+                            numero_sorteado = parseInt(numero_sorteado) + 1
+                        } else if (numero_sorteado % 1 < 0) {
+                            numero_sorteado = parseInt(numero_sorteado) - 1
+                        }
+
+                        numero_sorteado = numero_sorteado + Number(document.getElementById('sorteio_numero_1').value) - 1
+
+                        window.alert('O número sorteado foi: ' + numero_sorteado)
+                    }
+
+                </script>
+            </div>
+            
+
+            <p>Veja que usamos o id dentro da função para pegar os valores e isso complica, porque se quisessemos fazer de novo o código do sorteio, teríamos que repetir o código e trocar o id de quem estamos pegando o valor, isso por si só perde a praticidade.</p>
+
+            <p>Para isso foi criado os parametros, pode se dizer que são um tipo de variável que funciona igual o - let -, mas é bem diferente como você passa um valor para ser armazenado.</p>
+
+            <p>Para entender como funcionam segue um exemplo com o código que temos para sorteio:</p>
+
+            <code>
+                function sorteioAlcance(min, max) {
+                    var numero_max = max - min + 1
+
+                    var numero_max_digitos = ('' + Math.abs(numero_max)).length
+
+                    var numero_sorteado = parseInt(Math.random() * (10 ** numero_max_digitos)) + 1
+
+                    var numero_maximo_sorteado = ''
+                    for (var x = 0; numero_max_digitos - x != 0; x++) {
+                        numero_maximo_sorteado += 9
+                    }
+                    numero_maximo_sorteado = Number(numero_maximo_sorteado) + 1
+
+                    numero_sorteado = (numero_max * numero_sorteado) / numero_maximo_sorteado
+
+                    if (numero_sorteado % 1 > 0) {
+                        numero_sorteado = parseInt(numero_sorteado) + 1
+                    } else if (numero_sorteado % 1 < 0) {
+                        numero_sorteado = parseInt(numero_sorteado) - 1
+                    }
+
+                    numero_sorteado = numero_sorteado + min - 1
+
+                    window.alert('O número sorteado foi: ' + numero_sorteado)
+                }
+            </code>
+
+            <p>Veja que na primeira linha exigimos 2 parametros, - function sorteioAlcance(min, max) { - que neste caso é o "min" e o "max", mesmo que uma função peça um parametro, você não possui obrigação de o usar, por exemplo: - function alertaSemParametro(parametro_qualquer) { window.alert('Olá Mundo!') } -</p>
+
+            <p>Tá criamos essa "pseudo-variavel" que chamamos de parametro, mas como passamos um valor para ele? A resposta está em quando chamamos a função - sorteioAlcance() - dentro do parenteses podemos passar um valor se existir um parametro, - sorteioAlcance(document.getElementById('teste1').value, document.getElementById('teste2').value) - e mesmo se na chamada você passar um terceiro parâmetro - sorteioAlcance(document.getElementById('teste1').value, document.getElementById('teste2').value, 'string teste') - , nada aconstecerá, pois a função simplesmente o ignora já que em nenhum momento ela exige que um terceiro parametro seja informado, parametros tambem aceitam valores de tipo primitivos, como número, string entre tantas outras coisas, em suma, parâmetro é um tipo de variável</p>
+
+            
+            <script>
+
+                function sorteioAlcance(min, max) {
+                    var numero_max = max - min + 1
+
+                    var numero_max_digitos = ('' + Math.abs(numero_max)).length
+
+                    var numero_sorteado = parseInt(Math.random() * (10 ** numero_max_digitos)) + 1
+
+                    var numero_maximo_sorteado = ''
+                    for (var x = 0; numero_max_digitos - x != 0; x++) {
+                        numero_maximo_sorteado += 9
+                    }
+                    numero_maximo_sorteado = Number(numero_maximo_sorteado) + 1
+
+                    numero_sorteado = (numero_max * numero_sorteado) / numero_maximo_sorteado
+
+                    if (numero_sorteado % 1 > 0) {
+                        numero_sorteado = parseInt(numero_sorteado) + 1
+                    } else if (numero_sorteado % 1 < 0) {
+                        numero_sorteado = parseInt(numero_sorteado) - 1
+                    }
+
+                    numero_sorteado = numero_sorteado + min - 1
+
+                    window.alert('O número sorteado foi: ' + numero_sorteado)
+                }
+
+            </script>
+
+            <div>
+                <h5>Sortear um número entre 2 valores</h5>
+
+                <label for="sortear_numero_1">Informe de onde deve começar:</label>
+                <input type="number" id="sortear_numero_1">
+                <br>
+                <label for="sortear_numero_2">Informe até onde deve sortear:</label>
+                <input type="number" id="sortear_numero_2">
+                <br>
+                <button onclick="sorteioAlcance(Number(document.getElementById('sortear_numero_1').value), Number(document.getElementById('sortear_numero_2').value))">Sortear</button>
+            </div>
+
+        </div>
+        
+        
+
+        <h2>Como usar o return na function?</h2>
+
+        <div>
+
+            <p>Até agora fizemos com que a a function realizasce uma ação na página e com isso vimos o seu efeito, mas podemos também fazer com que uma função rode e retorne um valor, e com esse valor sendo retornado podemos trata-lo no meio de um código, exemplo:</p>
+
+            <code>
+                function alertaPerguntaNome() {
+                    let nome = window.prompt('Qual o seu nome?')
+                    return nome
+                }
+
+                function alertaSejaBemVindo() {
+                    let nome_informado = alertaPerguntaNome()
+                    window.alert('Seja bem-vindo ' + nome_informado)
+                }
+            </code>
+
+            <script>
+
+                function alertaPerguntaNome() {
+                    let nome = window.prompt('Qual o seu nome?')
+                    return nome
+                }
+
+                function alertaSejaBemVindo() {
+                    let nome_informado = alertaPerguntaNome()
+                    window.alert('Seja bem-vindo ' + nome_informado)
+                }
+
+            </script>
+
+            <button onclick="alertaSejaBemVindo()">Rodar script</button>
+
+            <p>Saiba que assim que o primiro return é escrito a função para de executar o que tiver nas linhas abaixo, então um return pode ser usado para quebrar a execução de um bloco, exemplo:</p>
+
+            <code>
+                function returnQuebrandoCodigo() {
+                    return
+                    window.alert('Olá mundo!')
+                }
+            </code>
+
+            <script>
+
+                function returnQuebrandoCodigo() {
+                    return
+                    window.alert('Olá mundo!')
+                }
+
+            </script>
+
+            <p>Basicamente o return para a função de executar as próximas linha e caso seja informado um valor após ele, ele passa esse valor para quem o chamou.</p>
+
+            <button onclick="returnQuebrandoCodigo()">Rodar script</button>
+
+        </div>
+
+
+
+        <h2>Como fazer um parametro configurado com um valor inicial caso não informem?</h2>
+
+        <div>
+
+            <p>É possível fazermos um parâmetro ter um valor inicial já pré-definido, esse valor serve para caso esqueçamos de informar ou caso seja mais convencional ter aquele valor fixo, onde em algumas raras exceções mechamos nele:</p>
+
+            <code>
+                function sortearNumero(min = 1, max = 10) {
+                    var numero_max = max - min + 1
+
+                    var numero_max_digitos = ('' + Math.abs(numero_max)).length
+
+                    var numero_sorteado = parseInt(Math.random() * (10 ** numero_max_digitos)) + 1
+
+                    var numero_maximo_sorteado = ''
+                    for (var x = 0; numero_max_digitos - x != 0; x++) {
+                        numero_maximo_sorteado += 9
+                    }
+                    numero_maximo_sorteado = Number(numero_maximo_sorteado) + 1
+
+                    numero_sorteado = (numero_max * numero_sorteado) / numero_maximo_sorteado
+
+                    if (numero_sorteado % 1 > 0) {
+                        numero_sorteado = parseInt(numero_sorteado) + 1
+                    } else if (numero_sorteado % 1 < 0) {
+                        numero_sorteado = parseInt(numero_sorteado) - 1
+                    }
+
+                    numero_sorteado = numero_sorteado + min - 1
+
+                    window.alert('O número sorteado foi: ' + numero_sorteado)
+                }
+            </code>
+
+            <script>
+
+                function sortearNumero(min = 1, max = 10) {
+                    var numero_max = max - min + 1
+
+                    var numero_max_digitos = ('' + Math.abs(numero_max)).length
+
+                    var numero_sorteado = parseInt(Math.random() * (10 ** numero_max_digitos)) + 1
+
+                    var numero_maximo_sorteado = ''
+                    for (var x = 0; numero_max_digitos - x != 0; x++) {
+                        numero_maximo_sorteado += 9
+                    }
+                    numero_maximo_sorteado = Number(numero_maximo_sorteado) + 1
+
+                    numero_sorteado = (numero_max * numero_sorteado) / numero_maximo_sorteado
+
+                    if (numero_sorteado % 1 > 0) {
+                        numero_sorteado = parseInt(numero_sorteado) + 1
+                    } else if (numero_sorteado % 1 < 0) {
+                        numero_sorteado = parseInt(numero_sorteado) - 1
+                    }
+
+                    numero_sorteado = numero_sorteado + min - 1
+
+                    window.alert('O número sorteado foi: ' + numero_sorteado)
+                }
+
+            </script>
+
+            <button onclick="sortearNumero()">Rodar Script</button>
+
+            <p>E assim como falamos, apesar de ser um valor predefinido, podemos fazer ele ficar com outro valor, se passarmos o valor - undefined - ele vai considerar como se não tivessemos mechido no parametro, mas se colocarmos qualquer outro ele já passa a interpretar, exemplo: - sortearNumero(undefined, 2) - aqui falamos que o primeiro parametro vai ficar sem nada, e quando fica com nada ele assume, se definirmos para ele assumir, um valor inicial, já o segundo parâmetro moficamos ele e agora ele só vai até o número 2</p>
+
+            <button onclick="sortearNumero(undefined, 2)">Rodar Script</button>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    
+
+</body>
+</html>

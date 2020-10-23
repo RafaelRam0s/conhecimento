@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+        }
+
+    </style>
+
+    <title>Console</title>
+</head>
+<body>
+    
+    <div>
+        <h2>Escrever no console</h2>
+
+        <div>
+
+            <h3>Console.log()</h3>
+
+            <p>Ao "inspecionar o elemento" da página, possuimos o campo console, nesse campo é possível programarmos em javascript diretamente na página, além de podermos programar é possível passar mensagens nessa tela, para isso usamos o código - console.log() - o valor que estiver dentro do parênteses será aparecido como uma mensagem</p>
+
+            <code>
+                console.log("Olá Mundo!");
+                console.log(123);
+                console.log(true);
+                let apresentacao = "Hello World!";
+                console.log(apresentacao);
+            </code>
+
+            <script>
+                
+                function escreverNoConsole() {
+                    console.log("Olá Mundo!");
+                    console.log(123);
+                    console.log(true);
+                    let apresentacao = "Hello World!";
+                    console.log(apresentacao);
+                }
+                
+            </script>
+
+            <button onclick="escreverNoConsole()">Rodar script</button>
+
+            <p>Abra o console e veja que as mensagens foram apresentadas</p>
+
+            <p>Este recurso só é recomendável de ser usado enquanto estiver fazendo testes na aplicação, quando for colocar o seu site na rede, retire-os</p>
+
+            <h3>Console.info()</h3>
+
+            <p>@@@@@ escrever uma informação</p>
+
+            <code>
+                console.info("Olá Mundo!");
+                console.info(123);
+                console.info(true);
+                let apresentacao = "Hello World!";
+                console.info(apresentacao);
+            </code>
+
+            <script>
+                
+                function informarNoConsole() {
+                    console.info("Olá Mundo!");
+                    console.info(123);
+                    console.info(true);
+                    let apresentacao = "Hello World!";
+                    console.info(apresentacao);
+                }
+                
+            </script>
+
+            <button onclick="informarNoConsole()">Rodar script</button>
+
+        </div>
+
+        <hr>
+
+
+        <h2>Limpar o console</h2>
+
+        <div>
+
+            <p>No console são passadas informações de quando tem algum erro na página e em alguns casos, utilizamos códigos que escrevem nele. Caso queira limpar o console utilize o código - console.clear() - </p>
+
+            <code>
+                console.clear()
+            </code>
+
+            <script>
+
+                function limparConsole() {
+                    console.clear()
+                }
+                
+            </script>
+
+            <button onclick="limparConsole()">Rodar script</button>
+        </div>
+
+        <hr>
+
+
+
+
+
+        <h2>Aviso no console</h2>
+
+        <div>
+
+            <p>Mandar avisos pelo console é uma ótima maneira de manter você alerta na sua aplicação. Temos dois níveis de perigo na mensagem do console, o aviso e o erro, o aviso é só para avisar que algo pode acontecer e que você deve ficar esperto em futuras atualizações, já o erro é caso algo na sua aplicação não esteja funcionando</p>
+
+            <code>
+                console.warn("Este é um aviso de alerta")
+                console.error("Este é um aviso de erro")
+            </code>
+
+            <script>
+
+                function alertarNoConsole() {
+                    console.warn("Este é um aviso de alerta")
+                    console.error("Este é um aviso de erro")
+                }
+                
+            </script>
+
+            <button onclick="alertarNoConsole()">Rodar script</button>
+        </div>
+
+        <hr>
+
+
+
+
+
+        <h2>Agrupar mensagens no console</h2>
+
+        <div>
+
+            <p>É possível organizarmos as mensagens no console através de grupos, desta forma podemos englobar uma série de mensagens dentro de um bloco para facilitar a visão e entendimento, para isso usamos o - console.group() - para iniciar uma seção e o console.groupEnd() - para finalizar a seção. Se dentro do parenteses de - console.group() - for informado um valor, ele será o nome do grupo, esse nome serve meramente ilustrativo para aparecer no console e te ajudar a se organizar, não age como um indentificador. Se colocarmos algum valor dentro do parênteses de - console.groupEnd() - servirá apenas para o programador na leitura do código se guiar, pois o valor dentro dele não aparece no console, não é referenciado e nem faz uma referência. O - console.groupEnd() - fecha o último grupo que foi escrito</p>
+
+            <p>O - console.group() - cria um grupo já aberto, ai precisamos clicar na setinha do console para minimizar, mas caso queiramos iniciar um grupo já minimizado, usamos o código - console.groupCollapsed() - que tem o mesmo funcionamento do - console.group() - tirando a parte que inicia minimizado</p>
+
+            <code>
+                console.group()
+                console.log("teste 1")
+                console.groupEnd()
+
+                console.group("Grupo 2")
+                console.log("teste 1")
+                console.group("Grupo 3")
+                console.log("teste 1")
+                console.groupEnd("Fechamento do grupo 3")
+                console.log("teste 1")
+                console.groupEnd("Fechamento do grupo 2")
+
+                console.groupCollapsed("Grupo 4")
+                console.log("teste 1")
+                console.group("Grupo 5")
+                console.log("teste 1")
+                console.groupEnd("Fechamento do grupo 5")
+                console.log("teste 1")
+                console.groupEnd("Fechamento do grupo 4")
+                console.log("teste 1")
+            </code>
+
+            <script>
+
+                function agruparConsole() {
+                    console.group()
+                    console.log("teste 1")
+                    console.groupEnd()
+
+                    console.group("Grupo 2")
+                    console.log("teste 2")
+                    console.group("Grupo 3")
+                    console.log("teste 3")
+                    console.groupEnd("Fechamento do grupo 3")
+                    console.log("teste 4")
+                    console.groupEnd("Fechamento do grupo 2")
+
+                    console.groupCollapsed("Grupo 4")
+                    console.log("teste 5")
+                    console.group("Grupo 5")
+                    console.log("teste 6")
+                    console.groupEnd("Fechamento do grupo 5")
+                    console.log("teste 7")
+                    console.groupEnd("Fechamento do grupo 4")
+                    console.log("teste 8")
+                }
+                
+            </script>
+
+            <button onclick="agruparConsole()">Rodar script</button>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+</html>

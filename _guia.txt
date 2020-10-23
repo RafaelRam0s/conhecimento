@@ -1,0 +1,123 @@
+
+Para aprender a programar na web:
+
+-- Veja o que é html
+
+Faça uma página com título, cabeçalho, parágrafo e em linguagem brasileira
+
+Faça uma página com vários cabeçalhos, parágrafos e divs
+
+Faça uma página com link para outra página sua, via caminho de arquivo, e faça um link para um outro website qualquer
+
+Faça uma página e preencha seus metadados informando o conjunto de caracteres, autor, descrição, palavras-chaves
+
+-- Veja o que é css, e o que são os atributos de um html, especialmente id e class
+
+Faça um parágrafo com a cor da letra diferente.
+
+Faça um parágrafo com o fundo de outra cor.
+
+Entenda para que serve e como funciona os 3 tipos de forma de se ativar o css no html (em linha, interno e externo)
+
+Faça uma página com imagem, vídeo, áudio e nessa página também deverá ter uma forma de acessar outra página sem sair da sua página e sem criar um hyperlink (iframe)
+
+Faça uma tabela com margens, distanciamento das bordas até o conteúdo e centralize o conteúdo de cada cédula da tabela
+
+Faça comentários em seu código
+
+Entenda um pouco sobre display block, inline-block e inline
+
+Faça uma página com uma barra de navegação fixa no topo da página (usar ol, ul, li, position, a, class).
+
+Faça uma página e altere os tamanhos (width e heigth) dos elementos, altere as distâncias entre eles, quando o tamanho da página diminuir até um certo tanto altere seu estilo (min, max, media, viewport).
+
+Pegue ícones de outras páginas, coloque símbolos e emojis.
+
+Faça uma página só com html e css que ao clicar em um parágrafo ele mude sua cor
+
+Veja os diferentes tipos de pseudo-classes que ativam no css e como, veja como um link as utiliza
+
+-- Veja o que é javascript
+
+Faça sua página antes de ser carregada mostrar um alerta.
+
+Veja o que são variáveis
+
+Armazene diferentes tipos de variáveis como int, string, null e undefined e transforme um tipo primitivo em outro
+
+Concatene, some e altere variáveis
+
+Entenda um pouco sobre DOM (document object model), peque um parágrafo e faça seu conteúdo ser exibido em um alerta.
+
+Altere um parágrafo por javascript
+
+Faça uma página com formulários, labels, fieldset, legend
+
+-- Veja o uso do inspecionar elemento, clicando no elemento e alterando seu conteúdo, sua tagname e sua classe
+
+Faça um javascript com uma letra errada no código e veja o console do inspecionar elemento
+
+Faça uma regra de javascript que some dois valores que deverão ser informados pelo o usuário, e ao ser clicado em um botão apresentar a soma desses valores (function simples)
+
+Veja o que são valores booleanos e regras de igual, e, ou, maior, menor, diferente, sinais matemáticos e ordem de prescedencia
+
+Faça uma página que pegue o nome de uma pessoa, verifique a quantidade de caracteres e dependendo do que for informado deve retornar se o nome é muito grande ou muito curto.
+
+Faça uma página que verifique que horas são, e que leia a data de nascimento de uma pessoa e informe se não nasceu, se é bebe, criança, adolescente, adulto, velho ou se já bateu o recorde mundial de velhice.
+
+Faça uma página que verifique a data de nascimento de uma pessoa e informe se é ou não menor de idade.
+
+Faça uma página em que o motorista informe a velocidade do carro e você informe se estava acima do limite de velocidade ou não (use ternário)
+
+Veja que dia da semana é hoje e informe o nome do dia da semana (switch case break)
+
+Faça uma página que faça progressão aritmética mostrando cada valor da PA entre o valor mínimo e o máximo (while, while do, for)
+
+-- Respire e se pergunte o pq de estar programando, quais suas motivações, objetivos.
+
+Faça uma página simples, bem organizada, estruturada com os conhecimentos que teve até agora.
+
+Faça uma página ao seu gosto.
+
+Faça duas tabelas de rpg com formulários que poderão ser preenchidos e que deverá informar a quantidade de pontos que usou em uma última linha de cada tabela (while, while do, for), exemplo a tabela 1 tem duas linhas uma com o valor 2 e a outra com valor 5 e a tabela 2 tem uma com o valor 3 e a outra com 1 no final da tabela 1 deverá ser mostrado então o número 7 e na da tabela 2 o valor 4.
+
+Faça um sistema que eu possa escolher um valor mínimo e um máximo, então deverá ser sorteado um número entre esses dois valores pedidos (function(param)).
+
+Faça um sistema de contagem que ao clicar o botão iniciar é mostrado uma contagem regressiva a cada segundo começando pelo 5
+
+Faça um jogo de pedra, papel ou tesoura contra o seu computador.
+
+
+
+-- Ver Banco de dados
+
+Para que serve
+
+Criar banco, tabelas, colunas, tipos primitivos, restrições
+
+Adicionar um registro
+
+Ver registros
+
+Excluir banco, tabelas, colunas, registros
+
+Adicionar colunas com restrições em uma tabela já criada
+
+Fazer backup
+
+Fazer Stored Procedure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

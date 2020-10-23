@@ -1,0 +1,307 @@
+
+
+Variáeis são palavras chaves que criamos para abrigar um método, este método pode ser muita coisa desde uma string ("Olá Mundo!"), números (1 ou 9999999999999999 ou -25 ou 0.5125), boolean (true ou false) até funções (function() {}), ele pode basicamente abrigar uma lógica ou valores.
+
+E podemos armazenar coisas em uma variável da seguinte maneira:
+// Exemplo 001
+var apresentacao = "Olá Mundo!";
+console.log(apresentacao);
+
+Agora sempre que chamarmos o método apresentacao será nos retornado a palavra "Olá Mundo!"
+
+
+
+
+-----------
+    A palavra chave var é o nome do método que começara a ação de tornar a seguinte palavra em uma variável.
+
+    A palavra que vem logo após a palavra var tem que seguir algumas regras para de fato poder se tornar uma variável, são elas:
+    1 - Todo nome deve ser composto apenas por letras, números e sublinhado ( _ )
+    2 - Deve começar com uma letra
+    3 - Não pode ser igual a nenhuma palavra reservada, ou seja, palavras que já possuam um significado próprio para a linguagem como por exemplo, true, var ou if.
+
+    Exemplos de palavras que podem:
+    Valor
+    meu_nome
+    X5
+
+    Exemplos de palavras que não podem:
+    5X // Começa com número
+    R$3,00 // Tem elementos não letras nem números nem sublinhados, como o sifrão e a vírgula
+    meu nome // não é uma palavra, são duas, o espaço também não é permitido
+
+------------
+
+
+
+-----
+
+    Podemos também realizar lógicas com as variáveis:
+    // Exemplo 002
+    var valor1 = 10;
+    var valor2 = 5;
+    console.log(valor1 + valor2);
+    var soma = valor1 + valor2;
+    console.log(soma);
+
+    Basicamente é como se na hora que o programa roda substituiscemos os lugares com o método pelo seu valor ficando mais ou menos da seguinte maneira:
+    // Exemplo 003
+    var valor1 = 10;
+    var valor2 = 5;
+    console.log(10 + 5);
+    var soma = 10 + 5;
+    console.log(10 + 5);
+
+----
+
+
+
+------
+
+    Podemos também falar que a variável existe, mas não necessariamente está possuindo um valor:
+    // Exemplo 004
+    var teste;
+    console.log(teste); // undefined
+
+    Como deu indefinida quer dizer que de fato não falamos que ela possui valor mas falamos que ela existe
+
+    Se colocamos uma palavra que segue as regras para se tornar uma variável, mas sem indicar que é uma variável é retornado um erro como não definida
+    // Exemplo 005
+    console.log(teste);
+
+------
+
+
+
+------
+
+    Variáeis podem ser definidas e redefinidas por isso a chamamos de variáveis:
+
+    // Exemplo 005
+    var teste = "Olá";
+    teste = "Oi";
+    console.log(teste); // Oi
+
+    Como já informamos que a palavra teste é uma variável, não precisamos informar novamente na hora de armazenar outro valor nela
+
+    // Exemplo 006
+    var teste;
+    teste = "Oi";
+    console.log(teste); // Oi
+
+    Cuidado a execução da leitura do javascript é feita linha por linha então temos que tomar cuidado quando inserimos um valor na variável, para que quando seja chamada aquela variável o código já o tenha lido.
+
+    // Exemplo 006
+    var teste;
+    console.log(teste); // undefined
+    teste = "Oi";
+    
+------
+
+
+
+-------
+
+    Escopo é a palavra que usamos quando nos referimos a forma com a qual a aplicação armazena dados, e o escopo de uma variável é bem intrigante segue alguns exemplos para futuras explicações
+
+    // Exemplo 007
+    var exibeMensagem = function() { 
+        var mensagemForaDoIf = 'Caelum'; 
+        if(true) { 
+            var mensagemDentroDoIf = 'Alura'; 
+            console.log(mensagemDentroDoIf)// Alura ;
+        } 
+        console.log(mensagemForaDoIf); // Caelum 
+
+        console.log(mensagemDentroDoIf); // Alura 
+    }
+    exibeMensagem()
+
+
+    // Exemplo 008
+    var exibeMensagem = function() { 
+        mensagem = 'Alura'; 
+        console.log(mensagem); 
+        var mensagem;
+    }
+    exibeMensagem()
+
+    Em JavaScript, toda variável é “elevada/içada” (hoisting) até o topo do seu contexto de execução. Esse mecanismo move as variáveis para o topo do seu escopo antes da execução do código.
+
+    Quer dizer que é como se na hora de rodar o projeto houvesse uma reorganização ficando o código da seguinte maneira:
+
+    // Exemplo 009
+    var exibeMensagem = function() { 
+        var mensagem;
+        mensagem = 'Alura'; 
+        console.log(mensagem); 
+    }
+    exibeMensagem()
+
+    E isso é feito em ordem de quem foi encontrado primeiro fica na primeira linha disponível, então olha como fica o seguinte código:
+
+    // Exemplo 010
+    var exibeMensagem = function() { 
+        mensagem = 'Alura'; 
+        console.log(mensagem);// Alura
+        console.log(teste1);// undefined
+        console.log(teste2);// undefined
+        var mensagem;
+        var teste1 = "lorem";
+        var teste3 = "lorem";
+        console.log(teste3);
+        var teste2 = "lorem";
+    }
+    exibeMensagem()
+
+    Agora como que ele fica ao rodarmos:
+
+    // Exemplo 011
+    var exibeMensagem = function() { 
+        var mensagem;
+        var teste1;
+        var teste3;
+        var teste2;
+        mensagem = 'Alura'; 
+        console.log(mensagem); // Alura
+        console.log(teste1); // undefined
+        console.log(teste2); // undefined
+        teste1 = "lorem";
+        teste3 = "lorem";
+        console.log(teste3); // lorem
+        teste2 = "lorem";
+    }
+    exibeMensagem()
+
+    Perceba que as variáveis são elevadas ao topo na ordem que apareceram, a mensagem foi para o topo depois apareceu o teste1 então ficou logo abaixo da var mensagem, e vai ocorrendo assim por diante.
+
+    Por isso é retornado undefined na hora que chamamos o console.log para teste2 e teste1 o que deveria aparecer é "not defined" e dar erro na aplicação, já que não existiria esse método "teste1", mas como a var vai para o topo, ela só apresenta como undefined.
+
+    Esse hosting que ocorre só leva em conta o bloco de uma função, então lá com o exemplo 007, a var dentro do if não vai para o topo do if mas sim para o topo da function, ficando assim:
+
+    // Exemplo 012
+    var exibeMensagem = function() { 
+        var mensagemForaDoIf
+        var mensagemDentroDoIf
+
+        mensagemForaDoIf = 'Caelum'; 
+        if(true) { 
+            mensagemDentroDoIf = 'Alura'; 
+            console.log(mensagemDentroDoIf)// Alura ;
+        } 
+        console.log(mensagemForaDoIf); // Caelum 
+
+        console.log(mensagemDentroDoIf); // Alura 
+    }
+    exibeMensagem()
+
+    É por esse mesmo motivo que “é possível usar uma variável antes dela ter sido declarada”: em tempo de execução a variável será elevada (hoisting) e tudo funcionará corretamente.
+
+--------
+
+
+
+
+
+---------
+
+    @@@@@ Dependendo da aplicação que está a criar o var serve perfeitamente para o projeto, mas esse seu escopo de ser levado até o topo e definida como undefined, gera processos
+
+    @@@@@ Processos aos quais nem sempre queremos, por isso irei mostrar o let, mas assim que o verem releia o próximo parágrafo que é informado os motivos para quando não queremos var.
+
+    @@@@@ Motivos para não usar var: 1 - Como é feito um hosting, definido primeiro undefined e depois inserido dentro um valor, isto gera 3 processos (@@@@@ já no let vira tudo um só). 2 - As vezes só usamos a variável uma única vez e somente dentro do bloco em que foi chamada e não precisamos chamar ela novamente, mas o seu espaço de armazenamento na memória continua a existir o que pode ser ruim para quem deseja performace
+
+---------
+
+
+
+
+
+---------
+
+    Assim como temos a var para variável, podemos definir a variável de outra forma, usando a palavra chave let, que segue as mesmas regras de nomenclatura da var.
+
+    O let diferentemente da var só consegue existir dentro do bloco em que é chamado
+
+    // Exemplo 012
+    var exibeMensagem = function() {
+        if(true) { 
+            var escopoFuncao = 'Caelum'; 
+            let escopoBloco = 'Alura';
+
+            console.log(escopoBloco); // Alura 
+        } 
+        console.log(escopoFuncao); // Caelum 
+        console.log(escopoBloco); 
+    }
+    exibeMensagem();
+
+    Será dado um erro pois o let só existiu dentro do bloco do if, assim que aquele bloco terminou ele deixou de existir e a palavra escopoBloco ficou novamente desocupada (sem definição)
+
+    Diferente do var ele só serve onde foi chamado então o seguinte código dá erro pois o let só foi informado depois:
+
+    // Exemplo 013
+    console.log(apresentacao);
+    let apresentacao = "Olá Mundo!";
+
+    E o valor undefined tbm é atribuido ao let caso não receba um valor
+    // Exemplo 014
+    ler teste;
+    console.log(teste)
+
+---------
+
+
+
+---------
+
+    Caso queiramos definir um método mas que ele não seja variável, podemos usar o const, o const é uma constatação, assim como o let ele só funciona dentro do bloco em que foi definido e depois desaparece, mas diferente do var e do let ele ele só pode ser definido uma única vez dentro do bloco e só pode receber um valor
+
+    Então o const serve para guardar uma informação e nada o alterar
+
+    //Exemplo 015
+    const apresentacao = "oi";
+    console.log(apresentacao); // oi
+
+    //Exemplo 016
+    const apresentacao = "oi";
+    apresentacao = "olá";
+    console.log(apresentacao);
+
+    O programa deu erro pois o apresentacao já tem um valor constatado e não pode receber nada nele, e nem ser alterado.
+
+    O const tem que receber algo, ele não possui um valor caso não o defina
+    //Exemplo 017
+    const teste;
+    console.log(teste);
+
+    Deu erro pois é explicitamente necessário o uso de uma definição para uma variável constatada
+
+---------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

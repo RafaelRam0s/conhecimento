@@ -1,4 +1,4 @@
 # Olá, Mundo!
 
-Este repositório tem como objetivo colocar o meu aprendizado em prática com demonstrações rápidas e objetivas.
+Este repositório tem como objetivo colocar o meu aprendizado em prática e salvar o que sei para buscas rápidas.
 

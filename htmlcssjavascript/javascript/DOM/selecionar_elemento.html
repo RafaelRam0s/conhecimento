@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+        }
+    </style>
+
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1>Document Object Model (DOM)</h1>
+
+    <p>O DOM é o sistema de procura por um elemento html através do javascript, por exemplo se quiséssemos selecionar este parágrafo no javascript utilizariamos o DOM</p>
+
+    <p>Imagine que queiramos criar uma janela de aviso na página, ou um aviso no console, tudo isso usaria o DOM, logo o DOM pode ser definido como um sistema de rotas para se chegar a um local da página</p>
+
+    <p>Existem diversas formas de se chegar em um elemento html, a seguir você poderá ver algumas das formas de acessa-los e modificar seus textos</p>
+
+    <hr>
+    
+    <div>
+        <h2>Via id</h2>
+       
+        <div>
+            <p id="teste_1">Este parágrafo será encontrado através do indentificador (id)</p>
+
+            <code>
+                let conteudo = document.getElementById('teste_1').innerText
+                document.getElementById('teste_1').innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+            </code>
+
+            <script>
+
+                function idDOM() {
+                    let conteudo = document.getElementById('teste_1').innerText
+                    document.getElementById('teste_1').innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+                }
+
+            </script>
+
+            <button onclick="idDOM()">Rodar script</button>
+
+            <hr>
+        </div>
+        
+
+
+
+
+
+
+
+
+        <h2>Via classe</h2>
+       
+        <div>
+            
+            <p>Para encontrar um elemento por uma classe, precisamos ter em mente que a classe não é algo único de apenas um elemento, logo precisamos informar qual o elemento daquela classe que iremos querer, o primeiro elemento o DOM chama como 0, o segundo por 1, o terceiro por 2 e assim por diante.</p>
+
+            <p class="teste_2">Parágrafo 1</p>
+            <p class="teste_2">Parágrafo 2</p>
+            <p class="teste_2">Parágrafo 3</p>
+
+            <code>
+                let conteudo = document.getElementsByClassName('teste_2')[1].innerText
+                document.getElementsByClassName('teste_2')[1].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+            </code>
+
+            <script>
+
+                function class1DOM() {
+                    let conteudo = document.getElementsByClassName('teste_2')[1].innerText
+                    document.getElementsByClassName('teste_2')[1].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+                }
+
+            </script>
+
+            <button onclick="class1DOM()">Rodar script</button>
+
+            <p>Agora para selecionar todos os elementos de uma classe podemos usar o seguinte código, tendo em mente que quando colocamos um número maior do que a quantidade de elementos com aquela classe, é retornado o valor undefined</p>
+
+            <p class="teste_3">Parágrafo 1</p>
+            <p class="teste_3">Parágrafo 2</p>
+            <p class="teste_3">Parágrafo 3</p>
+
+            <code>
+                let classe_teste_3 = document.getElementsByClassName('teste_3')
+                        
+                for (let x = 0; classe_teste_3[x] != undefined; x++ ) {
+
+                    let conteudo = classe_teste_3[x].innerText
+
+                    classe_teste_3[x].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+                }
+            </code>
+                
+            <script>
+
+                function class2DOM() {
+                    let classe_teste_3 = document.getElementsByClassName('teste_3')
+
+                    for (let x = 0; classe_teste_3[x] != undefined; x++ ) {
+
+                        let conteudo = classe_teste_3[x].innerText
+
+                        classe_teste_3[x].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+                    }
+                }
+
+            </script>
+
+            <button onclick="class2DOM()">Rodar script</button>
+
+            <p>Ao chamarmos por classe não precisamos informar apenas uma classe, podemos informar que determinada modificação irá ocorrer em um elemento que possuir diversas classes específicas</p>
+
+            <code>
+                let teste5 = 'teste_5'
+                document.getElementsByClassName('teste_4 ' + teste5)[0].innerText = 'ok'
+                document.getElementsByClassName('teste_7 teste_6')[0].innerText = 'ok'
+            </code>
+
+            <script>
+
+                function class3DOM() {
+                    let teste5 = 'teste_5'
+                    document.getElementsByClassName('teste_4 ' + teste5)[0].innerText = 'ok'
+
+                    document.getElementsByClassName('teste_7 teste_6')[0].innerText = 'ok'  
+                }
+                
+            </script>
+
+            <p class="teste_4">Teste 1, só tem a classe teste_4</p>
+            <p class="teste_4 teste_5">Teste 2, possui as classes teste_4 e teste_5</p>
+            <p class="teste_6 teste_7 teste_8">Teste 3, possui as classes teste_6, teste_7 e teste_8</p>
+            
+
+            <button onclick="class3DOM()">Rodar script</button>
+
+            <hr>
+
+        </div>
+        
+
+
+
+
+
+
+
+        <h2>Via tagname</h2>
+
+        <div>
+
+            <p>Usar por tagname é pouco recomendável, visto que qualquer alteração que seja feita no html do site pode impactar no javascript</p>
+
+            <code>
+                let conteudo = document.getElementsByTagName('var')[0].innerText
+                document.getElementsByTagName('var')[0].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+            </code>
+
+            <script>
+
+                function tagnameDOM() {
+                    let conteudo = document.getElementsByTagName('var')[0].innerText
+                    document.getElementsByTagName('var')[0].innerText = 'Modificado, o que estava escrito antes era: "' + conteudo + '"'
+                }
+                
+            </script>
+
+            <var>É convencional utilizar este código quando queremos modificar todas as tagnames para agirem de uma determinada maneira</var>
+            <br>
+
+            <button onclick="tagnameDOM()">Rodar script</button>
+
+            <hr>
+
+        </div>
+
+
+
+
+
+
+
+
+        <h2>Via name</h2>
+
+        <div>
+            <p name="teste_9">Pelo atributo name de um elemento: </p>
+
+            <code>
+                document.getElementsByName('teste_9')[0].innerText += ' ok'
+            </code>
+
+            <script>
+
+                function nameDOM() {
+                    document.getElementsByName('teste_9')[0].innerText += ' ok'
+                }
+
+            </script>
+
+            <button onclick="nameDOM()">Rodar script</button>
+
+            <hr>
+        </div>
+
+
+
+
+
+
+
+        <h2>Via seletor de css</h2>
+
+        <div>
+            <p>Assim como usamos a estrutura no css para chegar a um elemento html, podemos utilizar a mesma forma no javascript, o - querySelector() - é quem nos permite isso, porém ele só encontra a primeira ocorrência que for relacionado ao valor informado dentro do parênteses, já o - querySelectorAll() - consegue encontrar todas as referências mas pede que você especifique em qual delas você quer que ocorra, para informar qual delas, após os parênteses coloque colchetes e o número respectivo de aparecimento</p>
+
+            <div id="teste_10">
+                <p class="teste_11">Este parágrafo tem a classe teste_11 e está dentro de uma div de id teste_10. <var>Este é o ver ao qual sofrerá o efeito.</var> <var>Agora este é outro var para visualizar em como é selecionado</var></p>
+            </div>
+
+            
+            <p class="teste_12">Este é o parágrafo de classe teste_12 para teste com <var>este var dentro</var>, porém não será afetado</p>
+
+            <p class="teste_12">Este é o parágrafo de classe teste_12 para teste com <var>este var dentro</var>, é o var que será modificado</p>
+            
+
+            <code>
+                document.querySelector('#teste_10 .teste_11 var').innerText += " modificado"
+
+                document.querySelectorAll('.teste_12 var')[1].innerText += " modificado"
+            </code>
+
+            <script>
+
+                function seletorDOM() {
+                    document.querySelector('#teste_10 .teste_11 var').innerText += " modificado"
+
+                    document.querySelectorAll('.teste_12 var')[1].innerText += " modificado"
+                }
+
+            </script>
+
+            <button onclick="seletorDOM()">Rodar script</button>
+
+            <p>Perceba que quando usamos a referência em css - .teste_13 var - no html todos os - var - que estiverem dentro de uma classe - teste_13 - é que sofrerão mudanças e para isso temos o exemplo a segui com 2 estruturas iguais para ver como o javascript se comporta:</p>
+
+            <code>
+                document.querySelectorAll('.teste_13 p')[1].innerText += " modificado"
+            </code>
+
+            <script>
+
+                function seletorTodosDOM() {
+                    document.querySelectorAll('.teste_13 p')[1].innerText += " modificado"
+                }
+
+            </script>
+
+            <div class="teste_13">
+                <p>Parágrafo 1</p>
+                <p>Parágrafo 2</p>
+            </div>
+
+            <div class="teste_13">
+                <p>Parágrafo 3</p>
+                <p>Parágrafo 4</p>
+            </div>
+
+            <button onclick="seletorTodosDOM()">Rodar script</button>
+
+            <hr>
+        </div>
+
+
+
+
+
+    </div>
+
+    
+
+    
+
+</body>
+</html>

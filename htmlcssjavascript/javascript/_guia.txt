@@ -1,0 +1,55 @@
+
+
+Aula 001 - console.js
+
+console.log()
+
+Faça o javascript exibir uma mensagem no console.
+
+Faça exibir um número.
+
+Faça operações matemáticas (usando os sinais + - * / ** %) e exiba os resultados
+
+
+
+Aula 002 - variaveis
+
+var
+let
+const
+
+Guarde uma string em uma variável
+Guarde um número em uma variável
+Guarde uma operação numérica em uma variável
+Guarde uma operação numérica com variaveis em uma variável
+Entenda concatenação de variaveis e sua diferença com operação de soma
+
+
+
+Aula 003 - conversor
+
+parseint
+parsefloat
+number
+tostring
+isnan
+typeof
+
+Converta um número em uma string e vice-versa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

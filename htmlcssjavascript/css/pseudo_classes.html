@@ -48,19 +48,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div>
         <h3>Para ativar enquanto estiver sendo clicado:</h3>
 
@@ -79,36 +66,121 @@
 
 
 
+    <div>
+        <h3>Para inserir algo logo após e antes do conteúdo</h3>
 
+        <style>
+            #depois::after {
+                background-color: red;
+                padding: 5px;
+                content: "";
+            }
+            #depois_1::after {
+                content: " - Remember this";
+                background-color: yellow;
+                color: red;
+                font-weight: bold;
+                border-right: 2px solid aqua;
+            }
+            #exemplo_depois_1 {
+                background-color: yellow;
+                color: red;
+                font-weight: bold;
+                border-right: 2px solid aqua;
+            }
+            #antes::before {
+                background-color: red;
+                padding: 5px;
+                content: "";
+            }
+            #antes_1::before {
+                content: " - Remember this";
+                background-color: yellow;
+                color: red;
+                font-weight: bold;
+                border-right: 2px solid aqua;
+            }
+        </style>
 
+        <div id="depois" style="margin: 10px;">Sempre que formos inserir algo logo após o conteúdo com o after, precisamos indicar esse conteúdo adjacente, mesmo que seja só para falar que ele está vazio</div>
+        
+        <div id="depois_1" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center; background-color: rgb(37, 83, 83);">
+            <p>Parágrafo teste</p>
+        </div>
 
+        <p>Acima inserimos o after dentro da div, logo no final dela será criado uma última linha adicionando o texto. É como se no final da div, mas ainda dentro dela colocascemos por extenso um texto qualquer, desta forma:</p>
 
+        <div style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center; background-color: rgb(37, 83, 83);">
+            <p>Parágrafo teste</p>
+            <span id="exemplo_depois_1"> - Remember this</span>
+        </div>
 
+        <p>Note que com o span temos o mesmo efeito, porque é de fato como se inseriscemos um novo elemento após o próprio</p>
 
-
-
-
-
-
-
-
-
-
-
-
+        <p id="antes">Agora para adicionar algo antes é feito com o before e possui as mesmas características do after</p>
+    </div>
 
 
 
     <div>
-        <h3></h3>
+        <h3>Checked - Para ter uma reação somente quando um elemento for checado</h3>
+
+        <p>Funciona em elementos input que possam receber o atributo checked (checkbox e radio)</p>
 
         <style>
-            #modelo {background-color: rgb(37, 83, 83);}
-            #modelo:hover {background-color: black;}
+            #checado_1 {zoom: 2;}
+            #checado_1:checked {zoom: 1;}
+            #checado_2 {zoom: 1;}
+            #checado_2:checked {zoom: 2;}
+        </style>
+        
+        <div style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
+            <input type="checkbox" id="checado_1">
+            <input type="checkbox" id="checado_2">
+        </div>
+
+    </div>
+
+
+
+    <div>
+        <h3>Default - Para deixar diferente somente o elemento que iniciou marcado</h3>
+
+        <style>
+            input[name="gender"]:default { zoom: 1.5; }
+            .iniciou_checado:default {zoom: 1.5;}
         </style>
         
         <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
-            <p>Parágrafo teste</p>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female" checked> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+        </div>
+
+        <div style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
+            <input type="checkbox" class="iniciou_checado" checked>
+            <input type="checkbox" class="iniciou_checado">
+            <input type="checkbox" class="iniciou_checado" checked>
+        </div>
+
+    </div>
+
+
+
+    <div>
+        <h3>Disabled - Para todo elemento desabilitado</h3>
+
+        <style>
+            .desabilitado {background-color: rgb(37, 83, 83);}
+            .desabilitado:disabled {background-color: black;}
+        </style>
+        
+        <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
+            Texto selecionável:
+            <input type="text" class="desabilitado">
+
+            Texto desabilitado:
+            <input type="text" class="desabilitado" disabled>
         </div>
 
     </div>
@@ -125,140 +197,8 @@
 
 
 
-
-
     <div>
-        <h3></h3>
-
-        <style>
-            #modelo {background-color: rgb(37, 83, 83);}
-            #modelo:hover {background-color: black;}
-        </style>
-        
-        <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
-            <p>Parágrafo teste</p>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <h3></h3>
-
-        <style>
-            #modelo {background-color: rgb(37, 83, 83);}
-            #modelo:hover {background-color: black;}
-        </style>
-        
-        <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
-            <p>Parágrafo teste</p>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <h3></h3>
-
-        <style>
-            #modelo {background-color: rgb(37, 83, 83);}
-            #modelo:hover {background-color: black;}
-        </style>
-        
-        <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
-            <p>Parágrafo teste</p>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <h3></h3>
-
-        <style>
-            #modelo {background-color: rgb(37, 83, 83);}
-            #modelo:hover {background-color: black;}
-        </style>
-        
-        <div id="" style="margin: 0px; width: 200px; height: 200px; border: 2px solid white; text-align: center;">
-            <p>Parágrafo teste</p>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <h3></h3>
+        <h3>@@@@@ fazer todas as pseudo-classes e pseudo-elementos</h3>
 
         <style>
             #modelo {background-color: rgb(37, 83, 83);}
