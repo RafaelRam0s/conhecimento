@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+        }
+
+        table, td, th {
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+
+    <title>Operadores</title>
+</head>
+<body>
+    
+    <div>
+        <h2>Operadores matematicos simples</h2>
+       
+        <div>
+            <p>Os operadores matmáticos simples englobam a adição, subtração, multiplicação, divisão, pontenciação e divisão inteira retornando o valor do resto.</p>
+
+            <p>Basicamente utilizaremos símbolos entre dois valores que poderão realizar uma ou mais ações:</p>
+
+            <table id="tabela_de_operadores_matematicos">
+                <tr>
+                    <td>Símbolo</td>
+                    <td>O que faz?</td>
+                    <td>Operação</td>
+                    <td>Resultado</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Adição</td>
+                    <td>5 + 2</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtração</td>
+                    <td>5 - 2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplicação</td>
+                    <td>5 * 2</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Divisão</td>
+                    <td>5 / 2</td>
+                    <td>2.5</td>
+                </tr>
+                <tr>
+                    <td>**</td>
+                    <td>Pontenciação</td>
+                    <td>5 ** 2</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Divisão inteira com resultado do resto</td>
+                    <td>5 % 2</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
+
+            <code>
+                function fazerOperacaoEntre2Numeros() {
+                    window.alert(
+                        'Operações:' +
+                        '\n5 + 2 = ' + (5 + 2) +
+                        '\n5 - 2 = ' + (5 - 2) +
+                        '\n5 * 2 = ' + (5 * 2) +
+                        '\n5 / 2 = ' + (5 / 2) +
+                        '\n5 ** 2 = ' + (5 ** 2) +
+                        '\n5 % 2 = ' + (5 % 2)
+                    )
+                }
+            </code>
+
+            <script>
+
+                function fazerOperacaoEntre2Numeros() {
+                    window.alert(
+                        'Operações:' +
+                        '\n5 + 2 = ' + (5 + 2) +
+                        '\n5 - 2 = ' + (5 - 2) +
+                        '\n5 * 2 = ' + (5 * 2) +
+                        '\n5 / 2 = ' + (5 / 2) +
+                        '\n5 ** 2 = ' + (5 ** 2) +
+                        '\n5 % 2 = ' + (5 % 2)
+                    )
+                }
+
+            </script>
+
+            <button onclick="fazerOperacaoEntre2Numeros()">Rodar script</button>
+
+            <p>Ao usar o símbolo de adição, após uma string ser adicionada, todos os próximos valores são concatenados, respeitando a ordem de precedência.</p>
+
+            
+            <table>
+                <caption>Ordem de precedência dos símbolos, do maior para o menor</caption>
+                <tr>
+                    <td>Símbolos</td>
+                </tr>
+                <tr>
+                    <td>. []</td>
+                </tr>
+                <tr>
+                    <td>() new</td>
+                </tr>
+                <tr>
+                    <td>! ~ - + ++ -- typeof void delete</td>
+                </tr>
+                <tr>
+                    <td>* / ** %</td>
+                </tr>
+                <tr>
+                    <td>+ -</td>
+                </tr>
+                <tr>
+                    <td><< >> >>></td>
+                </tr>
+                <tr>
+                    <td>< <= > >= in instanceof</td>
+                </tr>
+                <tr>
+                    <td>== != === !==</td>
+                </tr>
+                <tr>
+                    <td>&</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                </tr>
+                <tr>
+                    <td>?:</td>
+                </tr>
+                <tr>
+                    <td>= += -= *= /= %= <<= >>= >>>= &= ^= |=</td>
+                </tr>
+                <tr>
+                    <td>,</td>
+                </tr>
+            </table>
+
+            <p>Lembrando que caso 2 símbolos estejam no mesmo nível o símbolo que veio antes da esquerda para a direita ganha</p>
+
+            <p>Como na precedência o + e o - empatam isso geraria um valor indesejado se utilizascemos o código anterior só retirando os parênteses, tá mas que valor é esse? É o NaN (not a number), beleza, mas porque raios ele foi gerado? Simples, na precedência seria feito uma operação de string menos um número -- 'Operações:\n5 + 2 = 52\n5 - 2 = 5' - 2 = NaN --(</p>
+
+            <code>
+                function fazerOperacaoEntre2Numeros() {
+                    window.alert(
+                        'Operações:' +
+                        '\n5 + 2 = ' + 5 + 2 +
+                        '\n5 * 2 = ' + 5 * 2 +
+                        '\n5 / 2 = ' + 5 / 2 +
+                        '\n5 ** 2 = ' + 5 ** 2 +
+                        '\n5 % 2 = ' + 5 % 2
+                    )
+                }
+            </code>
+
+            <script>
+
+                function fazerOperacaoComString() {
+                    window.alert(
+                        'Operações:' +
+                        '\n5 + 2 = ' + 5 + 2 +
+                        '\n5 * 2 = ' + 5 * 2 +
+                        '\n5 / 2 = ' + 5 / 2 +
+                        '\n5 ** 2 = ' + 5 ** 2 +
+                        '\n5 % 2 = ' + 5 % 2
+                    )
+                }
+
+            </script>
+
+            <button onclick="fazerOperacaoComString()">Rodar script</button>
+
+        </div>
+
+
+        <h2>Operadores de atribuição.</h2>
+
+        <div>
+
+            <p>Imagine que fazemos uma operação em que a variável que coleta um valor informado pelo usuario é a mesma variável que armazenará o resultado, exemplo:</p>
+
+            <code>
+                function somarComDois() {
+                    let x;
+                    x = window.prompt('Informe um número inteiro:');
+                    x = x + 2;
+                    window.alert('O seu número + 2 é igual a ' + x)
+                }
+            </code>
+
+            <script>
+
+                function somarComDois() {
+                    let x;
+                    x = window.prompt('Informe um número inteiro:');
+                    x = x + 2;
+                    window.alert('O seu número + 2 é igual a ' + x)
+                }
+
+            </script>
+
+            <button onclick="somarComDois()">Rodar script</button>
+
+            <p>Como na programação, escrever coisas repetidas vezes é algo considerado "não prático" existe uns símbolos que facilitam o nosso processo na hora de fazer operações, então para não repetirmos o x podemos fazer da seguinte forma - x += 2 - e com isso é a mesma coisa que escrever - x = x + 2 - e se escrevessemos - x += 2 + 3 - seria a mesma coisa que - x = x + 2 + 3 - além da adição vários outros operadores tem essa característica, são eles: >= <= += -= *= /= %= <<= >>= >>>= &= ^= |= </p>
+
+            <code>
+                function somarCom2() {
+                    let x;
+                    x = window.prompt('Informe um número inteiro:');
+                    x += 2;
+                    window.alert('O seu número + 2 é igual a ' + x)
+                }
+            </code>
+
+            <script>
+
+                function somarCom2() {
+                    let x;
+                    x = window.prompt('Informe um número inteiro:');
+                    x += 2;
+                    window.alert('O seu número + 2 é igual a ' + x)
+                }
+
+            </script>
+
+            <button onclick="somarCom2()">Rodar script</button>
+        </div>
+
+
+
+        <h2>Operadores matemáticos complexos:</h2>
+
+        <div>
+            
+            <p>Como na programação existem muitos casos que só é preciso adicionar 1 na conta ou subtrair 1 foi criado o ++ e -- que basicamente fazem a ação de somar 1 e subtrair 1, respectivamente.</p>
+
+            <p>Se tivermos um código - let x = 5 - e depois falamos - x++ - o valor de x agora é 6, pois 5 + 1 = 6 e se fizermos depois um - x-- - ele ficaria com 5, pois 6 - 1 = 5.</p>
+
+            <p>@@@@@Por uma questão de lógica, escrever - ++x - e - x++ - ou - --x - e - x-- - é a mesma coisa, ambos irão adicionar e subtrair o valor 1 na variável, só que por uma questão de processamento eles diferem @@@@@ o x++ faz x + 1 enquanto ++x faz 1 + x @@@@ não sei o pq disso impactar (algumas pessoas falam que o sistema pode agir diferente de qual vc escolhe, não possuo exemplos para diferir ambos)</p>
+
+        </div>
+
+
+
+        <h2>Operadores lógicos</h2>
+
+        <div>
+
+            <p>Operadores lógicos são operadores que trabalham principalmente através dos booleanos. Por exemplo imagine que queiramos saber se a resposta do usuario é igual ao valor 5:</p>
+
+            <code>
+                function respostaIgualCinco() {
+                    let x = window.prompt('Informe um número inteiro:')
+                    window.alert('Seu número é igual a 5? ' + x == 5)
+                }
+            </code>
+
+            <script>
+
+                function respostaIgualCinco() {
+                    let x = window.prompt('Informe um número inteiro:')
+                    window.alert('Seu número é igual a 5? ' + x == 5)
+                }
+
+            </script>
+
+            <button onclick="respostaIgualCinco()">Rodar script</button>
+
+            <p>Os operadores lógicos são: != "diferente", !== "totalmente diferente", == "igual", === "totalmente igual", && "e" e || "ou".</p>
+
+            <p>Agora na prática vamos entender como cada um age:</p>
+
+            <p>O igual == pergunta se dois valores são iguais, por exemplo 5 == 5 é true,  entenda que para o igual, '5' == 5 é true, pois ambos são 5, independentemente do seu tipo eles representam o 5, mas 5 == 55 é false, pq 5 e 55 são diferentes, assim como 'abóbora' == 'abóbora' é true, 'abóbora' == 'ameixa' é false</p>
+
+            <p>Mas se eu quiser validar tanto o valor quanto o seu tipo? Aí você pode usar o totalmente igual 5 === 5 é true, mas '5' === 5 é false.</p>
+
+            <p>Agora saiba que o diferente vai basicamente fazer o que o igual faz, mas totalmente o contrário o resultado, 5 != 5 é false, '5' != 5 é false, 5 != 6 é true, 'abóbora' != 'ameixa' é true</p>
+
+            <p>Totalmente diferente é o reverso do totalmente igual, '5' !== 5 é true, 5 !== 5 é false, 'teste' !== 'ola' é true.</p>
+
+            <p>O "e" lógico vai comparar duas operações booleanas uma a esquerda dele e outra a sua direita e a partir do resultado das duas gera um outro booleano, basta que um dos lados seja false para que ele retorne false:</p>
+
+            <p>true && true é true, false && true é false, true && false é false e false && false é false</p>
+
+            <p>O "ou" lógico vai comparar duas operações booleanas uma a esquerda dele e outra a sua direita e a partir do resultado das duas gera um outro booleano, basta que um dos lados seja true para que ele retorne true:</p>
+
+            <p>true || true é true, false || true é true, true || false é true e false || false é false</p>
+
+            <code>
+                function operacoesLogicas() {
+                    window.alert('Operações:' +
+                        '\n igual: (5 == 5) + (\'5\' == 5) + (2 == 5) + (\'2\' == \'5\') :' + (5 == 5) + ('5' == 5) + (2 == 5) + ('2' == '5') +
+                        '\n totalmente igual: (5 === 5) + (\'5\' === 5) + (2 === 5) + (\'2\' === \'5\') :' + (5 === 5) + ('5' === 5) + (2 === 5) + ('2' === '5') +
+                        '\n diferente: (5 != 5) + (\'5\' != 5) + (2 != 5) + (\'2\' != \'5\') :' + (5 != 5) + ('5' != 5) + (2 != 5) + ('2' != '5') +
+                        '\n totalmente diferente: (5 !== 5) + (\'5\' !== 5) + (2 !== 5) + (\'2\' !== \'5\') :' + (5 !== 5) + ('5' !== 5) + (2 !== 5) + ('2' !== '5') +
+                        '\n e : (true && true) + (false && true) + (true && false) + (false && false)' + (true && true) + (false && true) + (true && false) + (false && false) +
+                        '\n ou : (true || true) + (false || true) + (true || false) + (false || false)' + (true || true) + (false || true) + (true || false) + (false || false)
+                    )
+                }
+            </code>
+
+            <script>
+
+                function operacoesLogicas() {
+                    window.alert('Operações:' +
+                        '\n igual: (5 == 5) + (\'5\' == 5) + (2 == 5) + (\'2\' == \'5\') :' + (5 == 5) + ('5' == 5) + (2 == 5) + ('2' == '5') +
+                        '\n totalmente igual: (5 === 5) + (\'5\' === 5) + (2 === 5) + (\'2\' === \'5\') :' + (5 === 5) + ('5' === 5) + (2 === 5) + ('2' === '5') +
+                        '\n diferente: (5 != 5) + (\'5\' != 5) + (2 != 5) + (\'2\' != \'5\') :' + (5 != 5) + ('5' != 5) + (2 != 5) + ('2' != '5') +
+                        '\n totalmente diferente: (5 !== 5) + (\'5\' !== 5) + (2 !== 5) + (\'2\' !== \'5\') :' + (5 !== 5) + ('5' !== 5) + (2 !== 5) + ('2' !== '5') +
+                        '\n e : (true && true) + (false && true) + (true && false) + (false && false)' + (true && true) + (false && true) + (true && false) + (false && false) +
+                        '\n ou : (true || true) + (false || true) + (true || false) + (false || false)' + (true || true) + (false || true) + (true || false) + (false || false)
+                    )
+                }
+
+            </script>
+
+            <button onclick="operacoesLogicas()">Rodar script</button>
+
+        </div>
+
+        <h2>Sinais de comparação:</h2>
+
+        <div>
+
+            <p>São os sinais de maior, maior igual, menor e menor igual, utilizamos para avaliar números:</p>
+
+            <code>
+                function comparacoes() {
+                    window.alert('Comparações:' +
+                        '\n maior: (5 > 2) + (2 > 5) + (5 > 5)' + (5 > 2) + (2 > 5) + (5 > 5) +
+                        '\n maior igual: (5 >= 2) + (2 >= 5) + (5 >= 5)' + (5 >= 2) + (2 >= 5) + (5 >= 5) +
+                        '\n menor: (5 < 2) + (2 < 5) + (5 < 5)' + (5 < 2) + (2 < 5) + (5 < 5) +
+                        '\n menor igual: (5 <= 2) + (2 <= 5) + (5 <= 5)' + (5 <= 2) + (2 <= 5) + (5 <= 5)
+                    )
+                }
+            </code>
+
+            <script>
+
+                function comparacoes() {
+                    window.alert('Comparações:' +
+                        '\n maior: (5 > 2) + (2 > 5) + (5 > 5)' + (5 > 2) + (2 > 5) + (5 > 5) +
+                        '\n maior igual: (5 >= 2) + (2 >= 5) + (5 >= 5)' + (5 >= 2) + (2 >= 5) + (5 >= 5) +
+                        '\n menor: (5 < 2) + (2 < 5) + (5 < 5)' + (5 < 2) + (2 < 5) + (5 < 5) +
+                        '\n menor igual: (5 <= 2) + (2 <= 5) + (5 <= 5)' + (5 <= 2) + (2 <= 5) + (5 <= 5)
+                    )
+                }
+            </script>
+
+            <button onclick="comparacoes()">Rodar script</button>
+            
+        </div>
+        
+    </div>
+
+    <hr>
+
+    
+
+</body>
+</html>
