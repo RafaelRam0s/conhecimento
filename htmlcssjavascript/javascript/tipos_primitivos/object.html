@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+        }
+    </style>
+
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <div>
+        <h2>Para que serve o Object</h2>
+       
+        <div>
+            <p>Imaginemos que queiramos guardar todas as informações de um carro dentro de cada variável; - var carroNome = 'Fiat patrocina nóis', carroPortas = 4, carroCor = 'branco' - perceba que temos que usar muitas variáveis para armazenar os dados, do jeito que escrevi, estão todas organizadas e possuem um padrão de começar com a palavra "carro", mas e se eu colocasse somente; - var nome = 'Fiat patrocina nóis', portas = 4, cor = 'branco' - . Veja que colocamos em variáveis os dados, contudo parecem muito soltas e provavelmente você precisará de um comentário para lembrar que esses dados estão se tratando de um carro.</p>
+
+            <p>Pensando nisso temos o object, ele basicamente fará uma variável possuir diversas subdivisões e essas subdivisões irão agir como outras variáveis</p>
+
+            <code>
+                function dadosDeUmCarro() {
+                    let carro = {
+                        modelo: 'Fiat patrocina nóis',
+                        portas: 4,
+                        cor: 'branco',
+                        motor: {
+                            cavalos: 200,
+                            cilindradas: 50
+                        }
+                    }
+
+                    window.alert(`O carro de modelo ${carro.modelo}, de ${carro.portas} portas, é da cor ${carro.cor} e possui um motor com ${carro.motor.cavalos} cavalos rodando à ${carro.motor.cilindradas} cilindradas`)
+
+                }
+            </code>
+
+            <script>
+
+                function dadosDeUmCarro() {
+                    let carro = {
+                        modelo: 'Fiat patrocina nóis',
+                        portas: 4,
+                        cor: 'branco',
+                        motor: {
+                            cavalos: 200,
+                            cilindradas: 50
+                        }
+                    }
+
+                    window.alert(`O carro de modelo ${carro.modelo}, de ${carro.portas} portas, é da cor ${carro.cor} e possui um motor com ${carro.motor.cavalos} cavalos rodando à ${carro.motor.cilindradas} cilindradas`)
+
+                }
+
+            </script>
+
+            <button onclick="dadosDeUmCarro()">Rodar script</button>
+        </div>
+
+
+
+        <h2>Como criar um Object</h2>
+
+        <div>
+            
+            <p>Um objeto é criado com a abertura e fechamento das "chaves", tudo o que estiver entre chaves será o objeto, a próxima palavra que for escolhida terá apenas escopo local então se tivermos uma variável x definida e depois criarmos um objeto com nome x, está tudo bem esses dois x serão diferentes na hora de chamar-los. Após escolher uma palavra chave é utilizado o "sinal de dois pontos" que age parecido com um "recebe" de uma variável e por último você coloca o dado que aquela propriedade da variável irá receber.</p>
+
+            <p>Os objetos podem ser, tanto criado em apenas uma linha quanto em várias, segue exemplos:</p>
+
+            <code>
+                var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+                var person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 50,
+                    eyeColor: "blue"
+                };
+            </code>
+
+        </div>
+
+        
+        
+        <h2>Como usar um object</h2>
+
+        <div>
+
+            <p>Existem duas formas de chamadas, vou explicar a que mais prefiro, você tem que colocar o nome da variável que está armazenando o objeto (objectName), e depois colocar o "ponto final" e o nome do objeto que você quer acessar (propertyName), se esse último tem outro objeto armazenado, use o ponto final e o nome da próxima propriedade para acessar</p>
+
+            <code>
+                objectName.propertyName
+
+                objectName["propertyName"]
+            </code>
+        </div>
+
+
+
+
+        <h2>Usando uma função armazenada em um objeto</h2>
+
+        <div>
+
+            <p>É possível armazenar uma função dentro do objeto, mas para acessa-lo é um pouco diferente, segue exemplo de como montar:</p>
+
+            <code>  
+                var person = {
+                    firstName: "John",
+                    lastName : "Doe",
+                    id       : 5566,
+                    fullName : function() {
+                      return this.firstName + " " + this.lastName;
+                    }
+                };
+            </code>
+
+            <p>E para chamar essa função não é nada tão complexo:</p>
+
+            <code>
+                name = person.fullName();
+
+                name = person.fullName;
+            </code>
+
+            <p>A diferença é que no primeiro caso você executa a função, pois colocou o abre e fecha parênteses, no segundo o que ocorre é que você mostrará exatamente como a função foi digitada, mostrando assim o código</p>
+
+            <script>
+
+                function alertaObjetoAtivaFuncao() {
+                    let person = {
+                        firstName: "John",
+                        lastName : "Doe",
+                        id       : 5566,
+                        fullName : function() {
+                            return this.firstName + " " + this.lastName;
+                        }
+                    };
+
+                    window.alert(person.fullName() + '\n' + person.fullName)
+                }
+
+            </script>
+
+            <button onclick="alertaObjetoAtivaFuncao()">Rodar script</button>
+        </div>
+
+
+        <h2>@@@@@Colocar um valor em uma propriedade do objeto</h2>
+
+        <div>
+
+            <p>Como colocar um valor em uma propriedade do objeto:</p>
+
+            <code>
+                function colocandoValorNaPropriedadeDoObjeto() {
+                    let person = {
+                        firstName: "John",
+                        lastName : "Doe",
+                        id       : 5566,
+                        fullName : function() {
+                            return this.firstName + " " + this.lastName;
+                        }
+                    };
+
+                    person.firstName = "Rafael"
+
+                    window.alert('Olá ' + person.firstName)
+                }
+            </code>
+            
+            <script>
+
+                function colocandoValorNaPropriedadeDoObjeto() {
+                    let person = {
+                        firstName: "John",
+                        lastName : "Doe",
+                        id       : 5566,
+                        fullName : function() {
+                            return this.firstName + " " + this.lastName;
+                        }
+                    };
+
+                    person.firstName = "Rafael"
+
+                    window.alert('Olá ' + person.firstName)
+                }
+
+            </script>
+
+            <button onclick="colocandoValorNaPropriedadeDoObjeto()">Rodar script</button>
+        </div>
+
+
+    </div>
+
+    <hr>
+
+    
+
+</body>
+</html>

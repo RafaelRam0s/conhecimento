@@ -118,3 +118,145 @@ Regex: /to \/\\ pa/
 
 
 
+
+
+
+
+
+
+RegExp é usado principalmente em 2 métodos de string o search() e o replace()
+
+
+código: /w3schools/
+Leitura literal de código: Procure pelo primeiro índice que aparecer pelo nome de "w3schools"
+Observação: o que for escrito dentro das barras será a string que será procurada
+
+
+texto: "O W3schools me ensinou que, bla bla palavra w3schools de novo lorem com o w minúsculo."
+código: /w3schools/i
+Leitura literal de código: Procure pela primeira palavra w3schools que aparecer, sem levar em consideração letras minúsculas ou maiúsculas
+Palavras que tbm seriam achadas com o código escrito: w3schools, W3schools, w3SChoOlS, ...
+Observação: o i ao final do entre barras é quem dá a ordem de procurar a palavra que está escrita sem distinguir a formatação do caractere
+
+
+texto: "O w3schools me ensinou que, bla bla palavra w3schools de novo lorem."
+código: /w3schools/g
+Leitura literal de código: Procure por TODAS as palavras w3schools que aparecerem
+Observação: o g ao final do entre barras é quem dá a ordem de buscar todos os índices que atendem à string informada
+
+
+texto: "Olá mundo"
+código: /[bmag]/
+Leitura literal de código: Procure pelos caracteres informados aqui dentro, ache no texto a letra b, m, a ou g
+Observação: O que estiver entre colchetes será o caracter que será buscado, neste exemplo será analisado
+
+
+
+códigos combinando com o que foi visto até aqui:
+"Olá mundo! Hello World! Olá."
+/Ol[aáAÁ] mundo/
+/[o]/i
+/ol/ig
+/ol[aá]/i
+
+
+
+texto: "Olá mundo"
+código: /[a-m]/
+Leitura literal de código: Ache o primeiro índice de um caracter que esteja entre a e m, logo as letras procuradas são: a, b, c, d, e, f, g, h, i, j, k, l e m.
+Observação: Se dentro do colchetes tivermos um sinal de menos entre dois caracteres é feita uma busca de um caracter até o outro, temos as seguintes tabelas de pesquisas:
+[a-z] abcdefghijklmnopqrstuvwxyz
+[A-Z] ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[0-9] 0123456789
+Usos do código de forma alternativa
+[a-zA-Z] abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+[TEa-z01] TEabcdefghijklmnopqrstuvwxyz01
+[ ] - Procura literalmente por um espaço -
+
+
+
+Texto: "re, green, red, green, gren, gr, blue, yellow"
+código: /(red|green)/
+Leitura literal de código: ache a string "red" ou "green"
+Outras formas de se escrever esse código para buscar no texto exemplo:
+/(red|green|blue)/
+/(red|green|gr)/
+
+
+código: /\d/
+Leitura literal de código: Ache um dígito
+
+código: /\s/
+Leitura literal de código: Ache um espaço em branco
+
+código: /\btes/
+Leitura literal de código: Ache uma palavra que inicie pela string "tes"
+
+código: /te\b/
+Leitura literal de código: Ache uma palavra que termine pela string "te"
+
+@@@@@ código: /\u/
+@@@@@ Leitura literal de código: Ache um dígito
+
+código: /o+/g
+Leitura literal de código: Ache a letra "o" e todos os seus conjuntos em que se repete
+texto: "Hellooo World! Hello W3Schools!"
+resultados: ooo,o,o,oo
+
+código: /lo*/g
+Leitura literal de código: Ache a string "l" com a quantidade de "o"s opcional
+texto: "Hellooo World! Hello W3Schools!"
+resultados: l,looo,l,l,lo,l
+
+código: /10?1/g
+Leitura literal de código: Ache uma string "1" onde a próxima letra "0" é opcional para a busca. Vamos procurar por 11 e por 101.
+texto: "11, 111, 121 or 1010?"
+resultados: 11,11,101
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
