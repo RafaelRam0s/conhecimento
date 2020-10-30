@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="../../midia/icones/logo.ico" />
+
+    <style>
+        :root {
+            --paleta_cinza: rgba(6, 6, 7, 0.747);
+            --paleta_branca: rgba(255, 255, 240, 0.99);
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+        }
+        body {
+            background-color: var(--paleta_cinza);
+            margin: 5%;
+            color: var(--paleta_branca);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 26px;}
+        h5 {font-size: 22px;}
+        h6 {font-size: 12px;}
+        p {font-size: 18px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {white-space: pre-line;}
+
+        table, td, th {
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+
+    <title>String</title>
+</head>
+<body>
+    
+    <div>
+        <h2>O que é uma string</h2>
+       
+        <div>
+            <p>String é toda informação textual que temos, por exemplo o nome de uma pessoa, para colocarmos algo como string temos que colocar entre "aspas simples", "aspas duplas" ou "crases"</p>
+
+            <code>
+                function demonstracaoString() {
+                    
+                    let nome = 'Rafael Ramos'
+
+                    window.alert("Olá " + nome)
+                }
+            </code>
+
+            <script>
+
+                function demonstracaoString() {
+                    let boas_vindas = "Olá "
+                    let nome = 'Rafael Ramos'
+                    let explicacao = ` essas foram as formas de montar uma string.`
+
+                    window.alert(boas_vindas + nome + explicacao)
+                }
+
+            </script>
+
+            <button onclick="demonstracaoString()">Rodar script</button>
+        </div>
+
+
+        <h2>@@@@@@@Uso de códigos dentro das strings</h2>
+
+        <div>
+
+            <p>O "contra-barra" dentro de uma string leva a próxima letra após ele como literal, então se criarmos uma string por aspas simples e dentro dela quisermos colocar uma ou mais aspa simples devemos usar contra-barra e em seguida colocar o sinal de aspa simples. Contudo algumas letras em conjunto com o contra-barra servem para fazer algumas funções textuais como por exemplo a quebra de linha, segue alguns usos com letra:</p>
+
+            <p>Usos do "contra-barra" \b dá um espaço, \f , \n quebra de linha, \r, \t, \v</p>
+
+            <p>Além do contra-barra no entre crases tem outra série de símbolos que nos permite ter outra ação. Essa acão seria abrir um espaço no meio do da string para gerar um script, mas ao terminar o script continua dentro da string, seria igual a escrever - window.alert('Olá ' + 'Rafael' + ', seja bem-vindo') - na forma com código; - window.alert(`Olá ${'Rafael'}, seja bem-vindo`) - </p>
+
+            <code>
+                function codigosNaString() {
+                    window.alert('Texto para testes de código com o \'contra-barra\': \n \\n faz a quebra de linha, @@@@@')
+                    window.alert(`Olá ${'Rafael'}, seja bem-vindo`)
+                }
+            </code>
+
+            <script>
+
+                function codigosNaString() {
+                    window.alert('Texto para testes de código com o \'contra-barra\': \n \\n faz a quebra de linha, @@@@@')
+                    window.alert(`Olá ${'Rafael'}, seja bem-vindo`)
+                }
+
+            </script>
+
+            <button onclick="codigosNaString()">Rodar script</button>
+        </div>
+
+        
+        
+        
+        <h2>@@@@@Formas de armazenar um texto em uma variável.</h2>
+
+        <div>
+
+            <p>Além das formas que vimos definindo com a abertura e fechamento de "aspa simples", "aspas duplas" e "crases" podemos usar um código para tranformar algo em um texto</p>
+
+            <p>Temos o new String() porém o que ele cria é um objeto e não string, podem ser iguais em valores mas diferentes em dado new String('teste') == 'teste' é true, mas new String('teste') === 'teste' é false</p>
+
+            <code>
+                function transformarEmString() {
+                    let nome1 = 'Rafael'
+                    let nome2 = new String('Rafael')
+                    let numero1 = 1
+                    let numero2 =  (numero1).toString()
+                    let numero3 = '' + (numero1)
+                    let numero4 =  String(numero1)
+
+
+                    window.alert('Aqui vai os códigos e o tipo primitivo que acabou sendo criado:' +
+                    "let nome1 = 'Rafael' " + (typeof nome1) + nome1 + "\n" +
+                    "let nome2 = new String('Rafael') " + (typeof nome2) + nome2 + "\n" +
+                    "let numero1 = 1 " + (typeof numero1) + numero1 + "\n" +
+                    "let numero2 = (numero1).toString() " + (typeof numero2) + numero2 + "\n" +
+                    "let numero3 = '' + (numero2++) " + (typeof numero3) + numero3 + "\n" +
+                    "let numero4 =  String(1) " + (typeof numero4) + numero4 + "\n"
+                    )
+
+                }
+            </code>
+
+            <script>
+
+                function transformarEmString() {
+                    let nome1 = 'Rafael'
+                    let nome2 = new String('Rafael')
+                    let numero1 = 1
+                    let numero2 =  (numero1).toString()
+                    let numero3 = '' + (numero1)
+                    let numero4 =  String(numero1)
+
+
+                    window.alert('Aqui vai os códigos e o tipo primitivo que acabou sendo criado:' +
+                    "let nome1 = 'Rafael' " + (typeof nome1) + nome1 + "\n" +
+                    "let nome2 = new String('Rafael') " + (typeof nome2) + nome2 + "\n" +
+                    "let numero1 = 1 " + (typeof numero1) + numero1 + "\n" +
+                    "let numero2 = (numero1).toString() " + (typeof numero2) + numero2 + "\n" +
+                    "let numero3 = '' + (numero2++) " + (typeof numero3) + numero3 + "\n" +
+                    "let numero4 =  String(1) " + (typeof numero4) + numero4 + "\n"
+                    )
+
+                }
+
+            </script>
+
+            <button onclick="transformarEmString()">Rodar script</button>
+        </div>
+
+
+
+        <h2>Quantidade de caracteres</h2>
+
+        <div>
+            <p>Para vermos quantas letras uma string tem, usamos o - length -</p>
+            
+            <p>Observação: espaços também são contabilizados na hora de ver quantos caracteres existem</p>
+
+            <code>
+                function quantidadeDeCaracteres() {
+                    let nome = 'Rafael Ramos'
+                    window.alert('O nome ' + nome + ' tem ' + nome.length + ' caracteres')
+                }
+            </code>
+            
+            <script>
+
+                function quantidadeDeCaracteres() {
+                    let nome = 'Rafael Ramos'
+                    window.alert('O nome ' + nome + ' tem ' + nome.length + ' caracteres')
+                }
+
+            </script>
+
+            <button onclick="quantidadeDeCaracteres()">Rodar script</button>
+        </div>
+
+
+
+        <h2>Encontrar uma string em uma string</h2>
+        
+        <div>
+
+            <p>Para procurar por uma frase ou palavra no meio de uma string, podemos usar o - indexOf() - onde dentro do parênteses deve ser informado o que você quer procurar</p>
+
+            <p>Caso o parâmetro informado não seja encontrado dentro da string é retornado o valor -1 </p>
+
+            <p>Caso seja encontrado o valor o resultado vai ser a posição em que a letra está, sendo que a contagem da primeira posição é 0, a da segunda é 1, da terceira 2 e assim por diante em uma PA.</p>
+
+            <p>Só é procurado pela primeira ocorrência, se tiver na frase duas palavras iguais e vc buscar por elas somente a primeira ocorrência é procurada</p>
+
+            <p>Ao passarmos um segundo parâmetro do tipo number natural, podemos informar a partir de que posição poderá ser iniciada a busca.</p>
+
+            <code>
+                function procurarStringNaString() {
+                    let frase_qualquer = 'Uma frase qualquer para usar a busca de string na string. \n Outro trecho para teste.'
+
+                    window.alert('A seguir passarei a frase que usaremos para exemplo: ' + frase_qualquer + 
+                    '\n Procurando pela palavra "uma", resultado: ' + frase_qualquer.indexOf('uma') + 
+                    '\n Procurando pela frase "Uma frase", resultado: ' + frase_qualquer.indexOf('Uma frase') + 
+                    '\n Procurando pela palavra "qualquer", resultado: ' + frase_qualquer.indexOf('qualquer') + 
+                    '\n Procurando pela palavra "string. Outro", resultado: ' + frase_qualquer.indexOf('string. Outro') + 
+                    '\n Procurando pela palavra "string. \\n Outro", resultado: ' + frase_qualquer.indexOf('string. \n Outro') + 
+                    '\n Procurando pela palavra ".", resultado: ' + frase_qualquer.indexOf('.') + 
+                    '\n Procurando pela palavra "." a partir da posição ' + frase_qualquer.indexOf('.') + ', resultado: ' + frase_qualquer.indexOf('.', frase_qualquer.indexOf('.')) + 
+                    '\n Procurando pela palavra "." a partir da posição ' + (frase_qualquer.indexOf('.') + 1) + ', resultado: ' + frase_qualquer.indexOf('.', frase_qualquer.indexOf('.') + 1))
+                }
+            </code>
+
+            <script>
+
+                function procurarStringNaString() {
+                    let frase_qualquer = 'Uma frase qualquer para usar a busca de string na string. \n Outro trecho para teste.'
+
+                    window.alert('A seguir passarei a frase que usaremos para exemplo: ' + frase_qualquer + 
+                    '\n Procurando pela palavra "uma", resultado: ' + frase_qualquer.indexOf('uma') + 
+                    '\n Procurando pela frase "Uma frase", resultado: ' + frase_qualquer.indexOf('Uma frase') + 
+                    '\n Procurando pela palavra "qualquer", resultado: ' + frase_qualquer.indexOf('qualquer') + 
+                    '\n Procurando pela palavra "string. Outro", resultado: ' + frase_qualquer.indexOf('string. Outro') + 
+                    '\n Procurando pela palavra "string. \\n Outro", resultado: ' + frase_qualquer.indexOf('string. \n Outro') + 
+                    '\n Procurando pela palavra ".", resultado: ' + frase_qualquer.indexOf('.') + 
+                    '\n Procurando pela palavra "." a partir da posição ' + frase_qualquer.indexOf('.') + ', resultado: ' + frase_qualquer.indexOf('.', frase_qualquer.indexOf('.')) + 
+                    '\n Procurando pela palavra "." a partir da posição ' + (frase_qualquer.indexOf('.') + 1) + ', resultado: ' + frase_qualquer.indexOf('.', frase_qualquer.indexOf('.') + 1))
+                }
+
+            </script>
+
+            <button onclick="procurarStringNaString()">Rodar script</button>
+
+            <p>Além de conseguirmos encontrar uma palavra da direita para a esquerda, podemos fazer a mesma procura da esquerda para a direita, com um código que responde igual ao indexOf(), o - lastIndexOf() -</p>
+
+            <script>
+
+                function procurarStringNaStringReverso() {
+                    let frase_qualquer = 'Uma frase qualquer para usar a busca de string na string. \n Outro trecho para teste.'
+
+                    window.alert('A seguir passarei a frase que usaremos para exemplo: ' + frase_qualquer + 
+                    '\n Procurando pela palavra "uma", resultado: ' + frase_qualquer.lastIndexOf('uma') + 
+                    '\n Procurando pela frase "Uma frase", resultado: ' + frase_qualquer.lastIndexOf('Uma frase') + 
+                    '\n Procurando pela palavra "qualquer", resultado: ' + frase_qualquer.lastIndexOf('qualquer') + 
+                    '\n Procurando pela palavra "string. Outro", resultado: ' + frase_qualquer.lastIndexOf('string. Outro') + 
+                    '\n Procurando pela palavra "string. \\n Outro", resultado: ' + frase_qualquer.lastIndexOf('string. \n Outro') + 
+                    '\n Procurando pela palavra ".", resultado: ' + frase_qualquer.lastIndexOf('.') + 
+                    '\n Procurando pela palavra "." a partir da posição ' + frase_qualquer.lastIndexOf('.') + ', resultado: ' + frase_qualquer.lastIndexOf('.', frase_qualquer.lastIndexOf('.')) + 
+                    '\n Procurando pela palavra "." a partir da posição ' + (frase_qualquer.lastIndexOf('.') + 1) + ', resultado: ' + frase_qualquer.lastIndexOf('.', frase_qualquer.lastIndexOf('.') - 1))
+                }
+
+            </script>
+
+            <button onclick="procurarStringNaStringReverso()">Rodar script</button>
+
+            <h3>CUIDADO: indexOf e lastIndexOf não aceitam Regra regex</h3>
+
+            <p>Para procurar por uma string com regra regex utilizamos o - search() - esse diferentemente do indexOf ou do lastIndexOf não aceita um segundo parâmetro e o que for escrito no primeiro já está formatado para ler em Regra Regex</p>
+
+            <code>
+                function encontrarStringNaString() {
+                    let frase_qualquer = 'Uma frase qualquer para usar a busca de string na string. \n Outro trecho para teste.'
+
+                    window.alert('A seguir passarei a frase que usaremos para exemplo: ' + frase_qualquer + 
+                    '\n Procurando pela palavra "uma", resultado: ' + frase_qualquer.search('uma') + 
+                    '\n Procurando pela frase "Uma frase", resultado: ' + frase_qualquer.search('Uma frase') + 
+                    '\n Procurando pela palavra "qualquer", resultado: ' + frase_qualquer.search('qualquer') + 
+                    '\n Procurando pela palavra "string. Outro", resultado: ' + frase_qualquer.search('string. Outro') + 
+                    '\n Procurando pela palavra "string. \\n Outro", resultado: ' + frase_qualquer.search('string. \n Outro') + 
+                    '\n Procurando pela palavra "[a-z]", resultado: ' + frase_qualquer.search('[a-z]'))
+                }
+            </code>
+
+            <script>
+
+                function encontrarStringNaString() {
+                    let frase_qualquer = 'Uma frase qualquer para usar a busca de string na string. \n Outro trecho para teste.'
+
+                    window.alert('A seguir passarei a frase que usaremos para exemplo: ' + frase_qualquer + 
+                    '\n Procurando pela palavra "uma", resultado: ' + frase_qualquer.search('uma') + 
+                    '\n Procurando pela frase "Uma frase", resultado: ' + frase_qualquer.search('Uma frase') + 
+                    '\n Procurando pela palavra "qualquer", resultado: ' + frase_qualquer.search('qualquer') + 
+                    '\n Procurando pela palavra "string. Outro", resultado: ' + frase_qualquer.search('string. Outro') + 
+                    '\n Procurando pela palavra "string. \\n Outro", resultado: ' + frase_qualquer.search('string. \n Outro') + 
+                    '\n Procurando pela palavra "[a-z]", resultado: ' + frase_qualquer.search('[a-z]'))
+                }
+
+            </script>
+
+            <button onclick="encontrarStringNaString()">Rodar script</button>
+
+        </div>
+
+
+
+        <h2>Para retirar um pedaço de texto de uma string</h2>
+
+        <div>
+
+            <p>Temos 3 formas de fazer o recorte de uma string, por slice(), substring() e substr()</p>
+
+            <p>- slice() - o primeiro parâmetro informa a partir de que posição será feito feito o recorte e o segundo parâmetro informa até que posição deve ir. Os parâmetros devem ser números inteiros. O primeiro parâmetro tem que ser menor que o segundo para ser retorndo algo diferente de string vazia - '' - . Se for omitida o segundo parâmetro é feito o recorte do restante da string. Se o valor inicial for maior do que a quantidade de caracteres existentes será retornado uma string vazia</p>
+
+            <code>
+                function recortar() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 até a 5, resultado: ' + frase_qualquer.slice(2, 5) +
+                    '\n A seguir vamos recortar da posição 2 até a -5, resultado: ' + frase_qualquer.slice(2, -5) +
+                    '\n A seguir vamos recortar da posição -5 até a -2, resultado: ' + frase_qualquer.slice(-5, -2) +
+                    '\n A seguir vamos recortar da posição -5 até a -5, resultado: ' + frase_qualquer.slice(-5, -5) +
+                    '\n A seguir vamos recortar da posição 5 até a 2, resultado: ' + frase_qualquer.slice(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.slice(5) +
+                    '\n A seguir vamos recortar da posição -5 até o final, resultado: ' + frase_qualquer.slice(-5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.slice(1000))
+                }
+            </code>
+
+            <script>
+
+                function recortar() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 até a 5, resultado: ' + frase_qualquer.slice(2, 5) +
+                    '\n A seguir vamos recortar da posição 2 até a -5, resultado: ' + frase_qualquer.slice(2, -5) +
+                    '\n A seguir vamos recortar da posição -5 até a -2, resultado: ' + frase_qualquer.slice(-5, -2) +
+                    '\n A seguir vamos recortar da posição -5 até a -5, resultado: ' + frase_qualquer.slice(-5, -5) +
+                    '\n A seguir vamos recortar da posição 5 até a 2, resultado: ' + frase_qualquer.slice(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.slice(5) +
+                    '\n A seguir vamos recortar da posição -5 até o final, resultado: ' + frase_qualquer.slice(-5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.slice(1000))
+                }
+
+            </script>
+
+            <button onclick="recortar()">Rodar script</button>
+
+            <p>- substring() - é igual ao slice exceto pelo fato de ele não poder receber o primeiro parâmetro negativo e se o segundo parâmetro for negativo ele recorta até o início</p>
+
+            <code>
+                function recorte() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 até a 5, resultado: ' + frase_qualquer.substring(2, 5) +
+                    '\n A seguir vamos recortar da posição 2 até a -5, resultado: ' + frase_qualquer.substring(2, -5) +
+                    '\n A seguir vamos recortar da posição -5 até a -2, resultado: ' + frase_qualquer.substring(-5, -2) +
+                    '\n A seguir vamos recortar da posição -5 até a -5, resultado: ' + frase_qualquer.substring(-5, -5) +
+                    '\n A seguir vamos recortar da posição 5 até a 2, resultado: ' + frase_qualquer.substring(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.substring(5) +
+                    '\n A seguir vamos recortar da posição -5 até o final, resultado: ' + frase_qualquer.substring(-5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.substring(1000))
+                }
+            </code>
+
+            <script>
+
+                function recorte() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 até a 5, resultado: ' + frase_qualquer.substring(2, 5) +
+                    '\n A seguir vamos recortar da posição 10 até a -5, resultado: ' + frase_qualquer.substring(10, -5) +
+                    '\n A seguir vamos recortar da posição -5 até a -2, resultado: ' + frase_qualquer.substring(-5, -2) +
+                    '\n A seguir vamos recortar da posição -5 até a -5, resultado: ' + frase_qualquer.substring(-5, -5) +
+                    '\n A seguir vamos recortar da posição 5 até a 2, resultado: ' + frase_qualquer.substring(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.substring(5) +
+                    '\n A seguir vamos recortar da posição -5 até o final, resultado: ' + frase_qualquer.substring(-5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.substring(1000))
+                }
+
+            </script>
+
+            <button onclick="recorte()">Rodar script</button>
+
+            <p>- substr() - também faz recorte, mas age diferente do slice(). Ele só aceita no primeiro parâmetro numéricos inteiros e no segundo numéricos naturais. O primeiro parâmetro informa de onde deve ser iniciado o recorte e o segundo parâmetro informa quantas casas à frente do primeiro parâmetro devem ser recortadas, se omitido vai até o final</p>
+
+            <code>
+                function recorteEmFrente() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 os próximos 5 caracteres, resultado: ' + frase_qualquer.substr(2, 5) +
+                    '\n A seguir vamos recortar da posição 5 os próximos 2 caracteres, resultado: ' + frase_qualquer.substr(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.substr(5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.substr(1000) +
+                    '\n A seguir vamos recortar da posição -5 os próximos 2 caracteres, resultado: ' + frase_qualquer.substr(-5, 2) +
+                    '\n A seguir vamos recortar da posição 5 os próximos -2 caracteres, resultado: ' + frase_qualquer.substr(5, -2))
+                }
+            </code>
+
+            <script>
+
+                function recorteEmFrente() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n A seguir vamos recortar da posição 2 os próximos 5 caracteres, resultado: ' + frase_qualquer.substr(2, 5) +
+                    '\n A seguir vamos recortar da posição 5 os próximos 2 caracteres, resultado: ' + frase_qualquer.substr(5, 2) +
+                    '\n A seguir vamos recortar da posição 5 até o final, resultado: ' + frase_qualquer.substr(5) +
+                    '\n A seguir vamos recortar da posição 1000 até o final, resultado: ' + frase_qualquer.substr(1000) +
+                    '\n A seguir vamos recortar da posição -5 os próximos 2 caracteres, resultado: ' + frase_qualquer.substr(-5, 2) +
+                    '\n A seguir vamos recortar da posição 5 os próximos -2 caracteres, resultado: ' + frase_qualquer.substr(5, -2))
+                }
+
+            </script>
+
+            <button onclick="recorteEmFrente()">Rodar script</button>
+
+        </div>
+
+
+
+        <h2>Substituir um trecho por outro em uma String</h2>
+
+        <div>
+
+            <p>O - replace() -, usa dois parâmetros, o primeiro deve ser informada a string que deseja procurar ou uma forma regex de busca, e no segundo deve-se informar por qual string deseja substituir.</p>
+
+            <script>
+
+                function substituir() {
+                    let frase_qualquer = 'Trecho para exemplo/testes. Outra coisa escrita para visualizar outros efeitos.'
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer + 
+                    '\n Vamos substituir o ponto final por vírgula, resultado: ' + frase_qualquer.replace('.', ',') +
+                    '\n Vamos substituir a palavra "para" por "pra", resultado: ' + frase_qualquer.replace('para', 'pra') +
+                    '\n Vamos substituir com regex todas as palavras "para" por "pra", resultado: ' + frase_qualquer.replace(/para/g, 'pra') +
+                    '\n Vamos substituir com regex somente a primeira palavra "para" por "pra", resultado: ' + frase_qualquer.replace(/para/i, "pra"))
+                }
+
+            </script>
+
+            <button onclick="substituir()">Rodar script</button>
+        </div>
+
+        <h2>Para tranformar toda uma string em minúculo ou em maiúsculo</h2>
+
+        <div>
+
+            <p>Para tranformar todo um texto em minúculo, usamos - toLowerCase() - e para tranformar todo um texto em maiúsculo, usamos - toUpperCase() -</p>
+
+            <code>
+                function transformarTexto() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer +
+                    '\n Tranformando o texto em minúsculo: ' + frase_qualquer.toLowerCase() + 
+                    '\n Tranformando o texto em maiúculo: ' + frase_qualquer.toUpperCase()
+                    )
+                }
+            </code>
+
+            <script>
+
+                function transformarTexto() {
+                    let frase_qualquer = 'Trecho para exemplo/testes.'
+                    window.alert('Vamos usar a seguinte frase para exemplo: ' +
+                    frase_qualquer +
+                    '\n Tranformando o texto em minúsculo: ' + frase_qualquer.toLowerCase() + 
+                    '\n Tranformando o texto em maiúculo: ' + frase_qualquer.toUpperCase()
+                    )
+                }
+
+            </script>
+
+            <button onclick="transformarTexto()">Rodar script</button>
+
+        </div>
+
+
+        <h2>Concatenar strings</h2>
+
+        <div>
+
+            <p>Além do uso do "sinal de mais" para contenar strings, temos a função - .concat() - onde dentro do seu parênteses é informado com o que deseja conscatenar e se quiser adicionar outras concatenções é possível utilizar a vírgula para acrescentar outros</p>
+
+            <code>
+                function concatenar() {
+                    let boas_vindas = "Olá "
+                    let nome = 'Rafael Ramos'
+                    let explicacao = ` essas foram as formas de montar uma string.`
+
+                    window.alert(boas_vindas.concat(nome, explicacao))
+                }
+            </code>
+
+            <script>
+
+                function concatenar() {
+                    let boas_vindas = "Olá "
+                    let nome = 'Rafael Ramos'
+                    let explicacao = ` essas foram as formas de montar uma string.`
+
+                    window.alert(boas_vindas.concat(nome, explicacao))
+                }
+
+            </script>
+
+            <button>Rodar script</button>
+        </div>
+
+        <h2>Remover espaços em branco à direita e a esquerda da string</h2>
+
+        <div>
+
+            <p>Ao vermos uma string normalmente não queremos que espaços aleatórios sejam interpretados, para remover os espaços a mais no início e no fim da string usamos o - .trim() - , mas esse método não funciona em todos os navegadores, por isso no código a seguir terá um exemplo de como podemos fazer o método manualmente.</p>
+
+            <code>
+                function removerEspacosNoInicioENoFim() {
+                    if (!String.prototype.trim) {
+                        String.prototype.trim = function () {
+                        return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+                        };
+                    }
+                    var str = "       Hello World!        ";
+                    alert(str.trim());
+                    alert(str)
+                }
+            </code>
+
+            <script>
+
+                function removerEspacosNoInicioENoFim() {
+                    if (!String.prototype.trim) {
+                        String.prototype.trim = function () {
+                        return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+                        };
+                    }
+                    var str = "       Hello World!        ";
+                    alert(str.trim());
+                    alert(str)
+                }
+
+            </script>
+
+            <button onclick="removerEspacosNoInicioENoFim()">Rodar script</button>
+        </div>
+
+
+        <h2>Pegar um caracter de uma string</h2>
+
+        <div>
+            
+            <p>Quando queremos pegar somente um caracter em alguma posição de uma string temos, as seguintes formas:</p>
+
+            <p>Por acesso à propriedade - string[numberofposition] - ao chamarmos assim é como se tratassemos cada caracter como um item de uma lista, mas a pesar do acesso ser assim, não podemos armazenar ou substituir um caracter de forma simples colocando um recebe</p>
+
+            <code>
+                function pegarCaracterPorPropriedade() {
+                    let str = "HELLO WORLD";
+                    str[0] = "A";             // Não dá erro, mas não funciona
+                    alert(str[0])
+                }
+            </code>
+
+            <script>
+
+                function pegarCaracterPorPropriedade() {
+                    let str = "HELLO WORLD";
+                    str[0] = "A";             // Não dá erro, mas não funciona
+                    alert(str[0])
+                }
+
+            </script>
+
+            <button onclick="pegarCaracterPorPropriedade()">Rodar script</button>
+
+            <p>Por - .charAt(position) - Em que é retornado a letra em uma posição da string sendo que a primeira é 0, a segunda é 1 e assim por diante</p>
+
+            <code>
+
+            </code>
+
+            <script>
+
+                function pegarCaracterPorMetodo() {
+                    let str = "Olá Mundo";
+                    alert(str.charAt(0))
+                }
+
+            </script>
+
+            <button onclick="pegarCaracterPorMetodo()">Rodar script</button>
+
+            <p>Por - .charCodeAt(position) - faz as mesmas coisas e da mesma forma que o charAt() a diferença é que o valor retornado é em código ASCII</p>
+
+            <code>
+                var str = "HELLO WORLD";
+                str.charCodeAt(0);         // returns 72
+            </code>
+
+            <script>
+
+                function pegarCaracterPorCodigo() {
+                    let str = "HELLO WORLD";
+                    alert(str.charCodeAt(0))
+                }
+
+            </script>
+
+            <button onclick="pegarCaracterPorCodigo()">Rodar script</button>
+
+        </div>
+        
+
+        <h2>Separar a strings através de um símbolo.</h2>
+
+        <div>
+
+            <p>Com o - .split() - podemos criar uma lista a partir de uma string, ao pegarmos uma string palavra-chave no meio da string podemos usar para recortar e criar uma lista com vários itens. Se for informado um valor "vazio" dentro do parênteses é feita a separação em cada letra</p>
+
+
+
+            <code>
+                function listaDeUmaString() {
+                    let texto = "Frase, com muitas vírgulas, pois será a vírgula, que usarei para o exemplo,"
+                    let listaDeTexto = texto.split(",")
+                    alert('O texto original era: ' + texto +
+                    '\n Mas agora com o split separei ele nas vírgulas e cada parte ficou assim:' +
+                    '\n' + listaDeTexto[0] +
+                    '\n' + listaDeTexto[1] +
+                    '\n' + listaDeTexto[2] +
+                    '\n' + listaDeTexto[3] +
+                    '\n' + listaDeTexto[4] +
+                    '\n' + listaDeTexto[5])
+
+                    let listaDeTexto = texto.split("")
+                    alert('O texto original era: ' + texto +
+                    '\n Mas agora com o split separei ele nas vírgulas e cada parte ficou assim:' +
+                    '\n' + listaDeTexto[0] +
+                    '\n' + listaDeTexto[1] +
+                    '\n' + listaDeTexto[2] +
+                    '\n' + listaDeTexto[3] +
+                    '\n' + listaDeTexto[4] +
+                    '\n' + listaDeTexto[5])
+                }
+            </code>
+
+            <script>
+
+                function listaDeUmaString() {
+                    let texto = "Frase, com muitas vírgulas, pois será a vírgula, que usarei para o exemplo,"
+                    let listaDeTexto = texto.split(",")
+                    alert('O texto original era: ' + texto +
+                    '\n Mas agora com o split separei ele nas vírgulas e cada parte ficou assim:' +
+                    '\n' + listaDeTexto[0] +
+                    '\n' + listaDeTexto[1] +
+                    '\n' + listaDeTexto[2] +
+                    '\n' + listaDeTexto[3] +
+                    '\n' + listaDeTexto[4] +
+                    '\n' + listaDeTexto[5])
+
+                    let listaDeTexto = texto.split("")
+                    alert('O texto original era: ' + texto +
+                    '\n Mas agora com o split separei ele nas vírgulas e cada parte ficou assim:' +
+                    '\n' + listaDeTexto[0] +
+                    '\n' + listaDeTexto[1] +
+                    '\n' + listaDeTexto[2] +
+                    '\n' + listaDeTexto[3] +
+                    '\n' + listaDeTexto[4] +
+                    '\n' + listaDeTexto[5])
+                }
+
+            </script>
+
+            <button onclick="listaDeUmaString()">Rodar script</button>
+        </div>
+    </div>
+
+    <hr>
+
+    
+
+</body>
+</html>
