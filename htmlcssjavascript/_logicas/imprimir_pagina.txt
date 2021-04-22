@@ -10,20 +10,30 @@
 
 </div>
 
-<button onclick="printDiv()">Print this page</button>
+<button type="button" onclick="Imprimir('termos_de_uso')">Imprimir</button>
 
-<script>
+    <script>
+        function Imprimir(idElemento) {
+            //Forma 1         
+            //var printContents = document.getElementById(idElemento).innerHTML;
+            //var originalContents = document.body.innerHTML;
+            //document.body.innerHTML = printContents;
+            //window.print();
+            //Não indico fazer da Forma 1 pois ele acaba por quebrar páginas complexas que importam outros scripts como o jquerry bootstrap...
+            //document.body.innerHTML = originalContents;
+            //Fim Forma 1
 
-function printDiv() {
-   
-   var page = document.getElementById("teste").innerHTML;
-   tela_impressao = window.open();
-   tela_impressao.document.write('<div style="max-width: 500px; margin: 0 auto;">' + page  + '</div>');
-   tela_impressao.window.print();
-   tela_impressao.window.close();
-} 
+            //Forma 2
+            //Cria uma nova aba com o que você deseja imprimir
+            let conteudo = document.getElementById(idElemento).innerHTML;
+            let w = window.open();
+            w.document.write(conteudo);
+            w.print();
+            w.close();
+            //Fim Forma 2
+        }
+    </script>
 
-</script>
 
 </body>
 </html>

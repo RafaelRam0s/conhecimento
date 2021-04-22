@@ -1,0 +1,60 @@
+{
+    "StatusCode": 200,
+    "Content": [
+      {
+        "IdTipoAbordagem": 1,
+        "Nome": "PsicologiaHumanista",
+        "Descricao": "Psicologia  Humanista",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 2,
+        "Nome": "PsicologiaAnaliticaJunguiana",
+        "Descricao": "Psicologia Analítica Junguiana",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 3,
+        "Nome": "PsicologiaBehaviorista",
+        "Descricao": "Psicologia Behaviorista",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 4,
+        "Nome": "TerapiaCognitivoComportamental",
+        "Descricao": "Terapia Cognitivo Comportamental",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 5,
+        "Nome": "PsicoterapiaBreve",
+        "Descricao": "Psicoterapia Breve",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 6,
+        "Nome": "PsicoterapiaSistemica",
+        "Descricao": "Psicoterapia Sistêmica",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 7,
+        "Nome": "PsicoterapiaPsicanaliticaWinnicottiana",
+        "Descricao": "Psicoterapia Psicanalítica Winnicottiana",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 8,
+        "Nome": "PsicoterapiaFenomenologica",
+        "Descricao": "Psicoterapia Fenomenológica",
+        "Ativo": true
+      },
+      {
+        "IdTipoAbordagem": 9,
+        "Nome": "PsicanaliseFreudiana",
+        "Descricao": "Psicanálise Freudiana",
+        "Ativo": true
+      }
+    ],
+    "ErrorMessage": ""
+}

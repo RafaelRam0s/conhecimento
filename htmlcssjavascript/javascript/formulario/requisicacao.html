@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="shortcut icon" href="images/torre.ico"> -->
+
+    <style>
+        :root {
+            --paleta_preta: rgba(6, 6, 7, 0.747);
+            --paleta_branca: white;
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+            --paleta_cinza: rgb(95, 95, 95);
+            --paleta_button_branco: rgb(239, 239, 239);
+            --paleta_button_preto: rgb(0, 0, 0);
+        }
+
+        body {
+            background-color: var(--paleta_preta);
+            color: var(--paleta_branca);
+            font-family: serif;
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 27px;}
+        h5 {font-size: 24px;}
+        h6 {font-size: 12px;}
+        p {font-size: 22px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+            display: block;
+            margin: 10px 0px;
+        }
+
+        table, tr, th, td, caption {
+            border: 1px solid var(--paleta_branca);
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 20px 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        textarea {
+            display: block;
+        }
+
+        select {
+            max-width: 300px;
+        }
+
+        input {
+            background-color: var(--paleta_cinza);
+            color: var(--paleta_branca);
+            font-size: 15px;
+            font-weight: 100;
+            padding: 5px 7px 3px;
+            margin: 1px 0px;
+        }
+
+        input[type="button"], input[type="reset"], input[type="submit"] {
+            background-color: var(--paleta_button_branco);
+            color: var(--paleta_button_preto);
+            padding: 1px 6px;
+        }
+
+        input[type="image"] {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+    </style>
+    
+    <title>Testes Formulário</title>
+</head>
+<body>
+
+    <div style="margin: 20px 50px;">
+        <div>
+            <h2>Requisições Dinâmicas Síncronas (HttpRequest)</h2>
+           
+            <div>
+                <p>1- Cria um objeto XMLHttpRequest 2- Abra a conexão informando primeiro um parâmetro da forma de acesso (GET, POST, DELETE ...), um segundo parâmetro para informar a url do site e um terceiro parâmetro informando um valor booleano se a conexão é ou não assíncrona</p>
+
+                <button onclick="coneccaoSincrona()">Rodar script</button>
+                
+                <script>
+    
+                    function coneccaoSincrona() {
+                        let req = new XMLHttpRequest();
+                        req.open('GET', 'http://127.0.0.1:62088/htmlcssjavascript/javascript/formulario/teste.txt', false); // O false é uma forma síncrona de acesso, ela não é recomendável pois se tiver algum problema de conexão com o servidor seja um problema no dispositivo do cliente, no local do servidor ou em um banco de dados que o servidor esteja conectado, a página que o usuário esta, vai travar, impedindo que ele interaja com o site por um tempo
+
+                        // http://127.0.0.1:62088/htmlcssjavascript/javascript/formulario/teste.txt - o arquivo .txt tem o seguinte texto guardado:
+                        /*
+                            <table>
+                                <tr>
+                                    <td>Teste 1</td>
+                                    <td>Teste 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Teste 3</td>
+                                    <td>Teste 4</td>
+                                </tr>
+                            </table>
+                        */
+
+                        req.send()
+    
+                        document.getElementById('criarTabelaPorConexaoSincrona').innerHTML = req.responseText;
+                        
+                    }
+    
+                </script>
+    
+                <div id="criarTabelaPorConexaoSincrona"></div>
+            </div>
+            
+        </div>
+
+        <div>
+            <h2>Requisições Dinâmicas Assíncronas</h2>
+
+            <div>
+                <p> @@@@@ </p>
+
+                <button onclick="requisicaoAssincrona()">Rodar script</button>
+                
+                <script>
+
+                    function tratarEventosDeConxao(e) {
+                        if (e.target.readyState == 4) {
+                            if (e.target.status == 200) { // se sucesso na conexão
+                                document.getElementById('divConexaoAssincrona').innerHTML = e.target.responseText;
+                            } else if (e.target.status == 404) {
+                                window.alert("Erro ao encontrar arquivo verifique a url na chamada")
+                            }
+                        }
+                    }
+    
+                    function requisicaoAssincrona() {
+                        let req = new XMLHttpRequest();
+                        req.open('GET', 'http://127.0.0.1:62088/htmlcssjavascript/javascript/formulario/teste.txt', true);
+                        req.onreadystatechange = tratarEventosDeConxao; // Toda vez que um evento ocorrer, como a seguir teremos o send, a função tratarEventosDeConxao vai ser chamada
+
+                        // O arquivo js que tem a variável req começa no evento zero
+                        // Assim que mandamos o send() o req vai fazer uma conexão com o arquivo no servidor e isso dispara o evento 1
+                        // Assim que o local do servidor tem a solicitação do req, o servidor envia uma informação falando que recebeu o pedido esse é o evento 2
+                        // Aí o servidor começa a processar o pedido do req esse é o evento 3
+                        // Então é devolvida uma resposta informando o que ocorreu, se teve sucesso, se teve sucesso, toma as informações, se não teve, o porque de não ter tido e assim por diante esse é o evento 4
+
+                        req.send()
+                    }
+    
+                </script>
+    
+                <div id="divConexaoAssincrona"></div>
+            </div>
+           
+        </div>
+
+        <!-- <div>
+            <h2>Requisições Dinâmicas Assíncronas com Parâmetros</h2>
+
+            <div>
+                <p>Teste</p>
+
+                <button onclick="teste()">Rodar script</button>
+                
+                <script>
+
+                    function tratarEventosDeConxao(e) {
+                        if (e.target.readyState == 4) {
+                            if (e.target.status == 200) {
+                                document.getElementById('testando').innerHTML = e.target.responseText;
+                            } else if (e.target.status == 404) {
+                                window.alert("Erro ao encontrar arquivo verifique a url na chamada")
+                            }
+                        }
+                    }
+    
+                    function teste() {
+                        let req = new XMLHttpRequest();
+
+                        // Se GET
+                        req.open('GET', 'http://127.0.0.1:62088/htmlcssjavascript/javascript/formulario/teste.txt' + '?nome=' + 'var_nome' + '&' + 'cep=' + 'var_cep' + '&' + 'idade=' + 'var_idade', true);
+                        req.onreadystatechange = tratarEventosDeConxao;
+                        req.send()
+
+                        // Se POST
+                        req.open('POST', 'http://127.0.0.1:62088/htmlcssjavascript/javascript/formulario/teste.txt', true);
+                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+                        req.onreadystatechange = tratarEventosDeConxao;
+                        req.send('nome=' + 'var_nome' + '&' + 'cep=' + 'var_cep' + '&' + 'idade=' + 'var_idade')
+
+                    }
+    
+                </script>
+    
+                <div id="testando"></div>
+            </div>
+
+        </div> -->
+    
+    </div>
+
+</body>
+</html>

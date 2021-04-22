@@ -152,13 +152,13 @@ background
 
 
 .fundo_img_duzentos {
-    background-image: url('../../midia/imagens/duzentosporduzentos.png');
+    background-image: url('../../../midia/imagens/duzentosporduzentos.png');
 }
 .fundo_img_externa {
     background-image: url("https://s2.glbimg.com/PzijMfcV12zBe3dE-RPTOuIZIpQ=/0x0:695x463/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/05/29/google-hardware-1.jpg");
 }
 .fundo_img_misturada {
-    background-image: url("../../midia/imagens/quadro.png"), url("../../midia/imagens/cenariodeserto.jpg");
+    background-image: url("../../../midia/imagens/quadro.png"), url("../../../midia/imagens/cenariodeserto.jpg");
 }
 /* back-ground-image - define uma imagem de fundo
         Usos:
@@ -190,10 +190,10 @@ background
     background-repeat: no-repeat;
 }
 .fundo_img_cinza_degrade {
-    background-image: url('../../midia/imagens/fundo_detalhe_cinza.jpg');
+    background-image: url('../../../midia/imagens/fundo_detalhe_cinza.jpg');
 }
 .fundo_img_cinza_degrade_lateral {
-    background-image: url('../../midia/imagens/fundo_detalhe_cinza_lateral.jpg');
+    background-image: url('../../../midia/imagens/fundo_detalhe_cinza_lateral.jpg');
 }
 .fundo_repete_espaco {
     background-repeat: space;
@@ -457,29 +457,29 @@ background
 
 .fundo_simples {
     background-color: blue;
-    background-image: url('../../midia/imagens/duzentosporduzentos.png');
+    background-image: url('../../../midia/imagens/duzentosporduzentos.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
  .fundo_diversificado{
-    background: red url('../../midia/imagens/quadro.png') no-repeat fixed center;
+    background: red url('../../../midia/imagens/quadro.png') no-repeat fixed center;
 }
 .fundo_misturado {
-    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+    background: url('../../../midia/imagens/quadro.png') no-repeat scroll center, url('../../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
     background-size: 90.1% 100%;
     background-clip: content-box;
     background-origin: border-box;
 }
 .fundo_errado {
-    background: red url('../../midia/imagens/quadro.png') no-repeat scroll center, blue url('../../midia/imagens/t_gato.png') no-repeat scroll center, yellow url('../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
+    background: red url('../../../midia/imagens/quadro.png') no-repeat scroll center, blue url('../../../midia/imagens/t_gato.png') no-repeat scroll center, yellow url('../../../midia/imagens/cenariotempo.jpg') no-repeat scroll center;
 }
 .fundo_moldura {
-    background: url('../../midia/imagens/quadro.png') no-repeat scroll center, url('../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../midia/imagens/cenariomontanha.jpg') no-repeat fixed center;
+    background: url('../../../midia/imagens/quadro.png') no-repeat scroll center, url('../../../midia/imagens/t_gato.png') no-repeat scroll center, url('../../../midia/imagens/cenariomontanha.jpg') no-repeat fixed center;
     background-size: 90.1% 100%;
 }
 .fundo_quadro {
-    background: url('../../midia/imagens/quadro.png') no-repeat scroll, url('../../midia/imagens/cenariotempo.jpg') no-repeat fixed center;
+    background: url('../../../midia/imagens/quadro.png') no-repeat scroll, url('../../../midia/imagens/cenariotempo.jpg') no-repeat fixed center;
     background-size: 100% 100%;
 }
 /* background - fundo, define as formatações gerais de como o fundo deve se comportar, a cada vírgula colocada é acrescentado novos fundos

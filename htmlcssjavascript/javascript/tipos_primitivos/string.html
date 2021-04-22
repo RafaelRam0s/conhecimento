@@ -597,7 +597,8 @@
             <p>Por - .charAt(position) - Em que é retornado a letra em uma posição da string sendo que a primeira é 0, a segunda é 1 e assim por diante</p>
 
             <code>
-
+                let str = "Olá Mundo";
+                alert(str.charAt(0))
             </code>
 
             <script>
@@ -693,6 +694,29 @@
             </script>
 
             <button onclick="listaDeUmaString()">Rodar script</button>
+        </div>
+
+
+        <h2>@@@@@Usar código Regex em uma string</h2>
+
+        <div>
+            <p>Chamando a função exec() podemos passar o parâmetro regex que deverá ser executado em uma string</p>
+
+            <script>
+                function usandoRegex() {
+                    let regex = /ola/
+                    let texto = "ola mundo"
+
+                    window.alert(regex.exec(texto)) // não aceita as tags após o regex, isso é, o que estiver após a última barra não é computado
+                    
+                    window.alert(regex.test(texto))
+                    
+                    window.alert(texto.match(regex))
+
+                }
+            </script>
+
+            <button onclick="usandoRegex()">Rodar script</button>
         </div>
     </div>
 
