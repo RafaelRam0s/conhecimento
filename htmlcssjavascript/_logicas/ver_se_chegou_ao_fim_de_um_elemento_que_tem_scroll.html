@@ -104,18 +104,22 @@
             <div>
                 <p>Teste de parágrafo</p>
     
-                <div>
+                <div id="teste1" style="height: 100px; overflow: auto;" onscroll="chegouAoFimDeUmElementoQueTemScroll()">
                     <p style="height: 1000px; background-color: bisque;">Teste</p>
                 </div>
     
-                <div id="teste1">
-                    <p>Paragrafo foi visualizado</p>
-                </div>
 
                 <script>
-
-                    function teste() {
-                        
+    
+                    function chegouAoFimDeUmElementoQueTemScroll() {
+                        if (document.getElementById('teste1').clientHeight + document.getElementById('teste1').scrollTop >= document.getElementById('teste1').scrollHeight) {
+                            //chegou ao fim do elemento
+                            window.alert(
+                                'Tamanho do elemento: ' + document.getElementById('teste1').clientHeight
+                                + '\n scrollTop: ' + document.getElementById('teste1').scrollTop
+                                + '\n scrollHeight: ' + document.getElementById('teste1').scrollHeight
+                            )
+                        }
                     }
     
                 </script>

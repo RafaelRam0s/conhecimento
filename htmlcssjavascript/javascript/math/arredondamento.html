@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="shortcut icon" href="images/torre.ico"> -->
+
+    <style>
+        :root {
+            --paleta_preta: rgba(6, 6, 7, 0.747);
+            --paleta_branca: white;
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+            --paleta_cinza: rgb(95, 95, 95);
+            --paleta_button_branco: rgb(239, 239, 239);
+            --paleta_button_preto: rgb(0, 0, 0);
+        }
+
+        body {
+            background-color: var(--paleta_preta);
+            color: var(--paleta_branca);
+            font-family: serif;
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 27px;}
+        h5 {font-size: 24px;}
+        h6 {font-size: 12px;}
+        p {font-size: 22px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+            display: block;
+            margin: 10px 0px;
+        }
+
+        table, tr, th, td, caption {
+            border: 1px solid var(--paleta_branca);
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 20px 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        textarea {
+            display: block;
+        }
+
+        select {
+            max-width: 300px;
+        }
+
+        input {
+            background-color: var(--paleta_cinza);
+            color: var(--paleta_branca);
+            font-size: 15px;
+            font-weight: 100;
+            padding: 5px 7px 3px;
+            margin: 1px 0px;
+        }
+
+        input[type="button"], input[type="reset"], input[type="submit"] {
+            background-color: var(--paleta_button_branco);
+            color: var(--paleta_button_preto);
+            padding: 1px 6px;
+        }
+
+        input[type="image"] {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+    </style>
+    
+    <title>Arredondamento</title>
+</head>
+<body>
+
+    <div style="margin: 20px 50px;">
+        <div>
+            <h2>Trunc</h2>
+           
+            <div>
+                <p>Não é arredondado, simplesmente casas decimais são retirados do número</p>
+    
+                <code>
+
+                    function usoDoTrunc() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.trunc(0.99) + '\n' +
+                            'Número 0.12: ' + Math.trunc(0.12) + '\n' +
+                            'Número 123: ' + Math.trunc(123) + '\n' +
+                            'Número 99.5: ' + Math.trunc(99.5) + '\n' +
+                            'Número 4.9: ' + Math.trunc(4.9) + '\n' +
+                            'Número 4.5: ' + Math.trunc(4.5) + '\n' +
+                            'Número 4.49: ' + Math.trunc(4.49) + '\n' +
+                            'Número 4.1: ' + Math.trunc(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.trunc(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.trunc(1.999999999999999999999999999999999999)
+                        )
+                    }
+                    
+                </code>
+    
+                <script>
+
+                    function usoDoTrunc() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.trunc(0.99) + '\n' +
+                            'Número 0.12: ' + Math.trunc(0.12) + '\n' +
+                            'Número 123: ' + Math.trunc(123) + '\n' +
+                            'Número 99.5: ' + Math.trunc(99.5) + '\n' +
+                            'Número 4.9: ' + Math.trunc(4.9) + '\n' +
+                            'Número 4.5: ' + Math.trunc(4.5) + '\n' +
+                            'Número 4.49: ' + Math.trunc(4.49) + '\n' +
+                            'Número 4.1: ' + Math.trunc(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.trunc(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.trunc(1.999999999999999999999999999999999999)
+                        )
+                    }
+    
+                </script>
+    
+                <button onclick="usoDoTrunc()">Rodar script</button>
+            </div>
+            
+        </div>
+
+        <div>
+            <h2>Ceil</h2>
+           
+            <div>
+                <p>É feito um arredondamento somando +1 a parte inteira, se existir alguma casa decimal</p>
+    
+                <code>
+                    function usoDoCeil() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.ceil(0.99) + '\n' +
+                            'Número 0.12: ' + Math.ceil(0.12) + '\n' +
+                            'Número 123: ' + Math.ceil(123) + '\n' +
+                            'Número 99.5: ' + Math.ceil(99.5) + '\n' +
+                            'Número 4.9: ' + Math.ceil(4.9) + '\n' +
+                            'Número 4.5: ' + Math.ceil(4.5) + '\n' +
+                            'Número 4.49: ' + Math.ceil(4.49) + '\n' +
+                            'Número 4.1: ' + Math.ceil(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.ceil(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.ceil(1.999999999999999999999999999999999999)
+                        )
+                    }
+                </code>
+    
+                <script>
+
+                    function usoDoCeil() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.ceil(0.99) + '\n' +
+                            'Número 0.12: ' + Math.ceil(0.12) + '\n' +
+                            'Número 123: ' + Math.ceil(123) + '\n' +
+                            'Número 99.5: ' + Math.ceil(99.5) + '\n' +
+                            'Número 4.9: ' + Math.ceil(4.9) + '\n' +
+                            'Número 4.5: ' + Math.ceil(4.5) + '\n' +
+                            'Número 4.49: ' + Math.ceil(4.49) + '\n' +
+                            'Número 4.1: ' + Math.ceil(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.ceil(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.ceil(1.999999999999999999999999999999999999)
+                        )
+                    }
+    
+                </script>
+    
+                <button onclick="usoDoCeil()">Rodar script</button>
+            </div>
+            
+        </div>
+
+        <div>
+            <h2>Floor</h2>
+           
+            <div>
+                <p>É feito um arredondamento deixando só a parte inteira, se existir alguma casa decimal ela é retirada, parece muito com o trunc@@@@@</p>
+    
+                <code>
+                    function usoDoFloor() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.floor(0.99) + '\n' +
+                            'Número 0.12: ' + Math.floor(0.12) + '\n' +
+                            'Número 123: ' + Math.floor(123) + '\n' +
+                            'Número 99.5: ' + Math.floor(99.5) + '\n' +
+                            'Número 4.9: ' + Math.floor(4.9) + '\n' +
+                            'Número 4.5: ' + Math.floor(4.5) + '\n' +
+                            'Número 4.49: ' + Math.floor(4.49) + '\n' +
+                            'Número 4.1: ' + Math.floor(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.floor(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.floor(1.999999999999999999999999999999999999)
+                        )
+                    }
+                </code>
+    
+                <script>
+
+                    function usoDoFloor() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.floor(0.99) + '\n' +
+                            'Número 0.12: ' + Math.floor(0.12) + '\n' +
+                            'Número 123: ' + Math.floor(123) + '\n' +
+                            'Número 99.5: ' + Math.floor(99.5) + '\n' +
+                            'Número 4.9: ' + Math.floor(4.9) + '\n' +
+                            'Número 4.5: ' + Math.floor(4.5) + '\n' +
+                            'Número 4.49: ' + Math.floor(4.49) + '\n' +
+                            'Número 4.1: ' + Math.floor(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.floor(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.floor(1.999999999999999999999999999999999999)
+                        )
+                    }
+    
+                </script>
+    
+                <button onclick="usoDoFloor()">Rodar script</button>
+            </div>
+            
+        </div>
+
+        <div>
+            <h2>Round</h2>
+           
+            <div>
+                <p>É feito um arredondamento, se a casa decimal for menor que 5 age como floor (arredonda deixando só a parte inteira), se maior que 5 age como ceil (arredonda somando +1 na parte inteira)</p>
+    
+                <code>
+                    function usoDoRound() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.round(0.99) + '\n' +
+                            'Número 0.12: ' + Math.round(0.12) + '\n' +
+                            'Número 123: ' + Math.round(123) + '\n' +
+                            'Número 99.5: ' + Math.round(99.5) + '\n' +
+                            'Número 4.9: ' + Math.round(4.9) + '\n' +
+                            'Número 4.5: ' + Math.round(4.5) + '\n' +
+                            'Número 4.49: ' + Math.round(4.49) + '\n' +
+                            'Número 4.1: ' + Math.round(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.round(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.round(1.999999999999999999999999999999999999)
+                        )
+                    }
+                </code>
+    
+                <script>
+
+                    function usoDoRound() {
+                        window.alert(
+                            'Como explicado as casas decimais somem: \n' +
+                            'Número 0.99: ' + Math.round(0.99) + '\n' +
+                            'Número 0.12: ' + Math.round(0.12) + '\n' +
+                            'Número 123: ' + Math.round(123) + '\n' +
+                            'Número 99.5: ' + Math.round(99.5) + '\n' +
+                            'Número 4.9: ' + Math.round(4.9) + '\n' +
+                            'Número 4.5: ' + Math.round(4.5) + '\n' +
+                            'Número 4.49: ' + Math.round(4.49) + '\n' +
+                            'Número 4.1: ' + Math.round(4.1) + '\n' +
+                            'Número 1.000000000000000000000000000000000001: ' + Math.round(1.000000000000000000000000000000000001) + '\n' +
+                            'Número 1.999999999999999999999999999999999999: ' + Math.round(1.999999999999999999999999999999999999)
+                        )
+                    }
+    
+                </script>
+    
+                <button onclick="usoDoRound()">Rodar script</button>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

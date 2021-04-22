@@ -376,6 +376,119 @@
     <hr>
 
     
+    @@@@@ Verifique os códigos abaixo quando tiver tempo:
+
+    <script>
+        //Classe ou objeto
+        function testarDepois() {
+
+
+
+            function Pessoa(name, age) {
+                this.nome = name
+                this.idade = age
+            }
+            //Adiciona na função Pessoa um método
+            Pessoa.prototype.mudarIdade = function(age) { 
+                this.idade = age
+            }
+
+            let pessoa1 = new Pessoa("Ramos", 18)
+            let pessoa2 = new Pessoa("Rafael", 32)
+
+            console.log('Nome: ' + pessoa1.nome + '\n Idade: ' + pessoa1.idade)
+            pessoa1.mudarIdade(19)
+            console.log('Nome: ' + pessoa1.nome + '\n Idade: ' + pessoa1.idade)
+
+
+
+
+
+
+
+            class SerHumano {
+                constructor(name, age) {
+                    this.nome = name
+                    this.idade = age
+                }
+                mudarIdade(age) {
+                    this.idade = age
+                }
+            }
+
+            let serhumano1 = new SerHumano("Silva", 10)
+            let serhumano2 = new SerHumano("Jose", 67)
+
+            console.log('Nome: ' + serhumano1.nome + '\n Idade: ' + serhumano1.idade)
+            serhumano1.mudarIdade(19)
+            console.log('Nome: ' + serhumano1.nome + '\n Idade: ' + serhumano1.idade)
+
+
+
+
+
+
+
+
+
+            // Cria Objetos
+            function Individuo(name, age) {
+                this.nome = name
+                this.idade = age
+            }
+            Individuo.prototype.retornarDados = function() { 
+                return 'Nome: ' + this.nome + ', Idade: ' + this.idade;
+            }
+
+            // Cria um cadastro
+            let individuo1 = new Individuo('Ramos', 20);
+            // Apresenta o cadastro
+            console.log(individuo1.retornarDados());
+
+            // Cria um cadastro mais detalhado do já existente (Classe filha)
+            function IndividuoFisico(name, age, cpf) {
+                Individuo.call(this, name, age);
+                this.cpf = cpf;
+            }
+
+            IndividuoFisico.prototype = Object.create(Individuo.prototype);
+            IndividuoFisico.prototype.constructor = IndividuoFisico;
+            IndividuoFisico.prototype.retornarDados = function () {
+                return Pessoa.prototype.retornarDados.call(this) + ', CPF: ' + this.cpf;
+            }
+
+            let individuo2 = new IndividuoFisico('Rafael', 39, '12345678910')
+
+            console.log(individuo2.retornarDados())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Para chamar a própria função no momento que ela é criada
+
+            (function teste() { window.alert("Olá Mundo!") })();
+
+        }
+    </script>
+
 
 </body>
 </html>

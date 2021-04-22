@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Ramos">
+    <meta name="keywords" content="javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="shortcut icon" href="images/torre.ico"> -->
+
+    <style>
+        :root {
+            --paleta_preta: rgba(6, 6, 7, 0.747);
+            --paleta_branca: white;
+            --paleta_azul_claro: aqua;
+            --paleta_amarelo: gold;
+            --paleta_cinza: rgb(95, 95, 95);
+            --paleta_button_branco: rgb(239, 239, 239);
+            --paleta_button_preto: rgb(0, 0, 0);
+        }
+
+        body {
+            background-color: var(--paleta_preta);
+            color: var(--paleta_branca);
+            font-family: serif;
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        h1 {
+            text-decoration-line: underline;
+            font-size: 40px;
+        }
+        h1, h2, h3, h4, h5, h6 {font-weight: 900;}
+        h2 {font-size: 35px;}
+        h3 {font-size: 30px;}
+        h4 {font-size: 27px;}
+        h5 {font-size: 24px;}
+        h6 {font-size: 12px;}
+        p {font-size: 22px;}
+
+        a {color: var(--paleta_azul_claro);}
+            a:hover {color: var(--paleta_amarelo);}
+
+        code {
+            white-space: pre-line;
+            display: block;
+            margin: 10px 0px;
+        }
+
+        table, tr, th, td, caption {
+            border: 1px solid var(--paleta_branca);
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 20px 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        textarea {
+            display: block;
+        }
+
+        select {
+            max-width: 300px;
+        }
+
+        input {
+            background-color: var(--paleta_cinza);
+            color: var(--paleta_branca);
+            font-size: 15px;
+            font-weight: 100;
+            padding: 5px 7px 3px;
+            margin: 1px 0px;
+        }
+
+        input[type="button"], input[type="reset"], input[type="submit"] {
+            background-color: var(--paleta_button_branco);
+            color: var(--paleta_button_preto);
+            padding: 1px 6px;
+        }
+
+        input[type="image"] {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+    </style>
+    
+    <title>Reset</title>
+</head>
+<!-- <body> -->
+<body onload="document.getElementById('formSexo').reset()">
+
+    <div style="margin: 20px 50px;">
+        <div>
+            <h2>Reset</h2>
+           
+            <div>
+                <p>Se vc marcar um campo e depois atualizar a página, pode ocorrer do formulário não resetar o que estava selecionado anteriormente, com isso vc teria um problema</p>
+
+                <p>No exemplo abaixo temos um campo onde é selecionável o gênero e a partir do que é informado um parágrafo diferente pode surgir:</p>
+
+                <form id="formSexo" action="">
+                    <h4>Qual o seu gênero?</h4>
+
+                    <input type="radio" name="sexo" id="sexoMasc" onclick="meuGenero()" checked>
+                    <label for="sexoMasc">Masculino</label>
+                    <br>
+
+                    <input type="radio" name="sexo" id="sexoFemi" onclick="meuGenero()">
+                    <label for="sexoFemi">Feminino</label>
+                    <br>
+
+                    <p id="pSexoMasc">Você é um homem</p>
+                    <p id="pSexoFemi" style="display: none;">Você é uma mulher</p>
+                </form>
+
+                <p>Se você selecionar Feminino e atualizar a página, pode ocorrer (depende de cada navegador e de sua versão) de não mudar novamente para Masculino, aí ficaria selecionado, Feminino com o texto "Você é um homem", é para resolver este problema que temos o reset</p>
+
+                <p>Olhe os parâmetros do body para que possa entender como usar;  onload="document.getElementById('formSexo').reset()", se retirar o evento do body, pode ser possível dependendo do seu navegador ver os efeitos descritos</p>
+    
+                <code>
+
+                    function meuGenero() {
+                        if (document.getElementById('sexoMasc').checked == true) {
+                            document.getElementById('pSexoMasc').style.display = 'block'
+                            document.getElementById('pSexoFemi').style.display = 'none'
+                        } else {
+                            document.getElementById('pSexoMasc').style.display = 'none'
+                            document.getElementById('pSexoFemi').style.display = 'block'
+                        }
+                    }
+                    
+                </code>
+    
+                <script>
+
+                    function meuGenero() {
+                        if (document.getElementById('sexoMasc').checked == true) {
+                            document.getElementById('pSexoMasc').style.display = 'block'
+                            document.getElementById('pSexoFemi').style.display = 'none'
+                        } else {
+                            document.getElementById('pSexoMasc').style.display = 'none'
+                            document.getElementById('pSexoFemi').style.display = 'block'
+                        }
+                    }
+
+                </script>
+
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
